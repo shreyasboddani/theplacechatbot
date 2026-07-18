@@ -1,0 +1,659 @@
+{
+  "preparedAt": "2026-07-18T16:37:01.275Z",
+  "successfullyIndexedPages": [
+    {
+      "id": "web-home-8044e23b",
+      "title": "The Place | Get Assistance Today",
+      "url": "https://www.theplacega.org/",
+      "fetchedAt": "2026-07-18T16:30:12.818Z"
+    },
+    {
+      "id": "web-contact-us-eac5f990",
+      "title": "Contact Us | Explore Financials Today — The Place",
+      "url": "https://www.theplacega.org/contact-us",
+      "fetchedAt": "2026-07-18T16:30:13.290Z"
+    },
+    {
+      "id": "web-food-pantry-67cfe863",
+      "title": "Food Pantry | Support Your Community Today — The Place",
+      "url": "https://www.theplacega.org/food-pantry",
+      "fetchedAt": "2026-07-18T16:30:13.688Z"
+    },
+    {
+      "id": "web-food-donations-60d14ec3",
+      "title": "Food Donations | Support Community Through Donations — The Place",
+      "url": "https://www.theplacega.org/food-donations",
+      "fetchedAt": "2026-07-18T16:30:14.061Z"
+    },
+    {
+      "id": "web-thrift-store-donations-2ff82f7d",
+      "title": "Thrift Store Donations | Celebrate & Support Now — The Place",
+      "url": "https://www.theplacega.org/thrift-store-donations",
+      "fetchedAt": "2026-07-18T16:30:14.430Z"
+    },
+    {
+      "id": "web-financial-assistance-bfe6e37e",
+      "title": "Financial Assistance | Get Help Today — Apply Now — The Place",
+      "url": "https://www.theplacega.org/financial-assistance",
+      "fetchedAt": "2026-07-18T16:30:14.801Z"
+    },
+    {
+      "id": "web-fin-asst-initial-request-61d479bf",
+      "title": "Financial Assistance Request Form — The Place",
+      "url": "https://www.theplacega.org/fin-asst-initial-request",
+      "fetchedAt": "2026-07-18T16:30:15.175Z"
+    },
+    {
+      "id": "web-new-volunteers-51338cd7",
+      "title": "New Volunteers | Get Involved Today — The Place",
+      "url": "https://www.theplacega.org/new-volunteers",
+      "fetchedAt": "2026-07-18T16:30:15.546Z"
+    },
+    {
+      "id": "web-food-pantry-request-b0ed76b1",
+      "title": "Food Pantry Request — The Place",
+      "url": "https://www.theplacega.org/food-pantry-request",
+      "fetchedAt": "2026-07-18T16:30:16.049Z"
+    },
+    {
+      "id": "web-senior-assistance-06c474c8",
+      "title": "Senior Assistance | Support Senior Wellbeing – Get Help Today — The Place",
+      "url": "https://www.theplacega.org/senior-assistance",
+      "fetchedAt": "2026-07-18T16:30:16.542Z"
+    },
+    {
+      "id": "web-calendar-de55b331",
+      "title": "Calendar — The Place",
+      "url": "https://www.theplacega.org/calendar",
+      "fetchedAt": "2026-07-18T16:30:17.047Z"
+    },
+    {
+      "id": "web-thrift-store-0c4ffbf9",
+      "title": "Thrift Store | Support and Save Today - Join Our Community Efforts — The Place",
+      "url": "https://www.theplacega.org/thrift-store",
+      "fetchedAt": "2026-07-18T16:30:17.461Z"
+    },
+    {
+      "id": "web-workforce-development-education-c9cf19b6",
+      "title": "Employment Services and Adult Education | Empower Your Future - Get Started Today — The Place",
+      "url": "https://www.theplacega.org/workforce-development-education",
+      "fetchedAt": "2026-07-18T16:30:17.951Z"
+    },
+    {
+      "id": "web-youth-programs-ac03c0b6",
+      "title": "Youth Programs | Empower Youth Today—Join Us — The Place",
+      "url": "https://www.theplacega.org/youth-programs",
+      "fetchedAt": "2026-07-18T16:30:18.326Z"
+    },
+    {
+      "id": "web-host-a-drive-b0edec6a",
+      "title": "Host A Drive | Support Food Security – Donate Now — The Place",
+      "url": "https://www.theplacega.org/host-a-drive",
+      "fetchedAt": "2026-07-18T16:30:18.705Z"
+    },
+    {
+      "id": "web-calendar-forsyth-county-drive-through-pet-food-supply-pantry-205ae801",
+      "title": "Forsyth County Drive-Through Pet Food & Supply Pantry — The Place",
+      "url": "https://www.theplacega.org/calendar/forsyth-county-drive-through-pet-food-supply-pantry",
+      "fetchedAt": "2026-07-18T16:30:19.274Z"
+    },
+    {
+      "id": "web-calendar-financial-literacy-3-f04e7f47",
+      "title": "Financial Literacy Summer Series — The Place",
+      "url": "https://www.theplacega.org/calendar/financial-literacy-3",
+      "fetchedAt": "2026-07-18T16:30:19.759Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-dawsonville-july-23-2e5a7c65",
+      "title": "Mobile Pantry at Dawson County High School — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23",
+      "fetchedAt": "2026-07-18T16:30:20.244Z"
+    },
+    {
+      "id": "web-calendar-financial-literacy-3-4ej5c-ec692b3b",
+      "title": "Financial Literacy Summer Series — The Place",
+      "url": "https://www.theplacega.org/calendar/financial-literacy-3-4ej5c",
+      "fetchedAt": "2026-07-18T16:30:20.738Z"
+    },
+    {
+      "id": "web-calendar-dine-to-donate-f71a6389",
+      "title": "Dine to Donate — The Place",
+      "url": "https://www.theplacega.org/calendar/dine-to-donate",
+      "fetchedAt": "2026-07-18T16:30:21.218Z"
+    },
+    {
+      "id": "web-calendar-financial-literacy-4-c68a6c7b",
+      "title": "Financial Literacy Summer Series — The Place",
+      "url": "https://www.theplacega.org/calendar/financial-literacy-4",
+      "fetchedAt": "2026-07-18T16:30:21.906Z"
+    },
+    {
+      "id": "web-calendar-mobile-food-pantry-august-38e2502d",
+      "title": "Mobile Food Pantry — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-food-pantry-august",
+      "fetchedAt": "2026-07-18T16:30:22.623Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-august-9b1afcca",
+      "title": "Mobile Pantry at Cumming Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-august",
+      "fetchedAt": "2026-07-18T16:30:23.355Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-chattahoochee-august-72704973",
+      "title": "Mobile Pantry at Chattahoochee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-august",
+      "fetchedAt": "2026-07-18T16:30:24.073Z"
+    },
+    {
+      "id": "web-calendar-financial-literacy-5-685ee50a",
+      "title": "Financial Literacy Summer Series — The Place",
+      "url": "https://www.theplacega.org/calendar/financial-literacy-5",
+      "fetchedAt": "2026-07-18T16:30:24.767Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-chestatee-august-440764ff",
+      "title": "Mobile Pantry at Chestatee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-chestatee-august",
+      "fetchedAt": "2026-07-18T16:30:25.424Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-brandywine-august-5a61d38a",
+      "title": "Mobile Pantry at Brandywine Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-brandywine-august",
+      "fetchedAt": "2026-07-18T16:30:26.139Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-newhope-august-d52e5c4a",
+      "title": "Mobile Pantry at New Hope Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-newhope-august",
+      "fetchedAt": "2026-07-18T16:30:26.631Z"
+    },
+    {
+      "id": "web-calendar-mobile-food-pantry-september-45f5f6db",
+      "title": "Mobile Food Pantry — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-food-pantry-september",
+      "fetchedAt": "2026-07-18T16:30:27.285Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-september-e3b48b10",
+      "title": "Mobile Pantry at Cumming Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-september",
+      "fetchedAt": "2026-07-18T16:30:27.959Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-chattahoochee-september-33c5ece2",
+      "title": "Mobile Pantry at Chattahoochee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-september",
+      "fetchedAt": "2026-07-18T16:30:28.662Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-chestatee-september-920ba97b",
+      "title": "Mobile Pantry at Chestatee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-chestatee-september",
+      "fetchedAt": "2026-07-18T16:30:29.296Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-brandywine-september-832d367f",
+      "title": "Mobile Pantry at Brandywine Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-brandywine-september",
+      "fetchedAt": "2026-07-18T16:30:29.991Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-newhope-september-90b6242c",
+      "title": "Mobile Pantry at New Hope Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-newhope-september",
+      "fetchedAt": "2026-07-18T16:30:30.738Z"
+    },
+    {
+      "id": "web-calendar-mobile-food-pantry-october-cd9ce1d5",
+      "title": "Mobile Food Pantry — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-food-pantry-october",
+      "fetchedAt": "2026-07-18T16:30:31.232Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-october-e1e74464",
+      "title": "Mobile Pantry at Cumming Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-october",
+      "fetchedAt": "2026-07-18T16:30:31.942Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-chattahoochee-october-f5e42c28",
+      "title": "Mobile Pantry at Chattahoochee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-october",
+      "fetchedAt": "2026-07-18T16:30:32.660Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-chestatee-october-7b3934f0",
+      "title": "Mobile Pantry at Chestatee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-chestatee-october",
+      "fetchedAt": "2026-07-18T16:30:33.344Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-brandywine-october-768208c8",
+      "title": "Mobile Pantry at Brandywine Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-brandywine-october",
+      "fetchedAt": "2026-07-18T16:30:33.844Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-newhope-october-f2047113",
+      "title": "Mobile Pantry at New Hope Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-newhope-october",
+      "fetchedAt": "2026-07-18T16:30:34.454Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-chestatee-july-5416bbfd",
+      "title": "Mobile Pantry at Chestatee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-chestatee-july",
+      "fetchedAt": "2026-07-18T16:30:35.200Z"
+    },
+    {
+      "id": "web-calendar-mobile-food-pantry-november-e06ed654",
+      "title": "Mobile Food Pantry — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-food-pantry-november",
+      "fetchedAt": "2026-07-18T16:30:36.000Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-dawsonville-july-16-93433713",
+      "title": "Mobile Pantry at Dawson County High School — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-16",
+      "fetchedAt": "2026-07-18T16:30:36.653Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-november-6f626bb6",
+      "title": "Mobile Pantry at Cumming Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-november",
+      "fetchedAt": "2026-07-18T16:30:37.322Z"
+    },
+    {
+      "id": "web-calendar-farmington-creek-mobile-food-pantry-9cd9d207",
+      "title": "Farmington Creek Mobile Food Pantry — The Place",
+      "url": "https://www.theplacega.org/calendar/farmington-creek-mobile-food-pantry",
+      "fetchedAt": "2026-07-18T16:30:38.060Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-chattahoochee-november-99ec58f2",
+      "title": "Mobile Pantry at Chattahoochee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november",
+      "fetchedAt": "2026-07-18T16:30:38.725Z"
+    },
+    {
+      "id": "web-calendar-financial-literacy-2-7a8bf8c0",
+      "title": "Financial Literacy Summer Series — The Place",
+      "url": "https://www.theplacega.org/calendar/financial-literacy-2",
+      "fetchedAt": "2026-07-18T16:30:39.229Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-chestatee-november-66d2fa91",
+      "title": "Mobile Pantry at Chestatee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-chestatee-november",
+      "fetchedAt": "2026-07-18T16:30:39.895Z"
+    },
+    {
+      "id": "web-calendar-bingo-night-d44da376",
+      "title": "Bingo Night — The Place",
+      "url": "https://www.theplacega.org/calendar/bingo-night",
+      "fetchedAt": "2026-07-18T16:30:40.266Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-brandywine-november-b14c8dd6",
+      "title": "Mobile Pantry at Brandywine Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-brandywine-november",
+      "fetchedAt": "2026-07-18T16:30:40.977Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-chattahoochee-july-173369a5",
+      "title": "Mobile Pantry at Chattahoochee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-july",
+      "fetchedAt": "2026-07-18T16:30:41.690Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-newhope-november-ce172606",
+      "title": "Mobile Pantry at New Hope Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-newhope-november",
+      "fetchedAt": "2026-07-18T16:30:42.384Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-july-f8986bb7",
+      "title": "Mobile Pantry at Cumming Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-july",
+      "fetchedAt": "2026-07-18T16:30:43.113Z"
+    },
+    {
+      "id": "web-calendar-mobile-food-pantry-december-d98dfed8",
+      "title": "Mobile Food Pantry — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-food-pantry-december",
+      "fetchedAt": "2026-07-18T16:30:43.765Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-dawsonville-july-9-de1e890c",
+      "title": "Mobile Pantry at Dawson County High School — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-9",
+      "fetchedAt": "2026-07-18T16:30:44.458Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-november-7k66l-a28b322b",
+      "title": "Mobile Pantry at Cumming Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l",
+      "fetchedAt": "2026-07-18T16:30:44.925Z"
+    },
+    {
+      "id": "web-calendar-financial-literacy-8bbac2e8",
+      "title": "Financial Literacy Summer Series — The Place",
+      "url": "https://www.theplacega.org/calendar/financial-literacy",
+      "fetchedAt": "2026-07-18T16:30:45.591Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-chattahoochee-december-51efc857",
+      "title": "Mobile Pantry at Chattahoochee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december",
+      "fetchedAt": "2026-07-18T16:30:46.330Z"
+    },
+    {
+      "id": "web-calendar-mobile-food-pantry-d68aed49",
+      "title": "Mobile Food Pantry — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-food-pantry",
+      "fetchedAt": "2026-07-18T16:30:46.932Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-chestatee-december-fe31fb5d",
+      "title": "Mobile Pantry at Chestatee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-chestatee-december",
+      "fetchedAt": "2026-07-18T16:30:47.640Z"
+    },
+    {
+      "id": "web-calendar-free-ged-summer-study-hall-4ymr6-ffnty-2rerz-3ykba-34sxc-599m3-37c90276",
+      "title": "Free GED Summer Study Hall — The Place",
+      "url": "https://www.theplacega.org/calendar/free-ged-summer-study-hall-4ymr6-ffnty-2rerz-3ykba-34sxc-599m3",
+      "fetchedAt": "2026-07-18T16:30:48.119Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-brandywine-december-7430eeb8",
+      "title": "Mobile Pantry at Brandywine Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-brandywine-december",
+      "fetchedAt": "2026-07-18T16:30:48.837Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-chestatee-june-c1dbb86a",
+      "title": "Mobile Pantry at Chestatee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-chestatee-june",
+      "fetchedAt": "2026-07-18T16:30:49.510Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-newhope-december-82636496",
+      "title": "Mobile Pantry at New Hope Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-newhope-december",
+      "fetchedAt": "2026-07-18T16:30:50.206Z"
+    },
+    {
+      "id": "web-calendar-free-ged-summer-study-hall-4ymr6-ffnty-2rerz-3ykba-34sxc-b9d90f6f",
+      "title": "Free GED Summer Study Hall — The Place",
+      "url": "https://www.theplacega.org/calendar/free-ged-summer-study-hall-4ymr6-ffnty-2rerz-3ykba-34sxc",
+      "fetchedAt": "2026-07-18T16:30:50.861Z"
+    },
+    {
+      "id": "web-calendar-free-ged-summer-study-hall-4ymr6-ffnty-2rerz-3ykba-a1b95bb3",
+      "title": "Free GED Summer Study Hall — The Place",
+      "url": "https://www.theplacega.org/calendar/free-ged-summer-study-hall-4ymr6-ffnty-2rerz-3ykba",
+      "fetchedAt": "2026-07-18T16:30:51.568Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-chattahoochee-june-97d27028",
+      "title": "Mobile Pantry at Chattahoochee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-june",
+      "fetchedAt": "2026-07-18T16:30:52.386Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-june-beb0e749",
+      "title": "Mobile Pantry at Cumming Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-june",
+      "fetchedAt": "2026-07-18T16:30:53.052Z"
+    },
+    {
+      "id": "web-calendar-free-ged-summer-study-hall-4ymr6-ffnty-2rerz-f0b85f6b",
+      "title": "Free GED Summer Study Hall — The Place",
+      "url": "https://www.theplacega.org/calendar/free-ged-summer-study-hall-4ymr6-ffnty-2rerz",
+      "fetchedAt": "2026-07-18T16:30:53.777Z"
+    },
+    {
+      "id": "web-calendar-free-ged-summer-study-hall-4ymr6-ffnty-13db8497",
+      "title": "Free GED Summer Study Hall — The Place",
+      "url": "https://www.theplacega.org/calendar/free-ged-summer-study-hall-4ymr6-ffnty",
+      "fetchedAt": "2026-07-18T16:30:54.474Z"
+    },
+    {
+      "id": "web-calendar-nonprofit-of-the-night-at-gwinnett-stripers-50eacd44",
+      "title": "Nonprofit of the Night at Gwinnett Stripers — The Place",
+      "url": "https://www.theplacega.org/calendar/nonprofit-of-the-night-at-gwinnett-stripers",
+      "fetchedAt": "2026-07-18T16:30:55.146Z"
+    },
+    {
+      "id": "web-calendar-free-ged-summer-study-hall-4ymr6-3ec1933b",
+      "title": "Free GED Summer Study Hall — The Place",
+      "url": "https://www.theplacega.org/calendar/free-ged-summer-study-hall-4ymr6",
+      "fetchedAt": "2026-07-18T16:30:55.660Z"
+    },
+    {
+      "id": "web-calendar-free-ged-summer-study-hall-5050bf1d",
+      "title": "Free GED Summer Study Hall — The Place",
+      "url": "https://www.theplacega.org/calendar/free-ged-summer-study-hall",
+      "fetchedAt": "2026-07-18T16:30:56.285Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-newhope-may-38b59d84",
+      "title": "Mobile Pantry at New Hope Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-newhope-may",
+      "fetchedAt": "2026-07-18T16:30:57.016Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-brandywine-may-0f65bd4b",
+      "title": "Mobile Pantry at Brandywine Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-brandywine-may",
+      "fetchedAt": "2026-07-18T16:30:57.507Z"
+    },
+    {
+      "id": "web-calendar-brusters-dine-to-donate-eb2a4c6a",
+      "title": "Bruster's Dine to Donate — The Place",
+      "url": "https://www.theplacega.org/calendar/brusters-dine-to-donate",
+      "fetchedAt": "2026-07-18T16:30:58.164Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-farmington-creek-gw5zd-ebedb88e",
+      "title": "Mobile Pantry at Farmington Creek — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-farmington-creek-gw5zd",
+      "fetchedAt": "2026-07-18T16:30:58.918Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-chestatee-may-99587bc1",
+      "title": "Mobile Pantry at Chestatee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-chestatee-may",
+      "fetchedAt": "2026-07-18T16:30:59.644Z"
+    },
+    {
+      "id": "web-calendar-raising-canes-dine-to-donate-5fafcc96",
+      "title": "Raising Cane's Dine to Donate — The Place",
+      "url": "https://www.theplacega.org/calendar/raising-canes-dine-to-donate",
+      "fetchedAt": "2026-07-18T16:31:00.106Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-dawson-head-start-4-a26abec9",
+      "title": "Mobile Pantry at Dawson Head Start — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-dawson-head-start-4",
+      "fetchedAt": "2026-07-18T16:31:00.651Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-chattahoochee-may-510a5cbf",
+      "title": "Mobile Pantry at Chattahoochee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-may",
+      "fetchedAt": "2026-07-18T16:31:01.138Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-may-a6bef5d2",
+      "title": "Mobile Pantry at Cumming Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-may",
+      "fetchedAt": "2026-07-18T16:31:01.622Z"
+    },
+    {
+      "id": "web-calendar-nofo-golf-invitational-543f1136",
+      "title": "NoFo Golf Invitational — The Place",
+      "url": "https://www.theplacega.org/calendar/nofo-golf-invitational",
+      "fetchedAt": "2026-07-18T16:31:02.131Z"
+    },
+    {
+      "id": "web-calendar-down-derby-446fae97",
+      "title": "Down & Derby — The Place",
+      "url": "https://www.theplacega.org/calendar/down-derby",
+      "fetchedAt": "2026-07-18T16:31:02.802Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-dawson-head-start-3-e56dc758",
+      "title": "Mobile Pantry at Dawson Head Start — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-dawson-head-start-3",
+      "fetchedAt": "2026-07-18T16:31:03.546Z"
+    },
+    {
+      "id": "web-calendar-chick-fil-a-dine-to-donate-1d258ee2",
+      "title": "Chick Fil A Dine to Donate — The Place",
+      "url": "https://www.theplacega.org/calendar/chick-fil-a-dine-to-donate",
+      "fetchedAt": "2026-07-18T16:31:04.015Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-newhope-april-3796b2fa",
+      "title": "Mobile Pantry at New Hope Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-newhope-april",
+      "fetchedAt": "2026-07-18T16:31:04.692Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-brandywine-april-37c5a969",
+      "title": "Mobile Pantry at Brandywine Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-brandywine-april",
+      "fetchedAt": "2026-07-18T16:31:05.360Z"
+    },
+    {
+      "id": "web-calendar-aging-well-expo-a6dca280",
+      "title": "Aging Well Expo — The Place",
+      "url": "https://www.theplacega.org/calendar/aging-well-expo",
+      "fetchedAt": "2026-07-18T16:31:06.052Z"
+    },
+    {
+      "id": "web-calendar-poker-night-at-stars-and-strikes-aa0781cd",
+      "title": "Poker Night at Stars and Strikes — The Place",
+      "url": "https://www.theplacega.org/calendar/poker-night-at-stars-and-strikes",
+      "fetchedAt": "2026-07-18T16:31:06.743Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-chestatee-april-8e14a89a",
+      "title": "Mobile Pantry at Chestatee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-chestatee-april",
+      "fetchedAt": "2026-07-18T16:31:07.389Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-dawson-head-start-2-742c68fa",
+      "title": "Mobile Pantry at Dawson Head Start — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-dawson-head-start-2",
+      "fetchedAt": "2026-07-18T16:31:08.080Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-farmington-creek-f955ab49",
+      "title": "Mobile Pantry at Farmington Creek — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-farmington-creek",
+      "fetchedAt": "2026-07-18T16:31:08.735Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-chattahoochee-april-0ac8af0b",
+      "title": "Mobile Pantry at Chattahoochee Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-april",
+      "fetchedAt": "2026-07-18T16:31:09.363Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-forsyth-2c49c3b5",
+      "title": "Mobile Pantry at Cumming Elementary — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth",
+      "fetchedAt": "2026-07-18T16:31:10.033Z"
+    },
+    {
+      "id": "web-calendar-stars-and-strikes-giveback-day-d39c0767",
+      "title": "Stars and Strikes Giveback Day — The Place",
+      "url": "https://www.theplacega.org/calendar/stars-and-strikes-giveback-day",
+      "fetchedAt": "2026-07-18T16:31:10.769Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-professional-development-center-f2eb961f",
+      "title": "Mobile Pantry at Professional Development Center — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-professional-development-center",
+      "fetchedAt": "2026-07-18T16:31:11.383Z"
+    },
+    {
+      "id": "web-calendar-mobile-pantry-dawson-head-start-1-13e8791c",
+      "title": "Mobile Pantry at Dawson Head Start — The Place",
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-dawson-head-start-1",
+      "fetchedAt": "2026-07-18T16:31:12.085Z"
+    }
+  ],
+  "failedPages": [
+    {
+      "url": "https://www.theplacega.org/furniture-pickup-request",
+      "reason": "No meaningful public page content found"
+    }
+  ],
+  "duplicatePages": [],
+  "pendingFaqEntries": [
+    {
+      "id": "furniture-delivery-fees",
+      "question": "What are your delivery fees for furniture?",
+      "status": "pending",
+      "notes": [
+        "No complete staff-approved answer was provided in the source document."
+      ]
+    },
+    {
+      "id": "return-policy",
+      "question": "What is your return policy?",
+      "status": "pending",
+      "notes": [
+        "No complete staff-approved answer was provided in the source document."
+      ]
+    },
+    {
+      "id": "electronics-testing-outlets",
+      "question": "Are there outlets to test electronics?",
+      "status": "pending",
+      "notes": [
+        "No complete staff-approved answer was provided in the source document."
+      ]
+    },
+    {
+      "id": "colored-clothing-barbs",
+      "question": "What do the colored barbs on the clothing mean?",
+      "status": "pending",
+      "notes": [
+        "No complete staff-approved answer was provided in the source document."
+      ]
+    },
+    {
+      "id": "price-negotiation",
+      "question": "Do you negotiate prices?",
+      "status": "pending",
+      "notes": [
+        "No complete staff-approved answer was provided in the source document."
+      ]
+    },
+    {
+      "id": "clothing-exchanges",
+      "question": "Can I exchange my clothing for clothing in the store?",
+      "status": "pending",
+      "notes": [
+        "No complete staff-approved answer was provided in the source document."
+      ]
+    }
+  ],
+  "pendingFaqWebsiteMatches": [],
+  "conflictingInformation": [],
+  "missingLinks": [],
+  "unmappedSourceDocuments": [],
+  "totalDocumentsPrepared": 125,
+  "totalDocumentsUploaded": 125,
+  "uploadFailures": [],
+  "fileSearchStoreName": "fileSearchStores/the-place-grounded-knowledg-3zerv2a5s6wl",
+  "uploadedAt": "2026-07-18T17:11:20.242Z"
+}
