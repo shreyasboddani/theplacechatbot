@@ -127,7 +127,7 @@ describe("safe message rendering", () => {
     expect(link.getAttribute("rel")).toBe("noopener noreferrer");
   });
 
-  it("continues to display staff and official website source cards", () => {
+  it("shows only linked source cards and omits staff text without a URL", () => {
     render(
       <SourceCards
         sources={[
@@ -146,8 +146,8 @@ describe("safe message rendering", () => {
       />,
     );
     expect(
-      screen.getByText("Information provided by The Place staff"),
-    ).toBeDefined();
+      screen.queryByText("Information provided by The Place staff"),
+    ).toBeNull();
     const website = screen.getByRole("link", {
       name: /Food Donations.*View on The Place website/,
     });
