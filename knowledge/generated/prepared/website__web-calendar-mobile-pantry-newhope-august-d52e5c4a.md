@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-newhope-august-d52e5c4a
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-newhope-august
-Fetched at: 2026-07-18T16:30:26.631Z
 
 ## Important headings
 

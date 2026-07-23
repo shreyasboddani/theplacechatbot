@@ -6,7 +6,7 @@ import { resolveFileCitations } from "@/lib/gemini/citations";
 import type { FileCitationAnnotation } from "@/lib/gemini/citations";
 import {
   buildInteractionInput,
-  SYSTEM_INSTRUCTION,
+  buildSystemInstruction,
 } from "@/lib/gemini/prompts";
 import type {
   ChatResponse,
@@ -44,6 +44,7 @@ export interface GroundedInteractionClient {
     tools: Array<{
       type: "file_search";
       file_search_store_names: string[];
+      top_k: number;
     }>;
     response_format: {
       type: "text";
@@ -57,16 +58,18 @@ export function buildGroundedInteractionParams(
   request: ChatRequest,
   model: string,
   fileSearchStore: string,
+  currentDate?: string,
 ) {
   return {
     model,
     input: buildInteractionInput(request),
-    system_instruction: SYSTEM_INSTRUCTION,
+    system_instruction: buildSystemInstruction(currentDate),
     store: false as const,
     tools: [
       {
         type: "file_search" as const,
         file_search_store_names: [fileSearchStore],
+        top_k: 10,
       },
     ],
     response_format: {
@@ -80,7 +83,11 @@ export function buildGroundedInteractionParams(
             type: "string",
             enum: ["answered", "not_found", "conflicting_information"],
           },
-          answer: { type: "string" },
+          answer: {
+            type: "string",
+            minLength: 1,
+            maxLength: MAX_ASSISTANT_ANSWER_LENGTH,
+          },
         },
         required: ["status", "answer"],
       },

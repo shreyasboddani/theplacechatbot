@@ -3,7 +3,7 @@
 Source ID: web-calendar-mobile-food-pantry-august-38e2502d
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-food-pantry-august
-Fetched at: 2026-07-18T16:30:22.623Z
+Fetched at: 2026-07-23T18:36:22.930Z
 
 ## Page content
 

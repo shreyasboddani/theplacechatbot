@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-forsyth-chattahoochee-august-72704973
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-august
-Fetched at: 2026-07-18T16:30:24.073Z
 
 ## Important headings
 

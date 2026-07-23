@@ -3,7 +3,6 @@
 Source ID: web-calendar-free-ged-summer-study-hall-4ymr6-ffnty-13db8497
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/free-ged-summer-study-hall-4ymr6-ffnty
-Fetched at: 2026-07-18T16:30:54.474Z
 
 ## Important headings
 

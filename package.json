@@ -12,8 +12,10 @@
     "knowledge:crawl": "tsx scripts/crawl-website.ts",
     "knowledge:parse-faq": "tsx scripts/parse-manager-faq.ts",
     "knowledge:prepare": "tsx scripts/prepare-knowledge.ts",
+    "knowledge:verify": "tsx scripts/verify-knowledge.ts",
+    "knowledge:refresh": "npm run knowledge:crawl && npm run knowledge:prepare && npm run knowledge:verify",
     "knowledge:sync": "tsx scripts/sync-file-search.ts",
-    "knowledge:all": "npm run knowledge:crawl && npm run knowledge:parse-faq && npm run knowledge:prepare && npm run knowledge:sync",
+    "knowledge:all": "npm run knowledge:crawl && npm run knowledge:parse-faq && npm run knowledge:prepare && npm run knowledge:sync -- --new-store",
     "knowledge:list-stores": "tsx scripts/list-file-search-stores.ts",
     "knowledge:delete-store": "tsx scripts/delete-file-search-store.ts"
   },
@@ -21,7 +23,7 @@
     "@google/genai": "^2.12.0",
     "cheerio": "^1.2.0",
     "mammoth": "^1.12.0",
-    "next": "16.2.10",
+    "next": "16.2.11",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-markdown": "^10.1.0",
@@ -37,11 +39,12 @@
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^6.0.3",
     "eslint": "^9",
-    "eslint-config-next": "16.2.10",
+    "eslint-config-next": "16.2.11",
     "jsdom": "^29.1.1",
     "tailwindcss": "^4",
     "tsx": "^4.23.1",
     "typescript": "^5",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "yaml": "^2.9.0"
   }
 }

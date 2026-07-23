@@ -3,7 +3,6 @@
 Source ID: web-calendar-raising-canes-dine-to-donate-5fafcc96
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/raising-canes-dine-to-donate
-Fetched at: 2026-07-18T16:31:00.106Z
 
 ## Important headings
 

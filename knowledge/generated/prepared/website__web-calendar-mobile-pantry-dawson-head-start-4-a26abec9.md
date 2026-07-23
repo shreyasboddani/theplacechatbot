@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-dawson-head-start-4-a26abec9
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-dawson-head-start-4
-Fetched at: 2026-07-18T16:31:00.651Z
 
 ## Important headings
 

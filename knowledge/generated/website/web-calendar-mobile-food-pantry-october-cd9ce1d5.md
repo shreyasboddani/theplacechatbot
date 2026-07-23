@@ -3,7 +3,7 @@
 Source ID: web-calendar-mobile-food-pantry-october-cd9ce1d5
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-food-pantry-october
-Fetched at: 2026-07-18T16:30:31.232Z
+Fetched at: 2026-07-23T18:36:22.193Z
 
 ## Page content
 

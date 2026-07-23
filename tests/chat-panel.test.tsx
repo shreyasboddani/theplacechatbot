@@ -41,6 +41,12 @@ afterEach(() => {
 });
 
 describe("ChatPanel request pipeline", () => {
+  it("uses approved-information wording without exposing staff-source labels", () => {
+    render(<ChatPanel onMinimize={vi.fn()} onClose={vi.fn()} />);
+    expect(screen.getByText(/approved information from The Place/i)).toBeDefined();
+    expect(screen.queryByText(/staff-provided/i)).toBeNull();
+  });
+
   it("sends a quick action through the normal JSON request pipeline", async () => {
     const fetchMock = vi.fn().mockResolvedValue(
       mockHttpResponse(answered("You can donate food at The Place.")),

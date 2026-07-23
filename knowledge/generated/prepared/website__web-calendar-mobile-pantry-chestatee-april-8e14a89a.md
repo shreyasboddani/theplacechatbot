@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-chestatee-april-8e14a89a
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-chestatee-april
-Fetched at: 2026-07-18T16:31:07.389Z
 
 ## Important headings
 

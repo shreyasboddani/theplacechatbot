@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 import { SendIcon } from "@/components/chatbot/Icons";
 import { MAX_MESSAGE_LENGTH } from "@/lib/chat/limits";
@@ -11,6 +11,14 @@ interface ChatInputProps {
 
 export function ChatInput({ disabled, onSend }: ChatInputProps) {
   const [message, setMessage] = useState("");
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    const input = inputRef.current;
+    if (!input) return;
+    input.style.height = "auto";
+    input.style.height = `${Math.max(32, Math.min(input.scrollHeight, 90))}px`;
+  }, [message]);
 
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -18,6 +26,7 @@ export function ChatInput({ disabled, onSend }: ChatInputProps) {
     if (!messageToSend || disabled) return;
     onSend(messageToSend);
     setMessage("");
+    inputRef.current?.focus();
   }
 
   return (
@@ -26,6 +35,7 @@ export function ChatInput({ disabled, onSend }: ChatInputProps) {
         Ask The Place information assistant
       </label>
       <textarea
+        ref={inputRef}
         id="the-place-chat-input"
         value={message}
         onChange={(event) =>

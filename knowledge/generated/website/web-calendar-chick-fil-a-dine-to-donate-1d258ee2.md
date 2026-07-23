@@ -3,7 +3,7 @@
 Source ID: web-calendar-chick-fil-a-dine-to-donate-1d258ee2
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/chick-fil-a-dine-to-donate
-Fetched at: 2026-07-18T16:31:04.015Z
+Fetched at: 2026-07-23T18:36:50.251Z
 
 ## Page content
 

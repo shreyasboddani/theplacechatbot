@@ -6,6 +6,7 @@ interface RateLimitRecord {
 const records = new Map<string, RateLimitRecord>();
 const WINDOW_MS = 10 * 60 * 1_000;
 const MAX_REQUESTS = 20;
+const MAX_RECORDS = 5_000;
 
 export interface RateLimitResult {
   allowed: boolean;
@@ -13,9 +14,13 @@ export interface RateLimitResult {
 }
 
 export function checkRateLimit(key: string, now = Date.now()): RateLimitResult {
-  if (records.size > 1_000) {
+  if (records.size >= MAX_RECORDS) {
     for (const [recordKey, record] of records) {
       if (record.resetAt <= now) records.delete(recordKey);
+    }
+    if (records.size >= MAX_RECORDS) {
+      const oldestKey = records.keys().next().value;
+      if (typeof oldestKey === "string") records.delete(oldestKey);
     }
   }
 

@@ -3,7 +3,6 @@
 Source ID: web-thrift-store-0c4ffbf9
 Source type: official_website
 Canonical URL: https://www.theplacega.org/thrift-store
-Fetched at: 2026-07-18T16:30:17.461Z
 
 ## Important headings
 

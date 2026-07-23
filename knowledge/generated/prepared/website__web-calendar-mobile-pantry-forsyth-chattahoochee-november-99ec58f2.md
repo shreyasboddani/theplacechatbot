@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-forsyth-chattahoochee-november-99ec58f2
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
-Fetched at: 2026-07-18T16:30:38.725Z
 
 ## Important headings
 

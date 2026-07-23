@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-newhope-april-3796b2fa
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-newhope-april
-Fetched at: 2026-07-18T16:31:04.692Z
 
 ## Important headings
 

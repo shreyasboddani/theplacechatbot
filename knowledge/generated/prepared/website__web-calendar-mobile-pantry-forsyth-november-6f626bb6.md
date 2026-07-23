@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-forsyth-november-6f626bb6
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
-Fetched at: 2026-07-18T16:30:37.322Z
 
 ## Important headings
 

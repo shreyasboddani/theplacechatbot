@@ -3,7 +3,7 @@
 Source ID: web-workforce-development-education-c9cf19b6
 Source type: official_website
 Canonical URL: https://www.theplacega.org/workforce-development-education
-Fetched at: 2026-07-18T16:30:17.951Z
+Fetched at: 2026-07-23T18:36:55.910Z
 
 ## Page content
 

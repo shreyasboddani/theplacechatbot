@@ -3,7 +3,6 @@
 Source ID: web-calendar-brusters-dine-to-donate-eb2a4c6a
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/brusters-dine-to-donate
-Fetched at: 2026-07-18T16:30:58.164Z
 
 ## Important headings
 

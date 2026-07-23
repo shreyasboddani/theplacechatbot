@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-forsyth-october-e1e74464
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-forsyth-october
-Fetched at: 2026-07-18T16:30:31.942Z
 
 ## Important headings
 

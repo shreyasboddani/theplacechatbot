@@ -3,7 +3,7 @@
 Source ID: web-calendar-mobile-food-pantry-september-45f5f6db
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-food-pantry-september
-Fetched at: 2026-07-18T16:30:27.285Z
+Fetched at: 2026-07-23T18:36:22.548Z
 
 ## Page content
 

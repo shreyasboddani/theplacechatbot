@@ -110,6 +110,21 @@ describe("safe message rendering", () => {
     expect(screen.getByText("Unknown site").tagName).toBe("SPAN");
   });
 
+  it("does not load model-generated Markdown images", () => {
+    const { container } = render(
+      <ChatMessage
+        message={{
+          id: "external-image",
+          role: "assistant",
+          includeInHistory: true,
+          content: "![Tracking pixel](https://example.com/pixel.png)",
+        }}
+      />,
+    );
+    expect(container.querySelector("img")).toBeNull();
+    expect(screen.getByText("Tracking pixel").tagName).toBe("SPAN");
+  });
+
   it("allows approved The Place Markdown links safely", () => {
     render(
       <ChatMessage
@@ -154,5 +169,27 @@ describe("safe message rendering", () => {
     expect(website.getAttribute("href")).toBe(
       "https://www.theplacega.org/food-donations",
     );
+  });
+
+  it("deduplicates source cards that resolve to the same official URL", () => {
+    render(
+      <SourceCards
+        sources={[
+          {
+            id: "website-a",
+            title: "Food Donations",
+            url: "https://www.theplacega.org/food-donations",
+            sourceType: "official_website",
+          },
+          {
+            id: "website-b",
+            title: "Duplicate Food Donations",
+            url: "https://www.theplacega.org/food-donations",
+            sourceType: "official_website",
+          },
+        ]}
+      />,
+    );
+    expect(screen.getAllByRole("link")).toHaveLength(1);
   });
 });

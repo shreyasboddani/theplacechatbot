@@ -14,7 +14,7 @@ export const THE_PLACE = {
   },
 } as const;
 
-export const DEFAULT_GEMINI_MODEL = "gemini-3.1-flash-lite";
+export const DEFAULT_GEMINI_MODEL = "gemini-3.5-flash-lite";
 
 export interface RuntimeConfig {
   apiKey?: string;
@@ -30,7 +30,8 @@ export function getRuntimeConfig(): RuntimeConfig {
       process.env.GEMINI_FILE_SEARCH_STORE?.trim() || undefined,
     model: process.env.GEMINI_MODEL?.trim() || DEFAULT_GEMINI_MODEL,
     siteUrl:
-      process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000",
+      process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+      "https://theplacechatbot.vercel.app",
   };
 }
 

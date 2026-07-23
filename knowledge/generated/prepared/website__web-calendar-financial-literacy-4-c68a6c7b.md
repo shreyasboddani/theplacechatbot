@@ -3,7 +3,6 @@
 Source ID: web-calendar-financial-literacy-4-c68a6c7b
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/financial-literacy-4
-Fetched at: 2026-07-18T16:30:21.906Z
 
 ## Important headings
 

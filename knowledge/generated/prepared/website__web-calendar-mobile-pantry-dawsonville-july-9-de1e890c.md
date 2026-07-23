@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-dawsonville-july-9-de1e890c
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-9
-Fetched at: 2026-07-18T16:30:44.458Z
 
 ## Important headings
 

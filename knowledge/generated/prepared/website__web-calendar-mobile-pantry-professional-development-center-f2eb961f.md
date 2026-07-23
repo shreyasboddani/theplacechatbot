@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-professional-development-center-f2eb961f
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-professional-development-center
-Fetched at: 2026-07-18T16:31:11.383Z
 
 ## Important headings
 

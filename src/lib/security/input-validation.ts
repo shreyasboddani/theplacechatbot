@@ -20,10 +20,35 @@ export const historyItemSchema = z.object({
   content: z.string().trim().min(1).max(MAX_HISTORY_CONTENT_LENGTH),
 }).strip();
 
-export const chatRequestSchema = z.object({
-  message: z.string().trim().min(1).max(MAX_MESSAGE_LENGTH),
-  history: z.array(historyItemSchema).max(MAX_HISTORY_ITEMS).default([]),
-}).strip();
+const historySchema = z
+  .array(historyItemSchema)
+  .max(MAX_HISTORY_ITEMS)
+  .superRefine((history, context) => {
+    history.forEach((item, index) => {
+      const expectedRole = index % 2 === 0 ? "user" : "assistant";
+      if (item.role !== expectedRole) {
+        context.addIssue({
+          code: "custom",
+          path: [index, "role"],
+          message: `Expected ${expectedRole} at this conversation position.`,
+        });
+      }
+    });
+    if (history.length % 2 !== 0) {
+      context.addIssue({
+        code: "custom",
+        path: [history.length - 1],
+        message: "Conversation history must contain complete user and assistant turns.",
+      });
+    }
+  });
+
+export const chatRequestSchema = z
+  .object({
+    message: z.string().trim().min(1).max(MAX_MESSAGE_LENGTH),
+    history: historySchema.default([]),
+  })
+  .strip();
 
 export type ChatRequest = z.infer<typeof chatRequestSchema>;
 

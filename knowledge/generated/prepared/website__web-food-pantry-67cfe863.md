@@ -3,7 +3,6 @@
 Source ID: web-food-pantry-67cfe863
 Source type: official_website
 Canonical URL: https://www.theplacega.org/food-pantry
-Fetched at: 2026-07-18T16:30:13.688Z
 
 ## Important headings
 

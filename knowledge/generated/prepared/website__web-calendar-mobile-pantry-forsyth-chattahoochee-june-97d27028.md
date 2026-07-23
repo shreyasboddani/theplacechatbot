@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-forsyth-chattahoochee-june-97d27028
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-june
-Fetched at: 2026-07-18T16:30:52.386Z
 
 ## Important headings
 

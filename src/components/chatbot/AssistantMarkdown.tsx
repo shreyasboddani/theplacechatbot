@@ -29,7 +29,11 @@ export function AssistantMarkdown({ content }: { content: string }) {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         skipHtml
-        components={{ a: SafeMarkdownLink }}
+        components={{
+          a: SafeMarkdownLink,
+          img: ({ alt }) =>
+            alt ? <span className="markdown-image-disabled">{alt}</span> : null,
+        }}
       >
         {content}
       </ReactMarkdown>

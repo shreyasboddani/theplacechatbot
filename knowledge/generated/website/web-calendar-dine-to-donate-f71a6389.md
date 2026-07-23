@@ -3,7 +3,7 @@
 Source ID: web-calendar-dine-to-donate-f71a6389
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/dine-to-donate
-Fetched at: 2026-07-18T16:30:21.218Z
+Fetched at: 2026-07-23T18:36:19.510Z
 
 ## Page content
 

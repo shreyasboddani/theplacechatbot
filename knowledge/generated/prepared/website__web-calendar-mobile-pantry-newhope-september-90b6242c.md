@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-newhope-september-90b6242c
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-newhope-september
-Fetched at: 2026-07-18T16:30:30.738Z
 
 ## Important headings
 

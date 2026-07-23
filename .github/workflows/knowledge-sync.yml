@@ -1,0 +1,85 @@
+name: Reconcile approved Gemini knowledge
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "knowledge/generated/crawl-data.json"
+      - "knowledge/generated/manager-faq.json"
+      - "knowledge/generated/prepared/**"
+      - "knowledge/generated/sources.json"
+      - "src/generated/knowledge-manifest.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: knowledge-production-sync
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: knowledge-production
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_FILE_SEARCH_STORE: ${{ vars.GEMINI_FILE_SEARCH_STORE }}
+      VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+    steps:
+      - name: Check out approved main revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Confirm protected configuration
+        shell: bash
+        run: |
+          test -n "$GEMINI_API_KEY" || { echo "GEMINI_API_KEY is not configured in the knowledge-production environment."; exit 1; }
+          test -n "$GEMINI_FILE_SEARCH_STORE" || { echo "GEMINI_FILE_SEARCH_STORE is not configured in the knowledge-production environment."; exit 1; }
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Verify approved corpus safety
+        run: npm run knowledge:verify
+
+      - name: Run automated tests
+        run: npm test
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Build production application
+        run: npm run build
+
+      - name: Upload changed documents before removing stale copies
+        run: npm run knowledge:sync -- --reconcile --apply
+
+      - name: Preserve synchronization reports
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: knowledge-sync-report-${{ github.run_id }}
+          path: |
+            knowledge/generated/crawl-report.json
+            knowledge/generated/crawl-health.json
+            knowledge/generated/manager-faq-report.json
+            knowledge/generated/sync-report.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Trigger a post-sync Vercel deployment
+        if: env.VERCEL_DEPLOY_HOOK_URL != ''
+        shell: bash
+        run: curl --fail --silent --show-error --request POST "$VERCEL_DEPLOY_HOOK_URL" > /dev/null
+
+      - name: Record manual deployment reminder
+        if: env.VERCEL_DEPLOY_HOOK_URL == ''
+        run: echo "Knowledge is synchronized. Configure VERCEL_DEPLOY_HOOK_URL to automate the final redeploy." >> "$GITHUB_STEP_SUMMARY"

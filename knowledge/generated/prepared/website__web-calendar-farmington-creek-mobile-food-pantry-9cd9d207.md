@@ -3,7 +3,6 @@
 Source ID: web-calendar-farmington-creek-mobile-food-pantry-9cd9d207
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/farmington-creek-mobile-food-pantry
-Fetched at: 2026-07-18T16:30:38.060Z
 
 ## Important headings
 

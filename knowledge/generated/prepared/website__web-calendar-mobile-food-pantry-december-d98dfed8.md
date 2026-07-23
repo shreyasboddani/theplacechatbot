@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-food-pantry-december-d98dfed8
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-food-pantry-december
-Fetched at: 2026-07-18T16:30:43.765Z
 
 ## Important headings
 

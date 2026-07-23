@@ -3,7 +3,7 @@
 Source ID: web-food-donations-60d14ec3
 Source type: official_website
 Canonical URL: https://www.theplacega.org/food-donations
-Fetched at: 2026-07-18T16:30:14.061Z
+Fetched at: 2026-07-23T18:36:15.610Z
 
 ## Page content
 

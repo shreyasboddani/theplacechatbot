@@ -3,7 +3,7 @@
 Source ID: web-calendar-mobile-food-pantry-november-e06ed654
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-food-pantry-november
-Fetched at: 2026-07-18T16:30:36.000Z
+Fetched at: 2026-07-23T18:36:21.806Z
 
 ## Page content
 

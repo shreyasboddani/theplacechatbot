@@ -4,14 +4,15 @@ export const dynamic = "force-dynamic";
 
 export async function GET(): Promise<Response> {
   const config = getRuntimeConfig();
+  const ready = Boolean(config.apiKey && config.fileSearchStore);
   return Response.json(
     {
-      status: "ok",
-      geminiConfigured: Boolean(config.apiKey),
-      fileSearchConfigured: Boolean(config.fileSearchStore),
-      model: config.model,
+      status: ready ? "ok" : "unavailable",
     },
-    { headers: { "Cache-Control": "no-store" } },
+    {
+      status: ready ? 200 : 503,
+      headers: { "Cache-Control": "no-store" },
+    },
   );
 }
 

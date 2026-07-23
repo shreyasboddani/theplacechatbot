@@ -17,6 +17,7 @@ import {
 import { PrivacyNotice } from "@/components/chatbot/PrivacyNotice";
 import { QuickActions } from "@/components/chatbot/QuickActions";
 import type { ChatMessageItem } from "@/components/chatbot/types";
+import { CLIENT_REQUEST_TIMEOUT_MS } from "@/lib/chat/limits";
 import { buildChatRequest } from "@/lib/chat/request";
 import {
   parseChatResponse,
@@ -27,22 +28,29 @@ const WELCOME_MESSAGE: ChatMessageItem = {
   id: "welcome",
   role: "assistant",
   content:
-    "Hi! I can help you find confirmed information from The Place's website and staff-provided answers. What would you like help with?",
+    "Hi! I can help you find approved information from The Place about services, donations, volunteering, and more. What would you like help with?",
   includeInHistory: false,
 };
 
 interface ChatPanelProps {
   embedded?: boolean;
+  active?: boolean;
   onMinimize: () => void;
   onClose: () => void;
 }
 
-export function ChatPanel({ embedded, onMinimize, onClose }: ChatPanelProps) {
+export function ChatPanel({
+  embedded,
+  active = true,
+  onMinimize,
+  onClose,
+}: ChatPanelProps) {
   const [messages, setMessages] = useState<ChatMessageItem[]>([WELCOME_MESSAGE]);
   const [loading, setLoading] = useState(false);
   const scrollerRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const pendingRef = useRef(false);
+  const activeControllerRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     scrollerRef.current?.scrollTo({
@@ -52,8 +60,15 @@ export function ChatPanel({ embedded, onMinimize, onClose }: ChatPanelProps) {
   }, [messages, loading]);
 
   useEffect(() => {
-    panelRef.current?.focus();
-  }, []);
+    if (active) panelRef.current?.focus();
+  }, [active]);
+
+  useEffect(
+    () => () => {
+      activeControllerRef.current?.abort();
+    },
+    [],
+  );
 
   async function sendMessage(message: unknown) {
     if (pendingRef.current) return;
@@ -87,7 +102,11 @@ export function ChatPanel({ embedded, onMinimize, onClose }: ChatPanelProps) {
     setLoading(true);
 
     const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 30_000);
+    activeControllerRef.current = controller;
+    const timeout = window.setTimeout(
+      () => controller.abort(),
+      CLIENT_REQUEST_TIMEOUT_MS,
+    );
     try {
       const httpResponse = await fetch("/api/chat", {
         method: "POST",
@@ -131,7 +150,7 @@ export function ChatPanel({ embedded, onMinimize, onClose }: ChatPanelProps) {
           id: crypto.randomUUID(),
           role: "assistant",
           content:
-            "The information assistant is not available right now. Please contact The Place at 770-887-1098 or use the contact page for help.",
+            "The information assistant is temporarily unavailable. Please try again in a moment. If you still need help, contact The Place at 770-887-1098 or use the contact page.",
           sources: [
             {
               id: "contact-the-place",
@@ -146,6 +165,9 @@ export function ChatPanel({ embedded, onMinimize, onClose }: ChatPanelProps) {
       ]);
     } finally {
       window.clearTimeout(timeout);
+      if (activeControllerRef.current === controller) {
+        activeControllerRef.current = null;
+      }
       pendingRef.current = false;
       setLoading(false);
     }
@@ -205,7 +227,12 @@ export function ChatPanel({ embedded, onMinimize, onClose }: ChatPanelProps) {
         <span>Prototype technology by <strong>LearnAI</strong></span>
       </div>
 
-      <div className="chat-scroll" ref={scrollerRef} aria-live="polite">
+      <div
+        className="chat-scroll"
+        ref={scrollerRef}
+        aria-live="polite"
+        aria-busy={loading}
+      >
         <div className="chat-day-label">Today</div>
         {messages.map((message) => (
           <ChatMessage key={message.id} message={message} />

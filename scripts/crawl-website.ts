@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { mkdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -13,7 +13,9 @@ import type { WebsiteSource } from "../src/lib/knowledge/types";
 
 const USER_AGENT =
   "LearnAI-ThePlaceKnowledgeBot/1.0 (+https://www.theplacega.org; offline knowledge sync)";
-const DEFAULT_MAX_PAGES = 120;
+const DEFAULT_MAX_PAGES = 150;
+const MINIMUM_FULL_CRAWL_PAGES = 50;
+const MAXIMUM_FAILURE_RATIO = 0.25;
 const REQUEST_TIMEOUT_MS = 15_000;
 const REQUEST_DELAY_MS = 300;
 
@@ -45,6 +47,101 @@ interface RobotsRules {
 interface CrawlFailure {
   url: string;
   reason: string;
+}
+
+export interface CrawlReportForHealth {
+  maxPages: number;
+  failedPages: CrawlFailure[];
+  duplicatePages: Array<{ url: string; duplicateOf: string }>;
+  blockedPages: string[];
+  totalIndexed: number;
+}
+
+export function assertSafeCrawlSnapshot(
+  sources: WebsiteSource[],
+  report: CrawlReportForHealth,
+): void {
+  if (report.totalIndexed !== sources.length) {
+    throw new Error("Crawl report count does not match the indexed page count.");
+  }
+  if (
+    report.maxPages >= MINIMUM_FULL_CRAWL_PAGES &&
+    sources.length < MINIMUM_FULL_CRAWL_PAGES
+  ) {
+    throw new Error(
+      `Refusing to replace the last-known-good crawl with only ${sources.length} pages.`,
+    );
+  }
+  const attemptedPages = sources.length + report.failedPages.length;
+  if (
+    attemptedPages > 0 &&
+    report.failedPages.length / attemptedPages > MAXIMUM_FAILURE_RATIO
+  ) {
+    throw new Error(
+      "Refusing to replace the last-known-good crawl because more than 25% of attempted pages failed.",
+    );
+  }
+}
+
+export function crawlHealthSnapshot(report: CrawlReportForHealth) {
+  return {
+    maxPages: report.maxPages,
+    totalIndexed: report.totalIndexed,
+    failedPages: [...report.failedPages].sort((a, b) =>
+      `${a.url}\u0000${a.reason}`.localeCompare(`${b.url}\u0000${b.reason}`),
+    ),
+    duplicatePages: [...report.duplicatePages].sort((a, b) =>
+      `${a.url}\u0000${a.duplicateOf}`.localeCompare(
+        `${b.url}\u0000${b.duplicateOf}`,
+      ),
+    ),
+    blockedPages: [...report.blockedPages].sort(),
+  };
+}
+
+function isWebsiteSource(value: unknown): value is WebsiteSource {
+  if (!value || typeof value !== "object") return false;
+  const source = value as Record<string, unknown>;
+  return (
+    typeof source.id === "string" &&
+    typeof source.title === "string" &&
+    typeof source.canonicalUrl === "string" &&
+    typeof source.fetchedAt === "string" &&
+    typeof source.text === "string" &&
+    Array.isArray(source.headings) &&
+    Array.isArray(source.links) &&
+    source.sourceType === "official_website"
+  );
+}
+
+export function websiteContentFingerprint(source: WebsiteSource): string {
+  return createHash("sha256")
+    .update(
+      JSON.stringify({
+        id: source.id,
+        title: source.title,
+        canonicalUrl: source.canonicalUrl,
+        text: source.text,
+        headings: source.headings,
+        links: source.links,
+        sourceType: source.sourceType,
+      }),
+    )
+    .digest("hex");
+}
+
+export function preserveUnchangedFetchedAt(
+  source: WebsiteSource,
+  previous: WebsiteSource | undefined,
+): WebsiteSource {
+  if (
+    previous &&
+    previous.canonicalUrl === source.canonicalUrl &&
+    websiteContentFingerprint(previous) === websiteContentFingerprint(source)
+  ) {
+    return { ...source, fetchedAt: previous.fetchedAt };
+  }
+  return source;
 }
 
 function sleep(milliseconds: number): Promise<void> {
@@ -287,7 +384,10 @@ function pageMarkdown(source: WebsiteSource): string {
   ].join("\n");
 }
 
-export async function crawlWebsite(maxPages = DEFAULT_MAX_PAGES) {
+export async function crawlWebsite(
+  maxPages = DEFAULT_MAX_PAGES,
+  previousSources: WebsiteSource[] = [],
+) {
   const robotsUrl = `${THE_PLACE.canonicalOrigin}/robots.txt`;
   let robots: RobotsRules = { allows: [], disallows: [], sitemaps: [] };
   try {
@@ -304,12 +404,19 @@ export async function crawlWebsite(maxPages = DEFAULT_MAX_PAGES) {
     `${THE_PLACE.canonicalOrigin}/sitemap_index.xml`,
   ].filter((value, index, values) => values.indexOf(value) === index);
   const sitemapUrls = await discoverSitemapUrls(sitemapSeeds, maxPages * 3);
-  const queue = [...SEED_URLS, ...sitemapUrls]
-    .map(canonicalizeThePlaceUrl)
-    .filter((url): url is string => Boolean(url));
+  const queue = [
+    ...new Set(
+      [...SEED_URLS, ...sitemapUrls]
+        .map(canonicalizeThePlaceUrl)
+        .filter((url): url is string => Boolean(url)),
+    ),
+  ];
   const visited = new Set<string>();
   const queued = new Set(queue);
   const contentHashes = new Map<string, string>();
+  const previousByUrl = new Map(
+    previousSources.map((source) => [source.canonicalUrl, source]),
+  );
   const sources: WebsiteSource[] = [];
   const failedPages: CrawlFailure[] = [];
   const duplicatePages: Array<{ url: string; duplicateOf: string }> = [];
@@ -336,20 +443,24 @@ export async function crawlWebsite(maxPages = DEFAULT_MAX_PAGES) {
         continue;
       }
       const finalUrl = canonicalizeThePlaceUrl(response.url) || current;
-      const source = extractWebsiteSource(
+      const extractedSource = extractWebsiteSource(
         await response.text(),
         finalUrl,
         new Date().toISOString(),
       );
-      if (!source) {
+      if (!extractedSource) {
         failedPages.push({ url: current, reason: "No meaningful public page content found" });
         continue;
       }
+      const source = preserveUnchangedFetchedAt(
+        extractedSource,
+        previousByUrl.get(extractedSource.canonicalUrl),
+      );
 
       const hash = createHash("sha256").update(source.text).digest("hex");
       const duplicateOf = contentHashes.get(hash);
       if (duplicateOf) {
-        duplicatePages.push({ url: source.canonicalUrl, duplicateOf });
+        duplicatePages.push({ url: current, duplicateOf });
       } else {
         contentHashes.set(hash, source.canonicalUrl);
         sources.push(source);
@@ -405,7 +516,25 @@ async function main() {
   const root = process.cwd();
   const outputDir = path.resolve(root, "knowledge/generated");
   const websiteDir = path.join(outputDir, "website");
-  const { sources, report } = await crawlWebsite(maxPages);
+  let previousSources: WebsiteSource[] = [];
+  try {
+    const previousValue: unknown = JSON.parse(
+      await readFile(path.join(outputDir, "crawl-data.json"), "utf8"),
+    );
+    if (Array.isArray(previousValue)) {
+      previousSources = previousValue.filter(isWebsiteSource);
+    }
+  } catch (error: unknown) {
+    if (
+      !(error instanceof Error) ||
+      !("code" in error) ||
+      (error as Error & { code?: string }).code !== "ENOENT"
+    ) {
+      throw error;
+    }
+  }
+  const { sources, report } = await crawlWebsite(maxPages, previousSources);
+  assertSafeCrawlSnapshot(sources, report);
 
   await rm(websiteDir, { recursive: true, force: true });
   await mkdir(websiteDir, { recursive: true });
@@ -427,6 +556,11 @@ async function main() {
     writeFile(
       path.join(outputDir, "crawl-report.json"),
       `${JSON.stringify(report, null, 2)}\n`,
+      "utf8",
+    ),
+    writeFile(
+      path.join(outputDir, "crawl-health.json"),
+      `${JSON.stringify(crawlHealthSnapshot(report), null, 2)}\n`,
       "utf8",
     ),
   ]);

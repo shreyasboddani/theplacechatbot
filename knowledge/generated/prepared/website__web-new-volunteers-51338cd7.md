@@ -3,11 +3,10 @@
 Source ID: web-new-volunteers-51338cd7
 Source type: official_website
 Canonical URL: https://www.theplacega.org/new-volunteers
-Fetched at: 2026-07-18T16:30:15.546Z
 
 ## Important headings
 
-- New Volunteers
+- Become a Volunteer
 - Types of Volunteer Work Available
 - What to Wear and Bring
 - Interested in Group Volunteer Opportunities?
@@ -15,7 +14,7 @@ Fetched at: 2026-07-18T16:30:15.546Z
 
 ## Approved page content
 
-New Volunteers
+Become a Volunteer
 Thank you for sharing your time, talent, and passion with us. Volunteers are essential to our mission of assisting the people of Forsyth and Dawson counties with essential needs and to be self-sustaining.
 We couldn’t do it without you!
 Types of Volunteer Work Available

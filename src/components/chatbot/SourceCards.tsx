@@ -3,11 +3,16 @@ import type { ChatSource } from "@/lib/knowledge/types";
 import { getApprovedWebsiteUrl } from "@/lib/security/source-url";
 
 export function SourceCards({ sources }: { sources: ChatSource[] }) {
-  const linkedSources = sources
-    .map((source) => ({ source, url: getApprovedWebsiteUrl(source.url) }))
-    .filter((entry): entry is { source: ChatSource; url: string } =>
-      Boolean(entry.url),
-    );
+  const linkedSources = Array.from(
+    new Map(
+      sources
+        .map((source) => ({ source, url: getApprovedWebsiteUrl(source.url) }))
+        .filter((entry): entry is { source: ChatSource; url: string } =>
+          Boolean(entry.url),
+        )
+        .map((entry) => [entry.url, entry] as const),
+    ).values(),
+  );
   if (linkedSources.length === 0) return null;
   return (
     <div className="source-list" aria-label="Official sources">
