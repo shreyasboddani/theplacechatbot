@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-brandywine-august-5a61d38a
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-brandywine-august
-Fetched at: 2026-07-18T16:30:26.139Z
 
 ## Important headings
 

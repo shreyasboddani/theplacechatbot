@@ -1,9 +1,11 @@
 import { NextRequest } from "next/server";
 
 import {
+  rateLimitedResponse,
   sensitiveInformationResponse,
   serviceUnavailableResponse,
 } from "@/lib/contact-fallback";
+import { getLocalConversationalResponse } from "@/lib/chat/local-response";
 import { getRuntimeConfig } from "@/lib/config";
 import { askGroundedQuestion } from "@/lib/gemini/chat";
 import { createGroundedInteractionClient } from "@/lib/gemini/client";
@@ -17,6 +19,7 @@ import { checkRateLimit } from "@/lib/security/rate-limit";
 import { containsLikelySensitiveInformation } from "@/lib/security/sensitive-data";
 
 export const runtime = "nodejs";
+export const maxDuration = 60;
 
 const RESPONSE_HEADERS = {
   "Cache-Control": "no-store",
@@ -40,8 +43,12 @@ function invalidRequest(answer: string): ChatResponse {
 }
 
 function clientKey(request: NextRequest): string {
-  const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
-  return forwarded || request.headers.get("x-real-ip") || "anonymous";
+  const forwarded =
+    request.headers.get("x-vercel-forwarded-for") ||
+    request.headers.get("x-forwarded-for") ||
+    request.headers.get("x-real-ip") ||
+    "anonymous";
+  return forwarded.split(",")[0]?.trim().slice(0, 128) || "anonymous";
 }
 
 function safeServiceErrorDetails(value: unknown): Record<string, unknown> {
@@ -67,9 +74,21 @@ export async function POST(request: NextRequest): Promise<Response> {
 
   const rateLimit = checkRateLimit(clientKey(request));
   if (!rateLimit.allowed) {
-    return jsonResponse(serviceUnavailableResponse(), 429, {
+    return jsonResponse(rateLimitedResponse(rateLimit.retryAfterSeconds), 429, {
       "Retry-After": String(rateLimit.retryAfterSeconds),
     });
+  }
+
+  const contentType = request.headers
+    .get("content-type")
+    ?.split(";", 1)[0]
+    ?.trim()
+    .toLowerCase();
+  if (contentType !== "application/json") {
+    return jsonResponse(
+      invalidRequest("The chat request must use application/json."),
+      415,
+    );
   }
 
   let rawBody: string;
@@ -106,6 +125,9 @@ export async function POST(request: NextRequest): Promise<Response> {
     return jsonResponse(sensitiveInformationResponse(), 200);
   }
 
+  const localResponse = getLocalConversationalResponse(validation.data.message);
+  if (localResponse) return jsonResponse(localResponse);
+
   const config = getRuntimeConfig();
   if (!config.apiKey || !config.fileSearchStore) {
     return jsonResponse(serviceUnavailableResponse(), 503);
@@ -123,9 +145,7 @@ export async function POST(request: NextRequest): Promise<Response> {
     );
     return jsonResponse(response);
   } catch (error) {
-    if (process.env.NODE_ENV !== "production") {
-      console.error("Grounded chat service failed", safeServiceErrorDetails(error));
-    }
+    console.error("Grounded chat service failed", safeServiceErrorDetails(error));
     return jsonResponse(serviceUnavailableResponse(), 503);
   }
 }

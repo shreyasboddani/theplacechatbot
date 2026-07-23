@@ -3,7 +3,6 @@
 Source ID: web-calendar-stars-and-strikes-giveback-day-d39c0767
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/stars-and-strikes-giveback-day
-Fetched at: 2026-07-18T16:31:10.769Z
 
 ## Important headings
 

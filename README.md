@@ -37,6 +37,8 @@ docs/                    Manual test checklist
 
 Runtime visitor questions never trigger website crawling. The chat route calls Gemini's current Interactions API with exactly one tool: the configured File Search store. It uses `store: false`, requests a constrained JSON result, and separately maps File Search annotations to the checked-in source manifest. An `answered` response is released only when at least one citation maps to an approved source.
 
+Standalone greetings, thanks, and questions about what the assistant can do are answered locally with a validated official website source. They do not consume a Gemini request. Organization-specific questions still use the grounded File Search path.
+
 ## Requirements
 
 - Node.js 20 or newer (the official `@google/genai` SDK requires Node 20+)
@@ -81,24 +83,24 @@ No database, authentication provider, Redis service, or paid third-party depende
 ```dotenv
 GEMINI_API_KEY=
 GEMINI_FILE_SEARCH_STORE=
-GEMINI_MODEL=gemini-3.1-flash-lite
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
+GEMINI_MODEL=gemini-3.5-flash-lite
+NEXT_PUBLIC_SITE_URL=https://theplacechatbot.vercel.app
 ```
 
 | Variable | Purpose |
 | --- | --- |
 | `GEMINI_API_KEY` | Server-only Gemini Developer API credential. Never prefix it with `NEXT_PUBLIC_`. |
 | `GEMINI_FILE_SEARCH_STORE` | Resource name printed by the sync command, such as `fileSearchStores/...`. |
-| `GEMINI_MODEL` | Central model configuration. Defaults to stable `gemini-3.1-flash-lite`. |
+| `GEMINI_MODEL` | Central model configuration. Defaults to stable `gemini-3.5-flash-lite`. |
 | `NEXT_PUBLIC_SITE_URL` | Public deployment origin used in documentation/integration context. It contains no secret. |
 
-The application still renders without Gemini configuration. `/api/chat` returns a non-technical service-unavailable response with The Place's official contact path, and `/api/health` reports which configuration is missing.
+The application still renders without Gemini configuration. `/api/chat` returns a non-technical service-unavailable response with The Place's official contact path. `/api/health` returns only `ok` or `unavailable`; it does not disclose the model or which credential is missing.
 
 ### Gemini model selection
 
-The chatbot uses the stable [`gemini-3.1-flash-lite`](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite) model by default. It is designed for low-latency, cost-efficient, high-volume workloads and supports the File Search and structured-output features required by this chatbot. The retired `gemini-3.1-flash-lite-preview` alias must not be used.
+The chatbot uses the stable [`gemini-3.5-flash-lite`](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) model by default. Google lists it as a production-ready, low-latency, cost-efficient model with File Search and structured-output support. The request leaves its thinking level at the model's `minimal` default for lower token use and does not send deprecated sampling parameters.
 
-Flash-Lite lowers model cost compared with larger Gemini models, but changing models does not by itself reduce the number of input tokens in a request or guarantee additional free-tier quota. Prompt size is bounded separately by sending only the six most recent valid conversation messages. Google can change model and free-tier limits, so review the current [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) before production use. Changing the runtime model does not require recreating the File Search store or uploading the knowledge corpus again.
+Prompt size is bounded by sending only the six most recent valid conversation messages. Google can change model and free-tier limits, so review the current [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) before production use. Changing the runtime model does not require recreating the File Search store or uploading the knowledge corpus again.
 
 ## Knowledge synchronization
 
@@ -130,7 +132,7 @@ Only `approved` entries can become prepared File Search documents.
 npm run knowledge:crawl
 ```
 
-The default cap is 120 pages and the hard cap is 150. A smaller review crawl can be run with:
+The default and hard cap are 150 pages, leaving room for the current public site to grow while keeping every refresh bounded. A smaller review crawl can be run with:
 
 ```bash
 npm run knowledge:crawl -- --max-pages=25
@@ -152,21 +154,43 @@ This generates one Markdown document per approved source under `knowledge/genera
 
 Review the pending entries, potential website matches, conflicts, missing links, and crawl failures before uploading.
 
-### 4. Create/reuse and upload to File Search
+Validate the complete prepared snapshot before any upload:
+
+```bash
+npm run knowledge:verify
+```
+
+The verifier fails closed on manifest drift, unsafe paths, duplicate IDs or URLs, pending FAQ leakage, fabricated staff URLs, excessive crawl failures, suspicious instruction-like content, and unexpected corpus size changes.
+
+### 4. Upload or reconcile File Search
 
 After setting `GEMINI_API_KEY` in `.env.local`:
 
 ```bash
-npm run knowledge:sync
+npm run knowledge:sync -- --new-store
 ```
 
-If `GEMINI_FILE_SEARCH_STORE` is present, the script reuses that store. Otherwise it creates a timestamped store. Each prepared document is uploaded with source ID, source type, title, priority, canonical URL, and fetch timestamp metadata where applicable. The script waits for every indexing operation and finally prints:
+This explicitly creates a timestamped store and uploads every prepared document. Each document receives source metadata plus a SHA-256 content fingerprint. The script waits for indexing and finally prints:
 
 ```text
 GEMINI_FILE_SEARCH_STORE=fileSearchStores/...
 ```
 
 Copy that full value into `.env.local`. The raw API key is never logged. Existing stores are never deleted automatically.
+
+For routine updates to an existing managed store, preview the reconciliation first:
+
+```bash
+npm run knowledge:sync -- --reconcile
+```
+
+After reviewing the counts, apply it:
+
+```bash
+npm run knowledge:sync -- --reconcile --apply
+```
+
+Reconciliation skips unchanged hashes, uploads replacements before deleting stale copies, removes obsolete managed documents only after every upload succeeds, and aborts without mutation if unmanaged documents are present. A store created before content fingerprints were added will reindex its managed documents once; later refreshes upload only changes.
 
 Run the complete pipeline after the key is available:
 
@@ -189,6 +213,21 @@ npm run knowledge:delete-store -- fileSearchStores/EXACT_STORE_NAME --confirm
 ```
 
 Deletion is permanent, requires both an exact resource name and `--confirm`, and is never part of an automatic refresh.
+
+## Automatic website refresh
+
+The repository includes a review-gated automation system:
+
+- `Detect website knowledge updates` runs daily at 09:17 UTC, on demand, or from the `the-place-website-updated` repository-dispatch event.
+- The detection workflow has no Gemini or Vercel secrets. It crawls only public `theplacega.org` pages and opens or updates `automation/knowledge-refresh` when meaningful content or crawl health changes.
+- CI verifies the corpus, tests, lint, types, and production build on the generated pull request.
+- Merging an approved knowledge change triggers `Reconcile approved Gemini knowledge` on trusted `main` code.
+- The sync job uses the protected `knowledge-production` GitHub environment, reconciles changed documents, retains reports for 30 days, and optionally invokes a Vercel Deploy Hook after success.
+- The website crawler never parses or approves staff FAQ entries. Staff FAQ changes still require their normal human review and committed approval status.
+
+`crawl-report.json` keeps the detailed timestamped audit record. Its deterministic `crawl-health.json` companion records failures, duplicates, blocked pages, and page counts without creating a pull request merely because a scheduled run has a new timestamp. An unhealthy full crawl is rejected before it can replace the last-known-good files, and crawl timestamps are omitted from retrieval document text to prevent unnecessary File Search re-indexing.
+
+See [Knowledge automation setup and operations](docs/knowledge-automation.md) for the one-time GitHub/Vercel configuration, review checklist, failure behavior, and rollback process.
 
 ## Run locally
 
@@ -231,7 +270,7 @@ Automated tests mock or interpret Gemini-shaped responses and do not consume API
 
 1. Start the app with all three Gemini variables configured.
 2. Open `/` and launch **Ask The Place**.
-3. Send a supported question and confirm a website or staff source card appears.
+3. Send a supported question and confirm approved website source cards appear when the answer cites a public page. Staff-only evidence remains hidden rather than being presented as a website link.
 4. Send an unresolved policy question and confirm the contact fallback appears.
 5. Remove `GEMINI_FILE_SEARCH_STORE`, restart, and confirm the page remains usable while chat shows the service-unavailable contact path.
 6. Test keyboard navigation, Escape-to-minimize, restart, narrow mobile width, and reduced-motion mode.
@@ -240,7 +279,7 @@ Automated tests mock or interpret Gemini-shaped responses and do not consume API
 
 ```html
 <iframe
-  src="https://YOUR-DEPLOYMENT.vercel.app/embed?theme=light&launcher=hidden"
+  src="https://theplacechatbot.vercel.app/embed?theme=light&launcher=hidden"
   title="The Place information assistant"
   style="width: 390px; height: 650px; border: 0;"
   loading="lazy">
@@ -256,16 +295,16 @@ Add this before the host page's closing `</body>` tag or through its approved sc
 ```html
 <script
   async
-  src="https://YOUR-DEPLOYMENT.vercel.app/widget-loader.js"
-  data-chatbot-url="https://YOUR-DEPLOYMENT.vercel.app/embed"
+  src="https://theplacechatbot.vercel.app/widget-loader.js"
+  data-chatbot-url="https://theplacechatbot.vercel.app/embed"
   data-position="bottom-right"
   data-label="Ask The Place">
 </script>
 ```
 
-The loader has no dependencies, uses a Shadow DOM boundary when available, validates the iframe URL, requires HTTPS outside localhost, and constrains position/theme values. It does not assume React, Next.js, WordPress, Squarespace, or another host framework.
+The loader has no dependencies, uses a Shadow DOM boundary when available, locks the iframe to the loader's own HTTPS origin, and constrains position/theme values. It does not assume React, Next.js, WordPress, Squarespace, or another host framework.
 
-## Deploy to Vercel (not performed yet)
+## Deploy to Vercel
 
 The current official Vercel workflow is documented at [Deploying a project from the CLI](https://vercel.com/docs/projects/deploy-from-cli) and [Managing environment variables](https://vercel.com/docs/environment-variables/managing-environment-variables).
 
@@ -295,18 +334,20 @@ The current official Vercel workflow is documented at [Deploying a project from 
    vercel env add NEXT_PUBLIC_SITE_URL production
    ```
 
+   Enter `gemini-3.5-flash-lite` for `GEMINI_MODEL`. If that variable already exists in Vercel, edit its Preview and Production values in Project Settings instead of creating duplicates.
+
 4. Create a preview deployment:
 
    ```bash
    vercel deploy
    ```
 
-5. Set `NEXT_PUBLIC_SITE_URL` to the intended stable deployment origin if it changed, then redeploy. Vercel environment-variable changes apply only to new deployments.
+5. Set `NEXT_PUBLIC_SITE_URL` to the intended stable deployment origin if it changed, then redeploy. Vercel environment-variable changes—including `GEMINI_MODEL`—apply only to new deployments.
 
 6. Verify the preview:
 
    ```bash
-   curl https://YOUR-PREVIEW-URL.vercel.app/api/health
+   curl https://theplacechatbot.vercel.app/api/health
    ```
 
 7. Only after stakeholder review, create production:
@@ -319,19 +360,26 @@ The current official Vercel workflow is documented at [Deploying a project from 
 
 ## Refreshing website information
 
-For a clean review cycle:
+The normal production path is the automated review PR described above. For a manual local review cycle:
 
 ```bash
 npm run knowledge:crawl
-npm run knowledge:parse-faq
 npm run knowledge:prepare
+npm run knowledge:verify
 ```
 
-Inspect `sync-report.json` and the approved/pending FAQ Markdown files. Then either create a new store by leaving `GEMINI_FILE_SEARCH_STORE` empty during `knowledge:sync`, or intentionally reuse the configured store. Point the application at the resulting store and redeploy. Keep the previous store until the new deployment passes review; delete it manually later.
+This intentionally does not reparse or alter staff FAQ approval. Inspect `crawl-report.json`, `sync-report.json`, and the generated diff. Preview and apply the existing-store reconciliation with:
+
+```bash
+npm run knowledge:sync -- --reconcile
+npm run knowledge:sync -- --reconcile --apply
+```
+
+Use `--new-store` only for initial setup, ownership transfer, or an intentional blue/green rebuild. Reusing a store without `--reconcile` is rejected so duplicate documents cannot accumulate accidentally.
 
 ## Current synchronization result
 
-The latest local preparation pass indexed 98 public website pages and 27 approved staff FAQ entries, producing 125 prepared documents. One route (`/furniture-pickup-request`) returned no meaningful public page content and is listed as a crawl failure. No duplicate pages or source conflicts were detected in this pass.
+The latest local preparation pass indexed 117 public website pages and 27 approved staff FAQ entries, producing 144 prepared documents. Five routes (`/matching-gifts`, `/gala-recap`, `/furniture-pickup-request`, `/faroi`, and `/upcoming-events`) returned no meaningful public page content and are listed as crawl failures. `/home` duplicates the canonical homepage and is not uploaded twice. No source conflicts were detected in this pass.
 
 The following staff questions remain pending and are excluded from the approved FAQ corpus:
 
@@ -350,9 +398,10 @@ Targeted searches of the crawled official corpus found no direct official answer
 2. Greg (or the designated hosting administrator) configures that key in The Place's Vercel project.
 3. Run the knowledge crawl, FAQ parse, preparation, and File Search sync using The Place's key/project.
 4. Copy the newly printed `GEMINI_FILE_SEARCH_STORE` into the hosting environment.
-5. Redeploy and complete the manual checklist.
-6. Remove LearnAI's key from the hosting environment.
-7. After confirming the new deployment, manually delete the obsolete LearnAI File Search store if appropriate.
+5. Configure the protected GitHub `knowledge-production` environment and optional Vercel Deploy Hook as documented in `docs/knowledge-automation.md`.
+6. Redeploy and complete the manual checklist.
+7. Remove LearnAI's key from the hosting environment.
+8. After confirming the new deployment, manually delete the obsolete LearnAI File Search store if appropriate.
 
 File Search stores belong to the Gemini project that created them; changing only the key is not enough. The corpus must be synchronized under the new project.
 
@@ -365,19 +414,22 @@ File Search stores belong to the Gemini project that created them; changing only
 - React renders answer text directly; raw HTML and `dangerouslySetInnerHTML` are not used for model output.
 - Website source URLs are limited to HTTPS `theplacega.org` hosts and must exist in the generated manifest.
 - Request size, message length, history length, timeout, and response shape are bounded.
+- The API requires `application/json`, model-generated images are not loaded, the widget iframe is same-origin with its loader, and response security headers limit framing to The Place domains.
+- Production provider failures log only error type/status/code metadata, never visitor message text.
 - The in-memory rate limiter is best-effort only. Serverless instances do not share its state, so production should use a durable distributed limiter if abuse risk warrants it.
 - No browser analytics or transcript persistence is included by default.
 
 ## Prototype limitations and production hardening
 
 - File Search quality depends on the latest successful offline sync and staff review.
+- Public-site updates are detected automatically, but a human review gate intentionally prevents silent ingestion of compromised, malformed, or misleading website content.
 - The crawler uses practical main-content extraction; every refresh report should be reviewed for missing, duplicated, or layout-heavy pages.
 - Semantic retrieval can miss relevant wording. The citation gate favors a safe fallback over an unsupported answer.
 - The app does not authenticate visitors or connect to The Place's internal systems.
 - In-memory rate limiting is not a strong production control.
-- Before production, add a distributed rate limiter, a formal content-review workflow, uptime/error monitoring that excludes message text, accessibility testing with assistive technologies, security headers appropriate to the final embedding domains, retention/legal review, and a documented incident/rollback procedure.
+- Before broad public promotion, configure a Vercel Firewall rate-limit rule for `POST /api/chat`, plus a formal content-review workflow, uptime/error monitoring that excludes message text, accessibility testing with assistive technologies, retention/legal review, and a documented incident/rollback procedure.
 - Review Gemini and Vercel quotas, billing, and data-processing terms for The Place's expected traffic. Free-tier availability and limits can change.
-- `npm audit` currently reports two moderate findings for one transitive advisory: Next.js 16.2.10 pins PostCSS 8.4.31 below the advisory's fixed version. npm offers only a breaking/incorrect Next.js downgrade, and a local override leaves npm's dependency tree invalid, so no unsafe forced fix is applied. Monitor the next stable Next.js release and update promptly when it carries the fixed PostCSS dependency.
+- Next.js is pinned to the current 16.2 Active LTS security release. `npm audit` still reports transitive PostCSS and Sharp/libvips advisories inside Next.js. This app accepts neither user-provided CSS nor image uploads, has no remote image domains, and disables runtime image optimization for its trusted local logos. npm's forced fix proposes an unsafe Next.js downgrade, so it is not used; monitor the next stable Next.js release that updates those nested packages.
 
 ## Packages added
 
@@ -392,5 +444,6 @@ Development:
 
 - `tsx` — TypeScript execution for offline scripts
 - `vitest` — unit and API-behavior tests
+- `yaml` — local validation of GitHub workflow configuration
 
 No deprecated Gemini SDK or legacy model name is used.

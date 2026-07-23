@@ -3,6 +3,7 @@ import type {
   ChatSource,
   ChatStatus,
 } from "@/lib/knowledge/types";
+import { MAX_ASSISTANT_ANSWER_LENGTH } from "@/lib/chat/limits";
 
 export const CHAT_STATUSES = [
   "answered",
@@ -44,6 +45,8 @@ export function parseChatResponse(value: unknown): ChatResponse | undefined {
   const record = value as Record<string, unknown>;
   if (
     typeof record.answer !== "string" ||
+    record.answer.trim().length === 0 ||
+    record.answer.length > MAX_ASSISTANT_ANSWER_LENGTH ||
     !isChatStatus(record.status) ||
     !Array.isArray(record.sources) ||
     typeof record.contactRecommended !== "boolean"

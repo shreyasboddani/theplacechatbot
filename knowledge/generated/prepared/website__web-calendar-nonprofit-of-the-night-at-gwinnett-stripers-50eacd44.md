@@ -3,7 +3,6 @@
 Source ID: web-calendar-nonprofit-of-the-night-at-gwinnett-stripers-50eacd44
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/nonprofit-of-the-night-at-gwinnett-stripers
-Fetched at: 2026-07-18T16:30:55.146Z
 
 ## Important headings
 

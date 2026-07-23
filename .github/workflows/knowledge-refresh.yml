@@ -1,0 +1,97 @@
+name: Detect website knowledge updates
+
+on:
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - the-place-website-updated
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: knowledge-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Crawl, prepare, and verify public website content
+        run: npm run knowledge:refresh
+
+      - name: Detect meaningful corpus changes
+        id: changes
+        shell: bash
+        run: |
+          if [[ -n "$(git status --porcelain -- \
+            knowledge/generated/crawl-data.json \
+            knowledge/generated/crawl-health.json \
+            knowledge/generated/website \
+            knowledge/generated/prepared \
+            knowledge/generated/sources.json \
+            src/generated/knowledge-manifest.json)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No public knowledge changes were detected." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Test knowledge automation before opening a PR
+        if: steps.changes.outputs.changed == 'true'
+        run: npm test -- tests/knowledge-automation.test.ts tests/faq-parser.test.ts tests/widget-and-crawler.test.ts
+
+      - name: Commit refreshed generated knowledge
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        env:
+          REFRESH_BRANCH: automation/knowledge-refresh
+        run: |
+          git config user.name "the-place-knowledge-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$REFRESH_BRANCH"
+          git add -A knowledge/generated src/generated/knowledge-manifest.json
+          git commit -m "Refresh The Place website knowledge"
+          git fetch origin "+refs/heads/$REFRESH_BRANCH:refs/remotes/origin/$REFRESH_BRANCH" || true
+          git push --force-with-lease origin "HEAD:refs/heads/$REFRESH_BRANCH"
+
+      - name: Open or update the review PR
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REFRESH_BRANCH: automation/knowledge-refresh
+        run: |
+          pr_number="$(gh pr list --state open --head "$REFRESH_BRANCH" --json number --jq '.[0].number')"
+          pr_body=$'This automated PR contains newly crawled public content from The Place website.\n\nReview before merging:\n- Inspect crawl failures and removed pages.\n- Confirm changed dates, hours, contacts, and eligibility details on the linked official pages.\n- Confirm no instruction-like or irrelevant content entered the prepared corpus.\n- Staff FAQ approval files are not changed by this workflow.\n\nAfter merge, the protected knowledge sync workflow validates the repository again, reconciles changed Gemini documents, and can trigger a Vercel redeploy.'
+          if [[ -z "$pr_number" ]]; then
+            gh pr create \
+              --base main \
+              --head "$REFRESH_BRANCH" \
+              --title "Refresh The Place website knowledge" \
+              --body "$pr_body"
+          else
+            gh pr edit "$pr_number" \
+              --title "Refresh The Place website knowledge" \
+              --body "$pr_body"
+          fi
+          echo "A review PR was opened or updated for the refreshed corpus." >> "$GITHUB_STEP_SUMMARY"

@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-chestatee-july-5416bbfd
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-chestatee-july
-Fetched at: 2026-07-18T16:30:35.200Z
 
 ## Important headings
 

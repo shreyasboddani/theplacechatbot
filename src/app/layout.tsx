@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "The Place Information Assistant",
   description:
-    "A grounded information assistant prototype using The Place's approved website and staff-provided information.",
+    "A grounded information assistant prototype using approved information from The Place.",
 };
 
 export default function RootLayout({

@@ -3,7 +3,7 @@
 Source ID: web-calendar-mobile-pantry-newhope-november-ce172606
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
-Fetched at: 2026-07-18T16:30:42.384Z
+Fetched at: 2026-07-23T18:36:31.421Z
 
 ## Page content
 

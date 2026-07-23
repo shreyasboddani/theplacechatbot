@@ -33,7 +33,19 @@ export function serviceUnavailableResponse(): ChatResponse {
   return {
     status: "service_unavailable",
     answer:
-      `The information assistant is not available right now. Please contact The Place at ${THE_PLACE.contact.phone} or use their contact page for help.`,
+      `The information assistant is temporarily unavailable. Please try again in a moment. If you still need help, contact The Place at ${THE_PLACE.contact.phone} or use their contact page.`,
+    sources: [CONTACT_SOURCE],
+    contactRecommended: true,
+  };
+}
+
+export function rateLimitedResponse(retryAfterSeconds: number): ChatResponse {
+  const minutes = Math.max(1, Math.ceil(retryAfterSeconds / 60));
+  return {
+    status: "service_unavailable",
+    answer:
+      `You've reached the chat's temporary request limit. Please wait about ${minutes} ${minutes === 1 ? "minute" : "minutes"} and try again. ` +
+      `If you need help now, contact The Place at ${THE_PLACE.contact.phone} or use their contact page.`,
     sources: [CONTACT_SOURCE],
     contactRecommended: true,
   };

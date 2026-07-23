@@ -3,7 +3,6 @@
 Source ID: web-calendar-bingo-night-d44da376
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/bingo-night
-Fetched at: 2026-07-18T16:30:40.266Z
 
 ## Important headings
 

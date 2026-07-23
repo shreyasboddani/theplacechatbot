@@ -1,5 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
+import { GEMINI_REQUEST_TIMEOUT_MS } from "@/lib/chat/limits";
 import type {
   GroundedInteraction,
   GroundedInteractionClient,
@@ -76,8 +77,8 @@ export function createGroundedInteractionClient(
   return {
     async create(params) {
       const interaction = await ai.interactions.create(params, {
-        timeout: 25_000,
-        maxRetries: 1,
+        timeout: GEMINI_REQUEST_TIMEOUT_MS,
+        maxRetries: 0,
       });
       return normalizeInteraction(interaction);
     },

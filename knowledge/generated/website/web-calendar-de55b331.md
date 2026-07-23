@@ -3,27 +3,11 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-07-18T16:30:17.047Z
+Fetched at: 2026-07-23T18:36:18.328Z
 
 ## Page content
 
 Upcoming Events
-Forsyth County Drive-Through Pet Food & Supply Pantry
-Sunday, July 19, 2026
-9:00 AM
-11:00 AM
-2300 Keith Bridge Road
-Cumming, Georgia, 30040
-United States
-(map)
-Google Calendar
-ICS
-Financial Literacy Summer Series
-Tuesday, July 21, 2026
-6:00 PM
-7:30 PM
-Google Calendar
-ICS
 Mobile Pantry at Dawson County High School
 Thursday, July 23, 2026
 11:30 AM
@@ -311,6 +295,22 @@ New Hope Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Financial Literacy Summer Series
+Tuesday, July 21, 2026
+6:00 PM
+7:30 PM
+Google Calendar
+ICS
+Forsyth County Drive-Through Pet Food & Supply Pantry
+Sunday, July 19, 2026
+9:00 AM
+11:00 AM
+2300 Keith Bridge Road
+Cumming, Georgia, 30040
+United States
+(map)
+Google Calendar
+ICS
 Mobile Pantry at Chestatee Elementary
 Saturday, July 18, 2026
 10:00 AM
@@ -523,35 +523,9 @@ United States
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Mobile Pantry at Chattahoochee Elementary
-Saturday, May 9, 2026
-11:30 AM
-12:30 PM
-Chattahoochee Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Mobile Pantry at Cumming Elementary
-Saturday, May 9, 2026
-10:00 AM
-11:00 AM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 
 ## Relevant links
 
-- https://www.theplacega.org/calendar/forsyth-county-drive-through-pet-food-supply-pantry: https://www.theplacega.org/calendar/forsyth-county-drive-through-pet-food-supply-pantry
-- Forsyth County Drive-Through Pet Food & Supply Pantry: https://www.theplacega.org/calendar/forsyth-county-drive-through-pet-food-supply-pantry
-- ICS: https://www.theplacega.org/calendar/forsyth-county-drive-through-pet-food-supply-pantry
-- View Event →: https://www.theplacega.org/calendar/forsyth-county-drive-through-pet-food-supply-pantry
-- https://www.theplacega.org/calendar/financial-literacy-3: https://www.theplacega.org/calendar/financial-literacy-3
-- Financial Literacy Summer Series: https://www.theplacega.org/calendar/financial-literacy-3
-- ICS: https://www.theplacega.org/calendar/financial-literacy-3
-- View Event →: https://www.theplacega.org/calendar/financial-literacy-3
 - https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23: https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23
 - Mobile Pantry at Dawson County High School: https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23
@@ -644,3 +618,11 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-october
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-october
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-newhope-october
+- https://www.theplacega.org/calendar/mobile-food-pantry-november: https://www.theplacega.org/calendar/mobile-food-pantry-november
+- Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-november
+- ICS: https://www.theplacega.org/calendar/mobile-food-pantry-november
+- View Event →: https://www.theplacega.org/calendar/mobile-food-pantry-november
+- https://www.theplacega.org/calendar/mobile-pantry-forsyth-november: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
+- Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november

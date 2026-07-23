@@ -3,7 +3,6 @@
 Source ID: web-contact-us-eac5f990
 Source type: official_website
 Canonical URL: https://www.theplacega.org/contact-us
-Fetched at: 2026-07-18T16:30:13.290Z
 
 ## Important headings
 

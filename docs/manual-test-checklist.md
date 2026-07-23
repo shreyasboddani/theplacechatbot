@@ -26,10 +26,16 @@ For each supported answer:
 - [ ] The answer is concise and does not introduce an unsupported organization-specific fact.
 - [ ] At least one source card appears.
 - [ ] Website source links open only on `https://theplacega.org` or `https://www.theplacega.org`.
-- [ ] Staff answers are labeled “Information provided by The Place staff” and have no fabricated public URL.
+- [ ] Staff-only evidence is not shown as a source card, and no public URL is fabricated for it.
 - [ ] Forsyth and Dawson routing remains distinct where the source distinguishes them.
 
 ## Conversational follow-ups
+
+- [ ] Ask "Hello" and confirm a friendly response appears instead of a contact fallback.
+- [ ] Ask "What questions can you answer?" and confirm the assistant briefly explains its supported areas.
+- [ ] Ask "Who can I contact for thiftstore donations?" and confirm the obvious misspelling still retrieves the thrift-store contact.
+- [ ] Ask "Who can I contact for donations?", then "Prohibited items" and confirm the second message retains the donation context.
+- [ ] Ask "What events are upcoming for The Place?" and confirm only retrieved events on or after the current Georgia date are summarized.
 
 - [ ] Ask “I need food.”, then “What about Dawson County?” without restating the food topic.
 - [ ] Ask about an unanswered assistance application, then “Who should I contact?”.
@@ -115,3 +121,18 @@ Confirm that sensitive content is not echoed back and is not visible in server l
 - [ ] An upstream timeout produces a non-technical service-unavailable response.
 - [ ] Oversized requests and invalid JSON receive safe errors without stack traces.
 - [ ] Repeated requests eventually receive HTTP 429 from a single local instance.
+
+## Knowledge automation
+
+- [ ] `npm run knowledge:verify` passes before synchronization.
+- [ ] An unchanged public-page recrawl does not open a noisy knowledge PR.
+- [ ] A changed page opens or updates `automation/knowledge-refresh` without using Gemini secrets.
+- [ ] The refresh PR changes only generated knowledge and the runtime manifest.
+- [ ] Staff FAQ approval files are not altered by the public-site crawler.
+- [ ] CI passes before the refresh PR is merged.
+- [ ] The production sync waits for the `knowledge-production` environment review when protection is enabled.
+- [ ] Reconciliation uploads changed documents before removing stale copies.
+- [ ] A failed upload preserves every pre-existing document.
+- [ ] Unmanaged remote documents cause a fail-closed sync with no mutations.
+- [ ] The sync report artifact shows upload, deletion, unchanged, and failure counts.
+- [ ] The successful sync triggers the configured Vercel Deploy Hook, or records a manual-deployment reminder.

@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-chestatee-november-66d2fa91
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
-Fetched at: 2026-07-18T16:30:39.895Z
 
 ## Important headings
 

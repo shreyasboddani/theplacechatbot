@@ -35,6 +35,7 @@ describe("widget and crawler boundaries", () => {
     const loader = readFileSync("public/widget-loader.js", "utf8");
     expect(loader).toContain("/branding/the-place-logo.png");
     expect(loader).toContain('logoImage.alt = ""');
+    expect(loader).toContain("chatbotUrl.origin !== scriptUrl.origin");
   });
 
   it("keeps the crawler on public The Place HTML routes", () => {

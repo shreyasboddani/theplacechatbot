@@ -13,11 +13,11 @@ afterEach(() => {
 });
 
 describe("Gemini model configuration", () => {
-  it("defaults to the stable Flash-Lite model", () => {
+  it("defaults to the configured stable Flash-Lite model", () => {
     delete process.env.GEMINI_MODEL;
 
-    expect(DEFAULT_GEMINI_MODEL).toBe("gemini-3.1-flash-lite");
-    expect(getRuntimeConfig().model).toBe("gemini-3.1-flash-lite");
+    expect(DEFAULT_GEMINI_MODEL).toBe("gemini-3.5-flash-lite");
+    expect(getRuntimeConfig().model).toBe("gemini-3.5-flash-lite");
   });
 
   it("still honors an explicit model override", () => {

@@ -3,7 +3,6 @@
 Source ID: web-calendar-forsyth-county-drive-through-pet-food-supply-pantry-205ae801
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/forsyth-county-drive-through-pet-food-supply-pantry
-Fetched at: 2026-07-18T16:30:19.274Z
 
 ## Important headings
 

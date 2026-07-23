@@ -3,7 +3,6 @@
 Source ID: web-home-8044e23b
 Source type: official_website
 Canonical URL: https://www.theplacega.org/
-Fetched at: 2026-07-18T16:30:12.818Z
 
 ## Important headings
 

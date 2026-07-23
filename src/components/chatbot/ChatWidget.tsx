@@ -21,25 +21,39 @@ export function ChatWidget({
   theme = "light",
 }: ChatWidgetProps) {
   const [open, setOpen] = useState(initialOpen);
+  const [panelMounted, setPanelMounted] = useState(initialOpen);
   const embedded = variant === "embedded";
   const showLauncher = !open && (launcherVisible || embedded);
+
+  function openPanel() {
+    setPanelMounted(true);
+    setOpen(true);
+  }
+
+  function closePanel() {
+    setOpen(false);
+    setPanelMounted(false);
+  }
 
   return (
     <div
       className={`chat-widget chat-widget-${variant} chat-widget-${position} chat-theme-${theme}`}
     >
-      {open ? (
-        <ChatPanel
-          embedded={embedded}
-          onMinimize={() => setOpen(false)}
-          onClose={() => setOpen(false)}
-        />
+      {panelMounted ? (
+        <div hidden={!open}>
+          <ChatPanel
+            embedded={embedded}
+            active={open}
+            onMinimize={() => setOpen(false)}
+            onClose={closePanel}
+          />
+        </div>
       ) : null}
       {showLauncher ? (
         <button
           type="button"
           className="chat-launcher"
-          onClick={() => setOpen(true)}
+          onClick={openPanel}
           aria-label={open ? "Close The Place assistant" : "Open The Place assistant"}
           aria-expanded={open}
         >

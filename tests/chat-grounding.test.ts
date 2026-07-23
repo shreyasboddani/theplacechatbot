@@ -89,7 +89,7 @@ describe("grounded interaction interpretation", () => {
         ],
       },
       {
-        model: "gemini-3.1-flash-lite",
+        model: "gemini-3.5-flash-lite",
         fileSearchStore: "fileSearchStores/test",
         manifest: [staffSource],
       },

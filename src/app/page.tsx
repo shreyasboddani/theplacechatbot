@@ -71,8 +71,7 @@ export default function Home() {
           <div className="trust-line">
             <ShieldIcon />
             <span>
-              Answers come only from The Place&apos;s website and
-              staff-provided information.
+              Answers come only from approved information from The Place.
             </span>
           </div>
         </div>
@@ -159,8 +158,8 @@ export default function Home() {
         </div>
         <pre aria-label="Widget integration example"><code>{`<script
   async
-  src="https://YOUR-DOMAIN.vercel.app/widget-loader.js"
-  data-chatbot-url="https://YOUR-DOMAIN.vercel.app/embed"
+  src="https://theplacechatbot.vercel.app/widget-loader.js"
+  data-chatbot-url="https://theplacechatbot.vercel.app/embed"
   data-position="bottom-right"
   data-label="Ask The Place">
 </script>`}</code></pre>

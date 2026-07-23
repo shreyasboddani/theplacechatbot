@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-newhope-october-f2047113
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-newhope-october
-Fetched at: 2026-07-18T16:30:34.454Z
 
 ## Important headings
 

@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-chestatee-october-7b3934f0
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-chestatee-october
-Fetched at: 2026-07-18T16:30:33.344Z
 
 ## Important headings
 

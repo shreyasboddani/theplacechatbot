@@ -3,7 +3,6 @@
 Source ID: web-calendar-poker-night-at-stars-and-strikes-aa0781cd
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/poker-night-at-stars-and-strikes
-Fetched at: 2026-07-18T16:31:06.743Z
 
 ## Important headings
 

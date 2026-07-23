@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-food-pantry-d68aed49
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-food-pantry
-Fetched at: 2026-07-18T16:30:46.932Z
 
 ## Important headings
 

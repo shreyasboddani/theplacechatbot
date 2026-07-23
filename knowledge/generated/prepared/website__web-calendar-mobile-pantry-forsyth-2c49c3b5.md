@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-forsyth-2c49c3b5
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-forsyth
-Fetched at: 2026-07-18T16:31:10.033Z
 
 ## Important headings
 

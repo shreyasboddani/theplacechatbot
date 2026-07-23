@@ -66,7 +66,6 @@ function websiteMarkdown(source: WebsiteSource): string {
     `Source ID: ${source.id}`,
     "Source type: official_website",
     `Canonical URL: ${source.canonicalUrl}`,
-    `Fetched at: ${source.fetchedAt}`,
     ...(headings ? ["", "## Important headings", "", headings] : []),
     "",
     "## Approved page content",

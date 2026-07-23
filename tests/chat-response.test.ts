@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { CHAT_STATUSES, parseChatResponse } from "@/lib/chat/response";
+import { MAX_ASSISTANT_ANSWER_LENGTH } from "@/lib/chat/limits";
 
 describe("client API response handling", () => {
   it.each(CHAT_STATUSES)("accepts the %s API status", (status) => {
@@ -42,6 +43,21 @@ describe("client API response handling", () => {
         answer: "No",
         sources: [],
         contactRecommended: false,
+      }),
+    ).toBeUndefined();
+  });
+
+  it("rejects empty or oversized assistant text", () => {
+    const response = {
+      status: "not_found",
+      sources: [],
+      contactRecommended: true,
+    };
+    expect(parseChatResponse({ ...response, answer: "   " })).toBeUndefined();
+    expect(
+      parseChatResponse({
+        ...response,
+        answer: "x".repeat(MAX_ASSISTANT_ANSWER_LENGTH + 1),
       }),
     ).toBeUndefined();
   });

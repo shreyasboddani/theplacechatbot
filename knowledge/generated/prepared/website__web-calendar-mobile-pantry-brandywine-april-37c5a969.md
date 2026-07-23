@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-brandywine-april-37c5a969
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-brandywine-april
-Fetched at: 2026-07-18T16:31:05.360Z
 
 ## Important headings
 

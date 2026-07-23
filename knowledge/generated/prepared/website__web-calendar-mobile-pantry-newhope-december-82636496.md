@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-newhope-december-82636496
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-newhope-december
-Fetched at: 2026-07-18T16:30:50.206Z
 
 ## Important headings
 

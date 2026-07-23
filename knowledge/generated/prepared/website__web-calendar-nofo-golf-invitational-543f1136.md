@@ -3,7 +3,6 @@
 Source ID: web-calendar-nofo-golf-invitational-543f1136
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/nofo-golf-invitational
-Fetched at: 2026-07-18T16:31:02.131Z
 
 ## Important headings
 

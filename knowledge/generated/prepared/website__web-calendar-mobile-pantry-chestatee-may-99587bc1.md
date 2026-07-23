@@ -3,7 +3,6 @@
 Source ID: web-calendar-mobile-pantry-chestatee-may-99587bc1
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-chestatee-may
-Fetched at: 2026-07-18T16:30:59.644Z
 
 ## Important headings
 

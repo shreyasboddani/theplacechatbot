@@ -27,9 +27,11 @@
   var chatbotUrl = validUrl(
     requestedUrl || new URL("/embed", scriptUrl.origin).toString(),
   );
-  if (!chatbotUrl) {
+  if (!chatbotUrl || chatbotUrl.origin !== scriptUrl.origin) {
     if (window.console && typeof window.console.warn === "function") {
-      window.console.warn("The Place chatbot loader: invalid data-chatbot-url.");
+      window.console.warn(
+        "The Place chatbot loader: data-chatbot-url must use the loader's origin.",
+      );
     }
     return;
   }

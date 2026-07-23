@@ -3,7 +3,6 @@
 Source ID: web-calendar-down-derby-446fae97
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/down-derby
-Fetched at: 2026-07-18T16:31:02.802Z
 
 ## Important headings
 
