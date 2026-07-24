@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Mobile Pantry at Dawson County High School
 - Financial Literacy Summer Series
 - Dine to Donate
 - Financial Literacy Summer Series
@@ -42,6 +41,7 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at Chestatee Elementary
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
+- Mobile Pantry at Dawson County High School
 - Financial Literacy Summer Series
 - Forsyth County Drive-Through Pet Food & Supply Pantry
 - Mobile Pantry at Chestatee Elementary
@@ -50,12 +50,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Approved page content
 
 Upcoming Events
-Mobile Pantry at Dawson County High School
-Thursday, July 23, 2026
-11:30 AM
-12:30 PM
-Google Calendar
-ICS
 Financial Literacy Summer Series
 Tuesday, July 28, 2026
 6:00 PM
@@ -337,6 +331,12 @@ New Hope Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Mobile Pantry at Dawson County High School
+Thursday, July 23, 2026
+11:30 AM
+12:30 PM
+Google Calendar
+ICS
 Financial Literacy Summer Series
 Tuesday, July 21, 2026
 6:00 PM
@@ -554,24 +554,9 @@ Thursday, May 14, 2026
 8:00 PM
 Google Calendar
 ICS
-Mobile Pantry at Dawson Head Start
-Thursday, May 14, 2026
-1:30 PM
-2:30 PM
-409 Allen Street
-Dawsonville, GA, 30534
-United States
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23: https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23
-- Mobile Pantry at Dawson County High School: https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-dawsonville-july-23
 - https://www.theplacega.org/calendar/financial-literacy-3-4ej5c: https://www.theplacega.org/calendar/financial-literacy-3-4ej5c
 - Financial Literacy Summer Series: https://www.theplacega.org/calendar/financial-literacy-3-4ej5c
 - ICS: https://www.theplacega.org/calendar/financial-literacy-3-4ej5c
@@ -668,3 +653,7 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
+- https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
+- Mobile Pantry at Chattahoochee Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
