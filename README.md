@@ -89,7 +89,7 @@ NEXT_PUBLIC_SITE_URL=https://theplacechatbot.vercel.app
 
 | Variable | Purpose |
 | --- | --- |
-| `GEMINI_API_KEY` | Server-only Gemini Developer API credential. Never prefix it with `NEXT_PUBLIC_`. |
+| `GEMINI_API_KEY` | Server-only Gemini credential used by Vercel for production knowledge synchronization and grounded runtime answers. Never prefix it with `NEXT_PUBLIC_`. |
 | `GEMINI_FILE_SEARCH_STORE` | Resource name printed by the sync command, such as `fileSearchStores/...`. |
 | `GEMINI_MODEL` | Central model configuration. Defaults to stable `gemini-3.5-flash-lite`. |
 | `NEXT_PUBLIC_SITE_URL` | Public deployment origin used in documentation/integration context. It contains no secret. |
@@ -218,11 +218,11 @@ Deletion is permanent, requires both an exact resource name and `--confirm`, and
 
 The repository includes a fail-closed, direct-to-main automation system for bounded public-site updates:
 
-- `Detect and synchronize website knowledge updates` runs daily at 09:17 UTC, on demand, or from the `the-place-website-updated` repository-dispatch event.
-- The crawl job has no Gemini or Vercel secrets. An unchanged site produces no commit or Gemini call.
+- `Detect and commit website knowledge updates` runs daily at 09:17 UTC, on demand, or from the `the-place-website-updated` repository-dispatch event.
+- GitHub has no Gemini or Vercel secrets. An unchanged site produces no commit, deployment, or Gemini call.
 - A change can be committed directly to `main` only after file-boundary checks, staff-FAQ isolation, a 20-document automatic-change cap, corpus verification, all tests, lint, production build, and a final check that `main` did not advance. It never force-pushes.
-- The workflow explicitly invokes `Reconcile approved Gemini knowledge` for the exact committed revision, because GitHub intentionally suppresses ordinary push workflows for commits created with `GITHUB_TOKEN`.
-- The sync job uses the protected `knowledge-production` GitHub environment, reconciles changed documents, retains reports for 30 days, and optionally invokes a Vercel Deploy Hook after success.
+- The resulting Vercel Production build verifies the committed corpus again, reconciles the existing File Search store using Vercel's server-side key, and only then builds the deployable application. Preview builds never mutate Gemini.
+- Reconciliation uploads every replacement before deleting its stale managed copy and fails closed on unknown remote documents or missing production configuration.
 - The website crawler never parses or approves staff FAQ entries or removal approvals. Staff FAQ changes and permanent-removal allowlist changes still require human review and a normal commit.
 
 `crawl-report.json` keeps the detailed timestamped failures, duplicates, and blocked-route audit record. Its deterministic `crawl-health.json` companion records retained last-known-good pages, human-approved removals, and indexed page counts without treating intermittent discovery of an unapproved empty candidate as a knowledge change. An unhealthy full crawl is rejected before it can replace the last-known-good files, and crawl timestamps are omitted from retrieval document text to prevent unnecessary File Search re-indexing.
@@ -321,20 +321,16 @@ The current official Vercel workflow is documented at [Deploying a project from 
    vercel link
    ```
 
-3. Add variables for Preview and Production in **Project Settings → Environment Variables**, or with the CLI. Mark the API key sensitive:
+3. Add the required values to **Production** in **Project Settings → Environment Variables**, or with the CLI. Mark the API key sensitive:
 
    ```bash
-   vercel env add GEMINI_API_KEY preview --sensitive
    vercel env add GEMINI_API_KEY production --sensitive
-   vercel env add GEMINI_FILE_SEARCH_STORE preview
    vercel env add GEMINI_FILE_SEARCH_STORE production
-   vercel env add GEMINI_MODEL preview
    vercel env add GEMINI_MODEL production
-   vercel env add NEXT_PUBLIC_SITE_URL preview
    vercel env add NEXT_PUBLIC_SITE_URL production
    ```
 
-   Enter `gemini-3.5-flash-lite` for `GEMINI_MODEL`. If that variable already exists in Vercel, edit its Preview and Production values in Project Settings instead of creating duplicates.
+   Enter `gemini-3.5-flash-lite` for `GEMINI_MODEL`. If a variable already exists, edit its Production value instead of creating a duplicate. Add separate Preview values only if preview deployments must answer live Gemini questions; Preview builds never synchronize or mutate File Search.
 
 4. Create a preview deployment:
 
@@ -398,16 +394,16 @@ Targeted searches of the crawled official corpus found no direct official answer
 2. Greg (or the designated hosting administrator) configures that key in The Place's Vercel project.
 3. Run the knowledge crawl, FAQ parse, preparation, and File Search sync using The Place's key/project.
 4. Copy the newly printed `GEMINI_FILE_SEARCH_STORE` into the hosting environment.
-5. Configure the protected GitHub `knowledge-production` environment and optional Vercel Deploy Hook as documented in `docs/knowledge-automation.md`.
+5. Confirm `vercel.json` uses the guarded production build described in `docs/knowledge-automation.md`.
 6. Redeploy and complete the manual checklist.
-7. Remove LearnAI's key from the hosting environment.
+7. Remove LearnAI's key from every old hosting environment.
 8. After confirming the new deployment, manually delete the obsolete LearnAI File Search store if appropriate.
 
 File Search stores belong to the Gemini project that created them; changing only the key is not enough. The corpus must be synchronized under the new project.
 
 ## Privacy, security, and reliability notes
 
-- The Gemini key is accessed only in the Node.js route handler and offline scripts.
+- The Gemini key remains server-side in Vercel and is accessed only by the production build synchronization script and Node.js chat route.
 - Chat transcripts are not written to a database, file, analytics service, or application log.
 - Gemini interactions use `store: false`; provider-side abuse monitoring and service policies may still apply.
 - Obvious SSNs, Luhn-valid card numbers, password disclosures, bank-account context with long numbers, and large private-document-like pastes are blocked before Gemini.
@@ -421,7 +417,7 @@ File Search stores belong to the Gemini project that created them; changing only
 
 ## Prototype limitations and production hardening
 
-- File Search quality depends on the latest successful offline sync and staff review.
+- File Search quality depends on the latest successful Vercel Production build synchronization and staff review.
 - Public-site updates are detected automatically. Large changes, staff-FAQ changes, unsafe content, invalid crawls, and unapproved removals fail closed for human investigation; no crawler can guarantee the correctness of a legitimately compromised official page.
 - The crawler uses practical main-content extraction; synchronization reports should be audited periodically for missing, duplicated, retained, or layout-heavy pages.
 - Semantic retrieval can miss relevant wording. The citation gate favors a safe fallback over an unsupported answer.

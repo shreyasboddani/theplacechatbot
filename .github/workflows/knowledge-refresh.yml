@@ -1,4 +1,4 @@
-name: Detect and synchronize website knowledge updates
+name: Detect and commit website knowledge updates
 
 on:
   schedule:
@@ -19,9 +19,6 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 35
-    outputs:
-      changed: ${{ steps.changes.outputs.changed }}
-      revision: ${{ steps.commit.outputs.revision }}
     steps:
       - name: Check out main
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -117,13 +114,5 @@ jobs:
           git diff --cached --check
           git commit -m "Refresh The Place website knowledge"
           revision="$(git rev-parse HEAD)"
-          echo "revision=$revision" >> "$GITHUB_OUTPUT"
           git push origin HEAD:main
-          echo "Committed verified public knowledge to main at $revision." >> "$GITHUB_STEP_SUMMARY"
-
-  reconcile:
-    needs: refresh
-    if: needs.refresh.outputs.changed == 'true'
-    uses: ./.github/workflows/knowledge-sync.yml
-    with:
-      revision: ${{ needs.refresh.outputs.revision }}
+          echo "Committed verified public knowledge to main at $revision. Vercel will reconcile Gemini during the production build." >> "$GITHUB_STEP_SUMMARY"

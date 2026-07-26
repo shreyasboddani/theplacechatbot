@@ -292,12 +292,11 @@ describe("knowledge automation safety gate", () => {
   });
 });
 
-describe("GitHub automation configuration", () => {
-  it("keeps workflows valid, pinned, and separated by trust level", () => {
+describe("deployment automation configuration", () => {
+  it("keeps GitHub crawling credential-free, valid, and pinned", () => {
     const workflowFiles = [
       ".github/workflows/ci.yml",
       ".github/workflows/knowledge-refresh.yml",
-      ".github/workflows/knowledge-sync.yml",
     ];
     for (const filePath of workflowFiles) {
       const source = readFileSync(filePath, "utf8");
@@ -320,25 +319,24 @@ describe("GitHub automation configuration", () => {
     expect(refresh).toContain("Run the complete safety gate");
     expect(refresh).toContain('git diff --quiet HEAD');
     expect(refresh).toContain('git push origin HEAD:main');
-    expect(refresh).toContain("uses: ./.github/workflows/knowledge-sync.yml");
+    expect(refresh).toContain("Vercel will reconcile Gemini");
     expect(refresh).not.toContain("pull-requests: write");
     expect(refresh).not.toContain("gh pr");
     expect(refresh).not.toContain("GEMINI_API_KEY");
     expect(refresh).not.toContain("knowledge:sync");
+  });
 
-    const sync = readFileSync(
-      ".github/workflows/knowledge-sync.yml",
-      "utf8",
-    );
-    expect(sync).toContain("environment: knowledge-production");
-    expect(sync).toContain("workflow_call:");
-    expect(sync).toContain("ref: ${{ inputs.revision || github.sha }}");
-    expect(sync).toContain("--reconcile --apply");
-    expect(sync).toContain("secrets.GEMINI_API_KEY");
-    expect(sync).toContain('"knowledge/generated/prepared/**"');
-    expect(sync).not.toContain('"knowledge/generated/crawl-data.json"');
-    expect(sync).not.toContain('"knowledge/generated/sources.json"');
-    expect(sync).not.toContain("pull_request:");
+  it("runs reconciliation only in the Vercel production build", () => {
+    const vercel = JSON.parse(readFileSync("vercel.json", "utf8")) as Record<
+      string,
+      unknown
+    >;
+    expect(vercel.buildCommand).toBe("npm run build:vercel");
+    const buildScript = readFileSync("scripts/vercel-build.ts", "utf8");
+    expect(buildScript).toContain('target !== "production"');
+    expect(buildScript).toContain("GEMINI_API_KEY");
+    expect(buildScript).toContain("--reconcile");
+    expect(buildScript).toContain("--apply");
   });
 
   it("keeps dependency update configuration valid", () => {

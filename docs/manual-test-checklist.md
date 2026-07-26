@@ -128,14 +128,16 @@ Confirm that sensitive content is not echoed back and is not visible in server l
 - [ ] An unchanged public-page recrawl creates no commit and makes no Gemini reconciliation call.
 - [ ] A failed or severely truncated response for a previously approved URL retains the last-known-good prepared document and appears in `retainedPages`.
 - [ ] A previously approved URL cannot be removed unless its canonical URL is explicitly listed in `knowledge/source/approved-removals.json`.
-- [ ] A bounded changed page passes all guardrails, commits only generated knowledge to `main`, and explicitly starts the protected reconciliation job.
+- [ ] A bounded changed page passes all guardrails and commits only generated knowledge to `main`; GitHub never receives a Gemini key.
 - [ ] A refresh changes only generated knowledge and the runtime manifest; it never changes staff FAQ or removal-approval files.
 - [ ] Staff FAQ approval files are not altered by the public-site crawler.
 - [ ] More than 20 changed prepared documents fail closed for manual investigation.
 - [ ] Tests, lint, build, and diff checks pass before the bot pushes `main`.
-- [ ] The production sync waits for the `knowledge-production` environment review when protection is enabled.
+- [ ] A Vercel Preview build skips Gemini mutation.
+- [ ] A Vercel Production build fails closed when either Gemini variable is absent.
+- [ ] A configured Production build verifies and reconciles knowledge before `next build`.
 - [ ] Reconciliation uploads changed documents before removing stale copies.
 - [ ] A failed upload preserves every pre-existing document.
 - [ ] Unmanaged remote documents cause a fail-closed sync with no mutations.
-- [ ] The sync report artifact shows upload, deletion, unchanged, and failure counts.
-- [ ] The successful sync triggers the configured Vercel Deploy Hook, or records a manual-deployment reminder.
+- [ ] The Vercel build log shows upload, deletion, unchanged, and failure counts without exposing the key.
+- [ ] A failed synchronization prevents the new Production deployment from replacing the current live version.

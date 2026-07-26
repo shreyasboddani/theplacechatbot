@@ -1,48 +1,52 @@
 # Knowledge automation setup and operations
 
-The automated pipeline separates unprivileged public-site detection from the protected Gemini synchronization job. Routine, bounded website changes can move from crawl to `main` and Gemini without a pull request. Every unsafe, unusually large, or unverifiable change fails closed and requires a person to investigate.
+The automation keeps the Gemini credential in Vercel only. GitHub Actions crawls and validates public website content without any Gemini or Vercel secret. A successful production deployment uses Vercel's existing server-side Gemini configuration to reconcile File Search before building the chatbot.
 
 ## Workflow sequence
 
-1. `Detect and synchronize website knowledge updates` runs daily, manually, or from an approved CMS webhook.
+1. `Detect and commit website knowledge updates` runs daily, manually, or from an approved CMS webhook.
 2. It crawls only public The Place pages, revalidates every previously approved URL first, preserves unchanged timestamps, prepares the corpus, and runs the knowledge verifier.
-3. A failed, incomplete, redirected, missing, or suspiciously shrunken approved page retains its last-known-good document and is reported in `retainedPages`. Permanent removal requires a canonical URL already committed to `knowledge/source/approved-removals.json` after human review.
-4. If deterministic crawl health and prepared retrieval content are unchanged, the workflow does not commit, contact Gemini, or deploy.
-5. If they changed, the workflow verifies that only generated files changed, rejects any staff-FAQ change, limits the automatic change set to 20 prepared documents, and runs the complete test, lint, build, and diff safety gate.
+3. Failed, incomplete, redirected, missing, or suspiciously shrunken approved pages retain their last-known-good documents and appear in `retainedPages`. A permanent removal requires a canonical URL already committed to `knowledge/source/approved-removals.json` after human review.
+4. If deterministic crawl health and prepared retrieval content are unchanged, the workflow creates no commit. No Vercel deployment or Gemini request occurs.
+5. If content changed, GitHub verifies that only generated files changed, rejects staff-FAQ changes, limits the automatic change set to 20 prepared documents, and runs all tests, lint, production build, and diff checks.
 6. Immediately before committing, it fetches `origin/main`. If `main` advanced during validation, it exits instead of rebasing or overwriting newer work. Otherwise, the knowledge bot creates a normal commit directly on `main` and pushes without force.
-7. GitHub suppresses push-triggered workflows for commits created with `GITHUB_TOKEN`, so the refresh workflow explicitly calls the reusable protected reconciliation workflow with the exact committed revision.
-8. `Reconcile approved Gemini knowledge` validates that revision again inside the `knowledge-production` environment. It uploads every new or changed document before deleting its obsolete managed copy, saves audit reports for 30 days, and optionally calls a Vercel Deploy Hook.
+7. Vercel's Git integration starts a Production deployment for the new `main` commit. `vercel.json` selects `npm run build:vercel`.
+8. The production build requires the Vercel `GEMINI_API_KEY` and `GEMINI_FILE_SEARCH_STORE`, verifies the committed corpus again, uploads changed documents, deletes obsolete managed copies only after all uploads succeed, verifies zero remote drift, and then runs `next build`.
+9. Preview and Development builds run `next build` without mutating Gemini. After a successful Production build, the deployed API uses the same Vercel key and store to answer grounded questions.
 
-Crawl timestamps remain in audit data and the source manifest but are omitted from retrieval document text. Timestamp-only or intermittent sitemap-candidate failures therefore cannot consume indexing quota or cause noisy commits.
+The GitHub workflow never receives, references, or logs the Gemini key. Crawl timestamps remain in audit data and the source manifest but are omitted from retrieval text, preventing timestamp-only changes from consuming indexing quota.
 
-## One-time GitHub configuration
+## One-time configuration
 
-1. In **Settings -> Actions -> General -> Workflow permissions**, allow read and write access so the workflow can push its bounded generated commit to `main`. Pull-request creation permission is not required.
-2. If `main` is protected, permit the GitHub Actions knowledge workflow to push only when its repository safety gate succeeds. Never enable force pushes.
-3. Create a GitHub environment named `knowledge-production` and restrict it to `main`.
-4. Add these environment values:
+### GitHub
 
-   | Kind | Name | Purpose |
-   | --- | --- | --- |
-   | Secret | `GEMINI_API_KEY` | The Place-owned server-side Gemini key. |
-   | Variable | `GEMINI_FILE_SEARCH_STORE` | The stable `fileSearchStores/...` resource name. |
-   | Secret, optional | `VERCEL_DEPLOY_HOOK_URL` | A Production Deploy Hook for the repository's `main` branch. |
+1. In **Settings -> Actions -> General -> Workflow permissions**, allow read and write access so the workflow can push its bounded generated commit to `main`.
+2. If `main` is protected, allow this workflow to push only after its repository safety gate succeeds. Never enable force pushes.
+3. Do not add `GEMINI_API_KEY`, `GEMINI_FILE_SEARCH_STORE`, or a Vercel Deploy Hook to GitHub. They are unnecessary for this design.
 
-Do not put the Gemini key or Deploy Hook URL in repository variables, workflow YAML, generated reports, commit text, or any `NEXT_PUBLIC_` variable. A Vercel variable is not automatically available to GitHub Actions; configure the `knowledge-production` environment separately.
+### Vercel
 
-## Vercel configuration
+Add these values to the Vercel **Production** environment:
 
-The normal Vercel Preview and Production variables remain required. Keep `GEMINI_FILE_SEARCH_STORE` aligned between Vercel and GitHub. Routine reconciliation preserves the store resource name, so it does not change after each refresh.
+| Kind | Name | Purpose |
+| --- | --- | --- |
+| Sensitive | `GEMINI_API_KEY` | Server-side Gemini authentication for build-time synchronization and runtime answers. |
+| Variable | `GEMINI_FILE_SEARCH_STORE` | Stable existing `fileSearchStores/...` resource name. |
+| Variable | `GEMINI_MODEL` | Runtime chat model, currently `gemini-3.5-flash-lite`. |
+| Variable | `NEXT_PUBLIC_SITE_URL` | Stable public deployment origin. |
 
-In **Vercel -> Project Settings -> Git -> Deploy Hooks**, an administrator can create a Production hook for `main` and save it as the optional GitHub environment secret `VERCEL_DEPLOY_HOOK_URL`. The hook runs only after Gemini synchronization succeeds. Without it, the normal Git integration still deploys the main commit, and the sync workflow records a reminder.
+The key must never use the `NEXT_PUBLIC_` prefix. Vercel makes environment variables available during builds and Function execution, while keeping sensitive values outside repository files. Variable changes apply only to new deployments.
+
+Preview may have its own key and store if preview chat must function, but the build script never mutates File Search unless `VERCEL_ENV` is exactly `production`.
 
 ## Initial and periodic checks
 
-1. Commit the automation and current verified corpus to `main`.
-2. Open **Actions -> Detect and synchronize website knowledge updates -> Run workflow**.
-3. Confirm an unchanged crawl completes without a commit or Gemini call.
-4. For a real bounded change, inspect the knowledge-bot commit, both workflow jobs, and the `knowledge-sync-report-...` artifact.
-5. Confirm the Vercel deployment, `/api/health`, one grounded question, one follow-up, source cards, and a contact fallback.
+1. Push the automation and verified corpus to `main`.
+2. Confirm the Vercel Production build log runs, in order: `knowledge:verify`, `knowledge:sync -- --reconcile --apply`, and `next build`.
+3. Confirm the sync reports zero unknown documents and ends with the full expected unchanged count after verification.
+4. Run **Actions -> Detect and commit website knowledge updates -> Run workflow**.
+5. Confirm an unchanged crawl completes without creating a commit.
+6. Confirm the deployed `/api/health`, one grounded question, one follow-up, source cards, and a contact fallback.
 
 ## Permanent page removal
 
@@ -51,15 +55,15 @@ The crawler never infers that approved information should be deleted. HTTP error
 1. Verify the old URL and any replacement in a normal browser.
 2. Check that no unique policy, schedule, eligibility rule, address, contact, or service detail would be lost.
 3. Add the canonical URL to `knowledge/source/approved-removals.json` in a human-authored, reviewed commit.
-4. Run the refresh workflow and inspect the resulting deletion and synchronization report.
+4. Run the refresh workflow and inspect the resulting deletion and Vercel synchronization log.
 
-Removal approvals accept only canonical public `theplacega.org` HTML routes. The public-site workflow never edits this allowlist or staff FAQ approval files.
+Removal approvals accept only canonical public `theplacega.org` HTML routes. The public-site workflow never edits this allowlist or any staff FAQ approval file.
 
 ## Immediate CMS-triggered refresh
 
-If The Place's website platform supports outgoing webhooks, configure a trusted integration to send the `repository_dispatch` event type `the-place-website-updated`. Its GitHub credential should have only the permission needed to dispatch the workflow. The same crawl, size limit, tests, main-race check, and protected Gemini job apply.
+If The Place's website platform supports outgoing webhooks, configure a trusted integration to send the GitHub `repository_dispatch` event type `the-place-website-updated`. Its credential should have only permission to dispatch the workflow. The same crawl, change cap, tests, and main-race check apply.
 
-Without a webhook, the workflow checks daily at 09:17 UTC. It must fetch the public site to discover changes, but an unchanged check does not contact Gemini or create a commit. GitHub may delay scheduled jobs, so this is eventual detection rather than an exact-time guarantee.
+Without a webhook, GitHub checks daily at 09:17 UTC. It must fetch the public site to discover updates, but an unchanged check creates no commit and therefore no deployment or Gemini request. Scheduled jobs can be delayed, so this provides eventual rather than exact-time synchronization.
 
 ## Manual commands
 
@@ -69,7 +73,7 @@ npm run knowledge:sync -- --reconcile
 npm run knowledge:sync -- --reconcile --apply
 ```
 
-The first command crawls, prepares, and verifies without Gemini credentials. The second previews reconciliation without mutation. The third applies the reviewed plan.
+The first command needs no Gemini key. The second previews remote changes using the locally configured key. The third applies a reviewed plan.
 
 For a new Gemini project or intentional blue/green rebuild only:
 
@@ -77,23 +81,24 @@ For a new Gemini project or intentional blue/green rebuild only:
 npm run knowledge:sync -- --new-store
 ```
 
-Update both GitHub and Vercel store variables after verifying a new store. Keep the previous store until the replacement deployment passes acceptance testing.
+Update Vercel's store variable after verifying a new store. Keep the previous store until the replacement deployment passes acceptance testing.
 
 ## Failure and rollback behavior
 
-- No meaningful content change: no commit, Gemini call, or deployment hook.
-- Crawl, extraction, corpus, prompt-injection, test, lint, build, or diff failure: no commit, upload, deletion, or hook.
+- No meaningful website change: no commit, deployment, or Gemini request.
+- Crawl, extraction, corpus, prompt-injection, test, lint, build, or diff failure in GitHub: no commit or deployment.
 - More than 20 changed prepared documents: no commit; manual inspection is required.
 - Approved-page fetch or suspicious shrink failure: retain last-known-good content and record the warning.
 - Staff FAQ or out-of-boundary file change: no commit.
 - `main` advances during validation: no push; the next run starts from the new revision.
+- Missing Vercel Gemini configuration: the new Production build fails and the existing deployment stays live.
 - Unmanaged Gemini documents: reconciliation aborts before mutation.
-- Upload failure: all pre-existing remote documents remain. A successfully uploaded replacement may remain as a safe duplicate for the next retry.
+- Upload failure: every pre-existing remote document remains. A successfully uploaded replacement may remain as a safe duplicate for the next retry.
 - Deletion failure: the new document remains indexed and the stale copy is reported for retry.
-- Vercel hook failure: Gemini remains synchronized; retry deployment and acceptance checks.
-- Bad automated content discovered later: revert the knowledge commit and rerun the protected reconciliation. The old File Search store itself is never automatically deleted.
+- Next build failure after a successful sync: the previous deployment remains live; the store may be one verified commit ahead and the next production build safely reconciles it again.
+- Bad automated content discovered later: revert the knowledge commit and redeploy. The old File Search store itself is never automatically deleted.
 
-File Search stores and keys should ultimately belong to The Place's Google project. Store deletion is always manual and permanent:
+File Search store deletion is always manual and permanent:
 
 ```bash
 npm run knowledge:delete-store -- fileSearchStores/EXACT_STORE_NAME --confirm
