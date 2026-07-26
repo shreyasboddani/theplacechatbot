@@ -3,9 +3,10 @@ import { pathToFileURL } from "node:url";
 
 export type NpmArguments = string[];
 export type NpmRunner = (args: NpmArguments) => Promise<void>;
+export type BuildEnvironment = Readonly<Record<string, string | undefined>>;
 
 export function buildVercelCommandPlan(
-  environment: NodeJS.ProcessEnv,
+  environment: BuildEnvironment,
 ): NpmArguments[] {
   const target = environment.VERCEL_ENV?.trim();
   if (!target) {
@@ -62,7 +63,7 @@ async function runNpm(args: NpmArguments): Promise<void> {
 }
 
 export async function runVercelBuild(
-  environment: NodeJS.ProcessEnv = process.env,
+  environment: BuildEnvironment = process.env,
   runner: NpmRunner = runNpm,
 ): Promise<void> {
   const plan = buildVercelCommandPlan(environment);

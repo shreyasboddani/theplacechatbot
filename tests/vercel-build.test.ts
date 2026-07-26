@@ -40,7 +40,9 @@ describe("Vercel production knowledge synchronization", () => {
   });
 
   it("runs every production command in order", async () => {
-    const runner = vi.fn(async () => undefined);
+    const runner = vi.fn(async (args: string[]) => {
+      void args;
+    });
     await runVercelBuild(
       {
         VERCEL_ENV: "production",
