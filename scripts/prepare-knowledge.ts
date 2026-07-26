@@ -213,6 +213,8 @@ export async function prepareKnowledge(root = process.cwd()) {
     successfullyIndexedPages: crawlReport.indexedPages ?? [],
     failedPages: crawlReport.failedPages ?? [],
     duplicatePages: crawlReport.duplicatePages ?? [],
+    retainedPages: crawlReport.retainedPages ?? [],
+    approvedRemovedPages: crawlReport.approvedRemovedPages ?? [],
     pendingFaqEntries: unresolvedFaq.map((entry) => ({
       id: entry.id,
       question: entry.question,

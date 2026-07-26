@@ -138,7 +138,7 @@ The default and hard cap are 150 pages, leaving room for the current public site
 npm run knowledge:crawl -- --max-pages=25
 ```
 
-The crawler reads `robots.txt`, checks sitemap candidates, follows only canonicalized `theplacega.org` pages, waits between requests, avoids blocked/private/asset routes, and records per-page timestamps and failures. It never submits forms.
+The crawler reads `robots.txt`, checks sitemap candidates, revalidates previously approved URLs first, follows only canonicalized `theplacega.org` pages, waits between requests, avoids blocked/private/asset routes, and records per-page timestamps and failures. It never submits forms. A failed or suspiciously incomplete refresh retains the last-known-good document; permanent removal requires a human-reviewed entry in `knowledge/source/approved-removals.json`.
 
 ### 3. Prepare the approved corpus
 
@@ -216,16 +216,16 @@ Deletion is permanent, requires both an exact resource name and `--confirm`, and
 
 ## Automatic website refresh
 
-The repository includes a review-gated automation system:
+The repository includes a fail-closed, direct-to-main automation system for bounded public-site updates:
 
-- `Detect website knowledge updates` runs daily at 09:17 UTC, on demand, or from the `the-place-website-updated` repository-dispatch event.
-- The detection workflow has no Gemini or Vercel secrets. It crawls only public `theplacega.org` pages and opens or updates `automation/knowledge-refresh` when meaningful content or crawl health changes.
-- CI verifies the corpus, tests, lint, types, and production build on the generated pull request.
-- Merging an approved knowledge change triggers `Reconcile approved Gemini knowledge` on trusted `main` code.
+- `Detect and synchronize website knowledge updates` runs daily at 09:17 UTC, on demand, or from the `the-place-website-updated` repository-dispatch event.
+- The crawl job has no Gemini or Vercel secrets. An unchanged site produces no commit or Gemini call.
+- A change can be committed directly to `main` only after file-boundary checks, staff-FAQ isolation, a 20-document automatic-change cap, corpus verification, all tests, lint, production build, and a final check that `main` did not advance. It never force-pushes.
+- The workflow explicitly invokes `Reconcile approved Gemini knowledge` for the exact committed revision, because GitHub intentionally suppresses ordinary push workflows for commits created with `GITHUB_TOKEN`.
 - The sync job uses the protected `knowledge-production` GitHub environment, reconciles changed documents, retains reports for 30 days, and optionally invokes a Vercel Deploy Hook after success.
-- The website crawler never parses or approves staff FAQ entries. Staff FAQ changes still require their normal human review and committed approval status.
+- The website crawler never parses or approves staff FAQ entries or removal approvals. Staff FAQ changes and permanent-removal allowlist changes still require human review and a normal commit.
 
-`crawl-report.json` keeps the detailed timestamped audit record. Its deterministic `crawl-health.json` companion records failures, duplicates, blocked pages, and page counts without creating a pull request merely because a scheduled run has a new timestamp. An unhealthy full crawl is rejected before it can replace the last-known-good files, and crawl timestamps are omitted from retrieval document text to prevent unnecessary File Search re-indexing.
+`crawl-report.json` keeps the detailed timestamped failures, duplicates, and blocked-route audit record. Its deterministic `crawl-health.json` companion records retained last-known-good pages, human-approved removals, and indexed page counts without treating intermittent discovery of an unapproved empty candidate as a knowledge change. An unhealthy full crawl is rejected before it can replace the last-known-good files, and crawl timestamps are omitted from retrieval document text to prevent unnecessary File Search re-indexing.
 
 See [Knowledge automation setup and operations](docs/knowledge-automation.md) for the one-time GitHub/Vercel configuration, review checklist, failure behavior, and rollback process.
 
@@ -360,7 +360,7 @@ The current official Vercel workflow is documented at [Deploying a project from 
 
 ## Refreshing website information
 
-The normal production path is the automated review PR described above. For a manual local review cycle:
+The normal production path is the guarded direct-to-main workflow described above. For a manual local review cycle:
 
 ```bash
 npm run knowledge:crawl
@@ -422,14 +422,14 @@ File Search stores belong to the Gemini project that created them; changing only
 ## Prototype limitations and production hardening
 
 - File Search quality depends on the latest successful offline sync and staff review.
-- Public-site updates are detected automatically, but a human review gate intentionally prevents silent ingestion of compromised, malformed, or misleading website content.
-- The crawler uses practical main-content extraction; every refresh report should be reviewed for missing, duplicated, or layout-heavy pages.
+- Public-site updates are detected automatically. Large changes, staff-FAQ changes, unsafe content, invalid crawls, and unapproved removals fail closed for human investigation; no crawler can guarantee the correctness of a legitimately compromised official page.
+- The crawler uses practical main-content extraction; synchronization reports should be audited periodically for missing, duplicated, retained, or layout-heavy pages.
 - Semantic retrieval can miss relevant wording. The citation gate favors a safe fallback over an unsupported answer.
 - The app does not authenticate visitors or connect to The Place's internal systems.
 - In-memory rate limiting is not a strong production control.
 - Before broad public promotion, configure a Vercel Firewall rate-limit rule for `POST /api/chat`, plus a formal content-review workflow, uptime/error monitoring that excludes message text, accessibility testing with assistive technologies, retention/legal review, and a documented incident/rollback procedure.
 - Review Gemini and Vercel quotas, billing, and data-processing terms for The Place's expected traffic. Free-tier availability and limits can change.
-- Next.js is pinned to the current 16.2 Active LTS security release. `npm audit` still reports transitive PostCSS and Sharp/libvips advisories inside Next.js. This app accepts neither user-provided CSS nor image uploads, has no remote image domains, and disables runtime image optimization for its trusted local logos. npm's forced fix proposes an unsafe Next.js downgrade, so it is not used; monitor the next stable Next.js release that updates those nested packages.
+- Next.js and its ESLint configuration are pinned to the current 16.2.12 patch. `npm audit` still reports transitive PostCSS and Sharp/libvips advisories inside Next.js. This app accepts neither user-provided CSS nor image uploads, has no remote image domains, and disables runtime image optimization for its trusted local logos. npm's forced fix proposes an unsafe Next.js 9 downgrade, so it is not used; monitor the next stable Next.js release that updates those nested packages.
 
 ## Packages added
 

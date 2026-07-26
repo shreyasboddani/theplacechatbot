@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-07-23T18:39:25.820Z",
+  "preparedAt": "2026-07-26T01:28:54.061Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -41,7 +41,7 @@
       "id": "web-fin-asst-initial-request-61d479bf",
       "title": "Financial Assistance Request Form — The Place",
       "url": "https://www.theplacega.org/fin-asst-initial-request",
-      "fetchedAt": "2026-07-23T18:36:16.789Z"
+      "fetchedAt": "2026-07-26T01:07:24.713Z"
     },
     {
       "id": "web-new-volunteers-51338cd7",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-07-23T18:36:18.328Z"
+      "fetchedAt": "2026-07-26T01:07:26.570Z"
     },
     {
       "id": "web-calendar-forsyth-county-drive-through-pet-food-supply-pantry-205ae801",
@@ -732,6 +732,8 @@
       "duplicateOf": "https://www.theplacega.org/"
     }
   ],
+  "retainedPages": [],
+  "approvedRemovedPages": [],
   "pendingFaqEntries": [
     {
       "id": "furniture-delivery-fees",
@@ -787,13 +789,13 @@
   "missingLinks": [],
   "unmappedSourceDocuments": [],
   "totalDocumentsPrepared": 144,
-  "totalDocumentsUploaded": 117,
+  "totalDocumentsUploaded": 2,
   "uploadFailures": [],
   "fileSearchStoreName": "fileSearchStores/the-place-grounded-knowledg-3zerv2a5s6wl",
   "syncMode": "reconcile",
-  "totalDocumentsDeleted": 117,
-  "totalDocumentsUnchanged": 27,
+  "totalDocumentsDeleted": 2,
+  "totalDocumentsUnchanged": 142,
   "managedDocumentsAfterSync": 144,
   "deleteFailures": [],
-  "uploadedAt": "2026-07-23T18:47:59.514Z"
+  "uploadedAt": "2026-07-26T01:40:33.613Z"
 }

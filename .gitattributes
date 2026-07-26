@@ -1,0 +1,3 @@
+.github/workflows/*.yml text eol=lf
+knowledge/generated/** text eol=lf
+src/generated/** text eol=lf

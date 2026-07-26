@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import {
   isAllowedByRobots,
   isCrawlableUrl,
+  parseApprovedRemovalUrls,
   parseRobotsTxt,
 } from "../scripts/crawl-website";
 import { isValidWidgetUrl } from "@/lib/widget/url-validation";
@@ -57,5 +58,19 @@ describe("widget and crawler boundaries", () => {
     expect(
       isAllowedByRobots("https://www.theplacega.org/private/public/info", rules),
     ).toBe(true);
+  });
+
+  it("rejects malformed and duplicate removal approvals", () => {
+    expect(() => parseApprovedRemovalUrls({ canonicalUrls: "not-an-array" })).toThrow(
+      "canonicalUrls array",
+    );
+    expect(() =>
+      parseApprovedRemovalUrls({
+        canonicalUrls: [
+          "https://www.theplacega.org/contact-us",
+          "https://theplacega.org/contact-us/",
+        ],
+      }),
+    ).toThrow("Duplicate approved removal");
   });
 });

@@ -44,16 +44,18 @@ interface RobotsRules {
   sitemaps: string[];
 }
 
-interface CrawlFailure {
+export interface CrawlPageNote {
   url: string;
   reason: string;
 }
 
 export interface CrawlReportForHealth {
   maxPages: number;
-  failedPages: CrawlFailure[];
+  failedPages: CrawlPageNote[];
   duplicatePages: Array<{ url: string; duplicateOf: string }>;
   blockedPages: string[];
+  retainedPages: CrawlPageNote[];
+  approvedRemovedPages: string[];
   totalIndexed: number;
 }
 
@@ -87,15 +89,10 @@ export function crawlHealthSnapshot(report: CrawlReportForHealth) {
   return {
     maxPages: report.maxPages,
     totalIndexed: report.totalIndexed,
-    failedPages: [...report.failedPages].sort((a, b) =>
+    retainedPages: [...report.retainedPages].sort((a, b) =>
       `${a.url}\u0000${a.reason}`.localeCompare(`${b.url}\u0000${b.reason}`),
     ),
-    duplicatePages: [...report.duplicatePages].sort((a, b) =>
-      `${a.url}\u0000${a.duplicateOf}`.localeCompare(
-        `${b.url}\u0000${b.duplicateOf}`,
-      ),
-    ),
-    blockedPages: [...report.blockedPages].sort(),
+    approvedRemovedPages: [...report.approvedRemovedPages].sort(),
   };
 }
 
@@ -142,6 +139,103 @@ export function preserveUnchangedFetchedAt(
     return { ...source, fetchedAt: previous.fetchedAt };
   }
   return source;
+}
+
+export function parseApprovedRemovalUrls(value: unknown): Set<string> {
+  if (
+    !value ||
+    typeof value !== "object" ||
+    !Array.isArray((value as Record<string, unknown>).canonicalUrls)
+  ) {
+    throw new Error(
+      "knowledge/source/approved-removals.json must contain a canonicalUrls array.",
+    );
+  }
+
+  const canonicalUrls = (value as { canonicalUrls: unknown[] }).canonicalUrls;
+  const approved = new Set<string>();
+  for (const candidate of canonicalUrls) {
+    if (typeof candidate !== "string") {
+      throw new Error("Every approved removal must be a string URL.");
+    }
+    const canonical = canonicalizeThePlaceUrl(candidate);
+    if (!canonical || !isCrawlableUrl(canonical)) {
+      throw new Error(`Approved removal is not a public The Place page: ${candidate}`);
+    }
+    if (approved.has(canonical)) {
+      throw new Error(`Duplicate approved removal: ${canonical}`);
+    }
+    approved.add(canonical);
+  }
+  return approved;
+}
+
+export function hasSuspiciousContentLoss(
+  previous: WebsiteSource | undefined,
+  current: WebsiteSource,
+): boolean {
+  if (!previous) return false;
+  const looksLikeErrorPage = /\b(?:404|page not found|access denied|temporarily unavailable)\b/i.test(
+    `${current.title}\n${current.text.slice(0, 500)}`,
+  );
+  if (looksLikeErrorPage) return true;
+  return previous.text.length >= 500 && current.text.length < previous.text.length * 0.6;
+}
+
+export function mergePreviouslyApprovedSources(values: {
+  currentSources: WebsiteSource[];
+  previousSources: WebsiteSource[];
+  failedPages: CrawlPageNote[];
+  blockedPages: string[];
+  approvedRemovalUrls: ReadonlySet<string>;
+  maxPages: number;
+}): { sources: WebsiteSource[]; retainedPages: CrawlPageNote[] } {
+  const sources = [...values.currentSources];
+  const currentUrls = new Set(sources.map((source) => source.canonicalUrl));
+  const failedByUrl = new Map(
+    values.failedPages.map((failure) => [failure.url, failure.reason]),
+  );
+  const blocked = new Set(values.blockedPages);
+  const retainedPages: CrawlPageNote[] = [];
+
+  for (const previous of values.previousSources) {
+    if (
+      currentUrls.has(previous.canonicalUrl) ||
+      values.approvedRemovalUrls.has(previous.canonicalUrl)
+    ) {
+      continue;
+    }
+    if (sources.length >= values.maxPages) {
+      throw new Error(
+        "Refusing to drop previously approved pages because the crawl capacity was exhausted.",
+      );
+    }
+    const reason =
+      failedByUrl.get(previous.canonicalUrl) ||
+      (blocked.has(previous.canonicalUrl)
+        ? "Robots policy blocked revalidation; previous approved content was retained pending review."
+        : undefined) ||
+      "The page was not successfully revalidated; previous approved content was retained.";
+    sources.push(previous);
+    currentUrls.add(previous.canonicalUrl);
+    retainedPages.push({ url: previous.canonicalUrl, reason });
+  }
+
+  const previousOrder = new Map(
+    values.previousSources.map((source, index) => [source.canonicalUrl, index]),
+  );
+  sources.sort((left, right) => {
+    const leftOrder = previousOrder.get(left.canonicalUrl);
+    const rightOrder = previousOrder.get(right.canonicalUrl);
+    if (leftOrder !== undefined && rightOrder !== undefined) {
+      return leftOrder - rightOrder;
+    }
+    if (leftOrder !== undefined) return -1;
+    if (rightOrder !== undefined) return 1;
+    return left.canonicalUrl.localeCompare(right.canonicalUrl);
+  });
+
+  return { sources, retainedPages };
 }
 
 function sleep(milliseconds: number): Promise<void> {
@@ -387,6 +481,7 @@ function pageMarkdown(source: WebsiteSource): string {
 export async function crawlWebsite(
   maxPages = DEFAULT_MAX_PAGES,
   previousSources: WebsiteSource[] = [],
+  approvedRemovalUrls: ReadonlySet<string> = new Set(),
 ) {
   const robotsUrl = `${THE_PLACE.canonicalOrigin}/robots.txt`;
   let robots: RobotsRules = { allows: [], disallows: [], sitemaps: [] };
@@ -404,11 +499,15 @@ export async function crawlWebsite(
     `${THE_PLACE.canonicalOrigin}/sitemap_index.xml`,
   ].filter((value, index, values) => values.indexOf(value) === index);
   const sitemapUrls = await discoverSitemapUrls(sitemapSeeds, maxPages * 3);
+  const previousUrls = previousSources.map((source) => source.canonicalUrl);
   const queue = [
     ...new Set(
-      [...SEED_URLS, ...sitemapUrls]
+      [...previousUrls, ...SEED_URLS, ...sitemapUrls]
         .map(canonicalizeThePlaceUrl)
-        .filter((url): url is string => Boolean(url)),
+        .filter(
+          (url): url is string =>
+            Boolean(url) && !approvedRemovalUrls.has(String(url)),
+        ),
     ),
   ];
   const visited = new Set<string>();
@@ -418,7 +517,7 @@ export async function crawlWebsite(
     previousSources.map((source) => [source.canonicalUrl, source]),
   );
   const sources: WebsiteSource[] = [];
-  const failedPages: CrawlFailure[] = [];
+  const failedPages: CrawlPageNote[] = [];
   const duplicatePages: Array<{ url: string; duplicateOf: string }> = [];
   const blockedPages: string[] = [];
 
@@ -456,20 +555,48 @@ export async function crawlWebsite(
         extractedSource,
         previousByUrl.get(extractedSource.canonicalUrl),
       );
+      if (
+        hasSuspiciousContentLoss(
+          previousByUrl.get(extractedSource.canonicalUrl),
+          source,
+        )
+      ) {
+        failedPages.push({
+          url: current,
+          reason:
+            "Extracted content looked incomplete; previous approved content was retained.",
+        });
+        continue;
+      }
 
       const hash = createHash("sha256").update(source.text).digest("hex");
       const duplicateOf = contentHashes.get(hash);
       if (duplicateOf) {
         duplicatePages.push({ url: current, duplicateOf });
+        if (
+          previousByUrl.has(source.canonicalUrl) &&
+          !sources.some(
+            (candidate) => candidate.canonicalUrl === source.canonicalUrl,
+          )
+        ) {
+          sources.push(source);
+        }
       } else {
         contentHashes.set(hash, source.canonicalUrl);
-        sources.push(source);
+        if (
+          !sources.some(
+            (candidate) => candidate.canonicalUrl === source.canonicalUrl,
+          )
+        ) {
+          sources.push(source);
+        }
       }
 
       for (const link of source.links) {
         if (
           !queued.has(link.url) &&
           !visited.has(link.url) &&
+          !approvedRemovalUrls.has(link.url) &&
           isCrawlableUrl(link.url)
         ) {
           queued.add(link.url);
@@ -485,13 +612,25 @@ export async function crawlWebsite(
     await sleep(REQUEST_DELAY_MS);
   }
 
+  const merged = mergePreviouslyApprovedSources({
+    currentSources: sources,
+    previousSources,
+    failedPages,
+    blockedPages,
+    approvedRemovalUrls,
+    maxPages,
+  });
+  const approvedRemovedPages = previousSources
+    .map((source) => source.canonicalUrl)
+    .filter((url) => approvedRemovalUrls.has(url));
+
   return {
-    sources,
+    sources: merged.sources,
     report: {
       startedFrom: THE_PLACE.canonicalOrigin,
       crawledAt: new Date().toISOString(),
       maxPages,
-      indexedPages: sources.map((source) => ({
+      indexedPages: merged.sources.map((source) => ({
         id: source.id,
         title: source.title,
         url: source.canonicalUrl,
@@ -500,7 +639,9 @@ export async function crawlWebsite(
       failedPages,
       duplicatePages,
       blockedPages,
-      totalIndexed: sources.length,
+      retainedPages: merged.retainedPages,
+      approvedRemovedPages,
+      totalIndexed: merged.sources.length,
     },
   };
 }
@@ -517,6 +658,7 @@ async function main() {
   const outputDir = path.resolve(root, "knowledge/generated");
   const websiteDir = path.join(outputDir, "website");
   let previousSources: WebsiteSource[] = [];
+  let approvedRemovalUrls = new Set<string>();
   try {
     const previousValue: unknown = JSON.parse(
       await readFile(path.join(outputDir, "crawl-data.json"), "utf8"),
@@ -533,7 +675,31 @@ async function main() {
       throw error;
     }
   }
-  const { sources, report } = await crawlWebsite(maxPages, previousSources);
+  try {
+    const removalValue: unknown = JSON.parse(
+      await readFile(
+        path.resolve(root, "knowledge/source/approved-removals.json"),
+        "utf8",
+      ),
+    );
+    approvedRemovalUrls = parseApprovedRemovalUrls(removalValue);
+  } catch (error: unknown) {
+    if (
+      error instanceof Error &&
+      "code" in error &&
+      (error as Error & { code?: string }).code === "ENOENT"
+    ) {
+      throw new Error(
+        "knowledge/source/approved-removals.json is missing; refusing to infer removals.",
+      );
+    }
+    throw error;
+  }
+  const { sources, report } = await crawlWebsite(
+    maxPages,
+    previousSources,
+    approvedRemovalUrls,
+  );
   assertSafeCrawlSnapshot(sources, report);
 
   await rm(websiteDir, { recursive: true, force: true });

@@ -125,11 +125,14 @@ Confirm that sensitive content is not echoed back and is not visible in server l
 ## Knowledge automation
 
 - [ ] `npm run knowledge:verify` passes before synchronization.
-- [ ] An unchanged public-page recrawl does not open a noisy knowledge PR.
-- [ ] A changed page opens or updates `automation/knowledge-refresh` without using Gemini secrets.
-- [ ] The refresh PR changes only generated knowledge and the runtime manifest.
+- [ ] An unchanged public-page recrawl creates no commit and makes no Gemini reconciliation call.
+- [ ] A failed or severely truncated response for a previously approved URL retains the last-known-good prepared document and appears in `retainedPages`.
+- [ ] A previously approved URL cannot be removed unless its canonical URL is explicitly listed in `knowledge/source/approved-removals.json`.
+- [ ] A bounded changed page passes all guardrails, commits only generated knowledge to `main`, and explicitly starts the protected reconciliation job.
+- [ ] A refresh changes only generated knowledge and the runtime manifest; it never changes staff FAQ or removal-approval files.
 - [ ] Staff FAQ approval files are not altered by the public-site crawler.
-- [ ] CI passes before the refresh PR is merged.
+- [ ] More than 20 changed prepared documents fail closed for manual investigation.
+- [ ] Tests, lint, build, and diff checks pass before the bot pushes `main`.
 - [ ] The production sync waits for the `knowledge-production` environment review when protection is enabled.
 - [ ] Reconciliation uploads changed documents before removing stale copies.
 - [ ] A failed upload preserves every pre-existing document.

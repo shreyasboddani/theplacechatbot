@@ -5,6 +5,9 @@ import { parse } from "yaml";
 import {
   assertSafeCrawlSnapshot,
   crawlHealthSnapshot,
+  hasSuspiciousContentLoss,
+  mergePreviouslyApprovedSources,
+  parseApprovedRemovalUrls,
   preserveUnchangedFetchedAt,
   websiteContentFingerprint,
 } from "../scripts/crawl-website";
@@ -54,15 +57,17 @@ describe("automated website refresh", () => {
       failedPages: [{ url: "https://www.theplacega.org/empty", reason: "empty" }],
       duplicatePages: [],
       blockedPages: [],
+      retainedPages: [],
+      approvedRemovedPages: [],
     });
     expect(health).toEqual({
       maxPages: 120,
       totalIndexed: 117,
-      failedPages: [{ url: "https://www.theplacega.org/empty", reason: "empty" }],
-      duplicatePages: [],
-      blockedPages: [],
+      retainedPages: [],
+      approvedRemovedPages: [],
     });
     expect(health).not.toHaveProperty("crawledAt");
+    expect(health).not.toHaveProperty("failedPages");
   });
 
   it("keeps the new timestamp when approved page content changed", () => {
@@ -87,6 +92,8 @@ describe("automated website refresh", () => {
         ],
         duplicatePages: [],
         blockedPages: [],
+        retainedPages: [],
+        approvedRemovedPages: [],
       }),
     ).toThrow("last-known-good");
   });
@@ -100,8 +107,85 @@ describe("automated website refresh", () => {
         failedPages: [],
         duplicatePages: [],
         blockedPages: [],
+        retainedPages: [],
+        approvedRemovedPages: [],
       }),
     ).not.toThrow();
+  });
+
+  it("retains last-known-good content when an approved page cannot be refreshed", () => {
+    const previous = websiteSource();
+    const merged = mergePreviouslyApprovedSources({
+      currentSources: [],
+      previousSources: [previous],
+      failedPages: [{ url: previous.canonicalUrl, reason: "HTTP 503" }],
+      blockedPages: [],
+      approvedRemovalUrls: new Set(),
+      maxPages: 150,
+    });
+
+    expect(merged.sources).toEqual([previous]);
+    expect(merged.retainedPages).toEqual([
+      { url: previous.canonicalUrl, reason: "HTTP 503" },
+    ]);
+  });
+
+  it("requires an explicit same-origin approval before removing known content", () => {
+    const previous = websiteSource();
+    const approved = parseApprovedRemovalUrls({
+      canonicalUrls: [previous.canonicalUrl],
+    });
+    const merged = mergePreviouslyApprovedSources({
+      currentSources: [],
+      previousSources: [previous],
+      failedPages: [{ url: previous.canonicalUrl, reason: "HTTP 404" }],
+      blockedPages: [],
+      approvedRemovalUrls: approved,
+      maxPages: 150,
+    });
+
+    expect(merged.sources).toEqual([]);
+    expect(merged.retainedPages).toEqual([]);
+    expect(() =>
+      parseApprovedRemovalUrls({ canonicalUrls: ["https://example.com/page"] }),
+    ).toThrow("public The Place page");
+  });
+
+  it("retains known content when a new robots rule blocks revalidation", () => {
+    const previous = websiteSource();
+    const merged = mergePreviouslyApprovedSources({
+      currentSources: [],
+      previousSources: [previous],
+      failedPages: [],
+      blockedPages: [previous.canonicalUrl],
+      approvedRemovalUrls: new Set(),
+      maxPages: 150,
+    });
+
+    expect(merged.sources).toEqual([previous]);
+    expect(merged.retainedPages[0]?.reason).toContain("Robots policy");
+  });
+
+  it("treats severe extraction shrinkage and soft error pages as unsafe", () => {
+    const previous = websiteSource({ text: "A".repeat(1_000) });
+    expect(
+      hasSuspiciousContentLoss(
+        previous,
+        websiteSource({ text: "B".repeat(300) }),
+      ),
+    ).toBe(true);
+    expect(
+      hasSuspiciousContentLoss(
+        previous,
+        websiteSource({ title: "Page not found", text: "B".repeat(900) }),
+      ),
+    ).toBe(true);
+    expect(
+      hasSuspiciousContentLoss(
+        previous,
+        websiteSource({ text: "B".repeat(900) }),
+      ),
+    ).toBe(false);
   });
 });
 
@@ -228,7 +312,17 @@ describe("GitHub automation configuration", () => {
     expect(refresh).toContain("schedule:");
     expect(refresh).toContain("the-place-website-updated");
     expect(refresh).toContain("ref: main");
-    expect(refresh).toContain("pull-requests: write");
+    expect(refresh).toContain("contents: write");
+    expect(refresh).toContain("Guard the generated-file boundary");
+    expect(refresh).toContain("Enforce a bounded automatic change set");
+    expect(refresh).toContain("changed_documents > 20");
+    expect(refresh).toContain("manager_faq__*.md");
+    expect(refresh).toContain("Run the complete safety gate");
+    expect(refresh).toContain('git diff --quiet HEAD');
+    expect(refresh).toContain('git push origin HEAD:main');
+    expect(refresh).toContain("uses: ./.github/workflows/knowledge-sync.yml");
+    expect(refresh).not.toContain("pull-requests: write");
+    expect(refresh).not.toContain("gh pr");
     expect(refresh).not.toContain("GEMINI_API_KEY");
     expect(refresh).not.toContain("knowledge:sync");
 
@@ -237,8 +331,13 @@ describe("GitHub automation configuration", () => {
       "utf8",
     );
     expect(sync).toContain("environment: knowledge-production");
+    expect(sync).toContain("workflow_call:");
+    expect(sync).toContain("ref: ${{ inputs.revision || github.sha }}");
     expect(sync).toContain("--reconcile --apply");
     expect(sync).toContain("secrets.GEMINI_API_KEY");
+    expect(sync).toContain('"knowledge/generated/prepared/**"');
+    expect(sync).not.toContain('"knowledge/generated/crawl-data.json"');
+    expect(sync).not.toContain('"knowledge/generated/sources.json"');
     expect(sync).not.toContain("pull_request:");
   });
 

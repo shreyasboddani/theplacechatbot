@@ -8,7 +8,10 @@ import type {
   SourceManifestEntry,
   WebsiteSource,
 } from "../src/lib/knowledge/types";
-import { crawlHealthSnapshot } from "./crawl-website";
+import {
+  crawlHealthSnapshot,
+  parseApprovedRemovalUrls,
+} from "./crawl-website";
 
 const MINIMUM_WEBSITE_PAGES = 50;
 const MAXIMUM_WEBSITE_PAGES = 150;
@@ -23,6 +26,8 @@ interface CrawlReport {
   failedPages?: unknown;
   duplicatePages?: unknown;
   blockedPages?: unknown;
+  retainedPages?: unknown;
+  approvedRemovedPages?: unknown;
 }
 
 interface CrawlFailure {
@@ -42,6 +47,7 @@ export interface KnowledgeVerificationSummary {
   totalDocuments: number;
   totalBytes: number;
   crawlFailures: number;
+  retainedWebsiteDocuments: number;
 }
 
 async function readJson(filePath: string): Promise<unknown> {
@@ -179,6 +185,7 @@ export async function verifyKnowledgeSnapshot(
     faqValue,
     reportValue,
     crawlHealthValue,
+    approvedRemovalValue,
   ] =
     await Promise.all([
       readJson(path.join(generatedDir, "sources.json")),
@@ -187,6 +194,7 @@ export async function verifyKnowledgeSnapshot(
       readJson(path.join(generatedDir, "manager-faq.json")),
       readJson(path.join(generatedDir, "crawl-report.json")),
       readJson(path.join(generatedDir, "crawl-health.json")),
+      readJson(path.resolve(root, "knowledge/source/approved-removals.json")),
     ]);
 
   const errors: string[] = [];
@@ -224,6 +232,24 @@ export async function verifyKnowledgeSnapshot(
         (blockedPage): blockedPage is string => typeof blockedPage === "string",
       )
     : [];
+  const retainedPages = Array.isArray(report.retainedPages)
+    ? report.retainedPages.filter(isCrawlFailure)
+    : [];
+  const approvedRemovedPages = Array.isArray(report.approvedRemovedPages)
+    ? report.approvedRemovedPages.filter(
+        (removedPage): removedPage is string => typeof removedPage === "string",
+      )
+    : [];
+  let approvedRemovalUrls = new Set<string>();
+  try {
+    approvedRemovalUrls = parseApprovedRemovalUrls(approvedRemovalValue);
+  } catch (error: unknown) {
+    errors.push(
+      error instanceof Error
+        ? error.message
+        : "approved-removals.json is invalid.",
+    );
+  }
   const reportShapeIsValid =
     Number.isInteger(report.maxPages) &&
     typeof report.maxPages === "number" &&
@@ -238,7 +264,11 @@ export async function verifyKnowledgeSnapshot(
     Array.isArray(report.duplicatePages) &&
     duplicatePages.length === report.duplicatePages.length &&
     Array.isArray(report.blockedPages) &&
-    blockedPages.length === report.blockedPages.length;
+    blockedPages.length === report.blockedPages.length &&
+    Array.isArray(report.retainedPages) &&
+    retainedPages.length === report.retainedPages.length &&
+    Array.isArray(report.approvedRemovedPages) &&
+    approvedRemovedPages.length === report.approvedRemovedPages.length;
   if (!reportShapeIsValid) {
     errors.push("crawl-report.json has invalid or incomplete health fields.");
   }
@@ -252,6 +282,8 @@ export async function verifyKnowledgeSnapshot(
         failedPages,
         duplicatePages,
         blockedPages,
+        retainedPages,
+        approvedRemovedPages,
       }),
     )
   ) {
@@ -305,6 +337,11 @@ export async function verifyKnowledgeSnapshot(
     websiteSources.map((source) => [source.id, source]),
   );
   for (const websiteSource of websiteSources) {
+    if (approvedRemovalUrls.has(websiteSource.canonicalUrl)) {
+      errors.push(
+        `Approved removal ${websiteSource.canonicalUrl} remained in the crawl.`,
+      );
+    }
     if (!isApprovedWebsiteUrl(websiteSource.canonicalUrl)) {
       errors.push(`Crawled source ${websiteSource.id} has an unapproved URL.`);
     }
@@ -312,6 +349,26 @@ export async function verifyKnowledgeSnapshot(
       if (!isApprovedWebsiteUrl(link.url)) {
         errors.push(`Crawled source ${websiteSource.id} has an unapproved link.`);
       }
+    }
+  }
+
+  const crawledUrls = new Set(
+    websiteSources.map((source) => source.canonicalUrl),
+  );
+  for (const retainedPage of retainedPages) {
+    if (!crawledUrls.has(retainedPage.url)) {
+      errors.push(`Retained page ${retainedPage.url} is missing from crawl data.`);
+    }
+    if (!isApprovedWebsiteUrl(retainedPage.url)) {
+      errors.push(`Retained page ${retainedPage.url} is not an approved website URL.`);
+    }
+  }
+  for (const removedPage of approvedRemovedPages) {
+    if (!approvedRemovalUrls.has(removedPage)) {
+      errors.push(`Crawl report contains an unapproved removal: ${removedPage}`);
+    }
+    if (crawledUrls.has(removedPage)) {
+      errors.push(`Approved removal ${removedPage} is still indexed.`);
     }
   }
 
@@ -427,6 +484,7 @@ export async function verifyKnowledgeSnapshot(
     totalDocuments: sources.length,
     totalBytes,
     crawlFailures,
+    retainedWebsiteDocuments: retainedPages.length,
   };
 }
 
