@@ -47,7 +47,8 @@ jobs:
             knowledge/generated/prepared
           )
 
-          if git diff --quiet HEAD -- "${review_paths[@]}"; then
+          knowledge_changes="$(git status --porcelain --untracked-files=all -- "${review_paths[@]}")"
+          if [[ -z "$knowledge_changes" ]]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No verified public knowledge changes were detected; main and Gemini were left untouched." >> "$GITHUB_STEP_SUMMARY"
           else
@@ -65,13 +66,15 @@ jobs:
             exit 1
           fi
 
-          if ! git diff --quiet HEAD -- \
+          staff_faq_changes="$(git status --porcelain --untracked-files=all -- \
             knowledge/generated/manager-faq.json \
             knowledge/generated/manager-faq-approved.md \
             knowledge/generated/manager-faq-pending.md \
             knowledge/generated/manager-faq-report.json \
-            ':(glob)knowledge/generated/prepared/manager_faq__*.md'; then
+            ':(glob)knowledge/generated/prepared/manager_faq__*.md')"
+          if [[ -n "$staff_faq_changes" ]]; then
             echo "The public website refresh changed staff-managed FAQ files. Refusing to continue."
+            echo "$staff_faq_changes"
             exit 1
           fi
 
@@ -79,7 +82,7 @@ jobs:
         if: steps.changes.outputs.changed == 'true'
         shell: bash
         run: |
-          changed_documents="$(git diff --name-only HEAD -- knowledge/generated/prepared | grep -c . || true)"
+          changed_documents="$(git status --porcelain --untracked-files=all -- knowledge/generated/prepared | grep -c . || true)"
           deleted_documents="$(git diff --name-only --diff-filter=D HEAD -- knowledge/generated/prepared | grep -c . || true)"
           echo "Prepared documents changed: $changed_documents; deleted: $deleted_documents" >> "$GITHUB_STEP_SUMMARY"
 

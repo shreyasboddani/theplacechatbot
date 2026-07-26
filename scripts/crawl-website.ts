@@ -242,6 +242,14 @@ function sleep(milliseconds: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
+export function requireThePlaceFetchUrl(value: string): string {
+  const canonical = canonicalizeThePlaceUrl(value);
+  if (!canonical) {
+    throw new Error("Refusing to fetch or follow a URL outside The Place website.");
+  }
+  return canonical;
+}
+
 export function isCrawlableUrl(value: string): boolean {
   const canonical = canonicalizeThePlaceUrl(value);
   if (!canonical) return false;
@@ -389,12 +397,13 @@ export function extractWebsiteSource(
 }
 
 async function fetchWithRetry(url: string): Promise<Response> {
+  const requestUrl = requireThePlaceFetchUrl(url);
   let lastError: unknown;
   for (let attempt = 0; attempt < 2; attempt += 1) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
     try {
-      const response = await fetch(url, {
+      const response = await fetch(requestUrl, {
         headers: {
           "User-Agent": USER_AGENT,
           Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.5",
@@ -402,6 +411,7 @@ async function fetchWithRetry(url: string): Promise<Response> {
         redirect: "follow",
         signal: controller.signal,
       });
+      requireThePlaceFetchUrl(response.url);
       if (response.ok || response.status < 500) return response;
       lastError = new Error(`HTTP ${response.status}`);
     } catch (error: unknown) {

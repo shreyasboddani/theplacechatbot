@@ -5,10 +5,10 @@ The automation keeps the Gemini credential in Vercel only. GitHub Actions crawls
 ## Workflow sequence
 
 1. `Detect and commit website knowledge updates` runs daily, manually, or from an approved CMS webhook.
-2. It crawls only public The Place pages, revalidates every previously approved URL first, preserves unchanged timestamps, prepares the corpus, and runs the knowledge verifier.
+2. It crawls only public The Place pages, rejects off-domain fetch and redirect targets, revalidates every previously approved URL first, preserves unchanged timestamps, prepares the corpus, and runs the knowledge verifier.
 3. Failed, incomplete, redirected, missing, or suspiciously shrunken approved pages retain their last-known-good documents and appear in `retainedPages`. A permanent removal requires a canonical URL already committed to `knowledge/source/approved-removals.json` after human review.
 4. If deterministic crawl health and prepared retrieval content are unchanged, the workflow creates no commit. No Vercel deployment or Gemini request occurs.
-5. If content changed, GitHub verifies that only generated files changed, rejects staff-FAQ changes, limits the automatic change set to 20 prepared documents, and runs all tests, lint, production build, and diff checks.
+5. If content changed, GitHub verifies that only generated files changed, rejects tracked or newly created staff-FAQ changes, counts tracked and untracked prepared documents toward the 20-document automatic limit, and runs all tests, lint, production build, and diff checks.
 6. Immediately before committing, it fetches `origin/main`. If `main` advanced during validation, it exits instead of rebasing or overwriting newer work. Otherwise, the knowledge bot creates a normal commit directly on `main` and pushes without force.
 7. Vercel's Git integration starts a Production deployment for the new `main` commit. `vercel.json` selects `npm run build:vercel`.
 8. The production build requires the Vercel `GEMINI_API_KEY` and `GEMINI_FILE_SEARCH_STORE`, verifies the committed corpus again, uploads changed documents, deletes obsolete managed copies only after all uploads succeed, verifies zero remote drift, and then runs `next build`.

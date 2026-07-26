@@ -409,6 +409,7 @@ File Search stores belong to the Gemini project that created them; changing only
 - Obvious SSNs, Luhn-valid card numbers, password disclosures, bank-account context with long numbers, and large private-document-like pastes are blocked before Gemini.
 - React renders answer text directly; raw HTML and `dangerouslySetInnerHTML` are not used for model output.
 - Website source URLs are limited to HTTPS `theplacega.org` hosts and must exist in the generated manifest.
+- The crawler revalidates both requested and final redirect hosts so off-domain content cannot enter the approved corpus through a redirect or external sitemap.
 - Request size, message length, history length, timeout, and response shape are bounded.
 - The API requires `application/json`, model-generated images are not loaded, the widget iframe is same-origin with its loader, and response security headers limit framing to The Place domains.
 - Production provider failures log only error type/status/code metadata, never visitor message text.

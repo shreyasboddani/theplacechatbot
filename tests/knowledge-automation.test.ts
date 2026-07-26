@@ -9,6 +9,7 @@ import {
   mergePreviouslyApprovedSources,
   parseApprovedRemovalUrls,
   preserveUnchangedFetchedAt,
+  requireThePlaceFetchUrl,
   websiteContentFingerprint,
 } from "../scripts/crawl-website";
 import {
@@ -166,6 +167,18 @@ describe("automated website refresh", () => {
     expect(merged.retainedPages[0]?.reason).toContain("Robots policy");
   });
 
+  it("refuses off-domain crawl and redirect targets", () => {
+    expect(requireThePlaceFetchUrl("http://theplacega.org/contact-us#top")).toBe(
+      "https://www.theplacega.org/contact-us",
+    );
+    expect(() => requireThePlaceFetchUrl("https://example.com/poisoned")).toThrow(
+      "outside The Place website",
+    );
+    expect(() =>
+      requireThePlaceFetchUrl("https://www.theplacega.org.evil.example/page"),
+    ).toThrow("outside The Place website");
+  });
+
   it("treats severe extraction shrinkage and soft error pages as unsafe", () => {
     const previous = websiteSource({ text: "A".repeat(1_000) });
     expect(
@@ -315,9 +328,17 @@ describe("deployment automation configuration", () => {
     expect(refresh).toContain("Guard the generated-file boundary");
     expect(refresh).toContain("Enforce a bounded automatic change set");
     expect(refresh).toContain("changed_documents > 20");
+    expect(refresh).toContain(
+      "git status --porcelain --untracked-files=all -- knowledge/generated/prepared",
+    );
+    expect(refresh).toMatch(
+      /staff_faq_changes="\$\(git status --porcelain --untracked-files=all/,
+    );
     expect(refresh).toContain("manager_faq__*.md");
     expect(refresh).toContain("Run the complete safety gate");
-    expect(refresh).toContain('git diff --quiet HEAD');
+    expect(refresh).toMatch(
+      /knowledge_changes="\$\(git status --porcelain --untracked-files=all/,
+    );
     expect(refresh).toContain('git push origin HEAD:main');
     expect(refresh).toContain("Vercel will reconcile Gemini");
     expect(refresh).not.toContain("pull-requests: write");
