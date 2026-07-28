@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-07-26T02:27:10.169Z",
+  "preparedAt": "2026-07-28T11:30:36.433Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -47,7 +47,7 @@
       "id": "web-new-volunteers-51338cd7",
       "title": "New Volunteers | Get Involved Today — The Place",
       "url": "https://www.theplacega.org/new-volunteers",
-      "fetchedAt": "2026-07-23T18:36:17.172Z"
+      "fetchedAt": "2026-07-28T11:29:33.426Z"
     },
     {
       "id": "web-food-pantry-request-b0ed76b1",
@@ -683,7 +683,7 @@
       "id": "web-history-b11ce65d",
       "title": "History — The Place",
       "url": "https://www.theplacega.org/history",
-      "fetchedAt": "2026-07-23T18:36:59.147Z"
+      "fetchedAt": "2026-07-28T11:30:33.691Z"
     },
     {
       "id": "web-staff-564c6965",
@@ -706,32 +706,15 @@
   ],
   "failedPages": [
     {
-      "url": "https://www.theplacega.org/matching-gifts",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/gala-recap",
-      "reason": "No meaningful public page content found"
-    },
-    {
       "url": "https://www.theplacega.org/furniture-pickup-request",
       "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/faroi",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/upcoming-events",
+      "url": "https://www.theplacega.org/matching-gifts",
       "reason": "No meaningful public page content found"
     }
   ],
-  "duplicatePages": [
-    {
-      "url": "https://www.theplacega.org/home",
-      "duplicateOf": "https://www.theplacega.org/"
-    }
-  ],
+  "duplicatePages": [],
   "retainedPages": [],
   "approvedRemovedPages": [],
   "pendingFaqEntries": [
@@ -791,11 +774,5 @@
   "totalDocumentsPrepared": 144,
   "totalDocumentsUploaded": 0,
   "uploadFailures": [],
-  "fileSearchStoreName": "fileSearchStores/the-place-grounded-knowledg-3zerv2a5s6wl",
-  "syncMode": "reconcile",
-  "totalDocumentsDeleted": 0,
-  "totalDocumentsUnchanged": 144,
-  "managedDocumentsAfterSync": 144,
-  "deleteFailures": [],
-  "uploadedAt": "2026-07-26T02:28:18.555Z"
+  "fileSearchStoreName": null
 }

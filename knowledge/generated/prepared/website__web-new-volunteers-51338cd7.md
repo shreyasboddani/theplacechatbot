@@ -56,4 +56,5 @@ Home Projects The opportunities to volunteer at home are great for families with
 
 ## Relevant official links
 
+- The Place Volunteer Handbook: https://www.theplacega.org/s/The-Place-Volunteer-Handbook-6242026.pdf
 - https://www.theplacega.org/s/Heart-of-Service-July-2026.pdf: https://www.theplacega.org/s/Heart-of-Service-July-2026.pdf
