@@ -1,4 +1,5 @@
 import { THE_PLACE } from "@/lib/config";
+import type { ChatLanguagePreference } from "@/lib/chat/language";
 import type {
   ChatResponse,
   ChatSource,
@@ -239,11 +240,60 @@ function answered(
   };
 }
 
+type AutomaticGreetingLanguage =
+  | "ar-latn"
+  | "es"
+  | "fr"
+  | "hi-latn"
+  | "it"
+  | "pt"
+  | "tl"
+  | "vi-latn"
+  | "zh-latn";
+
+function automaticGreetingLanguage(
+  message: string,
+): AutomaticGreetingLanguage | undefined {
+  if (/^(hola|buenos dias|buenas tardes|buenas noches)$/.test(message)) {
+    return "es";
+  }
+  if (/^(bonjour|salut)$/.test(message)) return "fr";
+  if (/^(namaste|namaskar)$/.test(message)) return "hi-latn";
+  if (/^(salam|salaam|assalamu alaikum|as-salamu alaykum)$/.test(message)) {
+    return "ar-latn";
+  }
+  if (/^(ola|olá|bom dia|boa tarde|boa noite)$/.test(message)) return "pt";
+  if (/^(ciao|buongiorno|buonasera)$/.test(message)) return "it";
+  if (/^(xin chao)$/.test(message)) return "vi-latn";
+  if (/^(kumusta|kamusta)$/.test(message)) return "tl";
+  if (/^(ni hao|nihao)$/.test(message)) return "zh-latn";
+  return undefined;
+}
+
+function automaticGreetingAnswer(
+  detectedLanguage: AutomaticGreetingLanguage,
+): string {
+  const responses: Record<AutomaticGreetingLanguage, string> = {
+    es: "¡Hola! Puedo ayudarte a encontrar información aprobada de The Place. ¿En qué puedo ayudarte?",
+    fr: "Bonjour ! Je peux vous aider à trouver des informations approuvées sur The Place. Que souhaitez-vous savoir ?",
+    "hi-latn": "Namaste! Main The Place ke baare mein approved jaankari dhoondhne mein aapki madad kar sakta hoon. Aap kya jaanna chahenge?",
+    "ar-latn": "Ahlan! Mumkin asaedak fi al-hosool ala maaloomat muetamada an The Place. Sho habeb taaraf?",
+    pt: "Olá! Posso ajudar você a encontrar informações aprovadas sobre The Place. O que você gostaria de saber?",
+    it: "Ciao! Posso aiutarti a trovare informazioni approvate su The Place. Cosa vorresti sapere?",
+    "vi-latn": "Xin chao! Toi co the giup ban tim thong tin da duoc phe duyet ve The Place. Ban muon biet gi?",
+    tl: "Kumusta! Matutulungan kitang makahanap ng aprubadong impormasyon tungkol sa The Place. Ano ang gusto mong malaman?",
+    "zh-latn": "Ni hao! Wo keyi bang ni chazhao The Place de yanzheng xinxi. Ni xiang liaojie shenme?",
+  };
+  return responses[detectedLanguage];
+}
+
 export function getLocalConversationalResponse(
   message: string,
   manifest: SourceManifestEntry[] = [],
+  language: ChatLanguagePreference = "auto",
 ): ChatResponse | undefined {
   const normalized = normalizeConversationalMessage(message);
+  const detectedGreeting = automaticGreetingLanguage(normalized);
 
   const officialDocument = matchingOfficialDocument(normalized, manifest);
   if (officialDocument?.url) {
@@ -252,7 +302,9 @@ export function getLocalConversationalResponse(
       "",
     );
     return answered(
-      `Yes—I have ${conversationalTitle} available as an approved source and can help answer questions from it. What would you like to know?`,
+      language === "es"
+        ? `Sí, tengo ${conversationalTitle} disponible como fuente aprobada y puedo ayudarte a responder preguntas basadas en ese documento. ¿Qué te gustaría saber?`
+        : `Yes—I have ${conversationalTitle} available as an approved source and can help answer questions from it. What would you like to know?`,
       [
         {
           id: officialDocument.id,
@@ -265,11 +317,16 @@ export function getLocalConversationalResponse(
   }
 
   if (
-    greetingPrefixWordCount(normalized) > 0 &&
-    greetingPrefixWordCount(normalized) === words(normalized).length
+    (greetingPrefixWordCount(normalized) > 0 &&
+      greetingPrefixWordCount(normalized) === words(normalized).length) ||
+    Boolean(detectedGreeting)
   ) {
     return answered(
-      "Hi! I can help you find confirmed information about The Place’s services, donations, volunteering, locations, hours, contacts, and events. What would you like help with?",
+      language === "es"
+        ? "¡Hola! Puedo ayudarte a encontrar información confirmada sobre los servicios, donaciones, voluntariado, ubicaciones, horarios, contactos y eventos de The Place. ¿En qué puedo ayudarte?"
+        : language === "en" || !detectedGreeting
+          ? "Hi! I can help you find confirmed information about The Place’s services, donations, volunteering, locations, hours, contacts, and events. What would you like help with?"
+          : automaticGreetingAnswer(detectedGreeting),
     );
   }
 
@@ -280,13 +337,26 @@ export function getLocalConversationalResponse(
     /^(what|how) can you help( me)?( with)?$/.test(normalized)
   ) {
     return answered(
-      "You can ask about food or financial assistance, thrift-store donations and hours, volunteering, hosting a drive, locations, contacts, and upcoming events. Ask naturally and use follow-up questions if you need more detail. I can’t check a personal application or case, and I’ll direct you to staff when the approved information doesn’t confirm an answer.",
+      language === "es"
+        ? "Puedes preguntar sobre asistencia alimentaria o financiera, donaciones y horarios de las tiendas de segunda mano, voluntariado, organización de campañas, ubicaciones, contactos y próximos eventos. Pregunta con naturalidad y haz preguntas de seguimiento si necesitas más detalles. No puedo consultar solicitudes ni casos personales; cuando la información aprobada no confirme una respuesta, te dirigiré al personal."
+        : "You can ask about food or financial assistance, thrift-store donations and hours, volunteering, hosting a drive, locations, contacts, and upcoming events. Ask naturally and use follow-up questions if you need more detail. I can’t check a personal application or case, and I’ll direct you to staff when the approved information doesn’t confirm an answer.",
     );
   }
 
   if (/^(thanks|thank you|thank you so much|thanks so much|thx)$/.test(normalized)) {
     return answered(
-      "You’re welcome! Let me know if you have another question about The Place.",
+      language === "es"
+        ? "¡Con gusto! Avísame si tienes otra pregunta sobre The Place."
+        : "You’re welcome! Let me know if you have another question about The Place.",
+    );
+  }
+
+  if (
+    language === "es" &&
+    /^(gracias|muchas gracias|mil gracias)$/.test(normalized)
+  ) {
+    return answered(
+      "¡Con gusto! Avísame si tienes otra pregunta sobre The Place.",
     );
   }
 

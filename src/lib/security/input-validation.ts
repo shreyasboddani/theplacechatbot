@@ -6,6 +6,7 @@ import {
   MAX_MESSAGE_LENGTH,
   RUNTIME_HISTORY_ITEMS,
 } from "@/lib/chat/limits";
+import { CHAT_LANGUAGE_PREFERENCES } from "@/lib/chat/language";
 
 export {
   MAX_HISTORY_CONTENT_LENGTH,
@@ -47,6 +48,7 @@ export const chatRequestSchema = z
   .object({
     message: z.string().trim().min(1).max(MAX_MESSAGE_LENGTH),
     history: historySchema.default([]),
+    language: z.enum(CHAT_LANGUAGE_PREFERENCES).default("auto"),
   })
   .strip();
 

@@ -12,7 +12,11 @@ describe("client chat request builder", () => {
   it("creates the exact typed-message payload with a trimmed message", () => {
     expect(buildChatRequest("  Where can I donate food?  ", [])).toEqual({
       success: true,
-      payload: { message: "Where can I donate food?", history: [] },
+      payload: {
+        message: "Where can I donate food?",
+        history: [],
+        language: "auto",
+      },
     });
   });
 
@@ -21,7 +25,11 @@ describe("client chat request builder", () => {
     expect(action).toBeDefined();
     expect(buildChatRequest(action?.question, [])).toEqual({
       success: true,
-      payload: { message: "Where can I donate food?", history: [] },
+      payload: {
+        message: "Where can I donate food?",
+        history: [],
+        language: "auto",
+      },
     });
   });
 
@@ -62,11 +70,23 @@ describe("client chat request builder", () => {
         history: [
           { role: "user", content: "I applied for assistance." },
         ],
+        language: "auto",
       },
     });
     if (result.success) {
       expect(JSON.stringify(result.payload)).not.toContain("undefined");
     }
+  });
+
+  it("includes a validated explicit language preference", () => {
+    expect(buildChatRequest("¿Dónde puedo donar alimentos?", [], "es")).toEqual({
+      success: true,
+      payload: {
+        message: "¿Dónde puedo donar alimentos?",
+        history: [],
+        language: "es",
+      },
+    });
   });
 
   it("excludes welcome, loading, error, empty, and unsupported-role messages", () => {

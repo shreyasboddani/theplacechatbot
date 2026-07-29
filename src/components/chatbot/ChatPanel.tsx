@@ -7,6 +7,7 @@ import {
   ThePlaceLogo,
 } from "@/components/branding/BrandLogos";
 import { ChatInput } from "@/components/chatbot/ChatInput";
+import { LanguageSelector } from "@/components/chatbot/LanguageSelector";
 import { ChatMessage } from "@/components/chatbot/ChatMessage";
 import {
   ChatIcon,
@@ -20,17 +21,23 @@ import type { ChatMessageItem } from "@/components/chatbot/types";
 import { CLIENT_REQUEST_TIMEOUT_MS } from "@/lib/chat/limits";
 import { buildChatRequest } from "@/lib/chat/request";
 import {
+  CHAT_UI_COPY,
+  chatUiLanguage,
+  type ChatLanguagePreference,
+} from "@/lib/chat/language";
+import {
   parseChatResponse,
   responseBelongsInHistory,
 } from "@/lib/chat/response";
 
-const WELCOME_MESSAGE: ChatMessageItem = {
-  id: "welcome",
-  role: "assistant",
-  content:
-    "Hi! I can help you find approved information from The Place about services, donations, volunteering, and more. What would you like help with?",
-  includeInHistory: false,
-};
+function welcomeMessage(language: ChatLanguagePreference): ChatMessageItem {
+  return {
+    id: "welcome",
+    role: "assistant",
+    content: CHAT_UI_COPY[chatUiLanguage(language)].welcome,
+    includeInHistory: false,
+  };
+}
 
 interface ChatPanelProps {
   embedded?: boolean;
@@ -45,7 +52,12 @@ export function ChatPanel({
   onMinimize,
   onClose,
 }: ChatPanelProps) {
-  const [messages, setMessages] = useState<ChatMessageItem[]>([WELCOME_MESSAGE]);
+  const [language, setLanguage] = useState<ChatLanguagePreference>("auto");
+  const uiLanguage = chatUiLanguage(language);
+  const copy = CHAT_UI_COPY[uiLanguage];
+  const [messages, setMessages] = useState<ChatMessageItem[]>(() => [
+    welcomeMessage("auto"),
+  ]);
   const [loading, setLoading] = useState(false);
   const scrollerRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -72,7 +84,7 @@ export function ChatPanel({
 
   async function sendMessage(message: unknown) {
     if (pendingRef.current) return;
-    const request = buildChatRequest(message, messages);
+    const request = buildChatRequest(message, messages, language);
     if (!request.success) {
       if (request.reason === "empty_message") return;
       setMessages((current) => [
@@ -82,8 +94,8 @@ export function ChatPanel({
           role: "assistant",
           content:
             request.reason === "message_too_long"
-              ? "That message is too long to send. Please shorten it and try again."
-              : "The chat control could not read that message. Please type your question in the message box and try again.",
+              ? copy.invalidLong
+              : copy.invalidMessage,
           includeInHistory: false,
           status: "invalid_request",
         },
@@ -110,7 +122,10 @@ export function ChatPanel({
     try {
       const httpResponse = await fetch("/api/chat", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "X-Chat-Language": language,
+        },
         body: JSON.stringify(request.payload),
         signal: controller.signal,
       });
@@ -124,7 +139,7 @@ export function ChatPanel({
                 ...item,
                 content:
                   response.status === "sensitive_information"
-                    ? "Sensitive information was not sent."
+                    ? copy.sensitiveReplacement
                     : item.content,
                 includeInHistory: false,
               }
@@ -149,8 +164,7 @@ export function ChatPanel({
         {
           id: crypto.randomUUID(),
           role: "assistant",
-          content:
-            "The information assistant is temporarily unavailable. Please try again in a moment. If you still need help, contact The Place at 770-887-1098 or use the contact page.",
+          content: copy.unavailable,
           sources: [
             {
               id: "contact-the-place",
@@ -173,6 +187,15 @@ export function ChatPanel({
     }
   }
 
+  function changeLanguage(nextLanguage: ChatLanguagePreference) {
+    setLanguage(nextLanguage);
+    setMessages((current) =>
+      current.length === 1 && current[0]?.id === "welcome"
+        ? [welcomeMessage(nextLanguage)]
+        : current,
+    );
+  }
+
   return (
     <section
       ref={panelRef}
@@ -190,32 +213,34 @@ export function ChatPanel({
           <ThePlaceLogo className="chat-place-logo" />
         </div>
         <div className="chat-title-block">
-          <h2 id="chatbot-title" aria-label="The Place Assistant">Assistant</h2>
-          <p><span aria-hidden="true" /> Official information</p>
+          <h2 id="chatbot-title" aria-label={`The Place ${copy.assistant}`}>
+            {copy.assistant}
+          </h2>
+          <p><span aria-hidden="true" /> {copy.officialInformation}</p>
         </div>
         <div className="chat-header-actions">
           <button
             type="button"
-            onClick={() => setMessages([WELCOME_MESSAGE])}
+            onClick={() => setMessages([welcomeMessage(language)])}
             disabled={loading}
-            aria-label="Restart conversation"
-            title="Restart conversation"
+            aria-label={copy.restart}
+            title={copy.restart}
           >
             <RestartIcon />
           </button>
           <button
             type="button"
             onClick={onMinimize}
-            aria-label="Minimize chat"
-            title="Minimize chat"
+            aria-label={copy.minimize}
+            title={copy.minimize}
           >
             <MinimizeIcon />
           </button>
           <button
             type="button"
             onClick={onClose}
-            aria-label="Close chat"
-            title="Close chat"
+            aria-label={copy.close}
+            title={copy.close}
           >
             <CloseIcon />
           </button>
@@ -224,7 +249,16 @@ export function ChatPanel({
 
       <div className="prototype-strip">
         <LearnAILogo className="prototype-logo" decorative />
-        <span>Prototype technology by <strong>LearnAI</strong></span>
+        <span>{copy.prototypeBy} <strong>LearnAI</strong></span>
+      </div>
+
+      <div className="chat-language-bar">
+        <LanguageSelector
+          value={language}
+          uiLanguage={uiLanguage}
+          disabled={loading}
+          onChange={changeLanguage}
+        />
       </div>
 
       <div
@@ -233,15 +267,23 @@ export function ChatPanel({
         aria-live="polite"
         aria-busy={loading}
       >
-        <div className="chat-day-label">Today</div>
+        <div className="chat-day-label">{copy.today}</div>
         {messages.map((message) => (
-          <ChatMessage key={message.id} message={message} />
+          <ChatMessage
+            key={message.id}
+            message={message}
+            language={uiLanguage}
+          />
         ))}
         {messages.length === 1 ? (
-          <QuickActions disabled={loading} onSelect={sendMessage} />
+          <QuickActions
+            disabled={loading}
+            onSelect={sendMessage}
+            language={uiLanguage}
+          />
         ) : null}
         {loading ? (
-          <div className="typing-row" aria-label="Assistant is looking through approved sources">
+          <div className="typing-row" aria-label={copy.typing}>
             <div className="assistant-avatar" aria-hidden="true">
               <ChatIcon size={17} />
             </div>
@@ -255,9 +297,13 @@ export function ChatPanel({
       </div>
 
       <footer className="chat-composer">
-        <PrivacyNotice />
-        <ChatInput disabled={loading} onSend={sendMessage} />
-        <p className="chat-grounding-note">Answers require a confirmed official source.</p>
+        <PrivacyNotice language={uiLanguage} />
+        <ChatInput
+          disabled={loading}
+          onSend={sendMessage}
+          language={uiLanguage}
+        />
+        <p className="chat-grounding-note">{copy.groundingNote}</p>
       </footer>
     </section>
   );

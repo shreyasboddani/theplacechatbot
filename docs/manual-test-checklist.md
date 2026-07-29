@@ -57,6 +57,19 @@ For each follow-up:
 - [ ] The follow-up remains File Search-grounded and displays at least one mapped source card when answered.
 - [ ] An ambiguous follow-up produces one brief clarification, not `invalid_request`.
 
+## Language handling
+
+- [ ] The clearly labeled Response language control shows Auto, English, and Español without requiring hover and remains readable at 320px width.
+- [ ] Auto is selected by default and an English question receives an English grounded answer.
+- [ ] With Español selected, the welcome message, suggested questions, input label, privacy notice, status text, source labels, and grounded answer are in Spanish.
+- [ ] A Spanish quick action sends the Spanish natural-language question through the same `/api/chat` request pipeline with `language: "es"`.
+- [ ] With English selected, a Spanish question receives an English grounded answer.
+- [ ] In Auto, ask `Necesito ayuda con alimentos en Dawson County.` and confirm a Spanish grounded answer with mapped sources.
+- [ ] In Auto, ask `mujhe Dawson County mein khane ki madad chahiye` and confirm the intent is understood and the grounded answer uses readable Latin-letter Hindi rather than failing solely because native-script characters were not used.
+- [ ] Change the language after one answered turn and confirm the conversation remains present while the next answer honors the new selection.
+- [ ] A Spanish unsupported question uses the Spanish contact fallback and never invents a fact.
+- [ ] Language selection does not change citation requirements, source-card URL validation, sensitive-data blocking, or the four-message history limit.
+
 ## Expected to fall back unless a future website sync directly confirms them
 
 - [ ] What are your furniture delivery fees?

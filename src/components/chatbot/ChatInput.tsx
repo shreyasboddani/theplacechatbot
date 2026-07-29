@@ -2,14 +2,17 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 
 import { SendIcon } from "@/components/chatbot/Icons";
 import { MAX_MESSAGE_LENGTH } from "@/lib/chat/limits";
+import { CHAT_UI_COPY, type ChatUiLanguage } from "@/lib/chat/language";
 import { captureMessageForSubmit } from "@/lib/chat/request";
 
 interface ChatInputProps {
   disabled: boolean;
   onSend: (message: string) => void;
+  language?: ChatUiLanguage;
 }
 
-export function ChatInput({ disabled, onSend }: ChatInputProps) {
+export function ChatInput({ disabled, onSend, language = "en" }: ChatInputProps) {
+  const copy = CHAT_UI_COPY[language];
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -32,7 +35,7 @@ export function ChatInput({ disabled, onSend }: ChatInputProps) {
   return (
     <form className="chat-input-form" onSubmit={submit}>
       <label htmlFor="the-place-chat-input" className="sr-only">
-        Ask The Place information assistant
+        {copy.inputLabel}
       </label>
       <div className="chat-input-field">
         <textarea
@@ -51,7 +54,7 @@ export function ChatInput({ disabled, onSend }: ChatInputProps) {
           }}
           rows={1}
           maxLength={MAX_MESSAGE_LENGTH}
-          placeholder="Ask about services, donations, or volunteering..."
+          placeholder={copy.inputPlaceholder}
           disabled={disabled}
         />
         <span
@@ -66,7 +69,7 @@ export function ChatInput({ disabled, onSend }: ChatInputProps) {
         type="submit"
         className="chat-send-button"
         disabled={disabled || !message.trim()}
-        aria-label="Send message"
+        aria-label={copy.send}
       >
         <SendIcon />
       </button>

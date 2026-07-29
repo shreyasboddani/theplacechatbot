@@ -57,6 +57,19 @@ describe("chat input and quick actions", () => {
     expect(onSelect).toHaveBeenCalledWith("Where can I donate food?");
     expect(typeof onSelect.mock.calls[0]?.[0]).toBe("string");
   });
+
+  it("localizes the composer and quick actions in Spanish", () => {
+    const onSelect = vi.fn();
+    render(
+      <>
+        <ChatInput disabled={false} onSend={vi.fn()} language="es" />
+        <QuickActions onSelect={onSelect} language="es" />
+      </>,
+    );
+    expect(screen.getByLabelText(/Pregúntale al asistente/i)).toBeDefined();
+    fireEvent.click(screen.getByRole("button", { name: "Donar alimentos" }));
+    expect(onSelect).toHaveBeenCalledWith("¿Dónde puedo donar alimentos?");
+  });
 });
 
 describe("safe message rendering", () => {

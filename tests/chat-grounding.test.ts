@@ -71,6 +71,18 @@ describe("grounded interaction interpretation", () => {
     expect(result.answer).toContain("available information");
   });
 
+  it("localizes a confirmed not-found fallback without trusting model prose", () => {
+    const result = interpretGroundedInteraction(
+      interaction("not_found"),
+      [staffSource],
+      "es",
+    );
+
+    expect(result.status).toBe("not_found");
+    expect(result.answer).toContain("No pude encontrar una respuesta confirmada");
+    expect(result.answer).not.toContain("A supported answer");
+  });
+
   it("does not describe malformed model output as missing knowledge", () => {
     const result = interpretGroundedInteraction(
       {
@@ -106,6 +118,7 @@ describe("grounded interaction interpretation", () => {
       client,
       {
         message: "Who should I contact?",
+        language: "auto",
         history: [
           {
             role: "user",

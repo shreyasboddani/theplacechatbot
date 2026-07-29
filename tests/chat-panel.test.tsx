@@ -57,10 +57,14 @@ describe("ChatPanel request pipeline", () => {
     fireEvent.click(screen.getByRole("button", { name: "Donate food" }));
     await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
     const init = fetchMock.mock.calls[0]?.[1] as RequestInit;
-    expect(init.headers).toEqual({ "Content-Type": "application/json" });
+    expect(init.headers).toEqual({
+      "Content-Type": "application/json",
+      "X-Chat-Language": "auto",
+    });
     expect(JSON.parse(init.body as string)).toEqual({
       message: "Where can I donate food?",
       history: [],
+      language: "auto",
     });
   });
 
@@ -89,6 +93,7 @@ describe("ChatPanel request pipeline", () => {
     expect(JSON.parse(firstInit.body as string)).toEqual({
       message: "I need food.",
       history: [],
+      language: "auto",
     });
     const secondInit = fetchMock.mock.calls[1]?.[1] as RequestInit;
     expect(JSON.parse(secondInit.body as string)).toEqual({
@@ -100,6 +105,7 @@ describe("ChatPanel request pipeline", () => {
           content: "The Place offers confirmed food help.",
         },
       ],
+      language: "auto",
     });
   });
 
@@ -143,6 +149,33 @@ describe("ChatPanel request pipeline", () => {
     expect(JSON.parse(init.body as string)).toEqual({
       message: "Second question",
       history: [],
+      language: "auto",
+    });
+  });
+
+  it("shows a visible language selector and sends localized Spanish questions", async () => {
+    const fetchMock = vi.fn().mockResolvedValue(
+      mockHttpResponse(answered("Puedes donar alimentos en The Place.")),
+    );
+    vi.stubGlobal("fetch", fetchMock);
+    render(<ChatPanel onMinimize={vi.fn()} onClose={vi.fn()} />);
+
+    expect(screen.getByText("Response language")).toBeDefined();
+    fireEvent.click(screen.getByRole("button", { name: "Español" }));
+    expect(screen.getByText(/Puedo ayudarte a encontrar información aprobada/i)).toBeDefined();
+    expect(screen.getByLabelText(/Pregúntale al asistente/i)).toBeDefined();
+
+    fireEvent.click(screen.getByRole("button", { name: "Donar alimentos" }));
+    await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
+    const init = fetchMock.mock.calls[0]?.[1] as RequestInit;
+    expect(init.headers).toEqual({
+      "Content-Type": "application/json",
+      "X-Chat-Language": "es",
+    });
+    expect(JSON.parse(init.body as string)).toEqual({
+      message: "¿Dónde puedo donar alimentos?",
+      history: [],
+      language: "es",
     });
   });
 });

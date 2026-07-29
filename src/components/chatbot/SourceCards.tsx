@@ -1,8 +1,16 @@
 import { ExternalIcon } from "@/components/chatbot/Icons";
 import type { ChatSource } from "@/lib/knowledge/types";
 import { getApprovedWebsiteUrl } from "@/lib/security/source-url";
+import { CHAT_UI_COPY, type ChatUiLanguage } from "@/lib/chat/language";
 
-export function SourceCards({ sources }: { sources: ChatSource[] }) {
+export function SourceCards({
+  sources,
+  language = "en",
+}: {
+  sources: ChatSource[];
+  language?: ChatUiLanguage;
+}) {
+  const copy = CHAT_UI_COPY[language];
   const linkedSources = Array.from(
     new Map(
       sources
@@ -15,8 +23,8 @@ export function SourceCards({ sources }: { sources: ChatSource[] }) {
   );
   if (linkedSources.length === 0) return null;
   return (
-    <div className="source-list" aria-label="Official sources">
-      <p className="source-list-label">Sources</p>
+    <div className="source-list" aria-label={copy.officialSources}>
+      <p className="source-list-label">{copy.sources}</p>
       {linkedSources.map(({ source, url }) => {
         return (
           <a
@@ -28,7 +36,7 @@ export function SourceCards({ sources }: { sources: ChatSource[] }) {
           >
             <span>
               <strong>{source.title}</strong>
-              <small>View on The Place website</small>
+              <small>{copy.viewSource}</small>
             </span>
             <ExternalIcon />
           </a>

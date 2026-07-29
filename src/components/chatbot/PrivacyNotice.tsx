@@ -1,13 +1,12 @@
 import { ShieldIcon } from "@/components/chatbot/Icons";
+import { CHAT_UI_COPY, type ChatUiLanguage } from "@/lib/chat/language";
 
-export function PrivacyNotice() {
+export function PrivacyNotice({ language = "en" }: { language?: ChatUiLanguage }) {
+  const copy = CHAT_UI_COPY[language];
   return (
     <div className="chat-privacy" role="note">
       <ShieldIcon size={16} />
-      <p>
-        Please do not share Social Security numbers, bank information, medical
-        details, passwords, or private documents in this chat.
-      </p>
+      <p>{copy.privacy}</p>
     </div>
   );
 }

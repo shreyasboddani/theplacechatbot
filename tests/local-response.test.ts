@@ -49,6 +49,27 @@ describe("local conversational responses", () => {
   );
 
   it.each([
+    ["hola", "¡Hola!"],
+    ["namaste", "Namaste!"],
+    ["salaam", "Ahlan!"],
+    ["bonjour", "Bonjour !"],
+    ["kumusta", "Kumusta!"],
+  ])("answers a common multilingual greeting locally in Auto: %j", (message, expected) => {
+    const response = getLocalConversationalResponse(message, [], "auto");
+    expect(response?.status).toBe("answered");
+    expect(response?.answer).toContain(expected);
+  });
+
+  it("honors an explicit response language for a greeting", () => {
+    expect(getLocalConversationalResponse("hola", [], "en")?.answer).toMatch(
+      /^Hi! /,
+    );
+    expect(getLocalConversationalResponse("hello", [], "es")?.answer).toMatch(
+      /^¡Hola! /,
+    );
+  });
+
+  it.each([
     [
       "Hii, pls who can I contcat about thrift donations please?",
       "who can i contcat about thrift donations",

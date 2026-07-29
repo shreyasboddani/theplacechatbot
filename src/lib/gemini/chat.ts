@@ -16,6 +16,7 @@ import type {
   SourceManifestEntry,
 } from "@/lib/knowledge/types";
 import type { ChatRequest } from "@/lib/security/input-validation";
+import type { ChatLanguagePreference } from "@/lib/chat/language";
 
 const modelPayloadSchema = z.object({
   status: z.enum(["answered", "not_found", "conflicting_information"]),
@@ -99,7 +100,7 @@ export function buildGroundedInteractionParams(
   return {
     model,
     input: buildInteractionInput(request),
-    system_instruction: buildSystemInstruction(currentDate),
+    system_instruction: buildSystemInstruction(currentDate, request.language),
     store: false as const,
     generation_config: {
       max_output_tokens: responseTokenLimit(request),
@@ -138,6 +139,7 @@ export function buildGroundedInteractionParams(
 export function interpretGroundedInteraction(
   interaction: GroundedInteraction,
   manifest: SourceManifestEntry[],
+  language: ChatLanguagePreference = "auto",
 ): ChatResponse {
   const textBlocks = interaction.steps.flatMap((step) =>
     step.type === "model_output" ? (step.content ?? []) : [],
@@ -150,16 +152,22 @@ export function interpretGroundedInteraction(
   try {
     parsed = modelPayloadSchema.parse(JSON.parse(text));
   } catch {
-    return sourceVerificationFallback();
+    return sourceVerificationFallback(undefined, language);
   }
 
   if (parsed.status === "conflicting_information") {
-    return contactFallback("conflicting_information", sources);
+    return contactFallback(
+      "conflicting_information",
+      sources,
+      language,
+    );
   }
   if (parsed.status === "not_found") {
-    return contactFallback();
+    return contactFallback("not_found", undefined, language);
   }
-  if (sources.length === 0) return sourceVerificationFallback();
+  if (sources.length === 0) {
+    return sourceVerificationFallback(undefined, language);
+  }
 
   return {
     status: "answered",
@@ -184,5 +192,9 @@ export async function askGroundedQuestion(
     options.fileSearchStore,
   );
   const interaction = await client.create(params);
-  return interpretGroundedInteraction(interaction, options.manifest);
+  return interpretGroundedInteraction(
+    interaction,
+    options.manifest,
+    request.language,
+  );
 }

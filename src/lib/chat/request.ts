@@ -1,4 +1,5 @@
 import type { ChatRequest } from "@/lib/security/input-validation";
+import type { ChatLanguagePreference } from "@/lib/chat/language";
 import {
   MAX_HISTORY_CONTENT_LENGTH,
   MAX_MESSAGE_LENGTH,
@@ -47,6 +48,7 @@ function normalizeHistoryItem(
 export function buildChatRequest<T extends ChatHistoryCandidate>(
   message: unknown,
   messages: readonly T[],
+  language: ChatLanguagePreference = "auto",
 ): ChatRequestBuildResult {
   const messageToSend = captureMessageForSubmit(message);
   if (!messageToSend) {
@@ -71,6 +73,7 @@ export function buildChatRequest<T extends ChatHistoryCandidate>(
     payload: {
       message: messageToSend,
       history,
+      language,
     },
   };
 }
