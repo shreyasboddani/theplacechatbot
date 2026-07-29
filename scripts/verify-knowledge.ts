@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -5,6 +6,7 @@ import { pathToFileURL } from "node:url";
 import { isApprovedWebsiteUrl } from "../src/lib/security/source-url";
 import type {
   FaqEntry,
+  OfficialDocumentSource,
   SourceManifestEntry,
   WebsiteSource,
 } from "../src/lib/knowledge/types";
@@ -16,7 +18,8 @@ import {
 const MINIMUM_WEBSITE_PAGES = 50;
 const MAXIMUM_WEBSITE_PAGES = 150;
 const MAXIMUM_FAILURE_RATIO = 0.25;
-const MAXIMUM_DOCUMENT_BYTES = 512 * 1_024;
+const MAXIMUM_MARKDOWN_DOCUMENT_BYTES = 512 * 1_024;
+const MAXIMUM_PDF_DOCUMENT_BYTES = 2 * 1_024 * 1_024;
 const MAXIMUM_CORPUS_BYTES = 25 * 1_024 * 1_024;
 
 interface CrawlReport {
@@ -42,6 +45,7 @@ interface DuplicatePage {
 
 export interface KnowledgeVerificationSummary {
   websiteDocuments: number;
+  officialDocumentDocuments: number;
   managerFaqDocuments: number;
   pendingFaqDocuments: number;
   totalDocuments: number;
@@ -63,9 +67,44 @@ function isManifestEntry(value: unknown): value is SourceManifestEntry {
     typeof entry.documentPath === "string" &&
     typeof entry.title === "string" &&
     (entry.sourceType === "official_website" ||
+      entry.sourceType === "official_document" ||
       entry.sourceType === "manager_faq") &&
-    typeof entry.priority === "number"
+    typeof entry.priority === "number" &&
+    (entry.contentHash === undefined || typeof entry.contentHash === "string")
   );
+}
+
+function isOfficialDocumentSource(
+  value: unknown,
+): value is OfficialDocumentSource {
+  if (!value || typeof value !== "object") return false;
+  const source = value as Record<string, unknown>;
+  return (
+    typeof source.id === "string" &&
+    typeof source.title === "string" &&
+    typeof source.url === "string" &&
+    typeof source.sourcePath === "string" &&
+    typeof source.contentHash === "string" &&
+    /^[a-f0-9]{64}$/.test(source.contentHash) &&
+    source.sourceType === "official_document"
+  );
+}
+
+function sha256(value: Uint8Array): string {
+  return createHash("sha256").update(value).digest("hex");
+}
+
+function resolveOfficialDocumentPath(
+  root: string,
+  sourcePath: string,
+): string | undefined {
+  const sourceRoot = path.resolve(root, "knowledge/source/official-documents");
+  const resolved = path.resolve(root, sourcePath);
+  const relative = path.relative(sourceRoot, resolved);
+  if (!relative || relative.startsWith("..") || path.isAbsolute(relative)) {
+    return undefined;
+  }
+  return resolved;
 }
 
 function isFaqEntry(value: unknown): value is FaqEntry {
@@ -186,6 +225,7 @@ export async function verifyKnowledgeSnapshot(
     reportValue,
     crawlHealthValue,
     approvedRemovalValue,
+    officialDocumentValue,
   ] =
     await Promise.all([
       readJson(path.join(generatedDir, "sources.json")),
@@ -195,6 +235,7 @@ export async function verifyKnowledgeSnapshot(
       readJson(path.join(generatedDir, "crawl-report.json")),
       readJson(path.join(generatedDir, "crawl-health.json")),
       readJson(path.resolve(root, "knowledge/source/approved-removals.json")),
+      readJson(path.resolve(root, "knowledge/source/official-documents.json")),
     ]);
 
   const errors: string[] = [];
@@ -213,10 +254,25 @@ export async function verifyKnowledgeSnapshot(
   if (!Array.isArray(faqValue) || !faqValue.every(isFaqEntry)) {
     throw new Error("knowledge/generated/manager-faq.json is not valid.");
   }
+  if (
+    !officialDocumentValue ||
+    typeof officialDocumentValue !== "object" ||
+    !Array.isArray(
+      (officialDocumentValue as Record<string, unknown>).documents,
+    ) ||
+    !(officialDocumentValue as { documents: unknown[] }).documents.every(
+      isOfficialDocumentSource,
+    )
+  ) {
+    throw new Error("knowledge/source/official-documents.json is not valid.");
+  }
 
   const sources = sourceValue;
   const websiteSources = crawlValue;
   const faqEntries = faqValue;
+  const officialDocuments = (
+    officialDocumentValue as { documents: OfficialDocumentSource[] }
+  ).documents;
   const report =
     reportValue && typeof reportValue === "object"
       ? (reportValue as CrawlReport)
@@ -292,6 +348,9 @@ export async function verifyKnowledgeSnapshot(
   const websiteManifest = sources.filter(
     (source) => source.sourceType === "official_website",
   );
+  const officialDocumentManifest = sources.filter(
+    (source) => source.sourceType === "official_document",
+  );
   const faqManifest = sources.filter(
     (source) => source.sourceType === "manager_faq",
   );
@@ -308,6 +367,11 @@ export async function verifyKnowledgeSnapshot(
   }
   if (websiteManifest.length !== websiteSources.length) {
     errors.push("The website manifest count does not match the crawl data.");
+  }
+  if (officialDocumentManifest.length !== officialDocuments.length) {
+    errors.push(
+      "The official-document manifest count does not match the source registry.",
+    );
   }
   if (faqManifest.length !== approvedFaq.length) {
     errors.push("The manager FAQ manifest count does not match approved entries.");
@@ -352,6 +416,31 @@ export async function verifyKnowledgeSnapshot(
     }
   }
 
+  const officialDocumentsById = new Map(
+    officialDocuments.map((source) => [source.id, source]),
+  );
+  for (const source of officialDocuments) {
+    if (!isApprovedWebsiteUrl(source.url)) {
+      errors.push(`Official document ${source.id} has an unapproved URL.`);
+    }
+    const sourcePath = resolveOfficialDocumentPath(root, source.sourcePath);
+    if (!sourcePath || path.extname(sourcePath).toLowerCase() !== ".pdf") {
+      errors.push(`Official document ${source.id} has an unsafe source path.`);
+      continue;
+    }
+    try {
+      const content = await readFile(sourcePath);
+      if (!content.subarray(0, 5).equals(Buffer.from("%PDF-"))) {
+        errors.push(`Official document ${source.id} is not a valid PDF.`);
+      }
+      if (sha256(content) !== source.contentHash) {
+        errors.push(`Official document ${source.id} failed its source hash check.`);
+      }
+    } catch {
+      errors.push(`Official document ${source.id} is missing its source PDF.`);
+    }
+  }
+
   const crawledUrls = new Set(
     websiteSources.map((source) => source.canonicalUrl),
   );
@@ -375,11 +464,13 @@ export async function verifyKnowledgeSnapshot(
   const duplicateIds = duplicateValues(sources.map((source) => source.id));
   const duplicateFiles = duplicateValues(sources.map((source) => source.fileName));
   const duplicateUrls = duplicateValues(
-    websiteManifest.flatMap((source) => (source.url ? [source.url] : [])),
+    [...websiteManifest, ...officialDocumentManifest].flatMap((source) =>
+      source.url ? [source.url] : [],
+    ),
   );
   if (duplicateIds.length > 0) errors.push("The manifest contains duplicate source IDs.");
   if (duplicateFiles.length > 0) errors.push("The manifest contains duplicate file names.");
-  if (duplicateUrls.length > 0) errors.push("The manifest contains duplicate website URLs.");
+  if (duplicateUrls.length > 0) errors.push("The manifest contains duplicate official URLs.");
 
   const crawlFailures = failedPages.length;
   const crawlTotal = websiteSources.length + crawlFailures;
@@ -405,13 +496,17 @@ export async function verifyKnowledgeSnapshot(
       withFileTypes: true,
     })
   )
-    .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
+    .filter(
+      (entry) =>
+        entry.isFile() &&
+        (entry.name.endsWith(".md") || entry.name.endsWith(".pdf")),
+    )
     .map((entry) => entry.name);
   const unexpectedFiles = preparedFiles.filter(
     (fileName) => !manifestFileNames.has(fileName),
   );
   if (unexpectedFiles.length > 0) {
-    errors.push("The prepared directory contains unmapped Markdown documents.");
+    errors.push("The prepared directory contains unmapped documents.");
   }
   if (preparedFiles.length !== sources.length) {
     errors.push("The prepared document count does not match the manifest.");
@@ -425,7 +520,9 @@ export async function verifyKnowledgeSnapshot(
     const expectedFileName =
       source.sourceType === "official_website"
         ? `website__${source.id}.md`
-        : `manager_faq__${source.id}.md`;
+        : source.sourceType === "official_document"
+          ? `official_document__${source.id}.pdf`
+          : `manager_faq__${source.id}.md`;
     const expectedDocumentPath = `knowledge/generated/prepared/${expectedFileName}`;
     if (
       source.fileName !== expectedFileName ||
@@ -449,21 +546,53 @@ export async function verifyKnowledgeSnapshot(
       if (source.priority !== 50) {
         errors.push(`Website source ${source.id} has an unexpected priority.`);
       }
+    } else if (source.sourceType === "official_document") {
+      const configured = officialDocumentsById.get(source.id);
+      if (
+        !configured ||
+        configured.title !== source.title ||
+        configured.url !== source.url ||
+        configured.contentHash !== source.contentHash
+      ) {
+        errors.push(
+          `Official document ${source.id} does not match the source registry.`,
+        );
+      }
+      if (!source.url || !isApprovedWebsiteUrl(source.url)) {
+        errors.push(`Official document ${source.id} has an unapproved URL.`);
+      }
+      if (source.priority !== 75) {
+        errors.push(`Official document ${source.id} has an unexpected priority.`);
+      }
     } else if (source.priority !== 100) {
       errors.push(`Manager FAQ ${source.id} has an unexpected priority.`);
     }
     try {
       const fileStat = await stat(resolvedPath);
       totalBytes += fileStat.size;
-      if (fileStat.size > MAXIMUM_DOCUMENT_BYTES) {
+      const maximumDocumentBytes =
+        source.sourceType === "official_document"
+          ? MAXIMUM_PDF_DOCUMENT_BYTES
+          : MAXIMUM_MARKDOWN_DOCUMENT_BYTES;
+      if (fileStat.size > maximumDocumentBytes) {
         errors.push(`Source ${source.id} exceeds the per-document size limit.`);
       }
-      const content = await readFile(resolvedPath, "utf8");
-      if (!content.includes(`Source ID: ${source.id}`)) {
-        errors.push(`Source ${source.id} is missing its matching source marker.`);
-      }
-      if (containsKnowledgePromptInjection(content)) {
-        errors.push(`Source ${source.id} contains instruction-like content.`);
+      const content = await readFile(resolvedPath);
+      if (source.sourceType === "official_document") {
+        if (!content.subarray(0, 5).equals(Buffer.from("%PDF-"))) {
+          errors.push(`Official document ${source.id} is not a valid prepared PDF.`);
+        }
+        if (!source.contentHash || sha256(content) !== source.contentHash) {
+          errors.push(`Official document ${source.id} failed its prepared hash check.`);
+        }
+      } else {
+        const markdown = content.toString("utf8");
+        if (!markdown.includes(`Source ID: ${source.id}`)) {
+          errors.push(`Source ${source.id} is missing its matching source marker.`);
+        }
+        if (containsKnowledgePromptInjection(markdown)) {
+          errors.push(`Source ${source.id} contains instruction-like content.`);
+        }
       }
     } catch {
       errors.push(`Source ${source.id} is missing its prepared document.`);
@@ -479,6 +608,7 @@ export async function verifyKnowledgeSnapshot(
 
   return {
     websiteDocuments: websiteManifest.length,
+    officialDocumentDocuments: officialDocumentManifest.length,
     managerFaqDocuments: faqManifest.length,
     pendingFaqDocuments: pendingFaq.length,
     totalDocuments: sources.length,

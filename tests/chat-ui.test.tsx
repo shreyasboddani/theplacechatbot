@@ -5,6 +5,7 @@ import { ChatInput } from "@/components/chatbot/ChatInput";
 import { ChatMessage } from "@/components/chatbot/ChatMessage";
 import { QuickActions } from "@/components/chatbot/QuickActions";
 import { SourceCards } from "@/components/chatbot/SourceCards";
+import { MAX_MESSAGE_LENGTH } from "@/lib/chat/limits";
 
 afterEach(cleanup);
 
@@ -32,6 +33,21 @@ describe("chat input and quick actions", () => {
       "First question?",
       "Second question?",
     ]);
+  });
+
+  it("shows and enforces the browser message limit", () => {
+    render(<ChatInput disabled={false} onSend={vi.fn()} />);
+    const input = screen.getByLabelText("Ask The Place information assistant");
+    expect(input.getAttribute("maxlength")).toBe(String(MAX_MESSAGE_LENGTH));
+    fireEvent.change(input, {
+      target: { value: "x".repeat(MAX_MESSAGE_LENGTH + 25) },
+    });
+    expect((input as HTMLTextAreaElement).value).toHaveLength(
+      MAX_MESSAGE_LENGTH,
+    );
+    expect(
+      screen.getByText(`${MAX_MESSAGE_LENGTH}/${MAX_MESSAGE_LENGTH}`),
+    ).toBeDefined();
   });
 
   it("sends quick actions as natural-language strings", () => {
@@ -157,6 +173,12 @@ describe("safe message rendering", () => {
             url: "https://www.theplacega.org/food-donations",
             sourceType: "official_website",
           },
+          {
+            id: "handbook",
+            title: "The Place Volunteer Handbook",
+            url: "https://www.theplacega.org/volunteer-handbook",
+            sourceType: "official_document",
+          },
         ]}
       />,
     );
@@ -169,6 +191,9 @@ describe("safe message rendering", () => {
     expect(website.getAttribute("href")).toBe(
       "https://www.theplacega.org/food-donations",
     );
+    expect(
+      screen.getByRole("link", { name: /Volunteer Handbook.*View on The Place website/ }),
+    ).toBeDefined();
   });
 
   it("deduplicates source cards that resolve to the same official URL", () => {

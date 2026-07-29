@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-07-29T11:36:27.652Z",
+  "preparedAt": "2026-07-29T15:35:13.965Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -792,8 +792,26 @@
   "conflictingInformation": [],
   "missingLinks": [],
   "unmappedSourceDocuments": [],
-  "totalDocumentsPrepared": 144,
+  "totalDocumentsPrepared": 146,
+  "officialDocuments": [
+    {
+      "id": "volunteer-handbook-2026",
+      "title": "The Place Volunteer Handbook - Version 1.1 (June 24, 2026)",
+      "url": "https://www.theplacega.org/volunteer-handbook"
+    },
+    {
+      "id": "heart-of-service-july-2026",
+      "title": "Heart of Service - July 2026 Birthday Cake Kits",
+      "url": "https://www.theplacega.org/s/Heart-of-Service-July-2026.pdf"
+    }
+  ],
   "totalDocumentsUploaded": 0,
   "uploadFailures": [],
-  "fileSearchStoreName": null
+  "fileSearchStoreName": "fileSearchStores/the-place-grounded-knowledg-3zerv2a5s6wl",
+  "syncMode": "reconcile",
+  "totalDocumentsDeleted": 0,
+  "totalDocumentsUnchanged": 146,
+  "managedDocumentsAfterSync": 146,
+  "deleteFailures": [],
+  "uploadedAt": "2026-07-29T15:36:23.774Z"
 }

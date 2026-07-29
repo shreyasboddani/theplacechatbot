@@ -1,8 +1,10 @@
-export const MAX_MESSAGE_LENGTH = 1_200;
+export const MAX_MESSAGE_LENGTH = 600;
 export const MAX_ASSISTANT_ANSWER_LENGTH = 2_000;
 export const MAX_HISTORY_CONTENT_LENGTH = MAX_ASSISTANT_ANSWER_LENGTH;
 export const MAX_HISTORY_ITEMS = 20;
-export const RUNTIME_HISTORY_ITEMS = 6;
+// Two complete user/assistant turns are enough for normal follow-ups while
+// keeping each grounded retrieval request small.
+export const RUNTIME_HISTORY_ITEMS = 4;
 export const MAX_REQUEST_BYTES = 16_384;
 export const GEMINI_REQUEST_TIMEOUT_MS = 45_000;
 export const CLIENT_REQUEST_TIMEOUT_MS = 55_000;

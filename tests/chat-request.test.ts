@@ -106,7 +106,7 @@ describe("client chat request builder", () => {
     expect(result.success && result.payload.message).toBe(message);
   });
 
-  it("keeps only the six most recent valid messages", () => {
+  it("keeps only the four most recent valid messages", () => {
     const result = buildChatRequest(
       "What about Dawson?",
       Array.from({ length: 9 }, (_, index) => ({
@@ -117,8 +117,8 @@ describe("client chat request builder", () => {
     );
     expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.payload.history).toHaveLength(6);
-      expect(result.payload.history[0]?.content).toBe("message 3");
+      expect(result.payload.history).toHaveLength(4);
+      expect(result.payload.history[0]?.content).toBe("message 5");
       expect(result.payload.history.at(-1)?.content).toBe("message 8");
     }
   });

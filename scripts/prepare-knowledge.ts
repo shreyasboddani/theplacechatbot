@@ -1,12 +1,15 @@
+import { createHash } from "node:crypto";
 import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 import type {
   FaqEntry,
+  OfficialDocumentSource,
   SourceManifestEntry,
   WebsiteSource,
 } from "../src/lib/knowledge/types";
+import { isApprovedWebsiteUrl } from "../src/lib/security/source-url";
 
 async function readJsonIfPresent(filePath: string): Promise<unknown> {
   try {
@@ -53,6 +56,39 @@ function isWebsiteSource(value: unknown): value is WebsiteSource {
     Array.isArray(source.links) &&
     source.sourceType === "official_website"
   );
+}
+
+function isOfficialDocumentSource(
+  value: unknown,
+): value is OfficialDocumentSource {
+  if (!value || typeof value !== "object") return false;
+  const source = value as Record<string, unknown>;
+  return (
+    typeof source.id === "string" &&
+    typeof source.title === "string" &&
+    typeof source.url === "string" &&
+    typeof source.sourcePath === "string" &&
+    typeof source.contentHash === "string" &&
+    /^[a-f0-9]{64}$/.test(source.contentHash) &&
+    source.sourceType === "official_document"
+  );
+}
+
+function sha256(value: Uint8Array): string {
+  return createHash("sha256").update(value).digest("hex");
+}
+
+function resolveOfficialDocumentPath(
+  root: string,
+  sourcePath: string,
+): string | undefined {
+  const documentRoot = path.resolve(root, "knowledge/source/official-documents");
+  const resolved = path.resolve(root, sourcePath);
+  const relative = path.relative(documentRoot, resolved);
+  if (!relative || relative.startsWith("..") || path.isAbsolute(relative)) {
+    return undefined;
+  }
+  return resolved;
 }
 
 function websiteMarkdown(source: WebsiteSource): string {
@@ -150,6 +186,43 @@ export async function prepareKnowledge(root = process.cwd()) {
     crawlReportValue && typeof crawlReportValue === "object"
       ? (crawlReportValue as Record<string, unknown>)
       : {};
+  const officialDocumentValue = await readJsonIfPresent(
+    path.resolve(root, "knowledge/source/official-documents.json"),
+  );
+  if (
+    !officialDocumentValue ||
+    typeof officialDocumentValue !== "object" ||
+    !Array.isArray(
+      (officialDocumentValue as Record<string, unknown>).documents,
+    ) ||
+    !(officialDocumentValue as { documents: unknown[] }).documents.every(
+      isOfficialDocumentSource,
+    )
+  ) {
+    throw new Error("official-documents.json is invalid.");
+  }
+  const officialDocuments = (
+    officialDocumentValue as { documents: OfficialDocumentSource[] }
+  ).documents;
+  const officialDocumentFiles = await Promise.all(
+    officialDocuments.map(async (source) => {
+      if (!isApprovedWebsiteUrl(source.url)) {
+        throw new Error(`Official document ${source.id} has an unapproved URL.`);
+      }
+      const absolutePath = resolveOfficialDocumentPath(root, source.sourcePath);
+      if (!absolutePath || path.extname(absolutePath).toLowerCase() !== ".pdf") {
+        throw new Error(`Official document ${source.id} has an unsafe source path.`);
+      }
+      const content = await readFile(absolutePath);
+      if (!content.subarray(0, 5).equals(Buffer.from("%PDF-"))) {
+        throw new Error(`Official document ${source.id} is not a valid PDF.`);
+      }
+      if (sha256(content) !== source.contentHash) {
+        throw new Error(`Official document ${source.id} failed its hash check.`);
+      }
+      return { source, content };
+    }),
+  );
 
   await rm(preparedDir, { recursive: true, force: true });
   await mkdir(preparedDir, { recursive: true });
@@ -184,6 +257,22 @@ export async function prepareKnowledge(root = process.cwd()) {
       title: entry.question,
       sourceType: "manager_faq",
       priority: 100,
+    });
+  }
+
+  for (const { source, content } of officialDocumentFiles) {
+    const fileName = `official_document__${source.id}.pdf`;
+    const relativePath = `knowledge/generated/prepared/${fileName}`;
+    await writeFile(path.join(preparedDir, fileName), content);
+    manifest.push({
+      id: source.id,
+      fileName,
+      documentPath: relativePath,
+      title: source.title,
+      url: source.url,
+      sourceType: "official_document",
+      priority: 75,
+      contentHash: source.contentHash,
     });
   }
 
@@ -229,6 +318,11 @@ export async function prepareKnowledge(root = process.cwd()) {
     missingLinks,
     unmappedSourceDocuments: [],
     totalDocumentsPrepared: manifest.length,
+    officialDocuments: officialDocuments.map(({ id, title, url }) => ({
+      id,
+      title,
+      url,
+    })),
     totalDocumentsUploaded: 0,
     uploadFailures: [],
     fileSearchStoreName: storeName,

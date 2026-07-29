@@ -30,7 +30,7 @@ describe("chat request validation", () => {
     ).toBe(false);
   });
 
-  it("trims accepted history to the most recent six messages", () => {
+  it("trims accepted history to the most recent four messages", () => {
     const result = validateChatRequest({
       message: "How do I volunteer?",
       history: Array.from({ length: 8 }, (_, index) => ({
@@ -40,8 +40,8 @@ describe("chat request validation", () => {
     });
     expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.data.history).toHaveLength(6);
-      expect(result.data.history[0]?.content).toBe("message 2");
+      expect(result.data.history).toHaveLength(4);
+      expect(result.data.history[0]?.content).toBe("message 4");
     }
   });
 

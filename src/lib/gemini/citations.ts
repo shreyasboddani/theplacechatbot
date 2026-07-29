@@ -57,7 +57,8 @@ export function resolveFileCitations(
     );
     if (!entry) continue;
     if (
-      entry.sourceType === "official_website" &&
+      (entry.sourceType === "official_website" ||
+        entry.sourceType === "official_document") &&
       (!entry.url || !isApprovedWebsiteUrl(entry.url))
     ) {
       continue;

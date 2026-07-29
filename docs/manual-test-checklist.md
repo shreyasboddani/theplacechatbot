@@ -20,6 +20,8 @@ Run this checklist against a configured local instance and again against the Ver
 - [ ] I need help applying for food stamps or Medicaid.
 - [ ] Do you accept cribs or car seats?
 - [ ] What are your office hours?
+- [ ] What should I put in the July birthday cake kits?
+- [ ] What does the volunteer handbook say about student age requirements?
 
 For each supported answer:
 
@@ -89,6 +91,7 @@ Confirm that sensitive content is not echoed back and is not visible in server l
 - [ ] Launcher, minimize, close, and restart work.
 - [ ] Quick actions send normal grounded questions through `/api/chat`.
 - [ ] Enter sends; Shift+Enter inserts a line break.
+- [ ] The composer shows and enforces the 600-character message limit.
 - [ ] Escape minimizes the panel.
 - [ ] Focus indicators are visible.
 - [ ] Controls have useful accessible names.
@@ -125,6 +128,7 @@ Confirm that sensitive content is not echoed back and is not visible in server l
 ## Knowledge automation
 
 - [ ] `npm run knowledge:verify` passes before synchronization.
+- [ ] The two official PDFs pass exact SHA-256 checks and remain in the prepared corpus after a website-only refresh.
 - [ ] An unchanged public-page recrawl creates no commit and makes no Gemini reconciliation call.
 - [ ] A failed or severely truncated response for a previously approved URL retains the last-known-good prepared document and appears in `retainedPages`.
 - [ ] A previously approved URL cannot be removed unless its canonical URL is explicitly listed in `knowledge/source/approved-removals.json`.
@@ -132,12 +136,14 @@ Confirm that sensitive content is not echoed back and is not visible in server l
 - [ ] A refresh changes only generated knowledge and the runtime manifest; it never changes staff FAQ or removal-approval files.
 - [ ] Staff FAQ approval files are not altered by the public-site crawler.
 - [ ] More than 20 changed prepared documents fail closed for manual investigation.
+- [ ] Any automatic deletion is a website Markdown file, matches an explicit removal recorded in `crawl-health.json`, and no run removes more than five documents.
 - [ ] Tests, lint, build, and diff checks pass before the bot pushes `main`.
 - [ ] A Vercel Preview build skips Gemini mutation.
 - [ ] A Vercel Production build fails closed when either Gemini variable is absent.
 - [ ] A configured Production build verifies and reconciles knowledge before `next build`.
 - [ ] Reconciliation uploads changed documents before removing stale copies.
 - [ ] A failed upload preserves every pre-existing document.
+- [ ] Transient upload and deletion failures retry with bounded backoff and sanitized logs.
 - [ ] Unmanaged remote documents cause a fail-closed sync with no mutations.
 - [ ] The Vercel build log shows upload, deletion, unchanged, and failure counts without exposing the key.
 - [ ] A failed synchronization prevents the new Production deployment from replacing the current live version.

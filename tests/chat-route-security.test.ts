@@ -69,6 +69,31 @@ describe("chat route request safety", () => {
     },
   );
 
+  it("answers registered document-access questions locally with the document source", async () => {
+    const response = await POST(
+      chatRequest({
+        message: "do u have access to the handbook?",
+        history: [],
+      }),
+    );
+    const body = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(body).toEqual(
+      expect.objectContaining({
+        status: "answered",
+        sources: [
+          expect.objectContaining({
+            id: "volunteer-handbook-2026",
+            sourceType: "official_document",
+          }),
+        ],
+      }),
+    );
+    expect(mocks.askGroundedQuestion).not.toHaveBeenCalled();
+    expect(mocks.createGroundedInteractionClient).not.toHaveBeenCalled();
+  });
+
   it("returns a clear retry window after the temporary request limit", async () => {
     let response: Response | undefined;
     for (let index = 0; index < 21; index += 1) {

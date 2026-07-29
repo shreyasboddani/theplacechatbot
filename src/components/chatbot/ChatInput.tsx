@@ -34,24 +34,34 @@ export function ChatInput({ disabled, onSend }: ChatInputProps) {
       <label htmlFor="the-place-chat-input" className="sr-only">
         Ask The Place information assistant
       </label>
-      <textarea
-        ref={inputRef}
-        id="the-place-chat-input"
-        value={message}
-        onChange={(event) =>
-          setMessage(event.target.value.slice(0, MAX_MESSAGE_LENGTH))
-        }
-        onKeyDown={(event) => {
-          if (event.key === "Enter" && !event.shiftKey) {
-            event.preventDefault();
-            event.currentTarget.form?.requestSubmit();
+      <div className="chat-input-field">
+        <textarea
+          ref={inputRef}
+          id="the-place-chat-input"
+          aria-describedby="the-place-chat-character-count"
+          value={message}
+          onChange={(event) =>
+            setMessage(event.target.value.slice(0, MAX_MESSAGE_LENGTH))
           }
-        }}
-        rows={1}
-        maxLength={MAX_MESSAGE_LENGTH}
-        placeholder="Ask about services, donations, or volunteering..."
-        disabled={disabled}
-      />
+          onKeyDown={(event) => {
+            if (event.key === "Enter" && !event.shiftKey) {
+              event.preventDefault();
+              event.currentTarget.form?.requestSubmit();
+            }
+          }}
+          rows={1}
+          maxLength={MAX_MESSAGE_LENGTH}
+          placeholder="Ask about services, donations, or volunteering..."
+          disabled={disabled}
+        />
+        <span
+          id="the-place-chat-character-count"
+          className="chat-character-count"
+          aria-live="polite"
+        >
+          {message.length}/{MAX_MESSAGE_LENGTH}
+        </span>
+      </div>
       <button
         type="submit"
         className="chat-send-button"

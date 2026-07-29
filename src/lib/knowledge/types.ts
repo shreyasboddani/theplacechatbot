@@ -1,4 +1,7 @@
-export type SourceType = "official_website" | "manager_faq";
+export type SourceType =
+  | "official_website"
+  | "official_document"
+  | "manager_faq";
 
 export type FaqStatus =
   | "approved"
@@ -28,6 +31,15 @@ export interface WebsiteSource {
   sourceType: "official_website";
 }
 
+export interface OfficialDocumentSource {
+  id: string;
+  title: string;
+  url: string;
+  sourcePath: string;
+  contentHash: string;
+  sourceType: "official_document";
+}
+
 export interface SourceManifestEntry {
   id: string;
   fileName: string;
@@ -37,6 +49,7 @@ export interface SourceManifestEntry {
   fetchedAt?: string;
   sourceType: SourceType;
   priority: number;
+  contentHash?: string;
 }
 
 export interface ChatSource {

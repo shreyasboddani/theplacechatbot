@@ -1,4 +1,4 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, type HttpOptions } from "@google/genai";
 
 import { GEMINI_REQUEST_TIMEOUT_MS } from "@/lib/chat/limits";
 import type {
@@ -7,8 +7,11 @@ import type {
 } from "@/lib/gemini/chat";
 import type { FileCitationAnnotation } from "@/lib/gemini/citations";
 
-export function createGeminiClient(apiKey: string): GoogleGenAI {
-  return new GoogleGenAI({ apiKey });
+export function createGeminiClient(
+  apiKey: string,
+  httpOptions?: HttpOptions,
+): GoogleGenAI {
+  return new GoogleGenAI({ apiKey, ...(httpOptions ? { httpOptions } : {}) });
 }
 
 function normalizeAnnotation(value: unknown): FileCitationAnnotation | undefined {

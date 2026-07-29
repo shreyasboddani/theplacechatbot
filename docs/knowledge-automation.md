@@ -7,12 +7,13 @@ The automation keeps the Gemini credential in Vercel only. GitHub Actions crawls
 1. `Detect and commit website knowledge updates` runs daily, manually, or from an approved CMS webhook.
 2. It crawls only public The Place pages, rejects off-domain fetch and redirect targets, revalidates every previously approved URL first, preserves unchanged timestamps, prepares the corpus, and runs the knowledge verifier.
 3. Failed, incomplete, redirected, missing, or suspiciously shrunken approved pages retain their last-known-good documents and appear in `retainedPages`. A permanent removal requires a canonical URL already committed to `knowledge/source/approved-removals.json` after human review.
-4. If deterministic crawl health and prepared retrieval content are unchanged, the workflow creates no commit. No Vercel deployment or Gemini request occurs.
-5. If content changed, GitHub verifies that only generated files changed, rejects tracked or newly created staff-FAQ changes, counts tracked and untracked prepared documents toward the 20-document automatic limit, and runs all tests, lint, production build, and diff checks.
-6. Immediately before committing, it fetches `origin/main`. If `main` advanced during validation, it exits instead of rebasing or overwriting newer work. Otherwise, the knowledge bot creates a normal commit directly on `main` and pushes without force.
-7. Vercel's Git integration starts a Production deployment for the new `main` commit. `vercel.json` selects `npm run build:vercel`.
-8. The production build requires the Vercel `GEMINI_API_KEY` and `GEMINI_FILE_SEARCH_STORE`, verifies the committed corpus again, uploads changed documents, deletes obsolete managed copies only after all uploads succeed, verifies zero remote drift, and then runs `next build`.
-9. Preview and Development builds run `next build` without mutating Gemini. After a successful Production build, the deployed API uses the same Vercel key and store to answer grounded questions.
+4. The public Volunteer Handbook and July Birthday Cake Kits PDF are rebuilt from checksum-verified files in `knowledge/source/official-documents/`; the website crawler neither owns nor removes them.
+5. If deterministic crawl health and prepared retrieval content are unchanged, the workflow creates no commit. No Vercel deployment or Gemini request occurs.
+6. If content changed, GitHub verifies that only generated files changed, rejects tracked or newly created staff-FAQ changes, counts tracked and untracked prepared documents toward the 20-document automatic limit, and runs all tests, lint, production build, and diff checks. Every deletion must be a website Markdown document, match an explicit removal recorded in `crawl-health.json`, and stay within a separate five-document automatic-removal cap.
+7. Immediately before committing, it fetches `origin/main`. If `main` advanced during validation, it exits instead of rebasing or overwriting newer work. Otherwise, the knowledge bot creates a normal commit directly on `main` and pushes without force.
+8. Vercel's Git integration starts a Production deployment for the new `main` commit. `vercel.json` selects `npm run build:vercel`.
+9. The production build requires the Vercel `GEMINI_API_KEY` and `GEMINI_FILE_SEARCH_STORE`, verifies the committed corpus again, uploads changed documents, deletes obsolete managed copies only after all uploads succeed, verifies zero remote drift, and then runs `next build`.
+10. Preview and Development builds run `next build` without mutating Gemini. After a successful Production build, the deployed API uses the same Vercel key and store to answer grounded questions.
 
 The GitHub workflow never receives, references, or logs the Gemini key. Crawl timestamps remain in audit data and the source manifest but are omitted from retrieval text, preventing timestamp-only changes from consuming indexing quota.
 
@@ -87,13 +88,15 @@ Update Vercel's store variable after verifying a new store. Keep the previous st
 
 - No meaningful website change: no commit, deployment, or Gemini request.
 - Crawl, extraction, corpus, prompt-injection, test, lint, build, or diff failure in GitHub: no commit or deployment.
-- More than 20 changed prepared documents: no commit; manual inspection is required.
+- More than 20 changed prepared documents, more than five removals, a non-website deletion, or a deletion without an exact human-approved removal: no commit; manual inspection is required.
 - Approved-page fetch or suspicious shrink failure: retain last-known-good content and record the warning.
 - Staff FAQ or out-of-boundary file change: no commit.
 - `main` advances during validation: no push; the next run starts from the new revision.
 - Missing Vercel Gemini configuration: the new Production build fails and the existing deployment stays live.
 - Unmanaged Gemini documents: reconciliation aborts before mutation.
 - Upload failure: every pre-existing remote document remains. A successfully uploaded replacement may remain as a safe duplicate for the next retry.
+- Transient upload, deletion, quota, and network failures are retried with bounded backoff; logs and reports contain only sanitized error name/status/code metadata.
+- Replacement cleanup is recalculated from the live store after upload, so stale copies are deleted only after every desired replacement is active and no unmanaged document is present.
 - Deletion failure: the new document remains indexed and the stale copy is reported for retry.
 - Next build failure after a successful sync: the previous deployment remains live; the store may be one verified commit ahead and the next production build safely reconciles it again.
 - Bad automated content discovered later: revert the knowledge commit and redeploy. The old File Search store itself is never automatically deleted.

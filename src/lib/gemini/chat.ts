@@ -19,6 +19,35 @@ const modelPayloadSchema = z.object({
   answer: z.string().trim().max(MAX_ASSISTANT_ANSWER_LENGTH),
 });
 
+const SIMPLE_RESPONSE_TOKEN_LIMIT = 224;
+const COMPLEX_RESPONSE_TOKEN_LIMIT = 384;
+const SIMPLE_RETRIEVAL_RESULT_LIMIT = 6;
+const FOLLOW_UP_RETRIEVAL_RESULT_LIMIT = 8;
+const COMPLEX_RETRIEVAL_RESULT_LIMIT = 10;
+
+function isComplexRequest(request: ChatRequest): boolean {
+  const wordCount = request.message.trim().split(/\s+/).filter(Boolean).length;
+  return (
+    request.message.length > 140 ||
+    wordCount > 22 ||
+    request.message.includes("\n") ||
+    (request.message.match(/\?/g)?.length ?? 0) > 1
+  );
+}
+
+export function responseTokenLimit(request: ChatRequest): number {
+  return isComplexRequest(request)
+    ? COMPLEX_RESPONSE_TOKEN_LIMIT
+    : SIMPLE_RESPONSE_TOKEN_LIMIT;
+}
+
+export function retrievalResultLimit(request: ChatRequest): number {
+  if (isComplexRequest(request)) return COMPLEX_RETRIEVAL_RESULT_LIMIT;
+  return request.history.length > 0
+    ? FOLLOW_UP_RETRIEVAL_RESULT_LIMIT
+    : SIMPLE_RETRIEVAL_RESULT_LIMIT;
+}
+
 interface TextBlock {
   type: "text";
   text: string;
@@ -46,6 +75,10 @@ export interface GroundedInteractionClient {
       file_search_store_names: string[];
       top_k: number;
     }>;
+    generation_config: {
+      max_output_tokens: number;
+      thinking_level: "minimal";
+    };
     response_format: {
       type: "text";
       mime_type: "application/json";
@@ -65,11 +98,15 @@ export function buildGroundedInteractionParams(
     input: buildInteractionInput(request),
     system_instruction: buildSystemInstruction(currentDate),
     store: false as const,
+    generation_config: {
+      max_output_tokens: responseTokenLimit(request),
+      thinking_level: "minimal" as const,
+    },
     tools: [
       {
         type: "file_search" as const,
         file_search_store_names: [fileSearchStore],
-        top_k: 10,
+        top_k: retrievalResultLimit(request),
       },
     ],
     response_format: {

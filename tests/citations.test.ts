@@ -35,6 +35,39 @@ describe("citation resolution", () => {
     ]);
   });
 
+  it("resolves an approved public official-document citation", () => {
+    const officialDocument: SourceManifestEntry = {
+      id: "volunteer-handbook-2026",
+      fileName: "official_document__volunteer-handbook-2026.pdf",
+      documentPath:
+        "knowledge/generated/prepared/official_document__volunteer-handbook-2026.pdf",
+      title: "The Place Volunteer Handbook",
+      url: "https://www.theplacega.org/volunteer-handbook",
+      sourceType: "official_document",
+      priority: 75,
+      contentHash: "a".repeat(64),
+    };
+    expect(
+      resolveFileCitations(
+        [
+          {
+            type: "file_citation",
+            file_name: officialDocument.fileName,
+            custom_metadata: { source_id: officialDocument.id },
+          },
+        ],
+        [officialDocument],
+      ),
+    ).toEqual([
+      {
+        id: officialDocument.id,
+        title: officialDocument.title,
+        url: officialDocument.url,
+        sourceType: "official_document",
+      },
+    ]);
+  });
+
   it("drops unmapped citations", () => {
     expect(
       resolveFileCitations(

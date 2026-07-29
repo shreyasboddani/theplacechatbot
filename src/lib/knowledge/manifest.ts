@@ -11,9 +11,11 @@ function isManifestEntry(value: unknown): value is SourceManifestEntry {
     typeof entry.documentPath === "string" &&
     typeof entry.title === "string" &&
     (entry.sourceType === "official_website" ||
+      entry.sourceType === "official_document" ||
       entry.sourceType === "manager_faq") &&
     typeof entry.priority === "number" &&
-    (entry.url === undefined || typeof entry.url === "string")
+    (entry.url === undefined || typeof entry.url === "string") &&
+    (entry.contentHash === undefined || typeof entry.contentHash === "string")
   );
 }
 
@@ -21,7 +23,10 @@ export function getKnowledgeManifest(): SourceManifestEntry[] {
   const manifestValue: unknown = rawManifest;
   if (!Array.isArray(manifestValue)) return [];
   return manifestValue.filter(isManifestEntry).filter((entry) => {
-    if (entry.sourceType === "official_website") {
+    if (
+      entry.sourceType === "official_website" ||
+      entry.sourceType === "official_document"
+    ) {
       return Boolean(entry.url && isApprovedWebsiteUrl(entry.url));
     }
     return entry.url === undefined;

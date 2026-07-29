@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
 
@@ -14,6 +14,10 @@ import {
 } from "../scripts/crawl-website";
 import {
   buildReconcilePlan,
+  isRetryableFileSearchError,
+  preparedDocumentMimeType,
+  retryTransientFileSearchOperation,
+  safeFileSearchErrorDetails,
   type DesiredDocumentFingerprint,
   type RemoteDocumentFingerprint,
 } from "../scripts/sync-file-search";
@@ -214,24 +218,28 @@ describe("incremental File Search reconciliation", () => {
         name: "stores/example/documents/current",
         sourceId: "current",
         contentHash: "hash-current",
+        managedBy: "the-place-chatbot",
         state: "STATE_ACTIVE",
       },
       {
         name: "stores/example/documents/current-duplicate",
         sourceId: "current",
         contentHash: "hash-old",
+        managedBy: "the-place-chatbot",
         state: "STATE_ACTIVE",
       },
       {
         name: "stores/example/documents/changed",
         sourceId: "changed",
         contentHash: "hash-old",
+        managedBy: "the-place-chatbot",
         state: "STATE_ACTIVE",
       },
       {
         name: "stores/example/documents/obsolete",
         sourceId: "obsolete",
         contentHash: "hash-obsolete",
+        managedBy: "the-place-chatbot",
         state: "STATE_ACTIVE",
       },
       { name: "stores/example/documents/unmanaged" },
@@ -260,12 +268,110 @@ describe("incremental File Search reconciliation", () => {
           name: "stores/example/documents/failed",
           sourceId: "failed",
           contentHash: "same",
+          managedBy: "the-place-chatbot",
           state: "STATE_FAILED",
         },
       ],
     );
     expect(plan.uploads).toEqual(["failed"]);
     expect(plan.deletions[0]?.reason).toBe("replaced");
+  });
+
+  it("refuses remote documents that are not explicitly owned by this app", () => {
+    const plan = buildReconcilePlan(
+      [{ sourceId: "known", contentHash: "same" }],
+      [
+        {
+          name: "stores/example/documents/known",
+          sourceId: "known",
+          contentHash: "same",
+          state: "STATE_ACTIVE",
+        },
+      ],
+    );
+    expect(plan.unknownRemoteDocuments).toEqual([
+      "stores/example/documents/known",
+    ]);
+    expect(plan.uploads).toEqual(["known"]);
+    expect(plan.deletions).toEqual([]);
+  });
+
+  it("uses PDF MIME types and retries only transient sanitized failures", () => {
+    expect(preparedDocumentMimeType("official_document__handbook.pdf")).toBe(
+      "application/pdf",
+    );
+    expect(preparedDocumentMimeType("website__page.md")).toBe(
+      "text/markdown",
+    );
+    const error = new Error(
+      JSON.stringify({
+        error: {
+          code: 429,
+          status: "RESOURCE_EXHAUSTED",
+          message: "secret provider detail",
+        },
+      }),
+    );
+    expect(isRetryableFileSearchError(error)).toBe(true);
+    expect(safeFileSearchErrorDetails(error)).toEqual({
+      name: "Error",
+      status: 429,
+      code: "RESOURCE_EXHAUSTED",
+    });
+    expect(JSON.stringify(safeFileSearchErrorDetails(error))).not.toContain(
+      "secret provider detail",
+    );
+    expect(
+      isRetryableFileSearchError(
+        Object.assign(new Error("bad"), { status: 400 }),
+      ),
+    ).toBe(false);
+  });
+
+  it("retries transient uploads with bounded backoff", async () => {
+    const delay = vi.fn(async (milliseconds: number) => {
+      void milliseconds;
+    });
+    const onRetry = vi.fn();
+    let calls = 0;
+    const result = await retryTransientFileSearchOperation(
+      async () => {
+        calls += 1;
+        if (calls < 3) {
+          throw Object.assign(new Error("provider detail"), {
+            status: 503,
+          });
+        }
+        return "indexed";
+      },
+      { delay, onRetry },
+    );
+
+    expect(result).toBe("indexed");
+    expect(calls).toBe(3);
+    expect(delay.mock.calls.map(([milliseconds]) => milliseconds)).toEqual([
+      2_000,
+      4_000,
+    ]);
+    expect(onRetry).toHaveBeenCalledTimes(2);
+    expect(onRetry.mock.calls[0]?.[0]).toEqual({
+      name: "Error",
+      status: 503,
+    });
+  });
+
+  it("does not retry permanent File Search failures", async () => {
+    const operation = vi.fn(async () => {
+      throw Object.assign(new Error("invalid upload"), { status: 400 });
+    });
+    await expect(
+      retryTransientFileSearchOperation(operation, {
+        delay: vi.fn(async (milliseconds: number) => {
+          void milliseconds;
+        }),
+      }),
+    ).rejects.toMatchObject({ status: 400 });
+    expect(operation).toHaveBeenCalledTimes(1);
   });
 });
 
@@ -274,8 +380,11 @@ describe("knowledge automation safety gate", () => {
     const summary = await verifyKnowledgeSnapshot();
     expect(summary.websiteDocuments).toBeGreaterThanOrEqual(50);
     expect(summary.totalDocuments).toBe(
-      summary.websiteDocuments + summary.managerFaqDocuments,
+      summary.websiteDocuments +
+        summary.officialDocumentDocuments +
+        summary.managerFaqDocuments,
     );
+    expect(summary.officialDocumentDocuments).toBe(2);
     expect(summary.pendingFaqDocuments).toBeGreaterThan(0);
   });
 
@@ -328,6 +437,10 @@ describe("deployment automation configuration", () => {
     expect(refresh).toContain("Guard the generated-file boundary");
     expect(refresh).toContain("Enforce a bounded automatic change set");
     expect(refresh).toContain("changed_documents > 20");
+    expect(refresh).toContain("deleted_documents != approved_removals");
+    expect(refresh).toContain("deleted_documents > 5");
+    expect(refresh).toContain("website__[^/]+\\.md");
+    expect(refresh).toContain("approvedRemovedPages.length");
     expect(refresh).toContain(
       "git status --porcelain --untracked-files=all -- knowledge/generated/prepared",
     );

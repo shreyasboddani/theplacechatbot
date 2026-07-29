@@ -125,7 +125,11 @@ export async function POST(request: NextRequest): Promise<Response> {
     return jsonResponse(sensitiveInformationResponse(), 200);
   }
 
-  const localResponse = getLocalConversationalResponse(validation.data.message);
+  const manifest = getKnowledgeManifest();
+  const localResponse = getLocalConversationalResponse(
+    validation.data.message,
+    manifest,
+  );
   if (localResponse) return jsonResponse(localResponse);
 
   const config = getRuntimeConfig();
@@ -140,7 +144,7 @@ export async function POST(request: NextRequest): Promise<Response> {
       {
         model: config.model,
         fileSearchStore: config.fileSearchStore,
-        manifest: getKnowledgeManifest(),
+        manifest,
       },
     );
     return jsonResponse(response);

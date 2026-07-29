@@ -19,6 +19,7 @@ import {
 
 const POLL_INTERVAL_MS = 2_000;
 const OPERATION_TIMEOUT_MS = 10 * 60 * 1_000;
+const UPLOAD_ATTEMPTS = 3;
 const MANAGED_BY = "the-place-chatbot";
 
 export interface DesiredDocumentFingerprint {
@@ -30,6 +31,7 @@ export interface RemoteDocumentFingerprint {
   name?: string;
   sourceId?: string;
   contentHash?: string;
+  managedBy?: string;
   state?: string;
 }
 
@@ -73,6 +75,9 @@ function remoteDocumentFingerprint(document: Document): RemoteDocumentFingerprin
     ...(metadataValue(document, "content_sha256")
       ? { contentHash: metadataValue(document, "content_sha256") }
       : {}),
+    ...(metadataValue(document, "managed_by")
+      ? { managedBy: metadataValue(document, "managed_by") }
+      : {}),
     ...(document.state ? { state: String(document.state) } : {}),
   };
 }
@@ -100,7 +105,11 @@ export function buildReconcilePlan(
   const unknownRemoteDocuments: string[] = [];
   const remoteBySource = new Map<string, RemoteDocumentFingerprint[]>();
   for (const remote of remoteDocuments) {
-    if (!remote.name || !remote.sourceId) {
+    if (
+      !remote.name ||
+      !remote.sourceId ||
+      remote.managedBy !== MANAGED_BY
+    ) {
       unknownRemoteDocuments.push(remote.name || "unnamed-document");
       continue;
     }
@@ -190,8 +199,133 @@ async function waitForOperation(
     current = await getOperation(current);
   }
   if (current.error) {
-    throw new Error("Gemini reported an indexing failure for this document.");
+    const operationError = new Error(
+      "Gemini reported an indexing failure for this document.",
+    ) as Error & { status?: number; code?: string };
+    if (typeof current.error.code === "number") {
+      operationError.status = current.error.code;
+    }
+    if (typeof current.error.status === "string") {
+      operationError.code = current.error.status;
+    }
+    throw operationError;
   }
+}
+
+function nestedErrorDetails(value: unknown): {
+  status?: number;
+  code?: string;
+} {
+  if (!(value instanceof Error)) return {};
+  try {
+    const parsed: unknown = JSON.parse(value.message);
+    if (!parsed || typeof parsed !== "object") return {};
+    const error = (parsed as Record<string, unknown>).error;
+    if (!error || typeof error !== "object") return {};
+    const nested = error as Record<string, unknown>;
+    return {
+      ...(typeof nested.code === "number" ? { status: nested.code } : {}),
+      ...(typeof nested.status === "string" ? { code: nested.status } : {}),
+    };
+  } catch {
+    return {};
+  }
+}
+
+export function safeFileSearchErrorDetails(value: unknown): {
+  name: string;
+  status?: number;
+  code?: string;
+} {
+  if (!(value instanceof Error)) return { name: "UnknownError" };
+  const error = value as Error & { status?: unknown; code?: unknown };
+  const nested = nestedErrorDetails(error);
+  const status =
+    typeof error.status === "number"
+      ? error.status
+      : typeof error.code === "number"
+        ? error.code
+        : nested.status;
+  const code =
+    typeof error.code === "string"
+      ? error.code
+      : nested.code;
+  return {
+    name: error.name || "Error",
+    ...(status !== undefined ? { status } : {}),
+    ...(code ? { code } : {}),
+  };
+}
+
+export function isRetryableFileSearchError(value: unknown): boolean {
+  const details = safeFileSearchErrorDetails(value);
+  if (
+    details.status === 408 ||
+    details.status === 409 ||
+    details.status === 429 ||
+    (details.status !== undefined && details.status >= 500)
+  ) {
+    return true;
+  }
+  if (
+    details.code &&
+    [
+      "ABORTED",
+      "DEADLINE_EXCEEDED",
+      "INTERNAL",
+      "RESOURCE_EXHAUSTED",
+      "UNAVAILABLE",
+    ].includes(details.code)
+  ) {
+    return true;
+  }
+  return (
+    value instanceof Error &&
+    /(?:fetch failed|ECONNRESET|ETIMEDOUT|EAI_AGAIN|upload status is not finalized)/i.test(
+      value.message,
+    )
+  );
+}
+
+export function preparedDocumentMimeType(fileName: string): string {
+  return path.extname(fileName).toLowerCase() === ".pdf"
+    ? "application/pdf"
+    : "text/markdown";
+}
+
+export async function retryTransientFileSearchOperation<T>(
+  operation: () => Promise<T>,
+  options: {
+    attempts?: number;
+    delay?: (milliseconds: number) => Promise<void>;
+    onRetry?: (
+      details: ReturnType<typeof safeFileSearchErrorDetails>,
+      nextAttempt: number,
+      attempts: number,
+    ) => void;
+  } = {},
+): Promise<T> {
+  const attempts = Math.max(1, options.attempts ?? UPLOAD_ATTEMPTS);
+  const delay =
+    options.delay ??
+    ((milliseconds: number) =>
+      new Promise<void>((resolve) => setTimeout(resolve, milliseconds)));
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      return await operation();
+    } catch (error: unknown) {
+      if (!isRetryableFileSearchError(error) || attempt === attempts) {
+        throw error;
+      }
+      options.onRetry?.(
+        safeFileSearchErrorDetails(error),
+        attempt + 1,
+        attempts,
+      );
+      await delay(POLL_INTERVAL_MS * 2 ** (attempt - 1));
+    }
+  }
+  throw new Error("File Search retry loop ended unexpectedly.");
 }
 
 function isManifestEntry(value: unknown): value is SourceManifestEntry {
@@ -203,8 +337,10 @@ function isManifestEntry(value: unknown): value is SourceManifestEntry {
     typeof entry.documentPath === "string" &&
     typeof entry.title === "string" &&
     (entry.sourceType === "official_website" ||
+      entry.sourceType === "official_document" ||
       entry.sourceType === "manager_faq") &&
-    typeof entry.priority === "number"
+    typeof entry.priority === "number" &&
+    (entry.contentHash === undefined || typeof entry.contentHash === "string")
   );
 }
 
@@ -219,7 +355,11 @@ async function preparedDocuments(
         throw new Error(`Source ${source.id} has an unsafe document path.`);
       }
       const content = await readFile(absolutePath);
-      return { source, absolutePath, contentHash: sha256(content) };
+      const contentHash = sha256(content);
+      if (source.contentHash && source.contentHash !== contentHash) {
+        throw new Error(`Source ${source.id} failed its content hash check.`);
+      }
+      return { source, absolutePath, contentHash };
     }),
   );
 }
@@ -264,35 +404,73 @@ async function uploadDocuments(
   let uploaded = 0;
   for (const document of documents) {
     try {
-      const operation = await ai.fileSearchStores.uploadToFileSearchStore({
-        fileSearchStoreName: storeName,
-        file: document.absolutePath,
-        config: {
-          displayName: document.source.fileName,
-          mimeType: "text/markdown",
-          customMetadata: uploadMetadata(document),
-          chunkingConfig: {
-            whiteSpaceConfig: {
-              maxTokensPerChunk: 350,
-              maxOverlapTokens: 50,
+      await retryTransientFileSearchOperation(
+        async () => {
+          const operation = await ai.fileSearchStores.uploadToFileSearchStore({
+            fileSearchStoreName: storeName,
+            file: document.absolutePath,
+            config: {
+              displayName: document.source.fileName,
+              mimeType: preparedDocumentMimeType(document.source.fileName),
+              customMetadata: uploadMetadata(document),
+              chunkingConfig: {
+                whiteSpaceConfig: {
+                  maxTokensPerChunk: 350,
+                  maxOverlapTokens: 50,
+                },
+              },
             },
+          });
+          await waitForOperation(operation, (current) =>
+            ai.operations.get({ operation: current }),
+          );
+        },
+        {
+          onRetry: (details, nextAttempt, attempts) => {
+            process.stderr.write(
+              `Transient File Search upload failure for ${document.source.id}; retrying attempt ${nextAttempt}/${attempts} (${JSON.stringify(details)}).\n`,
+            );
           },
         },
-      });
-      await waitForOperation(operation, (current) =>
-        ai.operations.get({ operation: current }),
       );
       uploaded += 1;
       process.stdout.write(`Indexed ${document.source.fileName}\n`);
-    } catch {
+    } catch (error: unknown) {
+      const details = safeFileSearchErrorDetails(error);
       failures.push({
         sourceId: document.source.id,
-        reason: "Gemini upload or indexing failed.",
+        reason: `Gemini upload or indexing failed (${JSON.stringify(details)}).`,
       });
-      process.stderr.write(`Failed to index ${document.source.fileName}\n`);
+      process.stderr.write(
+        `Failed to index ${document.source.fileName} (${JSON.stringify(details)}).\n`,
+      );
     }
   }
   return { uploaded, failures };
+}
+
+async function planAfterUploads(
+  ai: ReturnType<typeof createGeminiClient>,
+  storeName: string,
+  desired: DesiredDocumentFingerprint[],
+): Promise<ReconcilePlan> {
+  let latestPlan: ReconcilePlan | undefined;
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    latestPlan = buildReconcilePlan(
+      desired,
+      await listRemoteDocuments(ai, storeName),
+    );
+    if (
+      latestPlan.uploads.length === 0 ||
+      latestPlan.unknownRemoteDocuments.length > 0
+    ) {
+      return latestPlan;
+    }
+    if (attempt < 3) {
+      await new Promise((resolve) => setTimeout(resolve, POLL_INTERVAL_MS));
+    }
+  }
+  return latestPlan as ReconcilePlan;
 }
 
 async function deleteDocuments(
@@ -303,19 +481,32 @@ async function deleteDocuments(
   let deleted = 0;
   for (const deletion of deletions) {
     try {
-      await ai.fileSearchStores.documents.delete({
-        name: deletion.name,
-        config: { force: true, httpOptions: { timeout: 30_000 } },
-      });
+      await retryTransientFileSearchOperation(
+        () =>
+          ai.fileSearchStores.documents.delete({
+            name: deletion.name,
+            config: { force: true, httpOptions: { timeout: 30_000 } },
+          }),
+        {
+          onRetry: (details, nextAttempt, attempts) => {
+            process.stderr.write(
+              `Transient File Search deletion failure for ${deletion.sourceId ?? "unknown source"}; retrying attempt ${nextAttempt}/${attempts} (${JSON.stringify(details)}).\n`,
+            );
+          },
+        },
+      );
       deleted += 1;
       process.stdout.write(
         `Removed ${deletion.reason} document for ${deletion.sourceId ?? "unknown source"}\n`,
       );
-    } catch {
+    } catch (error: unknown) {
       failures.push({
         ...(deletion.sourceId ? { sourceId: deletion.sourceId } : {}),
-        reason: "Gemini document deletion failed.",
+        reason: `Gemini document deletion failed (${JSON.stringify(safeFileSearchErrorDetails(error))}).`,
       });
+      process.stderr.write(
+        `Failed to remove stale document for ${deletion.sourceId ?? "unknown source"} (${JSON.stringify(safeFileSearchErrorDetails(error))}).\n`,
+      );
     }
   }
   return { deleted, failures };
@@ -444,7 +635,10 @@ async function main() {
   const bySourceId = new Map(
     documents.map((document) => [document.source.id, document]),
   );
-  const ai = createGeminiClient(apiKey);
+  const ai = createGeminiClient(apiKey, {
+    timeout: 60_000,
+    retryOptions: { attempts: 5 },
+  });
 
   if (createNewStore) {
     const store = await ai.fileSearchStores.create({
@@ -543,7 +737,31 @@ async function main() {
     );
   }
 
-  const deleteResult = await deleteDocuments(ai, plan.deletions);
+  const cleanupPlan = await planAfterUploads(ai, store.name, desired);
+  if (
+    cleanupPlan.unknownRemoteDocuments.length > 0 ||
+    cleanupPlan.uploads.length > 0
+  ) {
+    await writeSyncReport(generatedDir, {
+      storeName: store.name,
+      displayName: store.displayName,
+      mode: "reconcile",
+      desiredDocuments: documents.length,
+      uploaded: uploadResult.uploaded,
+      deleted: 0,
+      unchanged: cleanupPlan.unchanged.length,
+      uploadFailures: cleanupPlan.uploads.map((sourceId) => ({
+        sourceId,
+        reason: "The replacement was not active after upload; existing documents were preserved.",
+      })),
+      deleteFailures: [],
+    });
+    throw new Error(
+      "The replacement documents were not fully active after upload; existing documents were preserved.",
+    );
+  }
+
+  const deleteResult = await deleteDocuments(ai, cleanupPlan.deletions);
   if (deleteResult.failures.length === 0) {
     await verifyRemoteDocuments(ai, store.name, desired);
   }
@@ -554,7 +772,7 @@ async function main() {
     desiredDocuments: documents.length,
     uploaded: uploadResult.uploaded,
     deleted: deleteResult.deleted,
-    unchanged: plan.unchanged.length,
+    unchanged: desired.length,
     uploadFailures: [],
     deleteFailures: deleteResult.failures,
   });

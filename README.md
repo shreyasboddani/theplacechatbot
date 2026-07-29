@@ -13,7 +13,7 @@ This repository is a prototype for review. It is not a case-management system, d
 - `GET /api/health` with non-secret configuration status
 - A robots-aware, same-origin website crawler
 - Staff DOCX parsing with approved and pending separation
-- Prepared Markdown documents and a runtime source manifest
+- Prepared website/FAQ Markdown and checksum-verified official PDF documents
 - Gemini File Search create/reuse, upload, list, and manual-delete scripts
 - Local sensitive-data detection, Zod validation, source URL allowlisting, and best-effort rate limiting
 - Automated tests and a manual review checklist
@@ -27,7 +27,7 @@ src/lib/gemini/          Gemini request, prompt, citation, and response logic
 src/lib/knowledge/       Shared knowledge and manifest contracts
 src/lib/security/        Validation, privacy detection, and rate limiting
 src/generated/           Build-time source manifest
-knowledge/source/        Staff-provided source DOCX
+knowledge/source/        Staff FAQ source plus durable official PDF sources
 knowledge/generated/     Crawl, FAQ, prepared corpus, and sync reports
 scripts/                 Offline crawl, parse, prepare, and File Search tools
 public/widget-loader.js  Dependency-free host-site integration
@@ -37,7 +37,7 @@ docs/                    Manual test checklist
 
 Runtime visitor questions never trigger website crawling. The chat route calls Gemini's current Interactions API with exactly one tool: the configured File Search store. It uses `store: false`, requests a constrained JSON result, and separately maps File Search annotations to the checked-in source manifest. An `answered` response is released only when at least one citation maps to an approved source.
 
-Standalone greetings, thanks, and questions about what the assistant can do are answered locally with a validated official website source. They do not consume a Gemini request. Organization-specific questions still use the grounded File Search path.
+Standalone greetings, thanks, questions about what the assistant can do, and availability questions that uniquely match a registered official document are answered locally with the corresponding validated source. They do not consume a Gemini request. Document-content and other organization-specific questions still use the grounded File Search path.
 
 ## Requirements
 
@@ -98,9 +98,9 @@ The application still renders without Gemini configuration. `/api/chat` returns 
 
 ### Gemini model selection
 
-The chatbot uses the stable [`gemini-3.5-flash-lite`](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) model by default. Google lists it as a production-ready, low-latency, cost-efficient model with File Search and structured-output support. The request leaves its thinking level at the model's `minimal` default for lower token use and does not send deprecated sampling parameters.
+The chatbot uses the stable [`gemini-3.5-flash-lite`](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) model by default. Google lists it as a production-ready, low-latency, cost-efficient model with File Search and structured-output support. Every request explicitly uses the `minimal` thinking level. Short questions are limited to 224 output tokens and longer multi-part questions to 384; the prompt asks for 25-70 words for simple answers and 60-120 when important details require more context. File Search retrieves 6 results for a fresh simple question, 8 for a contextual follow-up, and up to 10 for a complex question.
 
-Prompt size is bounded by sending only the six most recent valid conversation messages. Google can change model and free-tier limits, so review the current [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) before production use. Changing the runtime model does not require recreating the File Search store or uploading the knowledge corpus again.
+Prompt size is bounded by sending only the four most recent valid conversation messages (two complete turns). Google can change model and free-tier limits, so review the current [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) before production use. Changing the runtime model does not require recreating the File Search store or uploading the knowledge corpus again.
 
 ## Knowledge synchronization
 
@@ -146,7 +146,7 @@ The crawler reads `robots.txt`, checks sitemap candidates, revalidates previousl
 npm run knowledge:prepare
 ```
 
-This generates one Markdown document per approved source under `knowledge/generated/prepared`, then writes:
+This generates one retrieval document per approved source under `knowledge/generated/prepared`, then writes:
 
 - `knowledge/generated/sources.json`
 - `src/generated/knowledge-manifest.json`
@@ -161,6 +161,8 @@ npm run knowledge:verify
 ```
 
 The verifier fails closed on manifest drift, unsafe paths, duplicate IDs or URLs, pending FAQ leakage, fabricated staff URLs, excessive crawl failures, suspicious instruction-like content, and unexpected corpus size changes.
+
+Two official public PDFs are managed separately from the HTML crawler: the June 24, 2026 Volunteer Handbook and the July 2026 Heart of Service Birthday Cake Kits sheet. Their exact source files live in `knowledge/source/official-documents/` and are registered with approved public URLs and SHA-256 hashes in `knowledge/source/official-documents.json`. Preparation recreates their generated copies on every refresh, so a website crawl cannot remove or silently replace them. Updating either PDF requires a reviewed source-file and hash change.
 
 ### 4. Upload or reconcile File Search
 
@@ -220,7 +222,7 @@ The repository includes a fail-closed, direct-to-main automation system for boun
 
 - `Detect and commit website knowledge updates` runs daily at 09:17 UTC, on demand, or from the `the-place-website-updated` repository-dispatch event.
 - GitHub has no Gemini or Vercel secrets. An unchanged site produces no commit, deployment, or Gemini call.
-- A change can be committed directly to `main` only after file-boundary checks, staff-FAQ isolation, a 20-document automatic-change cap, corpus verification, all tests, lint, production build, and a final check that `main` did not advance. It never force-pushes.
+- A change can be committed directly to `main` only after file-boundary checks, staff-FAQ isolation, a 20-document automatic-change cap, exact reconciliation of every website deletion against the human removal allowlist, a separate five-deletion cap, corpus verification, all tests, lint, production build, and a final check that `main` did not advance. It never force-pushes.
 - The resulting Vercel Production build verifies the committed corpus again, reconciles the existing File Search store using Vercel's server-side key, and only then builds the deployable application. Preview builds never mutate Gemini.
 - Reconciliation uploads every replacement before deleting its stale managed copy and fails closed on unknown remote documents or missing production configuration.
 - The website crawler never parses or approves staff FAQ entries or removal approvals. Staff FAQ changes and permanent-removal allowlist changes still require human review and a normal commit.
@@ -375,7 +377,7 @@ Use `--new-store` only for initial setup, ownership transfer, or an intentional 
 
 ## Current synchronization result
 
-The latest local preparation pass indexed 117 public website pages and 27 approved staff FAQ entries, producing 144 prepared documents. Five routes (`/matching-gifts`, `/gala-recap`, `/furniture-pickup-request`, `/faroi`, and `/upcoming-events`) returned no meaningful public page content and are listed as crawl failures. `/home` duplicates the canonical homepage and is not uploaded twice. No source conflicts were detected in this pass.
+The July 29, 2026 preparation pass indexed 117 public website pages, 27 approved staff FAQ entries, and 2 official public PDFs, producing 146 prepared documents. Five HTML routes (`/matching-gifts`, `/gala-recap`, `/furniture-pickup-request`, `/faroi`, and `/upcoming-events`) returned no meaningful public page content. The `/volunteer-handbook` route redirects to a document delivery target the HTML crawler intentionally refuses, so the exact verified PDF is supplied through the durable official-document registry instead. `/home` duplicates the canonical homepage and is not uploaded twice. No source conflicts were detected in this pass.
 
 The following staff questions remain pending and are excluded from the approved FAQ corpus:
 
@@ -410,7 +412,7 @@ File Search stores belong to the Gemini project that created them; changing only
 - React renders answer text directly; raw HTML and `dangerouslySetInnerHTML` are not used for model output.
 - Website source URLs are limited to HTTPS `theplacega.org` hosts and must exist in the generated manifest.
 - The crawler revalidates both requested and final redirect hosts so off-domain content cannot enter the approved corpus through a redirect or external sitemap.
-- Request size, message length, history length, timeout, and response shape are bounded.
+- Request size, the 600-character message limit, history length, timeout, and response shape are bounded.
 - The API requires `application/json`, model-generated images are not loaded, the widget iframe is same-origin with its loader, and response security headers limit framing to The Place domains.
 - Production provider failures log only error type/status/code metadata, never visitor message text.
 - The in-memory rate limiter is best-effort only. Serverless instances do not share its state, so production should use a durable distributed limiter if abuse risk warrants it.
@@ -426,7 +428,7 @@ File Search stores belong to the Gemini project that created them; changing only
 - In-memory rate limiting is not a strong production control.
 - Before broad public promotion, configure a Vercel Firewall rate-limit rule for `POST /api/chat`, plus a formal content-review workflow, uptime/error monitoring that excludes message text, accessibility testing with assistive technologies, retention/legal review, and a documented incident/rollback procedure.
 - Review Gemini and Vercel quotas, billing, and data-processing terms for The Place's expected traffic. Free-tier availability and limits can change.
-- Next.js and its ESLint configuration are pinned to the current 16.2.12 patch. `npm audit` still reports transitive PostCSS and Sharp/libvips advisories inside Next.js. This app accepts neither user-provided CSS nor image uploads, has no remote image domains, and disables runtime image optimization for its trusted local logos. npm's forced fix proposes an unsafe Next.js 9 downgrade, so it is not used; monitor the next stable Next.js release that updates those nested packages.
+- Next.js and its ESLint configuration are pinned to the current compatible 16.2.12 patch. `npm audit` reports 12 high-severity transitive findings: PostCSS and Sharp/libvips inside Next.js, plus glob-expansion packages used by development-only lint tooling. This app accepts neither user-provided CSS nor image uploads, has no remote image domains, disables runtime image optimization for its trusted local logos, and does not pass visitor input to lint tooling. npm's forced fix proposes an unsafe Next.js 9 downgrade; ESLint 10 is not yet compatible with the React plugin bundled by this Next configuration. Neither unsafe change is applied. Monitor the next stable compatible releases and rerun the audit regularly.
 
 ## Packages added
 

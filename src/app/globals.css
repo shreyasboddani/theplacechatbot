@@ -213,8 +213,10 @@ a { color: inherit; text-decoration: none; }
 .chat-privacy p { margin: 0; font-size: 8px; line-height: 1.35; }
 .chat-input-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 8px; padding: 7px 7px 7px 11px; background: #f8f6f3; border: 1px solid #dcd6d2; border-radius: 12px; }
 .chat-input-form:focus-within { border-color: var(--purple-600); box-shadow: 0 0 0 3px rgba(125,75,142,.11); }
+.chat-input-field { display: grid; min-width: 0; }
 .chat-input-form textarea { width: 100%; min-height: 32px; max-height: 90px; padding: 7px 0 4px; resize: none; color: #343646; background: transparent; border: 0; outline: 0; font-size: 10px; line-height: 1.45; }
 .chat-input-form textarea::placeholder { color: #96949c; }
+.chat-character-count { justify-self: end; color: #96949c; font-size: 7px; line-height: 1; }
 .chat-send-button { display: grid; width: 34px; height: 34px; place-items: center; padding: 0; color: white; background: var(--magenta-600); border: 0; border-radius: 9px; cursor: pointer; }
 .chat-send-button:hover { background: var(--purple-700); }
 .chat-send-button:disabled { color: #aaa5ae; background: #e5e0e2; cursor: not-allowed; }
@@ -229,6 +231,7 @@ a { color: inherit; text-decoration: none; }
 .chat-theme-dark .chat-composer { background: #1d2135; border-color: #383c52; }
 .chat-theme-dark .chat-input-form { background: #272b40; border-color: #42465b; }
 .chat-theme-dark .chat-input-form textarea { color: white; }
+.chat-theme-dark .chat-character-count { color: #aaa8b4; }
 @media (prefers-color-scheme: dark) {
   .chat-theme-auto .chat-panel { background: #171b2e; border-color: #373b53; }
   .chat-theme-auto .message-bubble, .chat-theme-auto .quick-action, .chat-theme-auto .typing-bubble { color: #e8e5ec; background: #24293e; border-color: #3b4058; }
@@ -237,6 +240,7 @@ a { color: inherit; text-decoration: none; }
   .chat-theme-auto .chat-composer { background: #1d2135; border-color: #383c52; }
   .chat-theme-auto .chat-input-form { background: #272b40; border-color: #42465b; }
   .chat-theme-auto .chat-input-form textarea { color: white; }
+  .chat-theme-auto .chat-character-count { color: #aaa8b4; }
 }
 
 @keyframes chat-pop { from { opacity: 0; transform: translateY(12px) scale(.97); } to { opacity: 1; transform: none; } }
