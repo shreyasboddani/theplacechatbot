@@ -107,6 +107,10 @@ Confirm that sensitive content is not echoed back and is not visible in server l
 ## Interface and accessibility
 
 - [ ] Launcher, minimize, close, and restart work.
+- [ ] With the chat closed in a fresh browser session, the “Need help?” suggestion appears after a short delay without moving keyboard focus.
+- [ ] Clicking the suggestion opens the chat; dismissing it keeps the chat closed.
+- [ ] The suggestion disappears automatically and does not repeat during the same browser session.
+- [ ] The suggestion stays aligned above bottom-left and bottom-right launchers and fits a narrow mobile viewport.
 - [ ] The compact language bar remains readable without taking excessive vertical space.
 - [ ] On desktop, dragging the visible top-corner handle makes the floating chat larger and smaller while the anchored edge stays in place.
 - [ ] Focusing the resize handle and using Left/Right changes width, Up/Down changes height, and Shift uses larger steps.
@@ -138,6 +142,7 @@ Confirm that sensitive content is not echoed back and is not visible in server l
 - [ ] Invalid theme, position, and launcher values fall back safely.
 - [ ] The iframe resizes without horizontal overflow.
 - [ ] `widget-loader.js` opens, closes, and reopens on desktop and mobile.
+- [ ] The loader suggestion is enabled by default, `data-prompt="hidden"` disables it, and `data-prompt-text` displays only escaped plain text.
 - [ ] Host-page styles do not change the loader styling.
 - [ ] Loader URL validation rejects external plain HTTP and non-HTTP schemes.
 

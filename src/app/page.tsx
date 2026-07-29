@@ -161,7 +161,9 @@ export default function Home() {
   src="https://theplacechatbot.vercel.app/widget-loader.js"
   data-chatbot-url="https://theplacechatbot.vercel.app/embed"
   data-position="bottom-right"
-  data-label="Ask The Place">
+  data-label="Ask The Place"
+  data-prompt="visible"
+  data-prompt-text="Ask The Place chatbot">
 </script>`}</code></pre>
       </section>
 

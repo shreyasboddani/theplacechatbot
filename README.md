@@ -11,6 +11,7 @@ This repository is a prototype for review. It is not a case-management system, d
 - A framework-independent floating widget loader at `/widget-loader.js`
 - A visible Auto / English / Español response-language selector
 - Bounded desktop resizing for both the demo panel and integration widget
+- A dismissible, once-per-session launcher suggestion
 - `POST /api/chat` with File Search-only Gemini grounding
 - `GET /api/health` with non-secret configuration status
 - A robots-aware, same-origin website crawler
@@ -308,11 +309,15 @@ Add this before the host page's closing `</body>` tag or through its approved sc
   src="https://theplacechatbot.vercel.app/widget-loader.js"
   data-chatbot-url="https://theplacechatbot.vercel.app/embed"
   data-position="bottom-right"
-  data-label="Ask The Place">
+  data-label="Ask The Place"
+  data-prompt="visible"
+  data-prompt-text="Ask The Place chatbot">
 </script>
 ```
 
 The loader has no dependencies, uses a Shadow DOM boundary when available, locks the iframe to the loader's own HTTPS origin, and constrains position/theme values. It does not assume React, Next.js, WordPress, Squarespace, or another host framework.
+
+When the launcher remains closed, a small “Need help?” suggestion appears after 2.2 seconds, never takes focus, disappears after 9 seconds, and can be dismissed or clicked to open the chat. A single `sessionStorage` boolean prevents it from repeating during the browser session; no visitor message or personal information is stored. The suggestion is enabled by default. Set `data-prompt="hidden"` to disable it, or customize its secondary line with a plain-text `data-prompt-text` value of up to 80 characters. Custom text is assigned with `textContent`, not interpreted as HTML.
 
 ## Deploy to Vercel
 
@@ -426,6 +431,7 @@ File Search stores belong to the Gemini project that created them; changing only
 - Production provider failures log only error type/status/code metadata, never visitor message text.
 - The in-memory rate limiter is best-effort only. Serverless instances do not share its state, so production should use a durable distributed limiter if abuse risk warrants it.
 - No browser analytics or transcript persistence is included by default.
+- The launcher suggestion stores only a non-sensitive, once-per-session “seen” flag in `sessionStorage`.
 
 ## Prototype limitations and production hardening
 

@@ -40,6 +40,12 @@ describe("widget and crawler boundaries", () => {
     expect(loader).toContain('resizeButton.addEventListener("pointerdown"');
     expect(loader).toContain('resizeButton.addEventListener("keydown"');
     expect(loader).toContain(".tp-resize{display:none}");
+    expect(loader).toContain('script.getAttribute("data-prompt")');
+    expect(loader).toContain('script.getAttribute("data-prompt-text")');
+    expect(loader).toContain("the-place-chatbot-nudge-seen");
+    expect(loader).toContain("nudgeText.textContent = promptText");
+    expect(loader).toContain('nudgeAction.addEventListener("click"');
+    expect(loader).toContain('nudgeClose.addEventListener("click"');
   });
 
   it("keeps the crawler on public The Place HTML routes", () => {
