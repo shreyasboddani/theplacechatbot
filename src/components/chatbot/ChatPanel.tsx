@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import {
+  type KeyboardEvent as ReactKeyboardEvent,
+  type PointerEvent as ReactPointerEvent,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import {
   LearnAILogo,
@@ -19,6 +25,12 @@ import { PrivacyNotice } from "@/components/chatbot/PrivacyNotice";
 import { QuickActions } from "@/components/chatbot/QuickActions";
 import type { ChatMessageItem } from "@/components/chatbot/types";
 import { CLIENT_REQUEST_TIMEOUT_MS } from "@/lib/chat/limits";
+import {
+  constrainChatPanelSize,
+  DEFAULT_CHAT_PANEL_SIZE,
+  dragChatPanelSize,
+  type ChatPanelSize,
+} from "@/lib/chat/panel-resize";
 import { buildChatRequest } from "@/lib/chat/request";
 import {
   CHAT_UI_COPY,
@@ -42,6 +54,7 @@ function welcomeMessage(language: ChatLanguagePreference): ChatMessageItem {
 interface ChatPanelProps {
   embedded?: boolean;
   active?: boolean;
+  position?: "bottom-left" | "bottom-right";
   onMinimize: () => void;
   onClose: () => void;
 }
@@ -49,6 +62,7 @@ interface ChatPanelProps {
 export function ChatPanel({
   embedded,
   active = true,
+  position = "bottom-right",
   onMinimize,
   onClose,
 }: ChatPanelProps) {
@@ -59,10 +73,20 @@ export function ChatPanel({
     welcomeMessage("auto"),
   ]);
   const [loading, setLoading] = useState(false);
+  const [panelSize, setPanelSize] = useState<ChatPanelSize>();
   const scrollerRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const pendingRef = useRef(false);
   const activeControllerRef = useRef<AbortController | null>(null);
+  const resizeRef = useRef<
+    | {
+        pointerId: number;
+        startX: number;
+        startY: number;
+        startSize: ChatPanelSize;
+      }
+    | undefined
+  >(undefined);
 
   useEffect(() => {
     scrollerRef.current?.scrollTo({
@@ -81,6 +105,86 @@ export function ChatPanel({
     },
     [],
   );
+
+  useEffect(() => {
+    if (embedded) return;
+    function fitPanelToViewport() {
+      setPanelSize((current) =>
+        current
+          ? constrainChatPanelSize(current, {
+              width: window.innerWidth,
+              height: window.innerHeight,
+            })
+          : current,
+      );
+    }
+    window.addEventListener("resize", fitPanelToViewport);
+    return () => window.removeEventListener("resize", fitPanelToViewport);
+  }, [embedded]);
+
+  function currentPanelSize(): ChatPanelSize {
+    const bounds = panelRef.current?.getBoundingClientRect();
+    return {
+      width: bounds?.width || panelSize?.width || DEFAULT_CHAT_PANEL_SIZE.width,
+      height:
+        bounds?.height || panelSize?.height || DEFAULT_CHAT_PANEL_SIZE.height,
+    };
+  }
+
+  function startResize(event: ReactPointerEvent<HTMLButtonElement>) {
+    if (embedded || event.button !== 0) return;
+    resizeRef.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      startSize: currentPanelSize(),
+    };
+    event.currentTarget.setPointerCapture?.(event.pointerId);
+    event.preventDefault();
+  }
+
+  function continueResize(event: ReactPointerEvent<HTMLButtonElement>) {
+    const start = resizeRef.current;
+    if (!start || start.pointerId !== event.pointerId) return;
+    setPanelSize(
+      dragChatPanelSize(
+        start.startSize,
+        { x: event.clientX - start.startX, y: event.clientY - start.startY },
+        position,
+        { width: window.innerWidth, height: window.innerHeight },
+      ),
+    );
+  }
+
+  function stopResize(event: ReactPointerEvent<HTMLButtonElement>) {
+    if (resizeRef.current?.pointerId !== event.pointerId) return;
+    resizeRef.current = undefined;
+    event.currentTarget.releasePointerCapture?.(event.pointerId);
+  }
+
+  function resizeWithKeyboard(event: ReactKeyboardEvent<HTMLButtonElement>) {
+    const step = event.shiftKey ? 40 : 16;
+    const current = currentPanelSize();
+    let requested = current;
+    if (event.key === "ArrowRight") {
+      requested = { ...current, width: current.width + step };
+    } else if (event.key === "ArrowLeft") {
+      requested = { ...current, width: current.width - step };
+    } else if (event.key === "ArrowUp") {
+      requested = { ...current, height: current.height + step };
+    } else if (event.key === "ArrowDown") {
+      requested = { ...current, height: current.height - step };
+    } else {
+      return;
+    }
+    event.preventDefault();
+    setPanelSize(
+      constrainChatPanelSize(requested, {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      }),
+    );
+  }
 
   async function sendMessage(message: unknown) {
     if (pendingRef.current) return;
@@ -199,7 +303,12 @@ export function ChatPanel({
   return (
     <section
       ref={panelRef}
-      className={`chat-panel ${embedded ? "chat-panel-embedded" : ""}`}
+      className={`chat-panel ${embedded ? "chat-panel-embedded" : "chat-panel-resizable"} chat-panel-position-${position}`}
+      style={
+        !embedded && panelSize
+          ? { width: panelSize.width, height: panelSize.height }
+          : undefined
+      }
       role="dialog"
       aria-modal={!embedded}
       aria-labelledby="chatbot-title"
@@ -208,6 +317,21 @@ export function ChatPanel({
         if (event.key === "Escape") onMinimize();
       }}
     >
+      {!embedded ? (
+        <button
+          type="button"
+          className="chat-panel-resize-handle"
+          aria-label={copy.resize}
+          title={copy.resize}
+          onPointerDown={startResize}
+          onPointerMove={continueResize}
+          onPointerUp={stopResize}
+          onPointerCancel={stopResize}
+          onKeyDown={resizeWithKeyboard}
+        >
+          <span aria-hidden="true" />
+        </button>
+      ) : null}
       <header className="chat-panel-header">
         <div className="chat-brand-mark">
           <ThePlaceLogo className="chat-place-logo" />

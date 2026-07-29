@@ -45,4 +45,13 @@ describe("chat widget lifecycle", () => {
     ).toBe("");
     expect(screen.getAllByText(/approved information from The Place/i)).toHaveLength(1);
   });
+
+  it("places the resize handle on the inward corner", () => {
+    render(<ChatWidget initialOpen position="bottom-left" />);
+    const dialog = screen.getByRole("dialog");
+    expect(dialog.className).toContain("chat-panel-position-bottom-left");
+    expect(
+      screen.getByRole("button", { name: /Resize chat/i }),
+    ).toBeDefined();
+  });
 });

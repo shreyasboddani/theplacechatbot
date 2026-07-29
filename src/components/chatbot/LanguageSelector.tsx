@@ -29,7 +29,7 @@ export function LanguageSelector({
 
   return (
     <div className="chat-language-control">
-      <span className="chat-language-label">{copy.languageSelector}</span>
+      <span className="chat-language-label">{copy.languageLabel}</span>
       <div
         className="chat-language-options"
         role="group"

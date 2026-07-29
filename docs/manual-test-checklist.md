@@ -107,6 +107,12 @@ Confirm that sensitive content is not echoed back and is not visible in server l
 ## Interface and accessibility
 
 - [ ] Launcher, minimize, close, and restart work.
+- [ ] The compact language bar remains readable without taking excessive vertical space.
+- [ ] On desktop, dragging the visible top-corner handle makes the floating chat larger and smaller while the anchored edge stays in place.
+- [ ] Focusing the resize handle and using Left/Right changes width, Up/Down changes height, and Shift uses larger steps.
+- [ ] Resizing stops at safe minimum, maximum, and viewport boundaries; shrinking the browser keeps the panel on screen.
+- [ ] The resize handle is absent from mobile and full-page embedded layouts.
+- [ ] The `widget-loader.js` integration can be resized independently of the host page and its iframe continues filling the panel.
 - [ ] Quick actions send normal grounded questions through `/api/chat`.
 - [ ] Enter sends; Shift+Enter inserts a line break.
 - [ ] The composer shows and enforces the 600-character message limit.

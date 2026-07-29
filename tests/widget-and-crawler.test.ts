@@ -37,6 +37,9 @@ describe("widget and crawler boundaries", () => {
     expect(loader).toContain("/branding/the-place-logo.png");
     expect(loader).toContain('logoImage.alt = ""');
     expect(loader).toContain("chatbotUrl.origin !== scriptUrl.origin");
+    expect(loader).toContain('resizeButton.addEventListener("pointerdown"');
+    expect(loader).toContain('resizeButton.addEventListener("keydown"');
+    expect(loader).toContain(".tp-resize{display:none}");
   });
 
   it("keeps the crawler on public The Place HTML routes", () => {

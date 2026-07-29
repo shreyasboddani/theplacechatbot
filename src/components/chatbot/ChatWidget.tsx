@@ -44,6 +44,7 @@ export function ChatWidget({
           <ChatPanel
             embedded={embedded}
             active={open}
+            position={position}
             onMinimize={() => setOpen(false)}
             onClose={closePanel}
           />

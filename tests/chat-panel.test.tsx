@@ -160,7 +160,10 @@ describe("ChatPanel request pipeline", () => {
     vi.stubGlobal("fetch", fetchMock);
     render(<ChatPanel onMinimize={vi.fn()} onClose={vi.fn()} />);
 
-    expect(screen.getByText("Response language")).toBeDefined();
+    expect(screen.getByText("Language")).toBeDefined();
+    expect(
+      screen.getByRole("group", { name: "Response language" }),
+    ).toBeDefined();
     fireEvent.click(screen.getByRole("button", { name: "Español" }));
     expect(screen.getByText(/Puedo ayudarte a encontrar información aprobada/i)).toBeDefined();
     expect(screen.getByLabelText(/Pregúntale al asistente/i)).toBeDefined();
@@ -177,5 +180,75 @@ describe("ChatPanel request pipeline", () => {
       history: [],
       language: "es",
     });
+  });
+
+  it("offers bounded keyboard resizing only for the floating panel", () => {
+    vi.stubGlobal("innerWidth", 1200);
+    vi.stubGlobal("innerHeight", 1000);
+    const { unmount } = render(
+      <ChatPanel onMinimize={vi.fn()} onClose={vi.fn()} />,
+    );
+    const dialog = screen.getByRole("dialog");
+    vi.spyOn(dialog, "getBoundingClientRect").mockReturnValue({
+      width: 390,
+      height: 650,
+      x: 0,
+      y: 0,
+      top: 0,
+      right: 390,
+      bottom: 650,
+      left: 0,
+      toJSON: () => ({}),
+    });
+
+    fireEvent.keyDown(
+      screen.getByRole("button", { name: /Resize chat/i }),
+      { key: "ArrowRight" },
+    );
+    expect(dialog.style.width).toBe("406px");
+    expect(dialog.style.height).toBe("650px");
+    unmount();
+
+    render(
+      <ChatPanel embedded onMinimize={vi.fn()} onClose={vi.fn()} />,
+    );
+    expect(
+      screen.queryByRole("button", { name: /Resize chat/i }),
+    ).toBeNull();
+  });
+
+  it("resizes the floating panel by dragging its corner handle", () => {
+    vi.stubGlobal("innerWidth", 1200);
+    vi.stubGlobal("innerHeight", 1000);
+    render(<ChatPanel onMinimize={vi.fn()} onClose={vi.fn()} />);
+    const dialog = screen.getByRole("dialog");
+    vi.spyOn(dialog, "getBoundingClientRect").mockReturnValue({
+      width: 390,
+      height: 650,
+      x: 0,
+      y: 0,
+      top: 0,
+      right: 390,
+      bottom: 650,
+      left: 0,
+      toJSON: () => ({}),
+    });
+    const handle = screen.getByRole("button", { name: /Resize chat/i });
+
+    fireEvent.pointerDown(handle, {
+      button: 0,
+      pointerId: 7,
+      clientX: 100,
+      clientY: 100,
+    });
+    fireEvent.pointerMove(handle, {
+      pointerId: 7,
+      clientX: 50,
+      clientY: 40,
+    });
+    fireEvent.pointerUp(handle, { pointerId: 7 });
+
+    expect(dialog.style.width).toBe("440px");
+    expect(dialog.style.height).toBe("710px");
   });
 });

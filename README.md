@@ -10,6 +10,7 @@ This repository is a prototype for review. It is not a case-management system, d
 - A responsive iframe experience at `/embed`
 - A framework-independent floating widget loader at `/widget-loader.js`
 - A visible Auto / English / Español response-language selector
+- Bounded desktop resizing for both the demo panel and integration widget
 - `POST /api/chat` with File Search-only Gemini grounding
 - `GET /api/health` with non-secret configuration status
 - A robots-aware, same-origin website crawler
@@ -43,6 +44,8 @@ Standalone greetings, thanks, questions about what the assistant can do, and ava
 Before a grounded request, harmless greeting and courtesy wrappers are removed while the substantive wording is preserved. The grounding instruction explicitly resolves obvious spelling mistakes, repeated letters, chat shorthand, and clear follow-ups into a standalone retrieval query and tries one reasonable paraphrase before reporting a confirmed knowledge miss. A malformed model response or an answer without a mapped citation uses separate source-verification wording; it does not claim that the information is absent from the corpus.
 
 The language selector defaults to **Auto**. Auto detects the visitor's language from the current message and recent conversational context, including common phonetic or transliterated language written with Latin letters, and asks Gemini to reply in the same language and script style. English and Español explicitly override automatic detection. The selector value is a validated enum carried separately from untrusted message text; language translation never relaxes File Search retrieval, citation mapping, sensitive-data blocking, or contact-fallback rules. The browser interface, quick actions, status text, and deterministic fallbacks are localized in Spanish when Español is selected. No additional environment variable is required.
+
+On desktop, the floating panel can be resized from its inward-facing top corner. The handle supports pointer dragging and arrow-key resizing, including larger Shift+Arrow steps. Width and height are clamped to usable minimums, maximums, and the current viewport; the panel is fitted again if the browser window shrinks. Embedded and mobile layouts stay viewport-sized so resizing cannot interfere with touch scrolling or host-page layout. The same behavior is implemented in the framework-independent widget loader.
 
 ## Requirements
 

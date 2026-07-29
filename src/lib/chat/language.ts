@@ -28,6 +28,7 @@ export const CHAT_UI_COPY = {
     welcome:
       "Hi! I can help you find approved information from The Place about services, donations, volunteering, and more. What would you like help with?",
     languageSelector: "Response language",
+    languageLabel: "Language",
     languageAuto: "Auto",
     languageEnglish: "English",
     languageSpanish: "Español",
@@ -54,6 +55,8 @@ export const CHAT_UI_COPY = {
     unavailable:
       "The information assistant is temporarily unavailable. Please try again in a moment. If you still need help, contact The Place at 770-887-1098 or use the contact page.",
     sensitiveReplacement: "Sensitive information was not sent.",
+    resize:
+      "Resize chat. Drag the corner, or use arrow keys while focused.",
     quickActions: [
       { label: "I need food", question: "I need food. How can The Place help?" },
       {
@@ -80,6 +83,7 @@ export const CHAT_UI_COPY = {
     welcome:
       "¡Hola! Puedo ayudarte a encontrar información aprobada de The Place sobre servicios, donaciones, voluntariado y más. ¿En qué puedo ayudarte?",
     languageSelector: "Idioma de respuesta",
+    languageLabel: "Idioma",
     languageAuto: "Auto",
     languageEnglish: "English",
     languageSpanish: "Español",
@@ -106,6 +110,8 @@ export const CHAT_UI_COPY = {
     unavailable:
       "El asistente de información no está disponible temporalmente. Inténtalo de nuevo en un momento. Si aún necesitas ayuda, llama a The Place al 770-887-1098 o usa la página de contacto.",
     sensitiveReplacement: "La información confidencial no se envió.",
+    resize:
+      "Cambiar el tamaño del chat. Arrastra la esquina o usa las flechas del teclado.",
     quickActions: [
       {
         label: "Necesito alimentos",
