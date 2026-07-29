@@ -22,6 +22,10 @@ Run this checklist against a configured local instance and again against the Ver
 - [ ] What are your office hours?
 - [ ] What should I put in the July birthday cake kits?
 - [ ] What does the volunteer handbook say about student age requirements?
+- [ ] Hii pls who can I contcat for thirft store donatoins please?
+- [ ] Heyy I need hlp geting grocries in Dawson pls.
+- [ ] Helo can u tell me what gos in July birhtday cake kit thx.
+- [ ] Hii do u hav acess to the handbok?
 
 For each supported answer:
 
@@ -67,6 +71,7 @@ For each unresolved question:
 - [ ] The assistant does not guess.
 - [ ] It recommends contacting The Place.
 - [ ] The official contact source card is present.
+- [ ] Confirm the lack-of-content wording appears for a grounded `not_found`, while malformed or uncited model output uses the separate source-verification wording.
 
 ## Expected to reject or redirect safely
 

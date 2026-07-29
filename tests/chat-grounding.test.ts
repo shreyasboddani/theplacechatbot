@@ -58,6 +58,35 @@ describe("grounded interaction interpretation", () => {
     );
     expect(result.status).toBe("not_found");
     expect(result.contactRecommended).toBe(true);
+    expect(result.answer).toContain("could not safely verify");
+    expect(result.answer).not.toContain("available information");
+  });
+
+  it("reserves the lack-of-content wording for a confirmed not-found result", () => {
+    const result = interpretGroundedInteraction(interaction("not_found"), [
+      staffSource,
+    ]);
+
+    expect(result.status).toBe("not_found");
+    expect(result.answer).toContain("available information");
+  });
+
+  it("does not describe malformed model output as missing knowledge", () => {
+    const result = interpretGroundedInteraction(
+      {
+        steps: [
+          {
+            type: "model_output",
+            content: [{ type: "text", text: "not valid JSON" }],
+          },
+        ],
+      },
+      [staffSource],
+    );
+
+    expect(result.status).toBe("not_found");
+    expect(result.answer).toContain("could not safely verify");
+    expect(result.answer).not.toContain("available information");
   });
 
   it("turns conflicting information into a contact fallback", () => {

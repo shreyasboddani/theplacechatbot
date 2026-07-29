@@ -1,7 +1,10 @@
 import { z } from "zod";
 
 import { MAX_ASSISTANT_ANSWER_LENGTH } from "@/lib/chat/limits";
-import { contactFallback } from "@/lib/contact-fallback";
+import {
+  contactFallback,
+  sourceVerificationFallback,
+} from "@/lib/contact-fallback";
 import { resolveFileCitations } from "@/lib/gemini/citations";
 import type { FileCitationAnnotation } from "@/lib/gemini/citations";
 import {
@@ -16,7 +19,7 @@ import type { ChatRequest } from "@/lib/security/input-validation";
 
 const modelPayloadSchema = z.object({
   status: z.enum(["answered", "not_found", "conflicting_information"]),
-  answer: z.string().trim().max(MAX_ASSISTANT_ANSWER_LENGTH),
+  answer: z.string().trim().min(1).max(MAX_ASSISTANT_ANSWER_LENGTH),
 });
 
 const SIMPLE_RESPONSE_TOKEN_LIMIT = 224;
@@ -147,15 +150,16 @@ export function interpretGroundedInteraction(
   try {
     parsed = modelPayloadSchema.parse(JSON.parse(text));
   } catch {
-    return contactFallback();
+    return sourceVerificationFallback();
   }
 
   if (parsed.status === "conflicting_information") {
     return contactFallback("conflicting_information", sources);
   }
-  if (parsed.status !== "answered" || sources.length === 0 || !parsed.answer) {
+  if (parsed.status === "not_found") {
     return contactFallback();
   }
+  if (sources.length === 0) return sourceVerificationFallback();
 
   return {
     status: "answered",

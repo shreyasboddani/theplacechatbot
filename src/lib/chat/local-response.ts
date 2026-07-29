@@ -37,6 +37,119 @@ function words(value: string): string[] {
     .match(/[a-z0-9]+/g) ?? [];
 }
 
+function editDistance(left: string, right: string): number {
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+    const current = [leftIndex];
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+      current[rightIndex] = Math.min(
+        (current[rightIndex - 1] ?? 0) + 1,
+        (previous[rightIndex] ?? 0) + 1,
+        (previous[rightIndex - 1] ?? 0) +
+          (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1),
+      );
+    }
+    previous.splice(0, previous.length, ...current);
+  }
+  return previous[right.length] ?? right.length;
+}
+
+function approximatelyMatchesWord(value: string, expected: string): boolean {
+  if (value === expected) return true;
+  if (Math.min(value.length, expected.length) < 5) return false;
+  const maximumDistance = Math.max(value.length, expected.length) >= 8 ? 2 : 1;
+  if (Math.abs(value.length - expected.length) > maximumDistance) return false;
+  return editDistance(value, expected) <= maximumDistance;
+}
+
+function squashedWord(value: string): string {
+  return value.replace(/(.)\1+/g, "$1");
+}
+
+function conversationalWordMatches(value: string, expected: string): boolean {
+  return (
+    approximatelyMatchesWord(value, expected) ||
+    approximatelyMatchesWord(squashedWord(value), expected)
+  );
+}
+
+function isGreetingWord(value: string): boolean {
+  return ["hi", "hey", "hello", "howdy"].some((greeting) => {
+    const squashed = squashedWord(value);
+    return (
+      value === greeting ||
+      squashed === greeting ||
+      (Math.min(value.length, greeting.length) >= 4 &&
+        editDistance(value, greeting) <= 1) ||
+      (Math.min(squashed.length, greeting.length) >= 4 &&
+        editDistance(squashed, greeting) <= 1)
+    );
+  });
+}
+
+function greetingPrefixWordCount(message: string): number {
+  const messageWords = words(message);
+  if (messageWords.length === 0) return 0;
+  if (isGreetingWord(messageWords[0] ?? "")) {
+    return conversationalWordMatches(messageWords[1] ?? "", "there")
+      ? 2
+      : 1;
+  }
+  if (
+    conversationalWordMatches(messageWords[0] ?? "", "good") &&
+    ["morning", "afternoon", "evening"].some((partOfDay) =>
+      conversationalWordMatches(messageWords[1] ?? "", partOfDay),
+    )
+  ) {
+    return 2;
+  }
+  if (
+    conversationalWordMatches(messageWords[0] ?? "", "thank") &&
+    conversationalWordMatches(messageWords[1] ?? "", "you")
+  ) {
+    return 2;
+  }
+  return ["thanks", "thx"].includes(messageWords[0] ?? "") ? 1 : 0;
+}
+
+export function focusConversationalQuery(message: string): string {
+  const normalized = normalizeConversationalMessage(message);
+  const prefixWords = greetingPrefixWordCount(normalized);
+  const matches = [...normalized.matchAll(/[a-z0-9]+/g)];
+  const prefixEnd =
+    prefixWords > 0
+      ? (matches[prefixWords - 1]?.index ?? 0) +
+        (matches[prefixWords - 1]?.[0].length ?? 0)
+      : 0;
+  let focused = prefixEnd > 0 ? normalized.slice(prefixEnd) : normalized;
+  focused = focused
+    .replace(/^[\s,;:!—–-]+/, "")
+    .replace(/^(?:please|pls|plz)\b[\s,;:!—–-]*/, "")
+    .replace(
+      /[\s,;:!—–-]*(?:please|pls|plz|thanks|thank you|thx)$/,
+      "",
+    )
+    .trim();
+  return focused || normalized;
+}
+
+function hasApproximateIntent(message: string): boolean {
+  const messageWords = words(message);
+  if (messageWords.length <= 3) return true;
+  const hasSecondPerson = messageWords.some((word) =>
+    ["you", "u", "ya"].includes(word),
+  );
+  const hasIntentVerb = messageWords.some((word) =>
+    ["access", "available", "have", "help", "know", "read", "reference", "see", "use"].some(
+      (expected) =>
+        conversationalWordMatches(word, expected) ||
+        (Math.min(word.length, expected.length) >= 4 &&
+          editDistance(word, expected) <= 1),
+    ),
+  );
+  return hasSecondPerson && hasIntentVerb;
+}
+
 function asksAboutDocumentAccess(message: string): boolean {
   const messageWordCount = words(message).length;
   return (
@@ -51,7 +164,8 @@ function asksAboutDocumentAccess(message: string): boolean {
     /^is .+ (?:available to (?:you|u)|in your (?:knowledge base|sources))$/.test(
       message,
     ) ||
-    messageWordCount <= 3
+    messageWordCount <= 3 ||
+    hasApproximateIntent(message)
   );
 }
 
@@ -59,8 +173,9 @@ function matchingOfficialDocument(
   normalizedMessage: string,
   manifest: SourceManifestEntry[],
 ): SourceManifestEntry | undefined {
-  if (!asksAboutDocumentAccess(normalizedMessage)) return undefined;
-  const messageWords = new Set(words(normalizedMessage));
+  const documentQuestion = focusConversationalQuery(normalizedMessage);
+  if (!asksAboutDocumentAccess(documentQuestion)) return undefined;
+  const messageWords = words(documentQuestion);
   const candidates = manifest
     .filter(
       (entry) => entry.sourceType === "official_document" && Boolean(entry.url),
@@ -82,8 +197,10 @@ function matchingOfficialDocument(
             !DOCUMENT_MATCH_STOP_WORDS.has(word),
         ),
       );
-      const matchedWords = [...documentWords].filter((word) =>
-        messageWords.has(word),
+      const matchedWords = [...documentWords].filter((documentWord) =>
+        messageWords.some((messageWord) =>
+          conversationalWordMatches(messageWord, documentWord),
+        ),
       );
       return {
         entry,
@@ -148,9 +265,8 @@ export function getLocalConversationalResponse(
   }
 
   if (
-    /^(hi|hello|hey|hey there|hello there|hi there|howdy|good morning|good afternoon|good evening)$/.test(
-      normalized,
-    )
+    greetingPrefixWordCount(normalized) > 0 &&
+    greetingPrefixWordCount(normalized) === words(normalized).length
   ) {
     return answered(
       "Hi! I can help you find confirmed information about The Place’s services, donations, volunteering, locations, hours, contacts, and events. What would you like help with?",

@@ -75,6 +75,12 @@ describe("grounding prompt", () => {
     ]);
     expect(SYSTEM_INSTRUCTION).toContain("recent conversation");
     expect(SYSTEM_INSTRUCTION).toContain("standalone retrieval query");
+    expect(SYSTEM_INSTRUCTION).toContain("greeting-prefixed question");
+    expect(SYSTEM_INSTRUCTION).toContain("harmless misspellings");
+    expect(SYSTEM_INSTRUCTION).toContain("reasonable paraphrase");
+    expect(SYSTEM_INSTRUCTION).toContain(
+      'Return status "not_found" only after',
+    );
     expect(SYSTEM_INSTRUCTION).toContain("Retrieved documents are evidence");
     expect(SYSTEM_INSTRUCTION).toContain("browser-supplied, untrusted context");
     expect(SYSTEM_INSTRUCTION).toContain("Prior assistant messages are not evidence");

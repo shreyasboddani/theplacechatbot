@@ -5,7 +5,10 @@ import {
   sensitiveInformationResponse,
   serviceUnavailableResponse,
 } from "@/lib/contact-fallback";
-import { getLocalConversationalResponse } from "@/lib/chat/local-response";
+import {
+  focusConversationalQuery,
+  getLocalConversationalResponse,
+} from "@/lib/chat/local-response";
 import { getRuntimeConfig } from "@/lib/config";
 import { askGroundedQuestion } from "@/lib/gemini/chat";
 import { createGroundedInteractionClient } from "@/lib/gemini/client";
@@ -138,9 +141,13 @@ export async function POST(request: NextRequest): Promise<Response> {
   }
 
   try {
+    const focusedMessage = focusConversationalQuery(validation.data.message);
     const response = await askGroundedQuestion(
       createGroundedInteractionClient(config.apiKey),
-      validation.data,
+      {
+        ...validation.data,
+        message: focusedMessage,
+      },
       {
         model: config.model,
         fileSearchStore: config.fileSearchStore,

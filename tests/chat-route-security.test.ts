@@ -72,7 +72,7 @@ describe("chat route request safety", () => {
   it("answers registered document-access questions locally with the document source", async () => {
     const response = await POST(
       chatRequest({
-        message: "do u have access to the handbook?",
+        message: "hi do u have access to the handbook?",
         history: [],
       }),
     );

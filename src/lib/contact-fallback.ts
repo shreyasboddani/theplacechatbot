@@ -12,6 +12,10 @@ export const CONTACT_FALLBACK_TEXT =
   `I could not find a confirmed answer to that question in The Place's available information. ` +
   `Please contact The Place at ${THE_PLACE.contact.phone} or use their contact page so a staff member can help.`;
 
+export const SOURCE_VERIFICATION_FALLBACK_TEXT =
+  `I could not safely verify a source-backed answer just now. Please try rephrasing the question. ` +
+  `If you still need help, contact The Place at ${THE_PLACE.contact.phone} or use their contact page.`;
+
 export function contactFallback(
   status: "not_found" | "conflicting_information" = "not_found",
   sources: ChatSource[] = [CONTACT_SOURCE],
@@ -24,6 +28,17 @@ export function contactFallback(
   return {
     status,
     answer,
+    sources: sources.length > 0 ? sources : [CONTACT_SOURCE],
+    contactRecommended: true,
+  };
+}
+
+export function sourceVerificationFallback(
+  sources: ChatSource[] = [CONTACT_SOURCE],
+): ChatResponse {
+  return {
+    status: "not_found",
+    answer: SOURCE_VERIFICATION_FALLBACK_TEXT,
     sources: sources.length > 0 ? sources : [CONTACT_SOURCE],
     contactRecommended: true,
   };

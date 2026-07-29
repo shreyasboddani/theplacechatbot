@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 
-import { getLocalConversationalResponse } from "@/lib/chat/local-response";
+import {
+  focusConversationalQuery,
+  getLocalConversationalResponse,
+} from "@/lib/chat/local-response";
 import type { SourceManifestEntry } from "@/lib/knowledge/types";
 
 const officialDocuments: SourceManifestEntry[] = [
@@ -38,6 +41,24 @@ describe("local conversational responses", () => {
     },
   );
 
+  it.each(["hii", "hellooo", "heyy there", "helo there!"])(
+    "recognizes a harmlessly misspelled standalone greeting: %j",
+    (message) => {
+      expect(getLocalConversationalResponse(message)?.status).toBe("answered");
+    },
+  );
+
+  it.each([
+    [
+      "Hii, pls who can I contcat about thrift donations please?",
+      "who can i contcat about thrift donations",
+    ],
+    ["Hello there — what are your hours, thanks", "what are your hours"],
+    ["Good afternoon! I need food help.", "i need food help"],
+  ])("focuses the substantive query without changing its meaning", (message, expected) => {
+    expect(focusConversationalQuery(message)).toBe(expected);
+  });
+
   it.each([
     "what questions can You answer",
     "What can you help me with?",
@@ -59,6 +80,11 @@ describe("local conversational responses", () => {
   it.each([
     "handbook",
     "the handbook",
+    "hi do u have access to the handbook?",
+    "Hello, can you help me with the handbook?",
+    "Good afternoon — do you know about the handbook?",
+    "hii do u hav acess to the handbok?",
+    "helo can u halp with the handboook?",
     "do u have access to the handbook?",
     "do u have access to the volunteer handbook?",
     "Do you have access to the volunteer handbook?",
@@ -101,6 +127,12 @@ describe("local conversational responses", () => {
     expect(
       getLocalConversationalResponse(
         "Do you have access to my volunteer application?",
+        officialDocuments,
+      ),
+    ).toBeUndefined();
+    expect(
+      getLocalConversationalResponse(
+        "Hii, do u hav acess to my volunter application?",
         officialDocuments,
       ),
     ).toBeUndefined();

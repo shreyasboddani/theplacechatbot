@@ -39,6 +39,8 @@ Runtime visitor questions never trigger website crawling. The chat route calls G
 
 Standalone greetings, thanks, questions about what the assistant can do, and availability questions that uniquely match a registered official document are answered locally with the corresponding validated source. They do not consume a Gemini request. Document-content and other organization-specific questions still use the grounded File Search path.
 
+Before a grounded request, harmless greeting and courtesy wrappers are removed while the substantive wording is preserved. The grounding instruction explicitly resolves obvious spelling mistakes, repeated letters, chat shorthand, and clear follow-ups into a standalone retrieval query and tries one reasonable paraphrase before reporting a confirmed knowledge miss. A malformed model response or an answer without a mapped citation uses separate source-verification wording; it does not claim that the information is absent from the corpus.
+
 ## Requirements
 
 - Node.js 20 or newer (the official `@google/genai` SDK requires Node 20+)
