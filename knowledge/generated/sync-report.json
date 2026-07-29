@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-07-28T11:30:36.433Z",
+  "preparedAt": "2026-07-29T11:36:27.652Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -47,7 +47,7 @@
       "id": "web-new-volunteers-51338cd7",
       "title": "New Volunteers | Get Involved Today — The Place",
       "url": "https://www.theplacega.org/new-volunteers",
-      "fetchedAt": "2026-07-28T11:29:33.426Z"
+      "fetchedAt": "2026-07-29T11:35:24.710Z"
     },
     {
       "id": "web-food-pantry-request-b0ed76b1",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-07-26T01:07:26.570Z"
+      "fetchedAt": "2026-07-29T11:35:26.147Z"
     },
     {
       "id": "web-calendar-forsyth-county-drive-through-pet-food-supply-pantry-205ae801",
@@ -683,7 +683,7 @@
       "id": "web-history-b11ce65d",
       "title": "History — The Place",
       "url": "https://www.theplacega.org/history",
-      "fetchedAt": "2026-07-28T11:30:33.691Z"
+      "fetchedAt": "2026-07-29T11:36:22.953Z"
     },
     {
       "id": "web-staff-564c6965",
@@ -706,15 +706,36 @@
   ],
   "failedPages": [
     {
+      "url": "https://www.theplacega.org/matching-gifts",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/gala-recap",
+      "reason": "No meaningful public page content found"
+    },
+    {
       "url": "https://www.theplacega.org/furniture-pickup-request",
       "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/matching-gifts",
+      "url": "https://www.theplacega.org/faroi",
       "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/upcoming-events",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/volunteer-handbook",
+      "reason": "Refusing to fetch or follow a URL outside The Place website."
     }
   ],
-  "duplicatePages": [],
+  "duplicatePages": [
+    {
+      "url": "https://www.theplacega.org/home",
+      "duplicateOf": "https://www.theplacega.org/"
+    }
+  ],
   "retainedPages": [],
   "approvedRemovedPages": [],
   "pendingFaqEntries": [

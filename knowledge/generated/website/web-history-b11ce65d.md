@@ -3,11 +3,10 @@
 Source ID: web-history-b11ce65d
 Source type: official_website
 Canonical URL: https://www.theplacega.org/history
-Fetched at: 2026-07-28T11:30:33.691Z
+Fetched at: 2026-07-29T11:36:22.953Z
 
 ## Page content
 
-Our History
 The Place was founded in 1975 by four Dominican Nuns. The sisters offered assistance with financial needs, clothing, shelter, food, and even tutoring. Throughout our history, we have been the catalyst for several agencies that had their beginnings as programs at The Place.
 In 2015, we started a workforce development initiative to help individuals who are unemployed or under-employed prepare for and secure jobs.
 In 2021, we merged with Dawson County’s RIC-Rack thrift store and food pantry. We also implemented many of our current programs and services including financial assistance, workforce development and more.

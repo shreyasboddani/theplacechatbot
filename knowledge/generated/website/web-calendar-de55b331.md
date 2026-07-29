@@ -3,17 +3,11 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-07-26T01:07:26.570Z
+Fetched at: 2026-07-29T11:35:26.147Z
 
 ## Page content
 
 Upcoming Events
-Financial Literacy Summer Series
-Tuesday, July 28, 2026
-6:00 PM
-7:30 PM
-Google Calendar
-ICS
 Dine to Donate
 Thursday, July 30, 2026
 5:00 PM
@@ -289,6 +283,12 @@ New Hope Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Financial Literacy Summer Series
+Tuesday, July 28, 2026
+6:00 PM
+7:30 PM
+Google Calendar
+ICS
 Mobile Pantry at Dawson County High School
 Thursday, July 23, 2026
 11:30 AM
@@ -506,19 +506,9 @@ Chestatee Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Raising Cane's Dine to Donate
-Thursday, May 14, 2026
-4:00 PM
-8:00 PM
-Google Calendar
-ICS
 
 ## Relevant links
 
-- https://www.theplacega.org/calendar/financial-literacy-3-4ej5c: https://www.theplacega.org/calendar/financial-literacy-3-4ej5c
-- Financial Literacy Summer Series: https://www.theplacega.org/calendar/financial-literacy-3-4ej5c
-- ICS: https://www.theplacega.org/calendar/financial-literacy-3-4ej5c
-- View Event →: https://www.theplacega.org/calendar/financial-literacy-3-4ej5c
 - https://www.theplacega.org/calendar/dine-to-donate: https://www.theplacega.org/calendar/dine-to-donate
 - Dine to Donate: https://www.theplacega.org/calendar/dine-to-donate
 - ICS: https://www.theplacega.org/calendar/dine-to-donate
@@ -615,3 +605,7 @@ ICS
 - Mobile Pantry at Chattahoochee Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
+- https://www.theplacega.org/calendar/mobile-pantry-chestatee-november: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
+- Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
