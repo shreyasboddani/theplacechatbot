@@ -3,7 +3,7 @@
 Source ID: web-calendar-mobile-pantry-newhope-august-d52e5c4a
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-newhope-august
-Fetched at: 2026-07-23T18:36:30.296Z
+Fetched at: 2026-07-31T11:36:40.391Z
 
 ## Page content
 
@@ -19,7 +19,7 @@ United States
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Mobile Pantry at Brandywine Elementary
+Electronic Recycling Event
 Mobile Food Pantry
 
 ## Relevant links
@@ -29,7 +29,7 @@ Mobile Food Pantry
 - Previous
 Previous
 August 22
-Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-august
+Electronic Recycling Event: https://www.theplacega.org/calendar/electronic-recycling-event
 - Next
 Next
 September 2

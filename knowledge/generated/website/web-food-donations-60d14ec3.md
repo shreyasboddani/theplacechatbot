@@ -3,7 +3,7 @@
 Source ID: web-food-donations-60d14ec3
 Source type: official_website
 Canonical URL: https://www.theplacega.org/food-donations
-Fetched at: 2026-07-23T18:36:15.610Z
+Fetched at: 2026-07-31T11:36:18.254Z
 
 ## Page content
 
@@ -12,7 +12,7 @@ Current Pantry Needs
 Drop-Off: Tuesday–Saturday from 10 AM–4 PM 2550 The Place Circle, Cumming or 829 Hwy 9N, Dawsonville Questions? Call (770) 887-1098 x231  or email deborah@theplacega.org
 Please note: We cannot accept opened or expired items.
 Our food needs change each month. There is a flyer below that can help you decide which food items to donate.
-June Food Needs
+Food Needs
 (Click to enlarge)
 Household Needs
 (Click to enlarge)

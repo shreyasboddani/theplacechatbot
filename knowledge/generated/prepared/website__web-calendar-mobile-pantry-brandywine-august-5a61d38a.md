@@ -8,7 +8,7 @@ Canonical URL: https://www.theplacega.org/calendar/mobile-pantry-brandywine-augu
 
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at Chestatee Elementary
-- Mobile Pantry at New Hope Elementary
+- Electronic Recycling Event
 
 ## Approved page content
 
@@ -25,7 +25,7 @@ Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at Chestatee Elementary
-Mobile Pantry at New Hope Elementary
+Electronic Recycling Event
 
 ## Relevant official links
 
@@ -38,4 +38,4 @@ Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobil
 - Next
 Next
 August 22
-Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-august
+Electronic Recycling Event: https://www.theplacega.org/calendar/electronic-recycling-event

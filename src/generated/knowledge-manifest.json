@@ -35,7 +35,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-food-donations-60d14ec3.md",
     "title": "Food Donations | Support Community Through Donations — The Place",
     "url": "https://www.theplacega.org/food-donations",
-    "fetchedAt": "2026-07-23T18:36:15.610Z",
+    "fetchedAt": "2026-07-31T11:36:18.254Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -105,7 +105,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-de55b331.md",
     "title": "Calendar — The Place",
     "url": "https://www.theplacega.org/calendar",
-    "fetchedAt": "2026-07-29T11:35:26.147Z",
+    "fetchedAt": "2026-07-31T11:36:21.488Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -415,7 +415,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-mobile-pantry-newhope-august-d52e5c4a.md",
     "title": "Mobile Pantry at New Hope Elementary — The Place",
     "url": "https://www.theplacega.org/calendar/mobile-pantry-newhope-august",
-    "fetchedAt": "2026-07-23T18:36:30.296Z",
+    "fetchedAt": "2026-07-31T11:36:40.391Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -485,7 +485,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-mobile-pantry-brandywine-august-5a61d38a.md",
     "title": "Mobile Pantry at Brandywine Elementary — The Place",
     "url": "https://www.theplacega.org/calendar/mobile-pantry-brandywine-august",
-    "fetchedAt": "2026-07-23T18:36:32.946Z",
+    "fetchedAt": "2026-07-31T11:36:43.804Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -1166,6 +1166,16 @@
     "title": "Board of Directors — The Place",
     "url": "https://www.theplacega.org/board-of-directors",
     "fetchedAt": "2026-07-23T18:37:00.343Z",
+    "sourceType": "official_website",
+    "priority": 50
+  },
+  {
+    "id": "web-calendar-electronic-recycling-event-4ea9fb84",
+    "fileName": "website__web-calendar-electronic-recycling-event-4ea9fb84.md",
+    "documentPath": "knowledge/generated/prepared/website__web-calendar-electronic-recycling-event-4ea9fb84.md",
+    "title": "Electronic Recycling Event — The Place",
+    "url": "https://www.theplacega.org/calendar/electronic-recycling-event",
+    "fetchedAt": "2026-07-31T11:37:25.619Z",
     "sourceType": "official_website",
     "priority": 50
   },

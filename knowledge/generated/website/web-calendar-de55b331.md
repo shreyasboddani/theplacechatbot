@@ -3,19 +3,11 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-07-29T11:35:26.147Z
+Fetched at: 2026-07-31T11:36:21.488Z
 
 ## Page content
 
 Upcoming Events
-Dine to Donate
-Thursday, July 30, 2026
-5:00 PM
-11:00 PM
-Taco Mac
-(map)
-Google Calendar
-ICS
 Financial Literacy Summer Series
 Tuesday, August 4, 2026
 6:00 PM
@@ -70,6 +62,15 @@ Brandywine Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Electronic Recycling Event
+Saturday, August 22, 2026
+10:00 AM
+1:00 PM
+The Place
+(map)
+Google Calendar
+ICS
+Electronic Recycling Event
 Mobile Pantry at New Hope Elementary
 Saturday, August 22, 2026
 11:30 AM
@@ -283,6 +284,14 @@ New Hope Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Dine to Donate
+Thursday, July 30, 2026
+5:00 PM
+11:00 PM
+Taco Mac
+(map)
+Google Calendar
+ICS
 Financial Literacy Summer Series
 Tuesday, July 28, 2026
 6:00 PM
@@ -497,22 +506,9 @@ United States
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Mobile Pantry at Chestatee Elementary
-Saturday, May 16, 2026
-10:00 AM
-11:00 AM
-Chestatee Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 
 ## Relevant links
 
-- https://www.theplacega.org/calendar/dine-to-donate: https://www.theplacega.org/calendar/dine-to-donate
-- Dine to Donate: https://www.theplacega.org/calendar/dine-to-donate
-- ICS: https://www.theplacega.org/calendar/dine-to-donate
-- View Event →: https://www.theplacega.org/calendar/dine-to-donate
 - https://www.theplacega.org/calendar/financial-literacy-4: https://www.theplacega.org/calendar/financial-literacy-4
 - Financial Literacy Summer Series: https://www.theplacega.org/calendar/financial-literacy-4
 - ICS: https://www.theplacega.org/calendar/financial-literacy-4
@@ -541,6 +537,10 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-august
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-august
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-august
+- https://www.theplacega.org/calendar/electronic-recycling-event: https://www.theplacega.org/calendar/electronic-recycling-event
+- Electronic Recycling Event: https://www.theplacega.org/calendar/electronic-recycling-event
+- ICS: https://www.theplacega.org/calendar/electronic-recycling-event
+- View Event →: https://www.theplacega.org/calendar/electronic-recycling-event
 - https://www.theplacega.org/calendar/mobile-pantry-newhope-august: https://www.theplacega.org/calendar/mobile-pantry-newhope-august
 - Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-august
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-august
