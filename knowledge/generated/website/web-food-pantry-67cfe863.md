@@ -3,7 +3,7 @@
 Source ID: web-food-pantry-67cfe863
 Source type: official_website
 Canonical URL: https://www.theplacega.org/food-pantry
-Fetched at: 2026-07-23T18:36:15.225Z
+Fetched at: 2026-08-03T12:37:43.706Z
 
 ## Page content
 
@@ -55,4 +55,3 @@ Our pantry uses SmartChoice Food Pantry Software to power our online shopping.
 
 - Register or Renew for the Food Pantry: https://www.theplacega.org/food-pantry-request
 - Register for the Food Pantry: https://www.theplacega.org/food-pantry-request
-- Renew for the Food Pantry: https://www.theplacega.org/food-pantry-request

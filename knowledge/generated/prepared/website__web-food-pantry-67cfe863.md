@@ -65,4 +65,3 @@ Our pantry uses SmartChoice Food Pantry Software to power our online shopping.
 
 - Register or Renew for the Food Pantry: https://www.theplacega.org/food-pantry-request
 - Register for the Food Pantry: https://www.theplacega.org/food-pantry-request
-- Renew for the Food Pantry: https://www.theplacega.org/food-pantry-request
