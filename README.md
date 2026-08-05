@@ -203,6 +203,8 @@ npm run knowledge:sync -- --reconcile --apply
 
 Reconciliation skips unchanged hashes, uploads replacements before deleting stale copies, removes obsolete managed documents only after every upload succeeds, and aborts without mutation if unmanaged documents are present. A store created before content fingerprints were added will reindex its managed documents once; later refreshes upload only changes.
 
+File Search document bytes use a bounded native HTTPS resumable uploader instead of the SDK's fetch-based upload transport. The uploader accepts only the configured `fileSearchStores/...` resource and Google's exact `generativelanguage.googleapis.com` HTTPS upload host, keeps the API key in the initial request header, limits response sizes and timeouts, and then hands the typed operation back to the official SDK for polling and verification. This avoids the Vercel build-runtime `TypeError: fetch failed` while preserving the same upload-before-delete safeguards.
+
 Run the complete pipeline after the key is available:
 
 ```bash
@@ -390,7 +392,7 @@ Use `--new-store` only for initial setup, ownership transfer, or an intentional 
 
 ## Current synchronization result
 
-The July 29, 2026 preparation pass indexed 117 public website pages, 27 approved staff FAQ entries, and 2 official public PDFs, producing 146 prepared documents. Five HTML routes (`/matching-gifts`, `/gala-recap`, `/furniture-pickup-request`, `/faroi`, and `/upcoming-events`) returned no meaningful public page content. The `/volunteer-handbook` route redirects to a document delivery target the HTML crawler intentionally refuses, so the exact verified PDF is supplied through the durable official-document registry instead. `/home` duplicates the canonical homepage and is not uploaded twice. No source conflicts were detected in this pass.
+The August 5, 2026 preparation pass indexed 120 public website pages, 27 approved staff FAQ entries, and 2 official public PDFs, producing 149 prepared documents. Five HTML routes (`/matching-gifts`, `/gala-recap`, `/furniture-pickup-request`, `/faroi`, and `/upcoming-events`) returned no meaningful public page content. The `/volunteer-handbook` route redirects to a document delivery target the HTML crawler intentionally refuses, so the exact verified PDF is supplied through the durable official-document registry instead. `/home` duplicates the canonical homepage and is not uploaded twice. The live File Search reconciliation finished with 149 unchanged desired documents, zero pending uploads, zero deletions, and zero unmanaged documents.
 
 The following staff questions remain pending and are excluded from the approved FAQ corpus:
 

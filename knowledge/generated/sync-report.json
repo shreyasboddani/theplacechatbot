@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-08-05T11:32:47.769Z",
+  "preparedAt": "2026-08-05T21:09:00.480Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-08-05T11:31:36.711Z"
+      "fetchedAt": "2026-08-05T21:07:45.659Z"
     },
     {
       "id": "web-calendar-forsyth-county-drive-through-pet-food-supply-pantry-205ae801",
@@ -695,7 +695,7 @@
       "id": "web-careers-9638b545",
       "title": "Careers — The Place",
       "url": "https://www.theplacega.org/careers",
-      "fetchedAt": "2026-08-05T11:32:40.116Z"
+      "fetchedAt": "2026-08-05T21:08:53.027Z"
     },
     {
       "id": "web-board-of-directors-8d8056e2",
@@ -825,5 +825,11 @@
   ],
   "totalDocumentsUploaded": 0,
   "uploadFailures": [],
-  "fileSearchStoreName": null
+  "fileSearchStoreName": "fileSearchStores/the-place-grounded-knowledg-3zerv2a5s6wl",
+  "syncMode": "reconcile",
+  "totalDocumentsDeleted": 0,
+  "totalDocumentsUnchanged": 149,
+  "managedDocumentsAfterSync": 149,
+  "deleteFailures": [],
+  "uploadedAt": "2026-08-05T21:24:23.495Z"
 }

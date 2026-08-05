@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Mobile Food Pantry
 - Mobile Pantry at Cumming Elementary
 - Mobile Pantry at Chattahoochee Elementary
 - Financial Literacy Summer Series
@@ -39,6 +38,7 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at Chestatee Elementary
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
+- Mobile Food Pantry
 - Financial Literacy Summer Series
 - Dine to Donate
 - Financial Literacy Summer Series
@@ -50,12 +50,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Approved page content
 
 Upcoming Events
-Mobile Food Pantry
-Wednesday, August 5, 2026
-12:30 PM
-1:30 PM
-Google Calendar
-ICS
 Mobile Pantry at Cumming Elementary
 Saturday, August 8, 2026
 10:00 AM
@@ -320,6 +314,12 @@ New Hope Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Mobile Food Pantry
+Wednesday, August 5, 2026
+12:30 PM
+1:30 PM
+Google Calendar
+ICS
 Financial Literacy Summer Series
 Tuesday, August 4, 2026
 6:00 PM
@@ -531,19 +531,9 @@ Brandywine Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Bruster's Dine to Donate
-Wednesday, May 20, 2026
-5:00 PM
-9:00 PM
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/mobile-food-pantry-august: https://www.theplacega.org/calendar/mobile-food-pantry-august
-- Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-august
-- ICS: https://www.theplacega.org/calendar/mobile-food-pantry-august
-- View Event →: https://www.theplacega.org/calendar/mobile-food-pantry-august
 - https://www.theplacega.org/calendar/mobile-pantry-forsyth-august: https://www.theplacega.org/calendar/mobile-pantry-forsyth-august
 - Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-august
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-august
@@ -640,3 +630,7 @@ ICS
 - Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- https://www.theplacega.org/calendar/mobile-pantry-newhope-november: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
+- Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-newhope-november

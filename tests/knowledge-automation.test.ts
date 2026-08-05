@@ -22,6 +22,11 @@ import {
   type RemoteDocumentFingerprint,
 } from "../scripts/sync-file-search";
 import {
+  uploadToFileSearchStoreOverHttps,
+  type HttpsTransportRequest,
+  type HttpsTransportResponse,
+} from "../scripts/file-search-upload";
+import {
   containsKnowledgePromptInjection,
   resolvePreparedDocumentPath,
   verifyKnowledgeSnapshot,
@@ -207,6 +212,125 @@ describe("automated website refresh", () => {
 });
 
 describe("incremental File Search reconciliation", () => {
+  const uploadRequest = {
+    apiKey: "test-api-key",
+    storeName: "fileSearchStores/test-store",
+    content: Buffer.from("# Confirmed content\n", "utf8"),
+    displayName: "website__test.md",
+    mimeType: "text/markdown",
+    customMetadata: [
+      { key: "managed_by", stringValue: "the-place-chatbot" },
+      { key: "source_id", stringValue: "web-test" },
+    ],
+    chunkingConfig: {
+      whiteSpaceConfig: {
+        maxTokensPerChunk: 350,
+        maxOverlapTokens: 50,
+      },
+    },
+  };
+
+  it("uses a trusted native HTTPS resumable upload without leaking the API key", async () => {
+    const requests: HttpsTransportRequest[] = [];
+    const transport = vi.fn(
+      async (request: HttpsTransportRequest): Promise<HttpsTransportResponse> => {
+        requests.push(request);
+        if (requests.length === 1) {
+          return {
+            statusCode: 200,
+            headers: {
+              "x-goog-upload-url":
+                "https://generativelanguage.googleapis.com/upload/v1beta/fileSearchStores/test-store:uploadToFileSearchStore?upload_id=one",
+            },
+            body: Buffer.alloc(0),
+          };
+        }
+        return {
+          statusCode: 200,
+          headers: { "x-goog-upload-status": "final" },
+          body: Buffer.from(
+            JSON.stringify({
+              name: "fileSearchStores/test-store/upload/operations/one",
+            }),
+          ),
+        };
+      },
+    );
+
+    const operation = await uploadToFileSearchStoreOverHttps(
+      uploadRequest,
+      transport,
+    );
+
+    expect(operation.name).toBe(
+      "fileSearchStores/test-store/upload/operations/one",
+    );
+    expect(
+      typeof (operation as unknown as Record<string, unknown>)._fromAPIResponse,
+    ).toBe("function");
+    expect(transport).toHaveBeenCalledTimes(2);
+    expect(requests[0]?.url.toString()).toBe(
+      "https://generativelanguage.googleapis.com/upload/v1beta/fileSearchStores/test-store:uploadToFileSearchStore",
+    );
+    expect(requests[0]?.headers["X-Goog-Api-Key"]).toBe("test-api-key");
+    expect(Buffer.from(requests[0]?.body ?? []).toString("utf8")).not.toContain(
+      "test-api-key",
+    );
+    expect(requests[1]?.url.toString()).not.toContain("test-api-key");
+    expect(requests[1]?.headers).not.toHaveProperty("X-Goog-Api-Key");
+    expect(Buffer.from(requests[1]?.body ?? []).toString("utf8")).toBe(
+      "# Confirmed content\n",
+    );
+  });
+
+  it("rejects an untrusted provider upload URL before sending document bytes", async () => {
+    const transport = vi.fn(
+      async (): Promise<HttpsTransportResponse> => ({
+        statusCode: 200,
+        headers: {
+          "x-goog-upload-url": "https://evil.example/upload/steal",
+        },
+        body: Buffer.alloc(0),
+      }),
+    );
+
+    await expect(
+      uploadToFileSearchStoreOverHttps(uploadRequest, transport),
+    ).rejects.toThrow("untrusted upload URL");
+    expect(transport).toHaveBeenCalledTimes(1);
+  });
+
+  it("returns sanitized provider status for a failed upload session", async () => {
+    const transport = vi.fn(
+      async (): Promise<HttpsTransportResponse> => ({
+        statusCode: 503,
+        headers: {},
+        body: Buffer.from(
+          JSON.stringify({
+            error: {
+              status: "UNAVAILABLE",
+              message: "provider detail that must not be logged",
+            },
+          }),
+        ),
+      }),
+    );
+
+    const error = await uploadToFileSearchStoreOverHttps(
+      uploadRequest,
+      transport,
+    ).catch((value: unknown) => value);
+    expect(error).toMatchObject({
+      name: "FileSearchUploadError",
+      status: 503,
+      code: "UNAVAILABLE",
+    });
+    expect(error).not.toHaveProperty(
+      "message",
+      expect.stringContaining("provider detail"),
+    );
+  });
+
   it("uploads changed and new documents while retaining one current copy", () => {
     const desired: DesiredDocumentFingerprint[] = [
       { sourceId: "current", contentHash: "hash-current" },

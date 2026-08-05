@@ -12,7 +12,7 @@ The automation keeps the Gemini credential in Vercel only. GitHub Actions crawls
 6. If content changed, GitHub verifies that only generated files changed, rejects tracked or newly created staff-FAQ changes, counts tracked and untracked prepared documents toward the 20-document automatic limit, and runs all tests, lint, production build, and diff checks. Every deletion must be a website Markdown document, match an explicit removal recorded in `crawl-health.json`, and stay within a separate five-document automatic-removal cap.
 7. Immediately before committing, it fetches `origin/main`. If `main` advanced during validation, it exits instead of rebasing or overwriting newer work. Otherwise, the knowledge bot creates a normal commit directly on `main` and pushes without force.
 8. Vercel's Git integration starts a Production deployment for the new `main` commit. `vercel.json` selects `npm run build:vercel`.
-9. The production build requires the Vercel `GEMINI_API_KEY` and `GEMINI_FILE_SEARCH_STORE`, verifies the committed corpus again, uploads changed documents, deletes obsolete managed copies only after all uploads succeed, verifies zero remote drift, and then runs `next build`.
+9. The production build requires the Vercel `GEMINI_API_KEY` and `GEMINI_FILE_SEARCH_STORE`, verifies the committed corpus again, uploads changed documents through the bounded native HTTPS resumable transport, deletes obsolete managed copies only after all uploads succeed, verifies zero remote drift, and then runs `next build`.
 10. Preview and Development builds run `next build` without mutating Gemini. After a successful Production build, the deployed API uses the same Vercel key and store to answer grounded questions.
 
 The GitHub workflow never receives, references, or logs the Gemini key. Crawl timestamps remain in audit data and the source manifest but are omitted from retrieval text, preventing timestamp-only changes from consuming indexing quota.
@@ -95,6 +95,7 @@ Update Vercel's store variable after verifying a new store. Keep the previous st
 - Missing Vercel Gemini configuration: the new Production build fails and the existing deployment stays live.
 - Unmanaged Gemini documents: reconciliation aborts before mutation.
 - Upload failure: every pre-existing remote document remains. A successfully uploaded replacement may remain as a safe duplicate for the next retry.
+- Upload transport accepts only `fileSearchStores/...` resources and the exact HTTPS `generativelanguage.googleapis.com` upload host. The Gemini key is sent only in the upload-session header, never in a URL, document body, report, or log.
 - Transient upload, deletion, quota, and network failures are retried with bounded backoff; logs and reports contain only sanitized error name/status/code metadata.
 - Replacement cleanup is recalculated from the live store after upload, so stale copies are deleted only after every desired replacement is active and no unmanaged document is present.
 - Deletion failure: the new document remains indexed and the stale copy is reported for retry.

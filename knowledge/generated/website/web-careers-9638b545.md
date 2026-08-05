@@ -3,7 +3,7 @@
 Source ID: web-careers-9638b545
 Source type: official_website
 Canonical URL: https://www.theplacega.org/careers
-Fetched at: 2026-08-05T11:32:40.116Z
+Fetched at: 2026-08-05T21:08:53.027Z
 
 ## Page content
 
@@ -26,16 +26,16 @@ Benefits Package: Offer benefits that reflect our Compassion and hope for employ
 We are currently seeking:
 Mobile Pantry Coordinator (Part-time) — click here for more information
 Mobile Pantry Coordinator (Part-time) — click here for more information
-Warehouse Assistant Coordinator (Full-time) — click here for more information
-Warehouse Assistant Coordinator (Full-time) — click here for more information
 Thrift Store Retail Specialist / Cashier (Part-time) — click here for more information
 Thrift Store Retail Specialist / Cashier (Part-time) — click here for more information
 Thrift Store/Retail Training Position (6 months/full-time) — click here for more information
 Thrift Store/Retail Training Position (6 months/full-time) — click here for more information
+Retail Volunteer Coordinator (Part-time) — click here for more information
+Retail Volunteer Coordinator (Part-time) — click here for more information
 
 ## Relevant links
 
 - click here for more information: https://www.theplacega.org/s/Mobile-Pantry-Coordinator.pdf
-- click here for more information: https://www.theplacega.org/s/Warehouse-Assistant-Coordinator-3rng.pdf
 - click here for more information: https://www.theplacega.org/s/Retail-Cashier-and-Specialist-Saturday.pdf
 - click here for more information: https://www.theplacega.org/s/ATP-Thrift-store-training-position.pdf
+- click here for more information: https://www.theplacega.org/s/Retail-Volunteer-Coordinator-826.pdf

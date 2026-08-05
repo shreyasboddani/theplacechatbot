@@ -16,6 +16,7 @@ import {
   resolvePreparedDocumentPath,
   verifyKnowledgeSnapshot,
 } from "./verify-knowledge";
+import { uploadToFileSearchStoreOverHttps } from "./file-search-upload";
 
 const POLL_INTERVAL_MS = 2_000;
 const OPERATION_TIMEOUT_MS = 10 * 60 * 1_000;
@@ -51,6 +52,7 @@ export interface ReconcilePlan {
 interface PreparedDocument {
   source: SourceManifestEntry;
   absolutePath: string;
+  content: Uint8Array;
   contentHash: string;
 }
 
@@ -359,7 +361,7 @@ async function preparedDocuments(
       if (source.contentHash && source.contentHash !== contentHash) {
         throw new Error(`Source ${source.id} failed its content hash check.`);
       }
-      return { source, absolutePath, contentHash };
+      return { source, absolutePath, content, contentHash };
     }),
   );
 }
@@ -397,6 +399,7 @@ async function listRemoteDocuments(
 
 async function uploadDocuments(
   ai: ReturnType<typeof createGeminiClient>,
+  apiKey: string,
   storeName: string,
   documents: PreparedDocument[],
 ) {
@@ -406,18 +409,17 @@ async function uploadDocuments(
     try {
       await retryTransientFileSearchOperation(
         async () => {
-          const operation = await ai.fileSearchStores.uploadToFileSearchStore({
-            fileSearchStoreName: storeName,
-            file: document.absolutePath,
-            config: {
-              displayName: document.source.fileName,
-              mimeType: preparedDocumentMimeType(document.source.fileName),
-              customMetadata: uploadMetadata(document),
-              chunkingConfig: {
-                whiteSpaceConfig: {
-                  maxTokensPerChunk: 350,
-                  maxOverlapTokens: 50,
-                },
+          const operation = await uploadToFileSearchStoreOverHttps({
+            apiKey,
+            storeName,
+            content: document.content,
+            displayName: document.source.fileName,
+            mimeType: preparedDocumentMimeType(document.source.fileName),
+            customMetadata: uploadMetadata(document),
+            chunkingConfig: {
+              whiteSpaceConfig: {
+                maxTokensPerChunk: 350,
+                maxOverlapTokens: 50,
               },
             },
           });
@@ -652,7 +654,7 @@ async function main() {
     if (!store.name) {
       throw new Error("Gemini did not return a File Search store name.");
     }
-    const uploadResult = await uploadDocuments(ai, store.name, documents);
+    const uploadResult = await uploadDocuments(ai, apiKey, store.name, documents);
     if (uploadResult.failures.length === 0) {
       await verifyRemoteDocuments(ai, store.name, desired);
     }
@@ -717,6 +719,7 @@ async function main() {
   });
   const uploadResult = await uploadDocuments(
     ai,
+    apiKey,
     store.name,
     documentsToUpload,
   );
