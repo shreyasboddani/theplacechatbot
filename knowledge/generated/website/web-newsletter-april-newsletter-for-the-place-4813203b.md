@@ -3,7 +3,7 @@
 Source ID: web-newsletter-april-newsletter-for-the-place-4813203b
 Source type: official_website
 Canonical URL: https://www.theplacega.org/newsletter/april-newsletter-for-the-place
-Fetched at: 2026-07-23T18:36:51.766Z
+Fetched at: 2026-08-05T11:32:29.589Z
 
 ## Page content
 
@@ -38,11 +38,15 @@ Hearts of Impact is our monthly giving community. When you join, you help The Pl
 Monthly gifts help provide food, housing support, and hope when neighbors need it most. Because these gifts are steady and reliable, we can plan ahead, respond faster, and serve more people when needs rise.
 Your monthly support means families don’t have to wait for help.
 Join Hearts of Impact today and make a difference every single month.
+June Newsletter for The Place
 March Newsletter for The Place
 
 ## Relevant links
 
 - Greg Tirico: https://www.theplacega.org/newsletter
+- Previous
+Previous
+June Newsletter for The Place: https://www.theplacega.org/newsletter/june-newsletter-for-the-place
 - Next
 Next
 March Newsletter for The Place: https://www.theplacega.org/newsletter/march-newsletter-for-the-place

@@ -34,9 +34,12 @@ Warehouse Assistant Coordinator (Full-time) — click here for more information
 Warehouse Assistant Coordinator (Full-time) — click here for more information
 Thrift Store Retail Specialist / Cashier (Part-time) — click here for more information
 Thrift Store Retail Specialist / Cashier (Part-time) — click here for more information
+Thrift Store/Retail Training Position (6 months/full-time) — click here for more information
+Thrift Store/Retail Training Position (6 months/full-time) — click here for more information
 
 ## Relevant official links
 
 - click here for more information: https://www.theplacega.org/s/Mobile-Pantry-Coordinator.pdf
 - click here for more information: https://www.theplacega.org/s/Warehouse-Assistant-Coordinator-3rng.pdf
 - click here for more information: https://www.theplacega.org/s/Retail-Cashier-and-Specialist-Saturday.pdf
+- click here for more information: https://www.theplacega.org/s/ATP-Thrift-store-training-position.pdf

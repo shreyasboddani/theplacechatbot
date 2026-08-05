@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Financial Literacy Summer Series
 - Mobile Food Pantry
 - Mobile Pantry at Cumming Elementary
 - Mobile Pantry at Chattahoochee Elementary
@@ -40,6 +39,7 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at Chestatee Elementary
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
+- Financial Literacy Summer Series
 - Dine to Donate
 - Financial Literacy Summer Series
 - Mobile Pantry at Dawson County High School
@@ -50,12 +50,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Approved page content
 
 Upcoming Events
-Financial Literacy Summer Series
-Tuesday, August 4, 2026
-6:00 PM
-7:30 PM
-Google Calendar
-ICS
 Mobile Food Pantry
 Wednesday, August 5, 2026
 12:30 PM
@@ -326,6 +320,12 @@ New Hope Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Financial Literacy Summer Series
+Tuesday, August 4, 2026
+6:00 PM
+7:30 PM
+Google Calendar
+ICS
 Dine to Donate
 Thursday, July 30, 2026
 5:00 PM
@@ -537,24 +537,9 @@ Wednesday, May 20, 2026
 9:00 PM
 Google Calendar
 ICS
-Mobile Pantry at Farmington Creek
-Wednesday, May 20, 2026
-1:00 PM
-2:00 PM
-35 Harvest Circle
-Dawsonville, GA, 30534
-United States
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/financial-literacy-4: https://www.theplacega.org/calendar/financial-literacy-4
-- Financial Literacy Summer Series: https://www.theplacega.org/calendar/financial-literacy-4
-- ICS: https://www.theplacega.org/calendar/financial-literacy-4
-- View Event →: https://www.theplacega.org/calendar/financial-literacy-4
 - https://www.theplacega.org/calendar/mobile-food-pantry-august: https://www.theplacega.org/calendar/mobile-food-pantry-august
 - Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-august
 - ICS: https://www.theplacega.org/calendar/mobile-food-pantry-august
@@ -651,3 +636,7 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
+- https://www.theplacega.org/calendar/mobile-pantry-brandywine-november: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november

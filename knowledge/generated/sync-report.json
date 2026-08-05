@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-08-03T12:39:20.838Z",
+  "preparedAt": "2026-08-05T11:32:47.769Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-07-31T11:36:21.488Z"
+      "fetchedAt": "2026-08-05T11:31:36.711Z"
     },
     {
       "id": "web-calendar-forsyth-county-drive-through-pet-food-supply-pantry-205ae801",
@@ -569,13 +569,13 @@
       "id": "web-newsletter-89967774",
       "title": "Newsletter — The Place",
       "url": "https://www.theplacega.org/newsletter",
-      "fetchedAt": "2026-07-23T18:36:51.386Z"
+      "fetchedAt": "2026-08-05T11:32:28.788Z"
     },
     {
       "id": "web-newsletter-april-newsletter-for-the-place-4813203b",
       "title": "April Newsletter for The Place — The Place",
       "url": "https://www.theplacega.org/newsletter/april-newsletter-for-the-place",
-      "fetchedAt": "2026-07-23T18:36:51.766Z"
+      "fetchedAt": "2026-08-05T11:32:29.589Z"
     },
     {
       "id": "web-newsletter-march-newsletter-for-the-place-d244942f",
@@ -695,7 +695,7 @@
       "id": "web-careers-9638b545",
       "title": "Careers — The Place",
       "url": "https://www.theplacega.org/careers",
-      "fetchedAt": "2026-07-23T18:36:59.910Z"
+      "fetchedAt": "2026-08-05T11:32:40.116Z"
     },
     {
       "id": "web-board-of-directors-8d8056e2",
@@ -708,23 +708,52 @@
       "title": "Electronic Recycling Event — The Place",
       "url": "https://www.theplacega.org/calendar/electronic-recycling-event",
       "fetchedAt": "2026-07-31T11:37:25.619Z"
+    },
+    {
+      "id": "web-newsletter-july-newsletter-for-the-place-f07a02af",
+      "title": "July Newsletter for The Place — The Place",
+      "url": "https://www.theplacega.org/newsletter/july-newsletter-for-the-place",
+      "fetchedAt": "2026-08-05T11:32:41.935Z"
+    },
+    {
+      "id": "web-newsletter-june-newsletter-for-the-place-75541533",
+      "title": "June Newsletter for The Place — The Place",
+      "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
+      "fetchedAt": "2026-08-05T11:32:42.680Z"
     }
   ],
   "failedPages": [
+    {
+      "url": "https://www.theplacega.org/matching-gifts",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/gala-recap",
+      "reason": "No meaningful public page content found"
+    },
     {
       "url": "https://www.theplacega.org/furniture-pickup-request",
       "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/volunteer-handbook",
-      "reason": "Refusing to fetch or follow a URL outside The Place website."
+      "url": "https://www.theplacega.org/faroi",
+      "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/matching-gifts",
+      "url": "https://www.theplacega.org/upcoming-events",
       "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/volunteer-handbook",
+      "reason": "Refusing to fetch or follow a URL outside The Place website."
     }
   ],
-  "duplicatePages": [],
+  "duplicatePages": [
+    {
+      "url": "https://www.theplacega.org/home",
+      "duplicateOf": "https://www.theplacega.org/"
+    }
+  ],
   "retainedPages": [],
   "approvedRemovedPages": [],
   "pendingFaqEntries": [
@@ -781,7 +810,7 @@
   "conflictingInformation": [],
   "missingLinks": [],
   "unmappedSourceDocuments": [],
-  "totalDocumentsPrepared": 147,
+  "totalDocumentsPrepared": 149,
   "officialDocuments": [
     {
       "id": "volunteer-handbook-2026",

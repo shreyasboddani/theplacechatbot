@@ -105,7 +105,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-de55b331.md",
     "title": "Calendar — The Place",
     "url": "https://www.theplacega.org/calendar",
-    "fetchedAt": "2026-07-31T11:36:21.488Z",
+    "fetchedAt": "2026-08-05T11:31:36.711Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -945,7 +945,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-newsletter-89967774.md",
     "title": "Newsletter — The Place",
     "url": "https://www.theplacega.org/newsletter",
-    "fetchedAt": "2026-07-23T18:36:51.386Z",
+    "fetchedAt": "2026-08-05T11:32:28.788Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -955,7 +955,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-newsletter-april-newsletter-for-the-place-4813203b.md",
     "title": "April Newsletter for The Place — The Place",
     "url": "https://www.theplacega.org/newsletter/april-newsletter-for-the-place",
-    "fetchedAt": "2026-07-23T18:36:51.766Z",
+    "fetchedAt": "2026-08-05T11:32:29.589Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -1155,7 +1155,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-careers-9638b545.md",
     "title": "Careers — The Place",
     "url": "https://www.theplacega.org/careers",
-    "fetchedAt": "2026-07-23T18:36:59.910Z",
+    "fetchedAt": "2026-08-05T11:32:40.116Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -1176,6 +1176,26 @@
     "title": "Electronic Recycling Event — The Place",
     "url": "https://www.theplacega.org/calendar/electronic-recycling-event",
     "fetchedAt": "2026-07-31T11:37:25.619Z",
+    "sourceType": "official_website",
+    "priority": 50
+  },
+  {
+    "id": "web-newsletter-july-newsletter-for-the-place-f07a02af",
+    "fileName": "website__web-newsletter-july-newsletter-for-the-place-f07a02af.md",
+    "documentPath": "knowledge/generated/prepared/website__web-newsletter-july-newsletter-for-the-place-f07a02af.md",
+    "title": "July Newsletter for The Place — The Place",
+    "url": "https://www.theplacega.org/newsletter/july-newsletter-for-the-place",
+    "fetchedAt": "2026-08-05T11:32:41.935Z",
+    "sourceType": "official_website",
+    "priority": 50
+  },
+  {
+    "id": "web-newsletter-june-newsletter-for-the-place-75541533",
+    "fileName": "website__web-newsletter-june-newsletter-for-the-place-75541533.md",
+    "documentPath": "knowledge/generated/prepared/website__web-newsletter-june-newsletter-for-the-place-75541533.md",
+    "title": "June Newsletter for The Place — The Place",
+    "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
+    "fetchedAt": "2026-08-05T11:32:42.680Z",
     "sourceType": "official_website",
     "priority": 50
   },
