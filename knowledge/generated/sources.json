@@ -75,7 +75,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-new-volunteers-51338cd7.md",
     "title": "New Volunteers | Get Involved Today — The Place",
     "url": "https://www.theplacega.org/new-volunteers",
-    "fetchedAt": "2026-07-29T11:35:24.710Z",
+    "fetchedAt": "2026-08-07T10:12:52.048Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -995,7 +995,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-notes-from-the-place-05499b1d.md",
     "title": "Notes from The Place — The Place",
     "url": "https://www.theplacega.org/notes-from-the-place",
-    "fetchedAt": "2026-07-23T18:36:53.283Z",
+    "fetchedAt": "2026-08-07T10:13:55.333Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -1005,7 +1005,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-notes-from-the-place-summer-hunger-is-real-0df7453b.md",
     "title": "Summer Hunger Is Real. Together, We Can Make a Difference — The Place",
     "url": "https://www.theplacega.org/notes-from-the-place/summer-hunger-is-real",
-    "fetchedAt": "2026-07-23T18:36:53.650Z",
+    "fetchedAt": "2026-08-07T10:13:56.145Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -1115,7 +1115,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-court-mandated-community-service-2-a6895588.md",
     "title": "Court Mandated Community Service | Get Help Today – Connect Now — The Place",
     "url": "https://www.theplacega.org/court-mandated-community-service-2",
-    "fetchedAt": "2026-07-23T18:36:58.374Z",
+    "fetchedAt": "2026-08-07T10:14:01.575Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -1196,6 +1196,16 @@
     "title": "June Newsletter for The Place — The Place",
     "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
     "fetchedAt": "2026-08-05T11:32:42.680Z",
+    "sourceType": "official_website",
+    "priority": 50
+  },
+  {
+    "id": "web-notes-from-the-place-five-ways-you-can-support-the-place-year-round-ef0baeb5",
+    "fileName": "website__web-notes-from-the-place-five-ways-you-can-support-the-place-year-round-ef0baeb5.md",
+    "documentPath": "knowledge/generated/prepared/website__web-notes-from-the-place-five-ways-you-can-support-the-place-year-round-ef0baeb5.md",
+    "title": "Five Ways You Can Support The Place Year-Round — The Place",
+    "url": "https://www.theplacega.org/notes-from-the-place/five-ways-you-can-support-the-place-year-round",
+    "fetchedAt": "2026-08-07T10:14:09.128Z",
     "sourceType": "official_website",
     "priority": 50
   },

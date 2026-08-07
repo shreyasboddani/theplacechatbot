@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-08-05T21:09:00.480Z",
+  "preparedAt": "2026-08-07T10:14:09.904Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -47,7 +47,7 @@
       "id": "web-new-volunteers-51338cd7",
       "title": "New Volunteers | Get Involved Today — The Place",
       "url": "https://www.theplacega.org/new-volunteers",
-      "fetchedAt": "2026-07-29T11:35:24.710Z"
+      "fetchedAt": "2026-08-07T10:12:52.048Z"
     },
     {
       "id": "web-food-pantry-request-b0ed76b1",
@@ -599,13 +599,13 @@
       "id": "web-notes-from-the-place-05499b1d",
       "title": "Notes from The Place — The Place",
       "url": "https://www.theplacega.org/notes-from-the-place",
-      "fetchedAt": "2026-07-23T18:36:53.283Z"
+      "fetchedAt": "2026-08-07T10:13:55.333Z"
     },
     {
       "id": "web-notes-from-the-place-summer-hunger-is-real-0df7453b",
       "title": "Summer Hunger Is Real. Together, We Can Make a Difference — The Place",
       "url": "https://www.theplacega.org/notes-from-the-place/summer-hunger-is-real",
-      "fetchedAt": "2026-07-23T18:36:53.650Z"
+      "fetchedAt": "2026-08-07T10:13:56.145Z"
     },
     {
       "id": "web-notes-from-the-place-caring-for-homebound-seniors-17f164cb",
@@ -671,7 +671,7 @@
       "id": "web-court-mandated-community-service-2-a6895588",
       "title": "Court Mandated Community Service | Get Help Today – Connect Now — The Place",
       "url": "https://www.theplacega.org/court-mandated-community-service-2",
-      "fetchedAt": "2026-07-23T18:36:58.374Z"
+      "fetchedAt": "2026-08-07T10:14:01.575Z"
     },
     {
       "id": "web-financials-7d99de46",
@@ -720,40 +720,29 @@
       "title": "June Newsletter for The Place — The Place",
       "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
       "fetchedAt": "2026-08-05T11:32:42.680Z"
+    },
+    {
+      "id": "web-notes-from-the-place-five-ways-you-can-support-the-place-year-round-ef0baeb5",
+      "title": "Five Ways You Can Support The Place Year-Round — The Place",
+      "url": "https://www.theplacega.org/notes-from-the-place/five-ways-you-can-support-the-place-year-round",
+      "fetchedAt": "2026-08-07T10:14:09.128Z"
     }
   ],
   "failedPages": [
-    {
-      "url": "https://www.theplacega.org/matching-gifts",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/gala-recap",
-      "reason": "No meaningful public page content found"
-    },
     {
       "url": "https://www.theplacega.org/furniture-pickup-request",
       "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/faroi",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/upcoming-events",
-      "reason": "No meaningful public page content found"
-    },
-    {
       "url": "https://www.theplacega.org/volunteer-handbook",
       "reason": "Refusing to fetch or follow a URL outside The Place website."
-    }
-  ],
-  "duplicatePages": [
+    },
     {
-      "url": "https://www.theplacega.org/home",
-      "duplicateOf": "https://www.theplacega.org/"
+      "url": "https://www.theplacega.org/matching-gifts",
+      "reason": "No meaningful public page content found"
     }
   ],
+  "duplicatePages": [],
   "retainedPages": [],
   "approvedRemovedPages": [],
   "pendingFaqEntries": [
@@ -810,7 +799,7 @@
   "conflictingInformation": [],
   "missingLinks": [],
   "unmappedSourceDocuments": [],
-  "totalDocumentsPrepared": 149,
+  "totalDocumentsPrepared": 150,
   "officialDocuments": [
     {
       "id": "volunteer-handbook-2026",
@@ -825,11 +814,5 @@
   ],
   "totalDocumentsUploaded": 0,
   "uploadFailures": [],
-  "fileSearchStoreName": "fileSearchStores/the-place-grounded-knowledg-3zerv2a5s6wl",
-  "syncMode": "reconcile",
-  "totalDocumentsDeleted": 0,
-  "totalDocumentsUnchanged": 149,
-  "managedDocumentsAfterSync": 149,
-  "deleteFailures": [],
-  "uploadedAt": "2026-08-05T21:24:23.495Z"
+  "fileSearchStoreName": null
 }

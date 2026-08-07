@@ -6,12 +6,15 @@ Canonical URL: https://www.theplacega.org/notes-from-the-place
 
 ## Important headings
 
+- Five Ways You Can Support The Place Year-Round
 - Summer Hunger Is Real. Together, We Can Make a Difference
 - Caring for our Homebound Seniors: Supporting Comfort, Dignity, and Connection
 - Top 10 Most Requested Pantry Items
 
 ## Approved page content
 
+Five Ways You Can Support The Place Year-Round
+When most people think about giving back, they often think of the holidays. While the holiday season is an important time for nonprofits, the needs of our neighbors don't disappear once the decorations come down.
 Summer Hunger Is Real. Together, We Can Make a Difference
 Summer is a season of sunshine, family vacations, and children enjoying a well-deserved break from school. But for many families in our community, summer also brings a difficult reality: when school is out, access to regular, nutritious meals becomes much harder.
 Caring for our Homebound Seniors: Supporting Comfort, Dignity, and Connection
@@ -21,6 +24,9 @@ At The Place, our food pantry is a vital resource for families across Forsyth an
 
 ## Relevant official links
 
+- https://www.theplacega.org/notes-from-the-place/five-ways-you-can-support-the-place-year-round: https://www.theplacega.org/notes-from-the-place/five-ways-you-can-support-the-place-year-round
+- Five Ways You Can Support The Place Year-Round: https://www.theplacega.org/notes-from-the-place/five-ways-you-can-support-the-place-year-round
+- Read More: https://www.theplacega.org/notes-from-the-place/five-ways-you-can-support-the-place-year-round
 - https://www.theplacega.org/notes-from-the-place/summer-hunger-is-real: https://www.theplacega.org/notes-from-the-place/summer-hunger-is-real
 - Summer Hunger Is Real. Together, We Can Make a Difference: https://www.theplacega.org/notes-from-the-place/summer-hunger-is-real
 - Read More: https://www.theplacega.org/notes-from-the-place/summer-hunger-is-real

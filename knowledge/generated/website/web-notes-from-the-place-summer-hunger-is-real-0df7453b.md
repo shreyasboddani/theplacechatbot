@@ -3,7 +3,7 @@
 Source ID: web-notes-from-the-place-summer-hunger-is-real-0df7453b
 Source type: official_website
 Canonical URL: https://www.theplacega.org/notes-from-the-place/summer-hunger-is-real
-Fetched at: 2026-07-23T18:36:53.650Z
+Fetched at: 2026-08-07T10:13:56.145Z
 
 ## Page content
 
@@ -31,12 +31,16 @@ A meal is more than food on a plate. It gives a child energy to play, learn, and
 This summer, you can help ensure that no child misses a meal simply because school is out.
 Thank you for supporting The Place and helping us support families all summer long.
 Because hunger doesn't take summer break. And neither do we.
+Five Ways You Can Support The Place Year-Round
 Caring for our Homebound Seniors: Supporting Comfort, Dignity, and Connection
 
 ## Relevant links
 
 - Greg Tirico: https://www.theplacega.org/notes-from-the-place
 - food pantry needs list: https://www.theplacega.org/food-donations
+- Previous
+Previous
+Five Ways You Can Support The Place Year-Round: https://www.theplacega.org/notes-from-the-place/five-ways-you-can-support-the-place-year-round
 - Next
 Next
 Caring for our Homebound Seniors: Supporting Comfort, Dignity, and Connection: https://www.theplacega.org/notes-from-the-place/caring-for-homebound-seniors

@@ -26,17 +26,16 @@ Crimes Involving Children
 Crimes Involving Children
 Theft/Shoplifting
 Theft/Shoplifting
-TYPE OF WORK AVAILABLE
-Assisting clients with unloading donations from their vehicle
-Assisting clients with unloading donations from their vehicle
-Sorting and hanging clothes, shoes & accessories
-Sorting and hanging clothes, shoes & accessories
+Please Note: We may need to ask for additional information about your charges or citation.
+ACTIVITIES COULD INCLUDE
+Assisting with unloading donations from vehicles
+Assisting with unloading donations from vehicles
+Sorting and hanging clothes, shoes, and accessories
+Sorting and hanging clothes, shoes, and accessories
 Janitorial sweeping and/or cleaning
 Janitorial sweeping and/or cleaning
-REQUIRES a lot of standing, bending, & lifting (up to 25 lbs.)
-REQUIRES a lot of standing, bending, & lifting (up to 25 lbs.)
-Must serve a minimum four hour shift
-Must serve a minimum four hour shift
+REQUIRES an ability to stand, walk, bend, reach, and lift up to 25 pounds as needed to perform essential functions
+REQUIRES an ability to stand, walk, bend, reach, and lift up to 25 pounds as needed to perform essential functions
 Activities are subject to change based on where the help is needed
 Activities are subject to change based on where the help is needed
 DRESS CODE
@@ -45,6 +44,6 @@ LUNCH
 Bring your lunch, a snack, and water. We have a refrigerator and a break room.
 Location & Hours
 FORSYTH COUNTY LOCATION
-2550 The Place Circle, Cumming, GA 30040Tuesday – Saturday8:30am – 12:30pm10:00am - 12:30pm12:30pm – 4:30pm
+2550 The Place Circle, Cumming, GA 30040Tuesday – Saturday8:30am – 12:30pm10:00am - 12:30pm12:30pm – 4:00pm
 DAWSON COUNTY LOCATION
 829 GA 9 North, Dawsonville, GA 30534Tuesday – Saturday10:00am – 4:00pm
