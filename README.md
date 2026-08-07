@@ -2,7 +2,7 @@
 
 A grounded chatbot prototype for The Place, created by LearnAI. The application answers only from a prepared Gemini File Search store containing The Place's public website and complete staff-provided FAQ entries. Unsupported, uncited, sensitive, or conflicting questions are routed to The Place instead of being guessed.
 
-This repository is a prototype for review. It is not a case-management system, does not check application status, and is not represented as a final production service approved by The Place.
+This repository is a prototype for review. It is not a case-management system, does not check application status, and isn't represented as a final production service approved by The Place.
 
 ## What is included
 
