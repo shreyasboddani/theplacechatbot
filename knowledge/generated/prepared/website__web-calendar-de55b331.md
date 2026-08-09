@@ -7,8 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Mobile Pantry at Cumming Elementary
-- Mobile Pantry at Chattahoochee Elementary
 - Financial Literacy Summer Series
 - Mobile Pantry at Chestatee Elementary
 - Mobile Pantry at Brandywine Elementary
@@ -38,6 +36,8 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at Chestatee Elementary
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
+- Mobile Pantry at Chattahoochee Elementary
+- Mobile Pantry at Cumming Elementary
 - Mobile Food Pantry
 - Financial Literacy Summer Series
 - Dine to Donate
@@ -50,24 +50,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Approved page content
 
 Upcoming Events
-Mobile Pantry at Cumming Elementary
-Saturday, August 8, 2026
-10:00 AM
-11:00 AM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Mobile Pantry at Chattahoochee Elementary
-Saturday, August 8, 2026
-11:30 AM
-12:30 PM
-Chattahoochee Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Financial Literacy Summer Series
 Tuesday, August 11, 2026
 6:00 PM
@@ -314,6 +296,24 @@ New Hope Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Mobile Pantry at Chattahoochee Elementary
+Saturday, August 8, 2026
+11:30 AM
+12:30 PM
+Chattahoochee Elementary
+(map)
+Google Calendar
+ICS
+Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Mobile Pantry at Cumming Elementary
+Saturday, August 8, 2026
+10:00 AM
+11:00 AM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
+Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Food Pantry
 Wednesday, August 5, 2026
 12:30 PM
@@ -513,35 +513,9 @@ Monday, June 1, 2026
 8:30 PM
 Google Calendar
 ICS
-Mobile Pantry at New Hope Elementary
-Saturday, May 23, 2026
-11:30 AM
-12:30 PM
-New Hope Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Mobile Pantry at Brandywine Elementary
-Saturday, May 23, 2026
-10:00 AM
-11:00 AM
-Brandywine Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/mobile-pantry-forsyth-august: https://www.theplacega.org/calendar/mobile-pantry-forsyth-august
-- Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-august
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-august
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-august
-- https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-august: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-august
-- Mobile Pantry at Chattahoochee Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-august
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-august
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-august
 - https://www.theplacega.org/calendar/financial-literacy-5: https://www.theplacega.org/calendar/financial-literacy-5
 - Financial Literacy Summer Series: https://www.theplacega.org/calendar/financial-literacy-5
 - ICS: https://www.theplacega.org/calendar/financial-literacy-5
@@ -634,3 +608,11 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
+- https://www.theplacega.org/calendar/mobile-food-pantry-december: https://www.theplacega.org/calendar/mobile-food-pantry-december
+- Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-december
+- ICS: https://www.theplacega.org/calendar/mobile-food-pantry-december
+- View Event →: https://www.theplacega.org/calendar/mobile-food-pantry-december
+- https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
+- Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
