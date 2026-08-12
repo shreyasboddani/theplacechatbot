@@ -3,17 +3,11 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-08-09T09:58:57.910Z
+Fetched at: 2026-08-12T10:28:24.500Z
 
 ## Page content
 
 Upcoming Events
-Financial Literacy Summer Series
-Tuesday, August 11, 2026
-6:00 PM
-7:30 PM
-Google Calendar
-ICS
 Mobile Pantry at Chestatee Elementary
 Saturday, August 15, 2026
 10:00 AM
@@ -254,6 +248,12 @@ New Hope Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Financial Literacy Summer Series
+Tuesday, August 11, 2026
+6:00 PM
+7:30 PM
+Google Calendar
+ICS
 Mobile Pantry at Chattahoochee Elementary
 Saturday, August 8, 2026
 11:30 AM
@@ -465,19 +465,9 @@ Wednesday, June 3, 2026
 8:30 PM
 Google Calendar
 ICS
-Free GED Summer Study Hall
-Monday, June 1, 2026
-6:00 PM
-8:30 PM
-Google Calendar
-ICS
 
 ## Relevant links
 
-- https://www.theplacega.org/calendar/financial-literacy-5: https://www.theplacega.org/calendar/financial-literacy-5
-- Financial Literacy Summer Series: https://www.theplacega.org/calendar/financial-literacy-5
-- ICS: https://www.theplacega.org/calendar/financial-literacy-5
-- View Event →: https://www.theplacega.org/calendar/financial-literacy-5
 - https://www.theplacega.org/calendar/mobile-pantry-chestatee-august: https://www.theplacega.org/calendar/mobile-pantry-chestatee-august
 - Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-august
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-august
@@ -574,3 +564,7 @@ ICS
 - Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
+- https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december
+- Mobile Pantry at Chattahoochee Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december

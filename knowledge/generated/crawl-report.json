@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-08-09T10:00:16.280Z",
+  "crawledAt": "2026-08-12T10:29:29.807Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-08-09T09:58:57.910Z"
+      "fetchedAt": "2026-08-12T10:28:24.500Z"
     },
     {
       "id": "web-calendar-forsyth-county-drive-through-pet-food-supply-pantry-205ae801",
