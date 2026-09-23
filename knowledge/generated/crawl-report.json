@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-09-22T14:04:42.548Z",
+  "crawledAt": "2026-09-23T14:18:04.286Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -316,6 +316,66 @@
       "fetchedAt": "2026-09-16T14:14:40.972Z"
     },
     {
+      "id": "web-media-room-d75c018c",
+      "title": "Media Room — The Place",
+      "url": "https://www.theplacega.org/media-room",
+      "fetchedAt": "2026-09-23T14:18:02.268Z"
+    },
+    {
+      "id": "web-media-room-posts-5dd8e022",
+      "title": "Media Room — The Place",
+      "url": "https://www.theplacega.org/media-room-posts",
+      "fetchedAt": "2026-09-23T14:17:51.371Z"
+    },
+    {
+      "id": "web-media-room-posts-7-things-you-shouldnt-donate-just-because-you-feel-guilty-throwing-them-away-decluttering-p-ace60086",
+      "title": "7 Things You Shouldn’t Donate Just Because You Feel Guilty Throwing Them Away, Decluttering Pros Say — The Place",
+      "url": "https://www.theplacega.org/media-room-posts/7-things-you-shouldnt-donate-just-because-you-feel-guilty-throwing-them-away-decluttering-pros-say",
+      "fetchedAt": "2026-09-23T14:17:52.409Z"
+    },
+    {
+      "id": "web-media-room-posts-how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity-88f8a70e",
+      "title": "How The Place is providing a living space for young women facing housing insecurity — The Place",
+      "url": "https://www.theplacega.org/media-room-posts/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
+      "fetchedAt": "2026-09-23T14:17:53.217Z"
+    },
+    {
+      "id": "web-media-room-posts-the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-suc-471f68db",
+      "title": "The Cottage Provides Young Women Facing Housing Insecurity with a Path to Stability and Success — The Place",
+      "url": "https://www.theplacega.org/media-room-posts/the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-success",
+      "fetchedAt": "2026-09-23T14:17:53.838Z"
+    },
+    {
+      "id": "web-media-room-posts-the-place-brings-the-magic-of-prom-to-local-students-15bbe0c6",
+      "title": "The Place Brings the Magic of Prom to Local Students — The Place",
+      "url": "https://www.theplacega.org/media-room-posts/the-place-brings-the-magic-of-prom-to-local-students",
+      "fetchedAt": "2026-09-23T14:17:54.681Z"
+    },
+    {
+      "id": "web-media-room-posts-the-place-honors-precision-concrete-construction-with-community-partnership-award-1aab6b03",
+      "title": "The Place Honors Precision Concrete Construction With Community Partnership Award — The Place",
+      "url": "https://www.theplacega.org/media-room-posts/the-place-honors-precision-concrete-construction-with-community-partnership-award",
+      "fetchedAt": "2026-09-23T14:17:56.752Z"
+    },
+    {
+      "id": "web-media-room-posts-the-place-hosts-heartsgiving-to-support-local-families-in-need-106ce50f",
+      "title": "The Place Hosts \"Heartsgiving\" to Support Local Families in Need — The Place",
+      "url": "https://www.theplacega.org/media-room-posts/the-place-hosts-heartsgiving-to-support-local-families-in-need",
+      "fetchedAt": "2026-09-23T14:17:57.396Z"
+    },
+    {
+      "id": "web-media-room-posts-the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families-b711e758",
+      "title": "The Place's 11th Annual Holiday House Brings Dignity and Joy to Local Families — The Place",
+      "url": "https://www.theplacega.org/media-room-posts/the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families",
+      "fetchedAt": "2026-09-23T14:17:56.142Z"
+    },
+    {
+      "id": "web-media-room-posts-the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christ-ad5afbda",
+      "title": "The Place's Holiday House Brings Joy, Dignity, and Hope to More Than 2,100 Children This Christmas Season — The Place",
+      "url": "https://www.theplacega.org/media-room-posts/the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christmas-season",
+      "fetchedAt": "2026-09-23T14:17:55.331Z"
+    },
+    {
       "id": "web-calendar-forsyth-county-drive-through-pet-food-supply-pantry-205ae801",
       "title": "Forsyth County Drive-Through Pet Food & Supply Pantry — The Place",
       "url": "https://www.theplacega.org/calendar/forsyth-county-drive-through-pet-food-supply-pantry",
@@ -472,10 +532,10 @@
       "fetchedAt": "2026-07-31T11:37:25.619Z"
     },
     {
-      "id": "web-calendar-free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-97887da8",
+      "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-5360fb29",
       "title": "Free GED Classes — The Place",
-      "url": "https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g",
-      "fetchedAt": "2026-09-21T15:56:32.995Z"
+      "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x",
+      "fetchedAt": "2026-09-23T14:17:46.004Z"
     },
     {
       "id": "web-calendar-red-robin-dine-to-donate-e8b1e68d",
@@ -505,6 +565,46 @@
   "failedPages": [
     {
       "url": "https://www.theplacega.org/press-releases",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-success",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-place-brings-the-magic-of-prom-to-local-students",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-place-honors-precision-concrete-construction-with-community-partnership-award",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-place-hosts-heartsgiving-to-support-local-families-in-need",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christmas-season",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/matching-gifts",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/gala-recap",
       "reason": "No meaningful public page content found"
     },
     {
@@ -512,26 +612,63 @@
       "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/volunteer-handbook",
-      "reason": "Refusing to fetch or follow a URL outside The Place website."
-    },
-    {
-      "url": "https://www.theplacega.org/matching-gifts",
+      "url": "https://www.theplacega.org/faroi",
       "reason": "No meaningful public page content found"
     },
     {
       "url": "https://www.theplacega.org/upcoming-events",
       "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/volunteer-handbook",
+      "reason": "Refusing to fetch or follow a URL outside The Place website."
     }
   ],
-  "duplicatePages": [],
+  "duplicatePages": [
+    {
+      "url": "https://www.theplacega.org/home",
+      "duplicateOf": "https://www.theplacega.org/"
+    }
+  ],
   "blockedPages": [],
   "retainedPages": [
     {
       "url": "https://www.theplacega.org/press-releases",
-      "reason": "No meaningful public page content found"
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-success",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-place-brings-the-magic-of-prom-to-local-students",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-place-honors-precision-concrete-construction-with-community-partnership-award",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-place-hosts-heartsgiving-to-support-local-families-in-need",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christmas-season",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
+      "reason": "HTTP 404"
     }
   ],
   "approvedRemovedPages": [],
-  "totalIndexed": 83
+  "totalIndexed": 93
 }

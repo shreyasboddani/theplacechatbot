@@ -1,10 +1,42 @@
 {
   "maxPages": 150,
-  "totalIndexed": 83,
+  "totalIndexed": 93,
   "retainedPages": [
     {
+      "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-success",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-place-brings-the-magic-of-prom-to-local-students",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-place-honors-precision-concrete-construction-with-community-partnership-award",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-place-hosts-heartsgiving-to-support-local-families-in-need",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1/the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christmas-season",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/press-releases-1",
+      "reason": "HTTP 404"
+    },
+    {
       "url": "https://www.theplacega.org/press-releases",
-      "reason": "No meaningful public page content found"
+      "reason": "HTTP 404"
     }
   ],
   "approvedRemovedPages": []
