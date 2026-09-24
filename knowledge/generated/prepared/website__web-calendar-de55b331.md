@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Free GED Classes
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
 - Free GED Classes
@@ -46,18 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at Chestatee Elementary
 - Free GED Classes
 - Free GED Classes
+- Mobile Pantry at Brandywine Elementary
 
 ## Approved page content
 
 Upcoming Events
-Free GED Classes
-Wednesday, September 23, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Mobile Pantry at Brandywine Elementary
 Saturday, September 26, 2026
 10:00 AM
@@ -822,6 +814,14 @@ Cumming Elementary
 Google Calendar
 ICS
 Free GED Classes
+Wednesday, September 23, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
+Free GED Classes
 Monday, September 21, 2026
 6:00 PM
 8:00 PM
@@ -1051,19 +1051,9 @@ Chestatee Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Mobile Pantry at Dawson County High School
-Thursday, July 16, 2026
-11:30 AM
-12:30 PM
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g
 - https://www.theplacega.org/calendar/mobile-pantry-brandywine-september: https://www.theplacega.org/calendar/mobile-pantry-brandywine-september
 - Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-september
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-september
@@ -1160,3 +1150,7 @@ ICS
 - Financial Literacy Fall Series: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd
 - ICS: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd
 - View Event →: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd
+- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8

@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-09-23T14:18:04.642Z",
+  "preparedAt": "2026-09-24T14:15:30.778Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-09-22T14:03:39.544Z"
+      "fetchedAt": "2026-09-24T14:14:19.084Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -191,7 +191,7 @@
       "id": "web-staff-564c6965",
       "title": "Staff — The Place",
       "url": "https://www.theplacega.org/staff",
-      "fetchedAt": "2026-09-16T14:13:40.265Z"
+      "fetchedAt": "2026-09-24T14:14:35.871Z"
     },
     {
       "id": "web-careers-9638b545",
@@ -598,36 +598,23 @@
       "reason": "HTTP 404"
     },
     {
-      "url": "https://www.theplacega.org/matching-gifts",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/gala-recap",
-      "reason": "No meaningful public page content found"
-    },
-    {
       "url": "https://www.theplacega.org/furniture-pickup-request",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/faroi",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/upcoming-events",
       "reason": "No meaningful public page content found"
     },
     {
       "url": "https://www.theplacega.org/volunteer-handbook",
       "reason": "Refusing to fetch or follow a URL outside The Place website."
-    }
-  ],
-  "duplicatePages": [
+    },
     {
-      "url": "https://www.theplacega.org/home",
-      "duplicateOf": "https://www.theplacega.org/"
+      "url": "https://www.theplacega.org/matching-gifts",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/upcoming-events",
+      "reason": "No meaningful public page content found"
     }
   ],
+  "duplicatePages": [],
   "retainedPages": [
     {
       "url": "https://www.theplacega.org/press-releases",

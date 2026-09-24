@@ -3,7 +3,7 @@
 Source ID: web-staff-564c6965
 Source type: official_website
 Canonical URL: https://www.theplacega.org/staff
-Fetched at: 2026-09-16T14:13:40.265Z
+Fetched at: 2026-09-24T14:14:35.871Z
 
 ## Page content
 
@@ -34,10 +34,9 @@ YOLY MULLENSenior Outreach Coordinator Yoly@theplaceGA.orgext. 230
 THRIFT STORE
 CATHY LAURetail Assistant Manager (Forsyth)cathy@theplacega.org
 SOMER PRICE​​Retail Supervisorsomer@theplacega.org
-BRENDA TORRES​​Retail Supervisorbrenda@theplacega.org
+ASHLEE ENGEL​​Retail Supervisorbrenda@theplacega.org
 VICKIE HAWKINSRetail Manager (Dawson)​vickie@theplacega.orgext. 752
 PAUL BEDWELLRetail Warehouse Managerpbedwell@theplacega.orgext. 240
-WILLIAM BICERetail Warehouse Managerwilliam@theplacega.org
 WORKFORCE DEVELOPMENT AND EDUCATION
 AMANDA WILSONWorkforce Development and Education Manageramanda@theplacega.orgext. 224
 PAIGE ASHKEBOUSSIAdult Education Coordinatorpashekeboussi@theplacega.orgext. 223
