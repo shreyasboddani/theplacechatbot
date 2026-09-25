@@ -3,7 +3,7 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-09-24T14:14:19.084Z
+Fetched at: 2026-09-25T14:37:51.451Z
 
 ## Page content
 
@@ -243,11 +243,27 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Let's Create!
+Friday, November 6, 2026
+10:00 AM
+9:00 PM
+The Georgia Art Company
+(map)
+Google Calendar
+ICS
 Free GED Classes
 Monday, November 9, 2026
 6:00 PM
 8:00 PM
 Cumming Elementary
+(map)
+Google Calendar
+ICS
+Charity Night Bingo
+Wednesday, November 11, 2026
+6:00 PM
+8:00 PM
+Crooked Culture
 (map)
 Google Calendar
 ICS

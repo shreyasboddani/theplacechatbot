@@ -36,7 +36,9 @@ Canonical URL: https://www.theplacega.org/calendar
 - Financial Literacy Fall Series
 - Mobile Food Pantry
 - Free GED Classes
+- Let's Create!
 - Free GED Classes
+- Charity Night Bingo
 - Free GED Classes
 - Mobile Pantry at Cumming Elementary
 - Mobile Pantry at Chattahoochee Elementary
@@ -44,8 +46,6 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Mobile Pantry at Chestatee Elementary
 - Free GED Classes
-- Free GED Classes
-- Mobile Pantry at Brandywine Elementary
 
 ## Approved page content
 
@@ -285,11 +285,27 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Let's Create!
+Friday, November 6, 2026
+10:00 AM
+9:00 PM
+The Georgia Art Company
+(map)
+Google Calendar
+ICS
 Free GED Classes
 Monday, November 9, 2026
 6:00 PM
 8:00 PM
 Cumming Elementary
+(map)
+Google Calendar
+ICS
+Charity Night Bingo
+Wednesday, November 11, 2026
+6:00 PM
+8:00 PM
+Crooked Culture
 (map)
 Google Calendar
 ICS
