@@ -7,8 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Mobile Pantry at Brandywine Elementary
-- Mobile Pantry at New Hope Elementary
 - Free GED Classes
 - Free GED Classes
 - Free GED Classes
@@ -46,28 +44,12 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Mobile Pantry at Chestatee Elementary
 - Free GED Classes
+- Free GED Classes
+- Mobile Pantry at Brandywine Elementary
 
 ## Approved page content
 
 Upcoming Events
-Mobile Pantry at Brandywine Elementary
-Saturday, September 26, 2026
-10:00 AM
-11:00 AM
-Brandywine Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Mobile Pantry at New Hope Elementary
-Saturday, September 26, 2026
-11:30 AM
-12:30 PM
-New Hope Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, September 28, 2026
 6:00 PM
@@ -829,6 +811,24 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Mobile Pantry at New Hope Elementary
+Saturday, September 26, 2026
+11:30 AM
+12:30 PM
+New Hope Elementary
+(map)
+Google Calendar
+ICS
+Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
+Mobile Pantry at Brandywine Elementary
+Saturday, September 26, 2026
+10:00 AM
+11:00 AM
+Brandywine Elementary
+(map)
+Google Calendar
+ICS
+Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Wednesday, September 23, 2026
 6:00 PM
@@ -1048,36 +1048,9 @@ Tuesday, July 21, 2026
 7:30 PM
 Google Calendar
 ICS
-Forsyth County Drive-Through Pet Food & Supply Pantry
-Sunday, July 19, 2026
-9:00 AM
-11:00 AM
-2300 Keith Bridge Road
-Cumming, Georgia, 30040
-United States
-(map)
-Google Calendar
-ICS
-Mobile Pantry at Chestatee Elementary
-Saturday, July 18, 2026
-10:00 AM
-11:00 AM
-Chestatee Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/mobile-pantry-brandywine-september: https://www.theplacega.org/calendar/mobile-pantry-brandywine-september
-- Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-september
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-september
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-september
-- https://www.theplacega.org/calendar/mobile-pantry-newhope-september: https://www.theplacega.org/calendar/mobile-pantry-newhope-september
-- Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-september
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-september
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-newhope-september
 - https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x
@@ -1170,3 +1143,11 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8
+- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5
+- https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
+- Financial Literacy Fall Series: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
+- ICS: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
+- View Event →: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x

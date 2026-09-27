@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-09-25T14:38:57.542Z",
+  "crawledAt": "2026-09-27T14:44:09.530Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-09-25T14:37:51.451Z"
+      "fetchedAt": "2026-09-27T14:43:10.697Z"
     },
     {
       "id": "web-newsletter-89967774",
