@@ -3,6 +3,30 @@
   "totalIndexed": 93,
   "retainedPages": [
     {
+      "url": "https://www.theplacega.org/calendar/dine-to-donate",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-farmington-creek-gw5zd",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/heartsgiving",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/holidayhouse",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/host-a-holiday-house-drive",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/media-room-posts/the-place-hosts-heartsgiving-to-support-local-families-in-need",
+      "reason": "HTTP 503"
+    },
+    {
       "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
       "reason": "HTTP 404"
     },
@@ -36,7 +60,7 @@
     },
     {
       "url": "https://www.theplacega.org/press-releases",
-      "reason": "HTTP 404"
+      "reason": "HTTP 503"
     }
   ],
   "approvedRemovedPages": []

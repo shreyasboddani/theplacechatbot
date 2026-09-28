@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-09-27T14:44:09.530Z",
+  "crawledAt": "2026-09-28T17:42:44.779Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -532,10 +532,10 @@
       "fetchedAt": "2026-07-31T11:37:25.619Z"
     },
     {
-      "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-5360fb29",
+      "id": "web-calendar-free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-1fee637e",
       "title": "Free GED Classes — The Place",
-      "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x",
-      "fetchedAt": "2026-09-23T14:17:46.004Z"
+      "url": "https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3",
+      "fetchedAt": "2026-09-28T17:42:36.057Z"
     },
     {
       "id": "web-calendar-red-robin-dine-to-donate-e8b1e68d",
@@ -564,8 +564,20 @@
   ],
   "failedPages": [
     {
+      "url": "https://www.theplacega.org/holidayhouse",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/host-a-holiday-house-drive",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/heartsgiving",
+      "reason": "HTTP 503"
+    },
+    {
       "url": "https://www.theplacega.org/press-releases",
-      "reason": "HTTP 404"
+      "reason": "HTTP 503"
     },
     {
       "url": "https://www.theplacega.org/press-releases-1",
@@ -598,6 +610,18 @@
     {
       "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
       "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/media-room-posts/the-place-hosts-heartsgiving-to-support-local-families-in-need",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/calendar/dine-to-donate",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-farmington-creek-gw5zd",
+      "reason": "HTTP 503"
     },
     {
       "url": "https://www.theplacega.org/furniture-pickup-request",
@@ -620,8 +644,20 @@
   "blockedPages": [],
   "retainedPages": [
     {
+      "url": "https://www.theplacega.org/holidayhouse",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/host-a-holiday-house-drive",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/heartsgiving",
+      "reason": "HTTP 503"
+    },
+    {
       "url": "https://www.theplacega.org/press-releases",
-      "reason": "HTTP 404"
+      "reason": "HTTP 503"
     },
     {
       "url": "https://www.theplacega.org/press-releases-1",
@@ -654,6 +690,18 @@
     {
       "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
       "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.theplacega.org/media-room-posts/the-place-hosts-heartsgiving-to-support-local-families-in-need",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/calendar/dine-to-donate",
+      "reason": "HTTP 503"
+    },
+    {
+      "url": "https://www.theplacega.org/calendar/mobile-pantry-farmington-creek-gw5zd",
+      "reason": "HTTP 503"
     }
   ],
   "approvedRemovedPages": [],
