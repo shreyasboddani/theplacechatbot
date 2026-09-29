@@ -3,19 +3,11 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-09-27T14:43:10.697Z
+Fetched at: 2026-09-29T15:56:04.789Z
 
 ## Page content
 
 Upcoming Events
-Free GED Classes
-Monday, September 28, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Free GED Classes
 Wednesday, September 30, 2026
 6:00 PM
@@ -769,6 +761,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Free GED Classes
+Monday, September 28, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
 Mobile Pantry at New Hope Elementary
 Saturday, September 26, 2026
 11:30 AM
@@ -1000,19 +1000,9 @@ Thursday, July 23, 2026
 12:30 PM
 Google Calendar
 ICS
-Financial Literacy Summer Series
-Tuesday, July 21, 2026
-6:00 PM
-7:30 PM
-Google Calendar
-ICS
 
 ## Relevant links
 
-- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x
 - https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3
@@ -1109,3 +1099,7 @@ ICS
 - Financial Literacy Fall Series: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
 - ICS: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
 - View Event →: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
+- https://www.theplacega.org/calendar/mobile-food-pantry-november: https://www.theplacega.org/calendar/mobile-food-pantry-november
+- Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-november
+- ICS: https://www.theplacega.org/calendar/mobile-food-pantry-november
+- View Event →: https://www.theplacega.org/calendar/mobile-food-pantry-november

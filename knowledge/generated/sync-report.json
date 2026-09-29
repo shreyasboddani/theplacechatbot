@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-09-28T17:42:45.055Z",
+  "preparedAt": "2026-09-29T15:57:16.791Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-09-27T14:43:10.697Z"
+      "fetchedAt": "2026-09-29T15:56:04.789Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -562,20 +562,8 @@
   ],
   "failedPages": [
     {
-      "url": "https://www.theplacega.org/holidayhouse",
-      "reason": "HTTP 503"
-    },
-    {
-      "url": "https://www.theplacega.org/host-a-holiday-house-drive",
-      "reason": "HTTP 503"
-    },
-    {
-      "url": "https://www.theplacega.org/heartsgiving",
-      "reason": "HTTP 503"
-    },
-    {
       "url": "https://www.theplacega.org/press-releases",
-      "reason": "HTTP 503"
+      "reason": "HTTP 404"
     },
     {
       "url": "https://www.theplacega.org/press-releases-1",
@@ -608,18 +596,6 @@
     {
       "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
       "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/media-room-posts/the-place-hosts-heartsgiving-to-support-local-families-in-need",
-      "reason": "HTTP 503"
-    },
-    {
-      "url": "https://www.theplacega.org/calendar/dine-to-donate",
-      "reason": "HTTP 503"
-    },
-    {
-      "url": "https://www.theplacega.org/calendar/mobile-pantry-farmington-creek-gw5zd",
-      "reason": "HTTP 503"
     },
     {
       "url": "https://www.theplacega.org/furniture-pickup-request",
@@ -641,20 +617,8 @@
   "duplicatePages": [],
   "retainedPages": [
     {
-      "url": "https://www.theplacega.org/holidayhouse",
-      "reason": "HTTP 503"
-    },
-    {
-      "url": "https://www.theplacega.org/host-a-holiday-house-drive",
-      "reason": "HTTP 503"
-    },
-    {
-      "url": "https://www.theplacega.org/heartsgiving",
-      "reason": "HTTP 503"
-    },
-    {
       "url": "https://www.theplacega.org/press-releases",
-      "reason": "HTTP 503"
+      "reason": "HTTP 404"
     },
     {
       "url": "https://www.theplacega.org/press-releases-1",
@@ -687,18 +651,6 @@
     {
       "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
       "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/media-room-posts/the-place-hosts-heartsgiving-to-support-local-families-in-need",
-      "reason": "HTTP 503"
-    },
-    {
-      "url": "https://www.theplacega.org/calendar/dine-to-donate",
-      "reason": "HTTP 503"
-    },
-    {
-      "url": "https://www.theplacega.org/calendar/mobile-pantry-farmington-creek-gw5zd",
-      "reason": "HTTP 503"
     }
   ],
   "approvedRemovedPages": [],
