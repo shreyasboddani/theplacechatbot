@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-09-29T15:57:16.400Z",
+  "crawledAt": "2026-09-30T15:57:52.454Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -532,10 +532,10 @@
       "fetchedAt": "2026-07-31T11:37:25.619Z"
     },
     {
-      "id": "web-calendar-free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-1fee637e",
+      "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-83a86558",
       "title": "Free GED Classes — The Place",
-      "url": "https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3",
-      "fetchedAt": "2026-09-28T17:42:36.057Z"
+      "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b",
+      "fetchedAt": "2026-09-30T15:57:46.069Z"
     },
     {
       "id": "web-calendar-red-robin-dine-to-donate-e8b1e68d",
