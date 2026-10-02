@@ -930,6 +930,26 @@
     "priority": 50
   },
   {
+    "id": "web-calendar-charity-night-bingo-551c187f",
+    "fileName": "website__web-calendar-charity-night-bingo-551c187f.md",
+    "documentPath": "knowledge/generated/prepared/website__web-calendar-charity-night-bingo-551c187f.md",
+    "title": "Charity Night Bingo — The Place",
+    "url": "https://www.theplacega.org/calendar/charity-night-bingo",
+    "fetchedAt": "2026-10-02T15:52:05.251Z",
+    "sourceType": "official_website",
+    "priority": 50
+  },
+  {
+    "id": "web-calendar-lets-create-7c812ac3",
+    "fileName": "website__web-calendar-lets-create-7c812ac3.md",
+    "documentPath": "knowledge/generated/prepared/website__web-calendar-lets-create-7c812ac3.md",
+    "title": "Let's Create! — The Place",
+    "url": "https://www.theplacega.org/calendar/lets-create",
+    "fetchedAt": "2026-10-02T15:52:05.935Z",
+    "sourceType": "official_website",
+    "priority": 50
+  },
+  {
     "id": "food-order-help",
     "fileName": "manager_faq__food-order-help.md",
     "documentPath": "knowledge/generated/prepared/manager_faq__food-order-help.md",

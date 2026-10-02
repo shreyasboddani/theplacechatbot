@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-01T16:30:11.765Z",
+  "crawledAt": "2026-10-02T15:52:42.043Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -560,6 +560,18 @@
       "title": "Financial Literacy Fall Series — The Place",
       "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series",
       "fetchedAt": "2026-09-16T14:14:40.195Z"
+    },
+    {
+      "id": "web-calendar-charity-night-bingo-551c187f",
+      "title": "Charity Night Bingo — The Place",
+      "url": "https://www.theplacega.org/calendar/charity-night-bingo",
+      "fetchedAt": "2026-10-02T15:52:05.251Z"
+    },
+    {
+      "id": "web-calendar-lets-create-7c812ac3",
+      "title": "Let's Create! — The Place",
+      "url": "https://www.theplacega.org/calendar/lets-create",
+      "fetchedAt": "2026-10-02T15:52:05.935Z"
     }
   ],
   "failedPages": [
@@ -600,23 +612,36 @@
       "reason": "HTTP 404"
     },
     {
+      "url": "https://www.theplacega.org/matching-gifts",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/gala-recap",
+      "reason": "No meaningful public page content found"
+    },
+    {
       "url": "https://www.theplacega.org/furniture-pickup-request",
       "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/volunteer-handbook",
-      "reason": "Refusing to fetch or follow a URL outside The Place website."
-    },
-    {
-      "url": "https://www.theplacega.org/matching-gifts",
+      "url": "https://www.theplacega.org/faroi",
       "reason": "No meaningful public page content found"
     },
     {
       "url": "https://www.theplacega.org/upcoming-events",
       "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/volunteer-handbook",
+      "reason": "Refusing to fetch or follow a URL outside The Place website."
     }
   ],
-  "duplicatePages": [],
+  "duplicatePages": [
+    {
+      "url": "https://www.theplacega.org/home",
+      "duplicateOf": "https://www.theplacega.org/"
+    }
+  ],
   "blockedPages": [],
   "retainedPages": [
     {
@@ -657,5 +682,5 @@
     }
   ],
   "approvedRemovedPages": [],
-  "totalIndexed": 93
+  "totalIndexed": 95
 }
