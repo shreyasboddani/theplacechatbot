@@ -3156,15 +3156,15 @@
     "sourceType": "official_website"
   },
   {
-    "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-83a86558",
+    "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-52c12ecc",
     "title": "Free GED Classes — The Place",
-    "canonicalUrl": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b",
-    "fetchedAt": "2026-09-30T15:57:46.069Z",
-    "text": "Free GED Classes\nMonday, October 5, 2026\n6:00 PM\n8:00 PM\nCumming Elementary\n540 Dahlonega Street\nCumming, Georgia, 30040\nUnited States\n(map)\nGoogle Calendar\nICS\nFree GED Classes\nMobile Food Pantry",
+    "canonicalUrl": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3",
+    "fetchedAt": "2026-10-05T18:32:33.019Z",
+    "text": "Free GED Classes\nMonday, October 12, 2026\n6:00 PM\n8:00 PM\nCumming Elementary\n540 Dahlonega Street\nCumming, Georgia, 30040\nUnited States\n(map)\nGoogle Calendar\nICS\nMobile Pantry at Chattahoochee Elementary\nFinancial Literacy Fall Series",
     "headings": [
       "Free GED Classes",
-      "Free GED Classes",
-      "Mobile Food Pantry"
+      "Mobile Pantry at Chattahoochee Elementary",
+      "Financial Literacy Fall Series"
     ],
     "links": [
       {
@@ -3173,15 +3173,15 @@
       },
       {
         "label": "ICS",
-        "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b"
+        "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3"
       },
       {
-        "label": "Previous\nPrevious\nSeptember 30\nFree GED Classes",
-        "url": "https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3"
+        "label": "Previous\nPrevious\nOctober 10\nMobile Pantry at Chattahoochee Elementary",
+        "url": "https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-october"
       },
       {
-        "label": "Next\nNext\nOctober 7\nMobile Food Pantry",
-        "url": "https://www.theplacega.org/calendar/mobile-food-pantry-october"
+        "label": "Next\nNext\nOctober 13\nFinancial Literacy Fall Series",
+        "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series"
       }
     ],
     "sourceType": "official_website"
