@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Free GED Classes
 - Mobile Food Pantry
 - Free GED Classes
 - Parenting Class
@@ -46,18 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
 - Free GED Classes
+- Mobile Food Pantry
 
 ## Approved page content
 
 Upcoming Events
-Free GED Classes
-Monday, October 5, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Mobile Food Pantry
 Wednesday, October 7, 2026
 12:30 PM
@@ -796,6 +788,14 @@ Cumming Elementary
 Google Calendar
 ICS
 Free GED Classes
+Monday, October 5, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
+Free GED Classes
 Wednesday, September 30, 2026
 6:00 PM
 8:00 PM
@@ -1030,19 +1030,9 @@ Taco Mac
 (map)
 Google Calendar
 ICS
-Financial Literacy Summer Series
-Tuesday, July 28, 2026
-6:00 PM
-7:30 PM
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b
 - https://www.theplacega.org/calendar/mobile-food-pantry-october: https://www.theplacega.org/calendar/mobile-food-pantry-october
 - Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-october
 - ICS: https://www.theplacega.org/calendar/mobile-food-pantry-october
@@ -1139,3 +1129,7 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
+- https://www.theplacega.org/calendar/lets-create: https://www.theplacega.org/calendar/lets-create
+- Let's Create!: https://www.theplacega.org/calendar/lets-create
+- ICS: https://www.theplacega.org/calendar/lets-create
+- View Event →: https://www.theplacega.org/calendar/lets-create
