@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-06T16:00:39.426Z",
+  "crawledAt": "2026-10-08T16:33:45.167Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-06T15:59:21.980Z"
+      "fetchedAt": "2026-10-08T16:32:32.536Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -193,13 +193,13 @@
       "id": "web-staff-564c6965",
       "title": "Staff — The Place",
       "url": "https://www.theplacega.org/staff",
-      "fetchedAt": "2026-09-24T14:14:35.871Z"
+      "fetchedAt": "2026-10-08T16:32:52.075Z"
     },
     {
       "id": "web-careers-9638b545",
       "title": "Careers — The Place",
       "url": "https://www.theplacega.org/careers",
-      "fetchedAt": "2026-09-03T13:37:41.653Z"
+      "fetchedAt": "2026-10-08T16:32:52.437Z"
     },
     {
       "id": "web-board-of-directors-8d8056e2",
@@ -550,10 +550,10 @@
       "fetchedAt": "2026-09-03T13:38:08.773Z"
     },
     {
-      "id": "web-calendar-parenting-class-45caf2dd",
+      "id": "web-calendar-parenting-class-ejs4y-9192cbe1",
       "title": "Parenting Class — The Place",
-      "url": "https://www.theplacega.org/calendar/parenting-class",
-      "fetchedAt": "2026-09-03T13:38:17.475Z"
+      "url": "https://www.theplacega.org/calendar/parenting-class-ejs4y",
+      "fetchedAt": "2026-10-08T16:33:38.500Z"
     },
     {
       "id": "web-calendar-financial-literacy-fall-series-161006ea",

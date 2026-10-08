@@ -45,7 +45,7 @@ YOLY MULLENSenior Outreach Coordinator Yoly@theplaceGA.orgext. 230
 THRIFT STORE
 CATHY LAURetail Assistant Manager (Forsyth)cathy@theplacega.org
 SOMER PRICE​​Retail Supervisorsomer@theplacega.org
-ASHLEE ENGEL​​Retail Supervisorbrenda@theplacega.org
+ASHLEE ENGEL​​Retail Supervisorashlee@theplacega.org
 VICKIE HAWKINSRetail Manager (Dawson)​vickie@theplacega.orgext. 752
 PAUL BEDWELLRetail Warehouse Managerpbedwell@theplacega.orgext. 240
 WORKFORCE DEVELOPMENT AND EDUCATION

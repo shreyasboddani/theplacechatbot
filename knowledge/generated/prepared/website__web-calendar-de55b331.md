@@ -7,8 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Mobile Food Pantry
-- Free GED Classes
 - Parenting Class
 - Mobile Pantry at Cumming Elementary
 - Mobile Pantry at Chattahoochee Elementary
@@ -46,24 +44,12 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at New Hope Elementary
 - Free GED Classes
 - Mobile Food Pantry
+- Free GED Classes
+- Free GED Classes
 
 ## Approved page content
 
 Upcoming Events
-Mobile Food Pantry
-Wednesday, October 7, 2026
-12:30 PM
-1:30 PM
-Google Calendar
-ICS
-Free GED Classes
-Wednesday, October 7, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Parenting Class
 Thursday, October 8, 2026
 6:00 PM
@@ -788,6 +774,20 @@ Cumming Elementary
 Google Calendar
 ICS
 Free GED Classes
+Wednesday, October 7, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
+Mobile Food Pantry
+Wednesday, October 7, 2026
+12:30 PM
+1:30 PM
+Google Calendar
+ICS
+Free GED Classes
 Monday, October 5, 2026
 6:00 PM
 8:00 PM
@@ -1016,31 +1016,9 @@ Wednesday, August 5, 2026
 1:30 PM
 Google Calendar
 ICS
-Financial Literacy Summer Series
-Tuesday, August 4, 2026
-6:00 PM
-7:30 PM
-Google Calendar
-ICS
-Dine to Donate
-Thursday, July 30, 2026
-5:00 PM
-11:00 PM
-Taco Mac
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/mobile-food-pantry-october: https://www.theplacega.org/calendar/mobile-food-pantry-october
-- Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-october
-- ICS: https://www.theplacega.org/calendar/mobile-food-pantry-october
-- View Event →: https://www.theplacega.org/calendar/mobile-food-pantry-october
-- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8
 - https://www.theplacega.org/calendar/parenting-class: https://www.theplacega.org/calendar/parenting-class
 - Parenting Class: https://www.theplacega.org/calendar/parenting-class
 - ICS: https://www.theplacega.org/calendar/parenting-class
@@ -1133,3 +1111,11 @@ ICS
 - Let's Create!: https://www.theplacega.org/calendar/lets-create
 - ICS: https://www.theplacega.org/calendar/lets-create
 - View Event →: https://www.theplacega.org/calendar/lets-create
+- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259
+- https://www.theplacega.org/calendar/charity-night-bingo: https://www.theplacega.org/calendar/charity-night-bingo
+- Charity Night Bingo: https://www.theplacega.org/calendar/charity-night-bingo
+- ICS: https://www.theplacega.org/calendar/charity-night-bingo
+- View Event →: https://www.theplacega.org/calendar/charity-night-bingo

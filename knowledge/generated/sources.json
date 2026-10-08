@@ -105,7 +105,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-de55b331.md",
     "title": "Calendar — The Place",
     "url": "https://www.theplacega.org/calendar",
-    "fetchedAt": "2026-10-06T15:59:21.980Z",
+    "fetchedAt": "2026-10-08T16:32:32.536Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -315,7 +315,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-staff-564c6965.md",
     "title": "Staff — The Place",
     "url": "https://www.theplacega.org/staff",
-    "fetchedAt": "2026-09-24T14:14:35.871Z",
+    "fetchedAt": "2026-10-08T16:32:52.075Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -325,7 +325,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-careers-9638b545.md",
     "title": "Careers — The Place",
     "url": "https://www.theplacega.org/careers",
-    "fetchedAt": "2026-09-03T13:37:41.653Z",
+    "fetchedAt": "2026-10-08T16:32:52.437Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -910,12 +910,12 @@
     "priority": 50
   },
   {
-    "id": "web-calendar-parenting-class-45caf2dd",
-    "fileName": "website__web-calendar-parenting-class-45caf2dd.md",
-    "documentPath": "knowledge/generated/prepared/website__web-calendar-parenting-class-45caf2dd.md",
+    "id": "web-calendar-parenting-class-ejs4y-9192cbe1",
+    "fileName": "website__web-calendar-parenting-class-ejs4y-9192cbe1.md",
+    "documentPath": "knowledge/generated/prepared/website__web-calendar-parenting-class-ejs4y-9192cbe1.md",
     "title": "Parenting Class — The Place",
-    "url": "https://www.theplacega.org/calendar/parenting-class",
-    "fetchedAt": "2026-09-03T13:38:17.475Z",
+    "url": "https://www.theplacega.org/calendar/parenting-class-ejs4y",
+    "fetchedAt": "2026-10-08T16:33:38.500Z",
     "sourceType": "official_website",
     "priority": 50
   },

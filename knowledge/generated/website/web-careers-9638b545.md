@@ -3,7 +3,7 @@
 Source ID: web-careers-9638b545
 Source type: official_website
 Canonical URL: https://www.theplacega.org/careers
-Fetched at: 2026-09-03T13:37:41.653Z
+Fetched at: 2026-10-08T16:32:52.437Z
 
 ## Page content
 
@@ -23,31 +23,4 @@ Performance and Development: Reward individual and team accomplishments through 
 Performance and Development: Reward individual and team accomplishments through performance-based adjustments. Support employee growth through professional development programs and training opportunities.
 Benefits Package: Offer benefits that reflect our Compassion and hope for employees, including medical/dental/vision, paid holidays, and paid time off.
 Benefits Package: Offer benefits that reflect our Compassion and hope for employees, including medical/dental/vision, paid holidays, and paid time off.
-We are currently seeking amazing individuals for these roles:
-Director of Food and Senior Services(Full-time)
-Click here for more information
-Click here for more information
-Click here to contact the hiring manager
-Click here to contact the hiring manager
-Retail Warehouse Donation Specialist and Driver (Full-time)
-Click here for more information
-Click here for more information
-Click here to contact the hiring manager
-Click here to contact the hiring manager
-Thrift Store Retail Specialist / Cashier(Part-time)
-Click here for more information
-Click here for more information
-Click here to contact the hiring manager
-Click here to contact the hiring manager
-Thrift Store Retail Specialist(Full-time)
-Click here for more information
-Click here for more information
-Click here to contact the hiring manager
-Click here to contact the hiring manager
-
-## Relevant links
-
-- Click here for more information: https://www.theplacega.org/s/Director-of-Food-and-Senior-Services-82026.pdf
-- Click here for more information: https://www.theplacega.org/s/Retail-Donation-Specialist-and-Driver.pdf
-- Click here for more information: https://www.theplacega.org/s/Retail-Cashier-and-Specialist-Saturday.pdf
-- Click here for more information: https://www.theplacega.org/s/Retail-Specialist-8s4c.pdf
+We do not currently have open roles but are always looking for amazing people. Please check back soon.
