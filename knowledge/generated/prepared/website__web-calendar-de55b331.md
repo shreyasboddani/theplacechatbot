@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Mobile Pantry at Chattahoochee Elementary
 - Free GED Classes
 - Financial Literacy Fall Series
 - Free GED Classes
@@ -46,19 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Free GED Classes
 - Mobile Pantry at Cumming Elementary
+- Mobile Pantry at Chattahoochee Elementary
 
 ## Approved page content
 
 Upcoming Events
-Mobile Pantry at Chattahoochee Elementary
-Saturday, October 10, 2026
-11:30 AM
-12:30 PM
-Chattahoochee Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, October 12, 2026
 6:00 PM
@@ -756,6 +747,15 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Mobile Pantry at Chattahoochee Elementary
+Saturday, October 10, 2026
+11:30 AM
+12:30 PM
+Chattahoochee Elementary
+(map)
+Google Calendar
+ICS
+Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at Cumming Elementary
 Saturday, October 10, 2026
 10:00 AM
@@ -992,22 +992,9 @@ Tuesday, August 11, 2026
 7:30 PM
 Google Calendar
 ICS
-Mobile Pantry at Chattahoochee Elementary
-Saturday, August 8, 2026
-11:30 AM
-12:30 PM
-Chattahoochee Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-october: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-october
-- Mobile Pantry at Chattahoochee Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-october
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-october
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-october
 - https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3
@@ -1104,3 +1091,7 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
+- https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
+- Mobile Pantry at Chattahoochee Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-november
