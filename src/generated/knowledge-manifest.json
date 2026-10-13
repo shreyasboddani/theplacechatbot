@@ -105,7 +105,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-de55b331.md",
     "title": "Calendar — The Place",
     "url": "https://www.theplacega.org/calendar",
-    "fetchedAt": "2026-10-11T15:45:38.223Z",
+    "fetchedAt": "2026-10-13T16:58:52.952Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -920,12 +920,12 @@
     "priority": 50
   },
   {
-    "id": "web-calendar-financial-literacy-fall-series-161006ea",
-    "fileName": "website__web-calendar-financial-literacy-fall-series-161006ea.md",
-    "documentPath": "knowledge/generated/prepared/website__web-calendar-financial-literacy-fall-series-161006ea.md",
+    "id": "web-calendar-financial-literacy-fall-series-szalb-58aaca0e",
+    "fileName": "website__web-calendar-financial-literacy-fall-series-szalb-58aaca0e.md",
+    "documentPath": "knowledge/generated/prepared/website__web-calendar-financial-literacy-fall-series-szalb-58aaca0e.md",
     "title": "Financial Literacy Fall Series — The Place",
-    "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series",
-    "fetchedAt": "2026-09-16T14:14:40.195Z",
+    "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb",
+    "fetchedAt": "2026-10-13T16:59:43.888Z",
     "sourceType": "official_website",
     "priority": 50
   },

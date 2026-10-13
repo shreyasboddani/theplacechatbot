@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-10-12T19:07:41.182Z",
+  "preparedAt": "2026-10-13T17:00:22.735Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-11T15:45:38.223Z"
+      "fetchedAt": "2026-10-13T16:58:52.952Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -554,10 +554,10 @@
       "fetchedAt": "2026-10-08T16:33:38.500Z"
     },
     {
-      "id": "web-calendar-financial-literacy-fall-series-161006ea",
+      "id": "web-calendar-financial-literacy-fall-series-szalb-58aaca0e",
       "title": "Financial Literacy Fall Series — The Place",
-      "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series",
-      "fetchedAt": "2026-09-16T14:14:40.195Z"
+      "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb",
+      "fetchedAt": "2026-10-13T16:59:43.888Z"
     },
     {
       "id": "web-calendar-charity-night-bingo-551c187f",
