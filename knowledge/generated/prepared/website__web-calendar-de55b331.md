@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Free GED Classes
 - Witches Night Out
 - Parenting Class
 - Mobile Pantry at Chestatee Elementary
@@ -46,18 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at Chattahoochee Elementary
 - Free GED Classes
 - Free GED Classes
+- Mobile Pantry at Chestatee Elementary
 
 ## Approved page content
 
 Upcoming Events
-Free GED Classes
-Wednesday, October 14, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Witches Night Out
 Thursday, October 15, 2026
 6:00 PM
@@ -731,6 +723,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Free GED Classes
+Wednesday, October 14, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
 Financial Literacy Fall Series
 Tuesday, October 13, 2026
 6:00 PM
@@ -968,22 +968,9 @@ The Place
 Google Calendar
 ICS
 Electronic Recycling Event
-Mobile Pantry at Brandywine Elementary
-Saturday, August 22, 2026
-10:00 AM
-11:00 AM
-Brandywine Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43
 - https://www.theplacega.org/calendar/witches-night-out: https://www.theplacega.org/calendar/witches-night-out
 - Witches Night Out: https://www.theplacega.org/calendar/witches-night-out
 - ICS: https://www.theplacega.org/calendar/witches-night-out
@@ -1080,3 +1067,7 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
+- https://www.theplacega.org/calendar/mobile-pantry-chestatee-november: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
+- Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november

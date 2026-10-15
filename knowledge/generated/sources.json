@@ -105,7 +105,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-de55b331.md",
     "title": "Calendar — The Place",
     "url": "https://www.theplacega.org/calendar",
-    "fetchedAt": "2026-10-14T14:32:49.486Z",
+    "fetchedAt": "2026-10-15T14:12:16.650Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -415,7 +415,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-heartsgiving-71cc983a.md",
     "title": "Heartsgiving — The Place",
     "url": "https://www.theplacega.org/heartsgiving",
-    "fetchedAt": "2026-09-18T13:38:39.231Z",
+    "fetchedAt": "2026-10-15T14:12:38.092Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -910,12 +910,12 @@
     "priority": 50
   },
   {
-    "id": "web-calendar-parenting-class-ejs4y-9192cbe1",
-    "fileName": "website__web-calendar-parenting-class-ejs4y-9192cbe1.md",
-    "documentPath": "knowledge/generated/prepared/website__web-calendar-parenting-class-ejs4y-9192cbe1.md",
+    "id": "web-calendar-parenting-class-ejs4y-8cdsn-abea5bd0",
+    "fileName": "website__web-calendar-parenting-class-ejs4y-8cdsn-abea5bd0.md",
+    "documentPath": "knowledge/generated/prepared/website__web-calendar-parenting-class-ejs4y-8cdsn-abea5bd0.md",
     "title": "Parenting Class — The Place",
-    "url": "https://www.theplacega.org/calendar/parenting-class-ejs4y",
-    "fetchedAt": "2026-10-08T16:33:38.500Z",
+    "url": "https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn",
+    "fetchedAt": "2026-10-15T14:13:13.212Z",
     "sourceType": "official_website",
     "priority": 50
   },

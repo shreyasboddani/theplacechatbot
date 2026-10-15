@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-14T14:34:33.718Z",
+  "crawledAt": "2026-10-15T14:13:18.937Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-14T14:32:49.486Z"
+      "fetchedAt": "2026-10-15T14:12:16.650Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -253,7 +253,7 @@
       "id": "web-heartsgiving-71cc983a",
       "title": "Heartsgiving — The Place",
       "url": "https://www.theplacega.org/heartsgiving",
-      "fetchedAt": "2026-09-18T13:38:39.231Z"
+      "fetchedAt": "2026-10-15T14:12:38.092Z"
     },
     {
       "id": "web-press-releases-31d36e55",
@@ -550,10 +550,10 @@
       "fetchedAt": "2026-09-03T13:38:08.773Z"
     },
     {
-      "id": "web-calendar-parenting-class-ejs4y-9192cbe1",
+      "id": "web-calendar-parenting-class-ejs4y-8cdsn-abea5bd0",
       "title": "Parenting Class — The Place",
-      "url": "https://www.theplacega.org/calendar/parenting-class-ejs4y",
-      "fetchedAt": "2026-10-08T16:33:38.500Z"
+      "url": "https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn",
+      "fetchedAt": "2026-10-15T14:13:13.212Z"
     },
     {
       "id": "web-calendar-financial-literacy-fall-series-szalb-58aaca0e",
@@ -612,36 +612,23 @@
       "reason": "HTTP 404"
     },
     {
-      "url": "https://www.theplacega.org/matching-gifts",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/gala-recap",
-      "reason": "No meaningful public page content found"
-    },
-    {
       "url": "https://www.theplacega.org/furniture-pickup-request",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/faroi",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/upcoming-events",
       "reason": "No meaningful public page content found"
     },
     {
       "url": "https://www.theplacega.org/volunteer-handbook",
       "reason": "Refusing to fetch or follow a URL outside The Place website."
-    }
-  ],
-  "duplicatePages": [
+    },
     {
-      "url": "https://www.theplacega.org/home",
-      "duplicateOf": "https://www.theplacega.org/"
+      "url": "https://www.theplacega.org/matching-gifts",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/upcoming-events",
+      "reason": "No meaningful public page content found"
     }
   ],
+  "duplicatePages": [],
   "blockedPages": [],
   "retainedPages": [
     {
