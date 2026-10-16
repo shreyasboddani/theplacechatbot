@@ -428,10 +428,15 @@ export function extractWebsiteSource(
     : $("article").first().length
       ? $("article").first()
       : $("body").first();
+  const isContactPage =
+    new URL(canonicalUrl).pathname.replace(/\/+$/, "") === "/contact-us";
+  const pageHeading = isContactPage
+    ? normalizedText(root.find("h1").first().text())
+    : "";
   const title = normalizedText(
-    $("meta[property='og:title']").attr("content") ||
+    pageHeading ||
+      $("meta[property='og:title']").attr("content") ||
       $("title").text() ||
-      root.find("h1").first().text() ||
       "The Place",
   );
   const headings = root
@@ -469,7 +474,20 @@ export function extractWebsiteSource(
   const blocks = root
     .find("h1, h2, h3, h4, p, li, dt, dd, address")
     .toArray()
-    .map((element) => normalizedText($(element).text()))
+    .map((element) => {
+      if (!isContactPage) return normalizedText($(element).text());
+      const block = $(element).clone();
+      block.find("*").each((_, child) => {
+        if (child.type !== "tag") return;
+        const childElement = $(child);
+        if (child.name.toLowerCase() === "br") {
+          childElement.replaceWith("\n");
+        } else {
+          childElement.before(" ").after(" ");
+        }
+      });
+      return normalizedText(block.text());
+    })
     .filter((text) => text.length > 1);
   const text = normalizedText(blocks.join("\n"));
   if (text.length < 80) return undefined;

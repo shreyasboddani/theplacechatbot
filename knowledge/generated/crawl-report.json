@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-16T14:00:51.725Z",
+  "crawledAt": "2026-10-16T20:35:04.888Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -11,9 +11,9 @@
     },
     {
       "id": "web-contact-us-eac5f990",
-      "title": "Contact Us | Explore Financials Today — The Place",
+      "title": "Contact Us",
       "url": "https://www.theplacega.org/contact-us",
-      "fetchedAt": "2026-07-23T18:36:14.846Z"
+      "fetchedAt": "2026-10-16T20:34:04.010Z"
     },
     {
       "id": "web-food-pantry-67cfe863",
@@ -612,23 +612,36 @@
       "reason": "HTTP 404"
     },
     {
+      "url": "https://www.theplacega.org/matching-gifts",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/gala-recap",
+      "reason": "No meaningful public page content found"
+    },
+    {
       "url": "https://www.theplacega.org/furniture-pickup-request",
       "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/volunteer-handbook",
-      "reason": "Refusing to fetch or follow a URL outside The Place website."
-    },
-    {
-      "url": "https://www.theplacega.org/matching-gifts",
+      "url": "https://www.theplacega.org/faroi",
       "reason": "No meaningful public page content found"
     },
     {
       "url": "https://www.theplacega.org/upcoming-events",
       "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/volunteer-handbook",
+      "reason": "Refusing to fetch or follow a URL outside The Place website."
     }
   ],
-  "duplicatePages": [],
+  "duplicatePages": [
+    {
+      "url": "https://www.theplacega.org/home",
+      "duplicateOf": "https://www.theplacega.org/"
+    }
+  ],
   "blockedPages": [],
   "retainedPages": [
     {

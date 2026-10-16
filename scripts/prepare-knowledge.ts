@@ -11,6 +11,9 @@ import type {
 } from "../src/lib/knowledge/types";
 import { isApprovedWebsiteUrl } from "../src/lib/security/source-url";
 
+const CONTACT_PAGE_URL = "https://www.theplacega.org/contact-us";
+const FOOD_PANTRY_PAGE_URL = "https://www.theplacega.org/food-pantry";
+
 async function readJsonIfPresent(filePath: string): Promise<unknown> {
   try {
     return JSON.parse(await readFile(filePath, "utf8"));
@@ -91,6 +94,19 @@ function resolveOfficialDocumentPath(
   return resolved;
 }
 
+function approvedWebsiteContent(source: WebsiteSource): string {
+  if (source.canonicalUrl !== CONTACT_PAGE_URL) return source.text;
+
+  const contactPantrySchedule = /^FOOD PANTRY\n[\s\S]*?(?=^THRIFT$)/m;
+  if (!contactPantrySchedule.test(source.text)) {
+    throw new Error("Could not isolate the Contact Us food pantry schedule.");
+  }
+  return source.text.replace(
+    contactPantrySchedule,
+    `FOOD PANTRY\nFor current food pantry hours and location details, use the official Food Pantry page: ${FOOD_PANTRY_PAGE_URL}\n`,
+  );
+}
+
 function websiteMarkdown(source: WebsiteSource): string {
   const headings = source.headings.map((heading) => `- ${heading}`).join("\n");
   const links = source.links
@@ -106,7 +122,7 @@ function websiteMarkdown(source: WebsiteSource): string {
     "",
     "## Approved page content",
     "",
-    source.text,
+    approvedWebsiteContent(source),
     ...(links ? ["", "## Relevant official links", "", links] : []),
     "",
   ].join("\n");

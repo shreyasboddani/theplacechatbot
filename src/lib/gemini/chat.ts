@@ -31,11 +31,15 @@ const COMPLEX_RETRIEVAL_RESULT_LIMIT = 10;
 
 function isComplexRequest(request: ChatRequest): boolean {
   const wordCount = request.message.trim().split(/\s+/).filter(Boolean).length;
+  const asksHoursAndLocation =
+    /\b(?:hours?|open|opening)\b/i.test(request.message) &&
+    /\b(?:locations?|addresses?)\b/i.test(request.message);
   return (
     request.message.length > 140 ||
     wordCount > 22 ||
     request.message.includes("\n") ||
-    (request.message.match(/\?/g)?.length ?? 0) > 1
+    (request.message.match(/\?/g)?.length ?? 0) > 1 ||
+    asksHoursAndLocation
   );
 }
 

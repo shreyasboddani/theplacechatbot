@@ -173,7 +173,10 @@ export async function POST(request: NextRequest): Promise<Response> {
   }
 
   try {
-    const focusedMessage = focusConversationalQuery(validation.data.message);
+    const focusedMessage = focusConversationalQuery(
+      validation.data.message,
+      validation.data.history,
+    );
     const response = await askGroundedQuestion(
       createGroundedInteractionClient(config.apiKey),
       {

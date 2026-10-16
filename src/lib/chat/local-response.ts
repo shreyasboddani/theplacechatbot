@@ -1,5 +1,6 @@
 import { THE_PLACE } from "@/lib/config";
 import type { ChatLanguagePreference } from "@/lib/chat/language";
+import type { ChatRequest } from "@/lib/security/input-validation";
 import type {
   ChatResponse,
   ChatSource,
@@ -113,7 +114,10 @@ function greetingPrefixWordCount(message: string): number {
   return ["thanks", "thx"].includes(messageWords[0] ?? "") ? 1 : 0;
 }
 
-export function focusConversationalQuery(message: string): string {
+export function focusConversationalQuery(
+  message: string,
+  history: ChatRequest["history"] = [],
+): string {
   const normalized = normalizeConversationalMessage(message);
   const prefixWords = greetingPrefixWordCount(normalized);
   const matches = [...normalized.matchAll(/[a-z0-9]+/g)];
@@ -131,6 +135,30 @@ export function focusConversationalQuery(message: string): string {
       "",
     )
     .trim();
+  if (
+    /^(?:are you sure|are u sure|r u sure|ru sure|u sure|you sure)(?:\s+(?:about|of)\s+(?:that|it|this|your answer))?$/.test(
+      focused,
+    )
+  ) {
+    const previousQuestion = [...history]
+      .reverse()
+      .find((item) => item.role === "user")?.content;
+    if (previousQuestion) {
+      focused = `Please verify against approved sources: ${focusConversationalQuery(previousQuestion)}`;
+    }
+  }
+  if (
+    /\bfood pantry\b/.test(focused) &&
+    /\b(?:hours?|open|opening|schedule|pickup)\b/.test(focused)
+  ) {
+    return `${focused} The Place official Food Pantry Hours and Location`;
+  }
+  if (
+    /\b(?:hours?|open|opening)\b/.test(focused) &&
+    /\b(?:locations?|addresses?)\b/.test(focused)
+  ) {
+    return `${focused} The Place office and program hours, location addresses`;
+  }
   return focused || normalized;
 }
 
