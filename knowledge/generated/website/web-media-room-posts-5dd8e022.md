@@ -3,11 +3,12 @@
 Source ID: web-media-room-posts-5dd8e022
 Source type: official_website
 Canonical URL: https://www.theplacega.org/media-room-posts
-Fetched at: 2026-09-23T14:17:51.371Z
+Fetched at: 2026-10-16T20:51:08.536Z
 
 ## Page content
 
-PressReleases
+Press
+Releases
 7 Things You Shouldn’t Donate Just Because You Feel Guilty Throwing Them Away, Decluttering Pros Say
 Read more at The Spruce, Yahoo, Southern Living, and Martha Stewart
 How The Place is providing a living space for young women facing housing insecurity

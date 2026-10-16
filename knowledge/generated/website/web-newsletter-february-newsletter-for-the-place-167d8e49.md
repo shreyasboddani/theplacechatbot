@@ -3,7 +3,7 @@
 Source ID: web-newsletter-february-newsletter-for-the-place-167d8e49
 Source type: official_website
 Canonical URL: https://www.theplacega.org/newsletter/february-newsletter-for-the-place
-Fetched at: 2026-09-01T14:10:38.883Z
+Fetched at: 2026-10-16T20:50:54.208Z
 
 ## Page content
 
@@ -24,18 +24,27 @@ Congratulations to the newest graduates of our Consumer Mastermind Financial Lit
 In partnership with Pinnacle Financial Partners, these graduates spent four weeks strengthening their money mindset, building a working budget, learning to save with purpose, and using credit wisely.
 We are so proud of you for investing in your financial education and taking an important step toward self-sustainability.
 We had an exciting day in our English as a Second Language (ESL) class!
-Scott from the Forsyth County School Board’s HR team joined us as a guest speaker, giving students the opportunity to practice their English in a formal, real-world setting.Each student participated in a mock interview, building confidence, improving communication skills, and learning how to present themselves professionally.Scott also shared information about job opportunities in schools throughout the county, helping students see new possibilities for their future.
+Scott from the Forsyth County School Board’s HR team joined us as a guest speaker, giving students the opportunity to practice their English in a formal, real-world setting.
+Each student participated in a mock interview, building confidence, improving communication skills, and learning how to present themselves professionally.
+Scott also shared information about job opportunities in schools throughout the county, helping students see new possibilities for their future.
 For more information, reach out to Paige Ashkeboussi at pashkeboussi@theplacega.org today!
-We’re excited to launch a brand-new way to serve:The Place Meal Makers!This opportunity is open to everyone, even if you’ve never volunteered with us before. If you have a heart for cooking and want to bless others with a homemade meal, this is for you.
-Meal Makers can support several of our programs, including Adult Education students, Homebound Seniors, Orange Duffle Bag Initiative (ODBI) students, and Food Pantry clients.Once you sign up, we’ll connect with you to share more about each program and help you find the perfect fit.Help us spread the word and invite the cooks and bakers in your life to turn their passion into impact!
+We’re excited to launch a brand-new way to serve:
+The Place Meal Makers!
+This opportunity is open to everyone, even if you’ve never volunteered with us before. If you have a heart for cooking and want to bless others with a homemade meal, this is for you.
+Meal Makers can support several of our programs, including Adult Education students, Homebound Seniors, Orange Duffle Bag Initiative (ODBI) students, and Food Pantry clients.
+Once you sign up, we’ll connect with you to share more about each program and help you find the perfect fit.
+Help us spread the word and invite the cooks and bakers in your life to turn their passion into impact!
 Events put on by The Place
 Bingo is ages 14 and up
 Pre Register Today!
 Reserve your tickets!
 Events benefiting The Place
 Needs and More
-Gift of PromOur Gift of Prom program helps students who may not otherwise attend experience this special night. We provide everything they need, from outfits to tickets, transportation, and a meal.Prom is more than a dance, it’s a chance to feel confident and included.
-Because of this support, students can focus on having fun, making memories, and feeling like they belong.You are invited to be a part of this event! Thank you to our community to making this possible!
+Gift of Prom
+Our Gift of Prom program helps students who may not otherwise attend experience this special night. We provide everything they need, from outfits to tickets, transportation, and a meal.
+Prom is more than a dance, it’s a chance to feel confident and included.
+Because of this support, students can focus on having fun, making memories, and feeling like they belong.
+You are invited to be a part of this event! Thank you to our community to making this possible!
 Join Hearts of Impact, Give Hope Every Month!
 Hearts of Impact is our monthly giving community. When you join, you help The Place be there for families in Forsyth and Dawson counties, not just once, but all year long.
 Monthly gifts help provide food, housing support, and hope when neighbors need it most. Because these gifts are steady and reliable, we can plan ahead, respond faster, and serve more people when needs rise.

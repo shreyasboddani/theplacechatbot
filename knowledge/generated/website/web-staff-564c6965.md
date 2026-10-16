@@ -3,42 +3,110 @@
 Source ID: web-staff-564c6965
 Source type: official_website
 Canonical URL: https://www.theplacega.org/staff
-Fetched at: 2026-10-08T16:32:52.075Z
+Fetched at: 2026-10-16T20:51:00.958Z
 
 ## Page content
 
 Our Amazing Staff
-Cristy FerenciePresident /CEOext. 225
-Colette KemeryDirector of Retailext. 238
-Nicole MorganDirector of Developmentext. 242
-Paige WhalenDirector of Client Servicesext. 235
+Cristy Ferencie
+President /CEO
+ext. 225
+Colette Kemery
+Director of Retail
+ext. 238
+Nicole Morgan
+Director of Development
+ext. 242
+Paige Whalen
+Director of Client Services
+ext. 235
 DEVELOPMENT
-NATALIE LANGWAYOutreach Coordinatornatalie@theplacega.orgext. 118
-JENNIFER RAATHSCommunications Coordinatorjraaths@theplacega.orgext. 236
-AMBER PHAMVolunteer Coordinatoramber@theplacega.orgext. 226
-KALEIGH TUHOLSKYDevelopment Coordinatorkaleigh@theplacega.orgext. 250
+NATALIE LANGWAY
+Outreach Coordinator
+natalie@theplacega.org
+ext. 118
+JENNIFER RAATHS
+Communications Coordinator
+jraaths@theplacega.org
+ext. 236
+AMBER PHAM
+Volunteer Coordinator
+amber@theplacega.org
+ext. 226
+KALEIGH TUHOLSKY
+Development Coordinator
+kaleigh@theplacega.org
+ext. 250
 CLIENT SERVICES
-MEGHAN LIVINGSTONCase Management Managermeghan@theplacega.orgext. 229
-JESSICA MCGUIREOffice Coordinator/Benefitsfrontdesk@theplacega.org​ext. 295
-HOLLIS MEYER​Financial Assistance Coordinatorhollis@theplacega.orgext. 296
+MEGHAN LIVINGSTON
+Case Management Manager
+meghan@theplacega.org
+ext. 229
+JESSICA MCGUIRE
+Office Coordinator/Benefits
+frontdesk@theplacega.org​
+ext. 295
+HOLLIS MEYER
+​Financial Assistance Coordinator
+hollis@theplacega.org
+ext. 296
 OPERATIONS
-BRAD EVERSONInterim Food and Operations Managerbrad@theplacega.orgext. 228
+BRAD EVERSON
+Interim Food and Operations Manager
+brad@theplacega.org
+ext. 228
 FOOD SERVICES
-​ERIC THURMANFood Warehouse Coordinatoreric@theplacega.org
-LEANDREA VOSKANIANFood Distribution Coordinator (Forsyth)leandrea@theplacega.orgext. 232
-CHUCK SNEADFood Distribution Coordinator (Dawson)chuck@theplacega.orgext. 247
-ASHLEY CARROLLProgram Analyst ashley@theplacega.orgext. 260
+​ERIC THURMAN
+Food Warehouse Coordinator
+eric@theplacega.org
+LEANDREA VOSKANIAN
+Food Distribution Coordinator (Forsyth)
+leandrea@theplacega.org
+ext. 232
+CHUCK SNEAD
+Food Distribution Coordinator (Dawson)
+chuck@theplacega.org
+ext. 247
+ASHLEY CARROLL
+Program Analyst ashley@theplacega.org
+ext. 260
 SENIOR SERVICES
-GLENN BOWMAN​Senior Program Coordinatorglenn@theplacega.orgext. 227
-YOLY MULLENSenior Outreach Coordinator Yoly@theplaceGA.orgext. 230
+GLENN BOWMAN
+​Senior Program Coordinator
+glenn@theplacega.org
+ext. 227
+YOLY MULLEN
+Senior Outreach Coordinator Yoly@theplaceGA.org
+ext. 230
 THRIFT STORE
-CATHY LAURetail Assistant Manager (Forsyth)cathy@theplacega.org
-SOMER PRICE​​Retail Supervisorsomer@theplacega.org
-ASHLEE ENGEL​​Retail Supervisorashlee@theplacega.org
-VICKIE HAWKINSRetail Manager (Dawson)​vickie@theplacega.orgext. 752
-PAUL BEDWELLRetail Warehouse Managerpbedwell@theplacega.orgext. 240
+CATHY LAU
+Retail Assistant Manager (Forsyth)
+cathy@theplacega.org
+SOMER PRICE
+​​Retail Supervisor
+somer@theplacega.org
+ASHLEE ENGEL
+​​Retail Supervisor
+ashlee@theplacega.org
+VICKIE HAWKINS
+Retail Manager (Dawson)
+​vickie@theplacega.org
+ext. 752
+PAUL BEDWELL
+Retail Warehouse Manager
+pbedwell@theplacega.org
+ext. 240
 WORKFORCE DEVELOPMENT AND EDUCATION
-AMANDA WILSONWorkforce Development and Education Manageramanda@theplacega.orgext. 224
-PAIGE ASHKEBOUSSIAdult Education Coordinatorpashekeboussi@theplacega.orgext. 223
+AMANDA WILSON
+Workforce Development and Education Manager
+amanda@theplacega.org
+ext. 224
+PAIGE ASHKEBOUSSI
+Adult Education Coordinator
+pashekeboussi@theplacega.org
+ext. 223
 YOUTH SERVICES
-SAM HENRYYouth Events Program Coordinator​sam@theplacega.org​​ext. 244
+SAM HENRY
+Youth Events Program Coordinator​
+sam@theplacega.org​​
+ext. 244

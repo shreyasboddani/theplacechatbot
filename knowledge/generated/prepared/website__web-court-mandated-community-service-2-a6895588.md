@@ -44,6 +44,12 @@ LUNCH
 Bring your lunch, a snack, and water. We have a refrigerator and a break room.
 Location & Hours
 FORSYTH COUNTY LOCATION
-2550 The Place Circle, Cumming, GA 30040Tuesday – Saturday8:30am – 12:30pm10:00am - 12:30pm12:30pm – 4:00pm
+2550 The Place Circle, Cumming, GA 30040
+Tuesday – Saturday
+8:30am – 12:30pm
+10:00am - 12:30pm
+12:30pm – 4:00pm
 DAWSON COUNTY LOCATION
-829 GA 9 North, Dawsonville, GA 30534Tuesday – Saturday10:00am – 4:00pm
+829 GA 9 North, Dawsonville, GA 30534
+Tuesday – Saturday
+10:00am – 4:00pm

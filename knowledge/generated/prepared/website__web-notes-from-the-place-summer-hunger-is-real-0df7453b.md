@@ -25,12 +25,12 @@ Whether you're making your first donation or have supported our pantry for years
 Here are a few ways you can help:
 Donate healthy, unopened, and non-expired food items that children and families can enjoy throughout the summer. Check our current food pantry needs list for what we currently need most!
 Donate healthy, unopened, and non-expired food items that children and families can enjoy throughout the summer. Check our current food pantry needs list for what we currently need most!
-Make a financial gift. Monetary donations allow us to purchase fresh produce, dairy products, protein, and other essential foods where they're needed most.
-Make a financial gift. Monetary donations allow us to purchase fresh produce, dairy products, protein, and other essential foods where they're needed most.
-Volunteer your time. From sorting donations to stocking shelves and assisting families, every volunteer helps us serve more neighbors with dignity and care.
-Volunteer your time. From sorting donations to stocking shelves and assisting families, every volunteer helps us serve more neighbors with dignity and care.
-Spread the word. Share our mission with friends, family, coworkers, and your social networks. You can find us on Instagram, Facebook, YouTube, and TikTok.
-Spread the word. Share our mission with friends, family, coworkers, and your social networks. You can find us on Instagram, Facebook, YouTube, and TikTok.
+Make a financial gift . Monetary donations allow us to purchase fresh produce, dairy products, protein, and other essential foods where they're needed most.
+Make a financial gift . Monetary donations allow us to purchase fresh produce, dairy products, protein, and other essential foods where they're needed most.
+Volunteer your time . From sorting donations to stocking shelves and assisting families, every volunteer helps us serve more neighbors with dignity and care.
+Volunteer your time . From sorting donations to stocking shelves and assisting families, every volunteer helps us serve more neighbors with dignity and care.
+Spread the word. Share our mission with friends, family, coworkers, and your social networks. You can find us on Instagram , Facebook , YouTube , and TikTok .
+Spread the word. Share our mission with friends, family, coworkers, and your social networks. You can find us on Instagram , Facebook , YouTube , and TikTok .
 Every Meal Matters
 A meal is more than food on a plate. It gives a child energy to play, learn, and grow. It offers parents relief during financially challenging times. It reminds families that their community cares.
 This summer, you can help ensure that no child misses a meal simply because school is out.

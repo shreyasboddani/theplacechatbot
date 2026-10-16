@@ -3,15 +3,18 @@
 Source ID: web-thrift-store-donations-2ff82f7d
 Source type: official_website
 Canonical URL: https://www.theplacega.org/thrift-store-donations
-Fetched at: 2026-07-23T18:36:15.990Z
+Fetched at: 2026-10-16T20:50:50.364Z
 
 ## Page content
 
 Thrift Store Donations
 HOURS AND LOCATIONS
-2550 The Place Circle, Cumming, GA 30040829 GA 9 N, Dawsonville, GA 30534Tuesday-Saturday from 10am - 4pm
+2550 The Place Circle, Cumming, GA 30040
+829 GA 9 N, Dawsonville, GA 30534
+Tuesday-Saturday from 10am - 4pm
 CONTACT
-COLETTE@THEPLACEGA.ORG770-887-1098
+COLETTE@THEPLACEGA.ORG
+770-887-1098
 Unfortunately, we cannot accept the items listed below. Items in good condition help us maximize thrift store sales, which support our growing community program needs.
 Torn, Ripped or Stained Items
 Torn, Ripped or Stained Items

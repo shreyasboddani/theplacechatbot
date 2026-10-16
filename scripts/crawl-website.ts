@@ -18,6 +18,7 @@ const MINIMUM_FULL_CRAWL_PAGES = 50;
 const MAXIMUM_FAILURE_RATIO = 0.25;
 const REQUEST_TIMEOUT_MS = 15_000;
 const REQUEST_DELAY_MS = 300;
+const MAX_REDIRECTS = 5;
 
 const SEED_URLS = [
   "https://www.theplacega.org/",
@@ -250,6 +251,10 @@ export function requireThePlaceFetchUrl(value: string): string {
   return canonical;
 }
 
+export function approvedRedirectTarget(currentUrl: string, location: string): string {
+  return requireThePlaceFetchUrl(new URL(location, currentUrl).toString());
+}
+
 export function isCrawlableUrl(value: string): boolean {
   const canonical = canonicalizeThePlaceUrl(value);
   if (!canonical) return false;
@@ -475,7 +480,6 @@ export function extractWebsiteSource(
     .find("h1, h2, h3, h4, p, li, dt, dd, address")
     .toArray()
     .map((element) => {
-      if (!isContactPage) return normalizedText($(element).text());
       const block = $(element).clone();
       block.find("*").each((_, child) => {
         if (child.type !== "tag") return;
@@ -511,17 +515,37 @@ async function fetchWithRetry(url: string): Promise<Response> {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
     try {
-      const response = await fetch(requestUrl, {
-        headers: {
-          "User-Agent": USER_AGENT,
-          Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.5",
-        },
-        redirect: "follow",
-        signal: controller.signal,
-      });
-      requireThePlaceFetchUrl(response.url);
-      if (response.ok || response.status < 500) return response;
-      lastError = new Error(`HTTP ${response.status}`);
+      let currentUrl = requestUrl;
+      const visitedUrls = new Set<string>();
+      for (let redirects = 0; ; redirects += 1) {
+        if (visitedUrls.has(currentUrl)) {
+          throw new Error("The Place website returned a redirect loop.");
+        }
+        visitedUrls.add(currentUrl);
+
+        const response = await fetch(currentUrl, {
+          headers: {
+            "User-Agent": USER_AGENT,
+            Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.5",
+          },
+          redirect: "manual",
+          signal: controller.signal,
+        });
+        requireThePlaceFetchUrl(response.url);
+        if (response.status < 300 || response.status >= 400) {
+          if (response.ok || response.status < 500) return response;
+          lastError = new Error(`HTTP ${response.status}`);
+          break;
+        }
+
+        const location = response.headers.get("location");
+        if (!location) return response;
+        await response.body?.cancel();
+        if (redirects >= MAX_REDIRECTS) {
+          throw new Error("The Place website exceeded the redirect limit.");
+        }
+        currentUrl = approvedRedirectTarget(currentUrl, location);
+      }
     } catch (error: unknown) {
       lastError = error;
     } finally {

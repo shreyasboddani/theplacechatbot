@@ -27,4 +27,4 @@ WIC (Women, Infants, and Children)
 WIC (Women, Infants, and Children)
 TANF (Temporary Assistance for Needy Families)
 TANF (Temporary Assistance for Needy Families)
-By appointment only. To make an appointment, call us at 770-887-1098 or send an email to benefits@theplacega.org
+By appointment only . To make an appointment, call us at 770-887-1098 or send an email to benefits@theplacega.org

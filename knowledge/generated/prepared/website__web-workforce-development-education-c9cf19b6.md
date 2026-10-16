@@ -17,8 +17,8 @@ Customized employment assessment
 Customized employment assessment
 Job Coaching
 Job Coaching
-Resume and interview skills
-Resume and interview skills
+Resume and interview s kills
+Resume and interview s kills
 Microsoft Excel Training
 Microsoft Excel Training
 Job and Skills Building

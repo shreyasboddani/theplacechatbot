@@ -11,4 +11,6 @@ Canonical URL: https://www.theplacega.org/food-pantry-request
 ## Approved page content
 
 Register or Renew for Food Pantry/Registrarse para la Despensa de Alimentos
-​UNITED WAY OF FORSYTH COUNTY ASSISTANCE NETWORKShared Case Management Software – CharityTrackerRELEASE OF INFORMATION (ROI)/Permiso Para Divulgar lnformación
+​UNITED WAY OF FORSYTH COUNTY ASSISTANCE NETWORK
+Shared Case Management Software – CharityTracker
+RELEASE OF INFORMATION (ROI)/Permiso Para Divulgar lnformación

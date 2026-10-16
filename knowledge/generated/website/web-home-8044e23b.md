@@ -3,11 +3,13 @@
 Source ID: web-home-8044e23b
 Source type: official_website
 Canonical URL: https://www.theplacega.org/
-Fetched at: 2026-09-15T14:20:52.373Z
+Fetched at: 2026-10-16T20:50:48.701Z
 
 ## Page content
 
-Support.Empower.Transform.
+Support.
+Empower.
+Transform.
 To assist the people of Forsyth and Dawson County areas with essential needs and to be self-sustaining.
 Who We Are
 The Place is a local nonprofit serving Forsyth and Dawson counties, helping individuals and families meet essential needs such as food, clothing, and financial assistance while guiding them toward long-term self-sufficiency through education, workforce training, and holistic support.
@@ -22,7 +24,8 @@ Collaboration and Coordination
 We bring resources together to transform lives in our area. We seek to identify gaps of needs in our community and, through collaboration, find creative ways to meet the needs.
 Our Services
 Food Pantry
-ThriftStore
+Thrift
+Store
 Financial Assistance
 Employment Services and Adult Education
 Senior Outreach

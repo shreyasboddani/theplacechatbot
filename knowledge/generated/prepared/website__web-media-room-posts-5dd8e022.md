@@ -18,7 +18,8 @@ Canonical URL: https://www.theplacega.org/media-room-posts
 
 ## Approved page content
 
-PressReleases
+Press
+Releases
 7 Things You Shouldn’t Donate Just Because You Feel Guilty Throwing Them Away, Decluttering Pros Say
 Read more at The Spruce, Yahoo, Southern Living, and Martha Stewart
 How The Place is providing a living space for young women facing housing insecurity

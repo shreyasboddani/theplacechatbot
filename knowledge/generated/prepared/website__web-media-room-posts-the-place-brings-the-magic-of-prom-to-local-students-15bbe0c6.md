@@ -14,11 +14,13 @@ Canonical URL: https://www.theplacega.org/media-room-posts/the-place-brings-the-
 
 The Place Brings the Magic of Prom to Local Students
 FOR IMMEDIATE RELEASE
-Jennifer Raaths, Communications Coordinatorjraaths@theplacega.org770-887-1098 x 236
+Jennifer Raaths, Communications Coordinator
+jraaths@theplacega.org
+770-887-1098 x 236
 February 24, 2026
 The Place Brings the Magic of Prom to Local Students
 Bringing joy, inclusion, and once-in-a-lifetime memories to students across Forsyth County
-Forsyth County, GA - Prom is one of the most memorable milestones of high school, yet for many families, the expense can make attending difficult. The Place is proud to present the Gift of Prom-an annual event committed to making sure every student has the chance to enjoy this unforgettable celebration.
+Forsyth County, GA - Prom is one of the most memorable milestones of high school, yet for many families, the expense can make attending difficult. The Place is proud to present the Gift of Prom -an annual event committed to making sure every student has the chance to enjoy this unforgettable celebration.
 Local high school students in need will have the chance to shop by appointment for their perfect prom outfit at [Browns Bridge Church] - Tuesday, March 10th through Thursday, March 12th 3:00 pm to 8:00 pm. Students will be able to select free prom dresses, tuxedos, dress shoes, accessories, and gift cards to help with prom-related expenses.
 "We believe that every student should have the opportunity to attend prom without financial stress," said Sam Henry, Youth Events Coordinator at [The Place]. "With the generosity of our community, we can help make prom dreams a reality."
 Quotes from grateful students from The Gift of Prom 2025

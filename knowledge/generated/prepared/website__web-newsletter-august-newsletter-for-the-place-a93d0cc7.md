@@ -31,11 +31,19 @@ You might be helping provide the essentials that make a new room feel like home.
 Your support helps turn a safe place to stay into a place to grow, achieve, and begin a new chapter.
 Help us continue investing in the young women of The Cottage and the futures they are working so hard to build.
 This month on Facebook and Instagram we took you on a behind the scenes tour of The Cottage. We invite you to go check those out there or on our YouTube page!
-Thank you to our partners that are making our work atThe Cottage possible:PWB Joy of Hope Foundation and The Mandula Family Foundation!
+Thank you to our partners that are making our work at
+The Cottage possible:
+PWB Joy of Hope Foundation and The Mandula Family Foundation!
 Thank You to Our Partners
-We just finished our summer Financial Literacy Class with Chase Bank.Thank you to Chase Bank and to the volunteer mentors who worked one-one with our participants. Congratulations to the participants who successfully learned to make a budget, plan for savings and work toward self sufficiency!
-Thank you to PWB Joy of Hope Foundation for helping our Cottage Young Women get ready to return to school! The gift cards will help with their needed school supplies and dress for success at their respective jobs and internships!Y'all are amazing!
-A big thank you to First Baptist Church Cumming's VBS and congregation for an impactful donation!We were blown away by the kids at VBS and how your congregation stepped up to help our community. Thank you for your heart and your continued partnership!
+We just finished our summer Financial Literacy Class with Chase Bank .
+Thank you to Chase Bank and to the volunteer mentors who worked one-one with our participants.
+Congratulations to the participants who successfully learned to make a budget, plan for savings and work toward self sufficiency!
+Thank you to PWB Joy of Hope Foundation for helping our Cottage Young Women get ready to return to school!
+The gift cards will help with their needed school supplies and dress for success at their respective jobs and internships!
+Y'all are amazing!
+A big thank you to First Baptist Church Cumming's VBS and congregation for an impactful donation!
+We were blown away by the kids at VBS and how your congregation stepped up to help our community.
+Thank you for your heart and your continued partnership!
 Volunteer Corner
 The North Atlanta Men’s Club has made volunteering at The Place a regular part of their routine! Every other week, they spend time hanging clothes at our Thrift Store and before they get to work, they gather for lunch together.
 We’re grateful for their continued commitment, hard work, and the fellowship they bring with them each time they volunteer. Thank you for being part of The Place!

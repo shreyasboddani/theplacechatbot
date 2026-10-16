@@ -14,7 +14,11 @@ Canonical URL: https://www.theplacega.org/media-room-posts/the-place-honors-prec
 
 The Place Honors Precision Concrete Construction With Community Partnership Award
 FOR IMMEDIATE RELEASE
-Contact:Nicole MorganThe Placenicole@theplacega.org | 770-887-1098 x242theplacega.org
+Contact:
+Nicole Morgan
+The Place
+nicole@theplacega.org | 770-887-1098 x242
+theplacega.org
 The Place Honors Precision Concrete Construction With Community Partnership Award
 Cumming, GA (November 2025) - The Place is proud to present Precision Concrete Construction with its Community Partnership Award in recognition of the company's extraordinary generosity, craftsmanship, and commitment to supporting vulnerable youth and families across Forsyth and Dawson counties.
 Precision Concrete led a series of transformational projects for The Place, including major improvements to The Cottage, The Place's home for young women at risk of homelessness. The company donated significant labor, materials, supervision, and expertise to build a new driveway for The Cottage, ensuring safe access for residents, staff, and emergency services.

@@ -13,7 +13,11 @@ Canonical URL: https://www.theplacega.org/media-room-posts/the-place-hosts-heart
 
 The Place Hosts "Heartsgiving" to Support Local Families in Need
 FOR IMMEDIATE RELEASE
-Contact:Nicole MorganThe Placenicole@theplacega.org | 770-887-1098 x242theplacega.org
+Contact:
+Nicole Morgan
+The Place
+nicole@theplacega.org | 770-887-1098 x242
+theplacega.org
 The Place Hosts "Heartsgiving" to Support Local Families in Need
 Cumming, GA (October 24, 2025) - This November, The Place will host its first-ever Heartsgiving, a special event bringing warmth, food, and hope to families in need across Forsyth and Dawson counties.
 Taking place November 18-20 in Forsyth County and November 20-21 in Dawson County, Heartsgiving will serve more than 450 families who receive assistance through The Place's Food Pantry. Each family will be able to select one coat per family member, receive a turkey, a box of food to complete their holiday meal, and a $25 gift card to help make their Thanksgiving brighter.

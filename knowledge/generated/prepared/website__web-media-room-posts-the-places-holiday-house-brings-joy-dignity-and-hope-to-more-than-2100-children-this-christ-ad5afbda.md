@@ -14,7 +14,11 @@ Canonical URL: https://www.theplacega.org/media-room-posts/the-places-holiday-ho
 
 The Place's Holiday House Brings Joy, Dignity, and Hope to More Than 2,100 Children This Christmas Season
 FOR IMMEDIATE RELEASE
-Contact:Nicole MorganThe Placenicole@theplacega.org | 770-887-1098 x242theplacega.org
+Contact:
+Nicole Morgan
+The Place
+nicole@theplacega.org | 770-887-1098 x242
+theplacega.org
 FOR IMMEDIATE RELEASE
 The Place's Holiday House Brings Joy, Dignity, and Hope to More Than 2,100 Children This Christmas Season
 Forsyth County, GA - This holiday season, The Place once again brought the community together to ensure families could celebrate the holidays with joy, dignity, and hope through its 11th Annual Holiday House event.
@@ -47,7 +51,7 @@ Snowman Sponsors: Weaver Capital Management, MDSi, ASBECO, Bear Mountain Paintin
 Cansy Cane Sponsor: Arc Angel Electric
 Cansy Cane Sponsor: Arc Angel Electric
 Holiday House relies entirely on community support through toy and monetary donations, volunteers, and sponsors. Together, this collective effort turned generosity into a holiday tradition that continues to change lives. We are so thankful for the individuals and groups that hosted drives and dropped off donations that made this event possible!
-For more information about Holiday House or how to get involved, visit theplacega.org.
+For more information about Holiday House or how to get involved, visit theplacega.org .
 The Place Brings the Magic of Prom to Local Students
 The Place's 11th Annual Holiday House Brings Dignity and Joy to Local Families
 

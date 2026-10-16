@@ -3,16 +3,22 @@
 Source ID: web-financials-7d99de46
 Source type: official_website
 Canonical URL: https://www.theplacega.org/financials
-Fetched at: 2026-07-23T18:36:58.753Z
+Fetched at: 2026-10-16T20:51:00.211Z
 
 ## Page content
 
 Financials
 As a non-profit organization supported by volunteers and donors, we value transparency in how we delegate our resources.
 IRS FORM 990
-FY 2025FY 2024Short FY 20232022
+FY 2025
+FY 2024
+Short FY 2023
+2022
 ANNUAL AUDIT
-FY 2025FY 2024Short FY 20232022
+FY 2025
+FY 2024
+Short FY 2023
+2022
 
 ## Relevant links
 

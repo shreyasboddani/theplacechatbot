@@ -50,7 +50,7 @@ On desktop, the floating panel can be resized from its inward-facing top corner.
 
 ## Requirements
 
-- Node.js 20 or newer (the official `@google/genai` SDK requires Node 20+)
+- Node.js 22 or newer (Vercel currently defaults new projects to Node.js 24)
 - npm
 - A Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
 - A Gemini project with sufficient File Search/model quota for the sync and prototype traffic
@@ -234,7 +234,7 @@ The repository includes a fail-closed, direct-to-main automation system for boun
 - `Detect and commit website knowledge updates` runs daily at 09:17 UTC, on demand, or from the `the-place-website-updated` repository-dispatch event.
 - GitHub has no Gemini or Vercel secrets. An unchanged site produces no commit, deployment, or Gemini call.
 - A change can be committed directly to `main` only after file-boundary checks, staff-FAQ isolation, a 20-document automatic-change cap, exact reconciliation of every website deletion against the human removal allowlist, a separate five-deletion cap, corpus verification, all tests, lint, production build, and a final check that `main` did not advance. It never force-pushes.
-- The resulting Vercel Production build verifies the committed corpus again, reconciles the existing File Search store using Vercel's server-side key, and only then builds the deployable application. Preview builds never mutate Gemini.
+- The Vercel Production build verifies the committed corpus and builds the application. After deployment, Vercel Cron reconciles the existing File Search store using Vercel's server-side key. Preview builds never mutate Gemini.
 - Reconciliation uploads every replacement before deleting its stale managed copy and fails closed on unknown remote documents or missing production configuration.
 - The website crawler never parses or approves staff FAQ entries or removal approvals. Staff FAQ changes and permanent-removal allowlist changes still require human review and a normal commit.
 
@@ -390,9 +390,9 @@ npm run knowledge:sync -- --reconcile --apply
 
 Use `--new-store` only for initial setup, ownership transfer, or an intentional blue/green rebuild. Reusing a store without `--reconcile` is rejected so duplicate documents cannot accumulate accidentally.
 
-## Current synchronization result
+## Current knowledge status
 
-The August 5, 2026 preparation pass indexed 120 public website pages, 27 approved staff FAQ entries, and 2 official public PDFs, producing 149 prepared documents. Five HTML routes (`/matching-gifts`, `/gala-recap`, `/furniture-pickup-request`, `/faroi`, and `/upcoming-events`) returned no meaningful public page content. The `/volunteer-handbook` route redirects to a document delivery target the HTML crawler intentionally refuses, so the exact verified PDF is supplied through the durable official-document registry instead. `/home` duplicates the canonical homepage and is not uploaded twice. The live File Search reconciliation finished with 149 unchanged desired documents, zero pending uploads, zero deletions, and zero unmanaged documents.
+The generated crawl and preparation reports under `knowledge/generated/` describe the current checkout. `crawl-report.json` lists indexed, failed, duplicate, and retained pages; `sync-report.json` records the prepared corpus and any local File Search sync. A local preparation report does not prove the production Gemini store is current. Check the Vercel Cron run logs for the production sync result.
 
 The following staff questions remain pending and are excluded from the approved FAQ corpus:
 
@@ -420,13 +420,13 @@ File Search stores belong to the Gemini project that created them; changing only
 
 ## Privacy, security, and reliability notes
 
-- The Gemini key remains server-side in Vercel and is accessed only by the production build synchronization script and Node.js chat route.
+- The Gemini key remains server-side in Vercel and is accessed only by the protected knowledge-sync route and Node.js chat route.
 - Chat transcripts are not written to a database, file, analytics service, or application log.
 - Gemini interactions use `store: false`; provider-side abuse monitoring and service policies may still apply.
 - Obvious SSNs, Luhn-valid card numbers, password disclosures, bank-account context with long numbers, and large private-document-like pastes are blocked before Gemini.
 - React renders answer text directly; raw HTML and `dangerouslySetInnerHTML` are not used for model output.
 - Website source URLs are limited to HTTPS `theplacega.org` hosts and must exist in the generated manifest.
-- The crawler revalidates both requested and final redirect hosts so off-domain content cannot enter the approved corpus through a redirect or external sitemap.
+- The crawler validates every redirect destination before fetching it, and revalidates final response URLs, so off-domain content cannot enter the approved corpus through a redirect or external sitemap.
 - Request size, the 600-character message limit, history length, timeout, and response shape are bounded.
 - The optional language preference is restricted to `auto`, `en`, or `es`; arbitrary browser values cannot enter the system instruction.
 - The API requires `application/json`, model-generated images are not loaded, the widget iframe is same-origin with its loader, and response security headers limit framing to The Place domains.
@@ -437,7 +437,7 @@ File Search stores belong to the Gemini project that created them; changing only
 
 ## Prototype limitations and production hardening
 
-- File Search quality depends on the latest successful Vercel Production build synchronization and staff review.
+- File Search quality depends on the latest successful Vercel Cron synchronization and staff review.
 - Public-site updates are detected automatically. Large changes, staff-FAQ changes, unsafe content, invalid crawls, and unapproved removals fail closed for human investigation; no crawler can guarantee the correctness of a legitimately compromised official page.
 - The crawler uses practical main-content extraction; synchronization reports should be audited periodically for missing, duplicated, retained, or layout-heavy pages.
 - Semantic retrieval can miss relevant wording. The citation gate favors a safe fallback over an unsupported answer.
@@ -445,7 +445,7 @@ File Search stores belong to the Gemini project that created them; changing only
 - In-memory rate limiting is not a strong production control.
 - Before broad public promotion, configure a Vercel Firewall rate-limit rule for `POST /api/chat`, plus a formal content-review workflow, uptime/error monitoring that excludes message text, accessibility testing with assistive technologies, retention/legal review, and a documented incident/rollback procedure.
 - Review Gemini and Vercel quotas, billing, and data-processing terms for The Place's expected traffic. Free-tier availability and limits can change.
-- Next.js and its ESLint configuration are pinned to the current compatible 16.2.12 patch. `npm audit` reports 12 high-severity transitive findings: PostCSS and Sharp/libvips inside Next.js, plus glob-expansion packages used by development-only lint tooling. This app accepts neither user-provided CSS nor image uploads, has no remote image domains, disables runtime image optimization for its trusted local logos, and does not pass visitor input to lint tooling. npm's forced fix proposes an unsafe Next.js 9 downgrade; ESLint 10 is not yet compatible with the React plugin bundled by this Next configuration. Neither unsafe change is applied. Monitor the next stable compatible releases and rerun the audit regularly.
+- Next.js and its ESLint configuration are pinned together to 16.4.2, which removes the critical Next.js advisory from the previous release. The remaining audit findings are in the development-only lint toolchain and Mammoth's argument-parser dependencies, which are used only by the offline staff FAQ parser. Their current compatible dependency ranges do not have a clean automatic fix. No critical findings remain; rerun the audit after upstream releases.
 
 ## Packages added
 

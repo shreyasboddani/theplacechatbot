@@ -15,7 +15,7 @@ Canonical URL: https://www.theplacega.org/notes-from-the-place
 ## Approved page content
 
 The Cottage: A Place to Find Stability, Build Confidence, and Create a Brighter Future
-Every young woman deserves a safe place to call home. A place where she can feel supported, discover her strengths, set goals, and build a future she can be proud of. That is the heart behind The Cottage at The Place.
+Every young woman deserves a safe place to call home. A place where she can feel supported, discover her strengths, set goals, and build a future she can be proud of. That is the heart behind The Cottage at The Place .
 Five Ways You Can Support The Place Year-Round
 When most people think about giving back, they often think of the holidays. While the holiday season is an important time for nonprofits, the needs of our neighbors don't disappear once the decorations come down.
 Summer Hunger Is Real. Together, We Can Make a Difference

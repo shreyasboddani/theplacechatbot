@@ -3,7 +3,7 @@
 Source ID: web-workforce-development-education-c9cf19b6
 Source type: official_website
 Canonical URL: https://www.theplacega.org/workforce-development-education
-Fetched at: 2026-07-23T18:36:55.910Z
+Fetched at: 2026-10-16T20:50:57.588Z
 
 ## Page content
 
@@ -13,8 +13,8 @@ Customized employment assessment
 Customized employment assessment
 Job Coaching
 Job Coaching
-Resume and interview skills
-Resume and interview skills
+Resume and interview s kills
+Resume and interview s kills
 Microsoft Excel Training
 Microsoft Excel Training
 Job and Skills Building

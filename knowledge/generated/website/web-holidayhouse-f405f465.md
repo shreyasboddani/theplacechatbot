@@ -3,7 +3,7 @@
 Source ID: web-holidayhouse-f405f465
 Source type: official_website
 Canonical URL: https://www.theplacega.org/holidayhouse
-Fetched at: 2026-09-16T14:13:43.065Z
+Fetched at: 2026-10-16T20:51:03.249Z
 
 ## Page content
 
@@ -18,16 +18,20 @@ click to enlarge
 Calificar Y Comprar
 click to enlarge
 How You Can Help
-NORTH POLE SPONSOR$5,000
-ELF SPONSOR$2,500
-SNOWMAN SPONSOR$1,500
-CANDY CANE SPONSOR$750
+NORTH POLE SPONSOR
+$5,000
+ELF SPONSOR
+$2,500
+SNOWMAN SPONSOR
+$1,500
+CANDY CANE SPONSOR
+$750
 VOLUNTEER OPPORTUNITIES
 Volunteer Opportunities will open on Monday, November 2, 2026
 For more information, contact Amber Pham at Amber@theplacega.org
 Gift Guide
 Little Ones | Ages 0 - 4 yrs
-Baby dolls and soft dollsBaby booksMusical and interactive toysPlay matsSit-to-stand and push toysPretend play and play kitchensBuilding toysCharacter toysBlankets and comfort itemsToddler clothing and shoes
+Baby dolls and soft dolls Baby books Musical and interactive toys Play mats Sit-to-stand and push toys Pretend play and play kitchens Building toys Character toys Blankets and comfort items Toddler clothing and shoes
 Little Ones | Ages 0 - 4 yrs
 Baby dolls and soft dolls
 Baby dolls and soft dolls
@@ -50,7 +54,7 @@ Blankets and comfort items
 Toddler clothing and shoes
 Toddler clothing and shoes
 Boys and Girls | 5 - 11 yrs | Grades K - 5
-Toys and CharactersAction figures and character toysDoll and doll accessoriesDinosaurs and animal toysDisney, Marvel, Pokemon, Minecraft, and other popular charactersLEGO and building setsSTEM and science kitsRemote-control cars and trucksHot Wheels and car tracksTrains and train setsOutdoor and ActiveScootersSports balls and equipmentBikes and helmetsOutdoor gamesCreative and Pretend PlayArt and craft kitsDrawing and coloring suppliesPlay-Doh and slime kitsJewelry and bracelet-making kitsJournals and diariesCostumes and dress-up clothesPlay kitchens, playsets, and tentsBooksAccessories and ComfortKid-friendly makeup, nails, and skincareKid camerasWater bottlesTwin bedding and sleeping bagsClothes and shoes
+Toys and Characters Action figures and character toys Doll and doll accessories Dinosaurs and animal toys Disney, Marvel, Pokemon, Minecraft, and other popular characters LEGO and building sets STEM and science kits Remote-control cars and trucks Hot Wheels and car tracks Trains and train sets Outdoor and Active Scooters Sports balls and equipment Bikes and helmets Outdoor games Creative and Pretend Play Art and craft kits Drawing and coloring supplies Play-Doh and slime kits Jewelry and bracelet-making kits Journals and diaries Costumes and dress-up clothes Play kitchens, playsets, and tents Books Accessories and Comfort Kid-friendly makeup, nails, and skincare Kid cameras Water bottles Twin bedding and sleeping bags Clothes and shoes
 Boys and Girls | 5 - 11 yrs | Grades K - 5
 Toys and Characters
 Action figures and character toys
@@ -109,7 +113,7 @@ Twin bedding and sleeping bags
 Clothes and shoes
 Clothes and shoes
 Tweens and Teens | 12 - 18 yrs | Grades 6 - 12
-Tech and EntertainmentWireless headphones and earbudsWireless speakersGaming systems and gamesGaming accessoriesLED light stripsDigital and Instant CamerasRing lightsBeauty and Self-CareBath and body gift setsCologne and perfumeMakeup and makeup kitsNail kitsHair dryers, straighteners, and curling ironsToiletry and travel kitsClothing and AccessoriesBranded hoodiesShoesSlides and slippersBelt bags, purses, and walletsJewelrySunglassesWatchesWater bottles$25 Gift CardsTarget/WalmartAmazonVisa/MastercardDick’s Sporting GoodUlta BeautyOld Navy/TJ Maxx/Belk/Khol’sAcademy Sports
+Tech and Entertainment Wireless headphones and earbuds Wireless speakers Gaming systems and games Gaming accessories LED light strips Digital and Instant Cameras Ring lights Beauty and Self-Care Bath and body gift sets Cologne and perfume Makeup and makeup kits Nail kits Hair dryers, straighteners, and curling irons Toiletry and travel kits Clothing and Accessories Branded hoodies Shoes Slides and slippers Belt bags, purses, and wallets Jewelry Sunglasses Watches Water bottles $25 Gift Cards Target/Walmart Amazon Visa/Mastercard Dick’s Sporting Good Ulta Beauty Old Navy/TJ Maxx/Belk/Khol’s Academy Sports
 Tweens and Teens | 12 - 18 yrs | Grades 6 - 12
 Tech and Entertainment
 Wireless headphones and earbuds
@@ -172,7 +176,7 @@ Old Navy/TJ Maxx/Belk/Khol’s
 Academy Sports
 Academy Sports
 Gifts for All Ages
-Sports and ActivitiesBasketballs and indoor basketball equipment Soccer balls and equipmentFootballs and equipmentCornhole and other outdoor gamesSkateboards and roller skatesPickleball equipmentMiscellaneousBatteries Wrapping paper TapeBowsBagsTissue paper
+Sports and Activities Basketballs and indoor basketball equipment Soccer balls and equipment Footballs and equipment Cornhole and other outdoor games Skateboards and roller skates Pickleball equipment Miscellaneous Batteries Wrapping paper Tape Bows Bags Tissue paper
 Gifts for All Ages
 Sports and Activities
 Basketballs and indoor basketball equipment

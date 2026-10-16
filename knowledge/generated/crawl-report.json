@@ -1,13 +1,13 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-16T20:35:04.888Z",
+  "crawledAt": "2026-10-16T20:51:46.012Z",
   "maxPages": 150,
   "indexedPages": [
     {
       "id": "web-home-8044e23b",
       "title": "The Place | Get Assistance Today",
       "url": "https://www.theplacega.org/",
-      "fetchedAt": "2026-09-15T14:20:52.373Z"
+      "fetchedAt": "2026-10-16T20:50:48.701Z"
     },
     {
       "id": "web-contact-us-eac5f990",
@@ -19,43 +19,43 @@
       "id": "web-food-pantry-67cfe863",
       "title": "Food Pantry | Support Your Community Today — The Place",
       "url": "https://www.theplacega.org/food-pantry",
-      "fetchedAt": "2026-08-03T12:37:43.706Z"
+      "fetchedAt": "2026-10-16T20:50:49.607Z"
     },
     {
       "id": "web-food-donations-60d14ec3",
       "title": "Food Donations | Support Community Through Donations — The Place",
       "url": "https://www.theplacega.org/food-donations",
-      "fetchedAt": "2026-08-31T17:05:41.697Z"
+      "fetchedAt": "2026-10-16T20:50:49.978Z"
     },
     {
       "id": "web-thrift-store-donations-2ff82f7d",
       "title": "Thrift Store Donations | Celebrate & Support Now — The Place",
       "url": "https://www.theplacega.org/thrift-store-donations",
-      "fetchedAt": "2026-07-23T18:36:15.990Z"
+      "fetchedAt": "2026-10-16T20:50:50.364Z"
     },
     {
       "id": "web-financial-assistance-bfe6e37e",
       "title": "Financial Assistance | Get Help Today — Apply Now — The Place",
       "url": "https://www.theplacega.org/financial-assistance",
-      "fetchedAt": "2026-08-27T20:21:00.010Z"
+      "fetchedAt": "2026-10-16T20:50:50.742Z"
     },
     {
       "id": "web-fin-asst-initial-request-61d479bf",
       "title": "Financial Assistance Request Form — The Place",
       "url": "https://www.theplacega.org/fin-asst-initial-request",
-      "fetchedAt": "2026-07-26T01:07:24.713Z"
+      "fetchedAt": "2026-10-16T20:50:51.114Z"
     },
     {
       "id": "web-new-volunteers-51338cd7",
       "title": "New Volunteers | Get Involved Today — The Place",
       "url": "https://www.theplacega.org/new-volunteers",
-      "fetchedAt": "2026-09-03T13:37:20.796Z"
+      "fetchedAt": "2026-10-16T20:50:51.497Z"
     },
     {
       "id": "web-food-pantry-request-b0ed76b1",
       "title": "Food Pantry Request — The Place",
       "url": "https://www.theplacega.org/food-pantry-request",
-      "fetchedAt": "2026-07-23T18:36:17.560Z"
+      "fetchedAt": "2026-10-16T20:50:51.866Z"
     },
     {
       "id": "web-senior-assistance-06c474c8",
@@ -79,37 +79,37 @@
       "id": "web-newsletter-april-newsletter-for-the-place-4813203b",
       "title": "April 2026 Newsletter for The Place — The Place",
       "url": "https://www.theplacega.org/newsletter/april-newsletter-for-the-place",
-      "fetchedAt": "2026-09-01T14:10:37.502Z"
+      "fetchedAt": "2026-10-16T20:50:53.422Z"
     },
     {
       "id": "web-newsletter-march-newsletter-for-the-place-d244942f",
       "title": "March 2026 Newsletter for The Place — The Place",
       "url": "https://www.theplacega.org/newsletter/march-newsletter-for-the-place",
-      "fetchedAt": "2026-09-01T14:10:38.309Z"
+      "fetchedAt": "2026-10-16T20:50:53.819Z"
     },
     {
       "id": "web-newsletter-february-newsletter-for-the-place-167d8e49",
       "title": "February 2026 Newsletter for The Place — The Place",
       "url": "https://www.theplacega.org/newsletter/february-newsletter-for-the-place",
-      "fetchedAt": "2026-09-01T14:10:38.883Z"
+      "fetchedAt": "2026-10-16T20:50:54.208Z"
     },
     {
       "id": "web-newsletter-hello-january-see-whats-happening-at-the-place-3d7af936",
       "title": "Hello January 2026! See What’s Happening at The Place — The Place",
       "url": "https://www.theplacega.org/newsletter/hello-january-see-whats-happening-at-the-place",
-      "fetchedAt": "2026-09-01T14:10:39.729Z"
+      "fetchedAt": "2026-10-16T20:50:54.583Z"
     },
     {
       "id": "web-notes-from-the-place-05499b1d",
       "title": "Notes from The Place — The Place",
       "url": "https://www.theplacega.org/notes-from-the-place",
-      "fetchedAt": "2026-08-23T16:25:52.607Z"
+      "fetchedAt": "2026-10-16T20:50:54.957Z"
     },
     {
       "id": "web-notes-from-the-place-summer-hunger-is-real-0df7453b",
       "title": "Summer Hunger Is Real. Together, We Can Make a Difference — The Place",
       "url": "https://www.theplacega.org/notes-from-the-place/summer-hunger-is-real",
-      "fetchedAt": "2026-08-07T10:13:56.145Z"
+      "fetchedAt": "2026-10-16T20:50:55.322Z"
     },
     {
       "id": "web-notes-from-the-place-caring-for-homebound-seniors-17f164cb",
@@ -121,7 +121,7 @@
       "id": "web-notes-from-the-place-top-10-most-requested-pantry-items-b4774b02",
       "title": "Top 10 Most Requested Pantry Items — The Place",
       "url": "https://www.theplacega.org/notes-from-the-place/top-10-most-requested-pantry-items",
-      "fetchedAt": "2026-07-23T18:36:54.395Z"
+      "fetchedAt": "2026-10-16T20:50:56.064Z"
     },
     {
       "id": "web-thrift-store-0c4ffbf9",
@@ -133,13 +133,13 @@
       "id": "web-assistance-with-federal-aid-applications-2dc4f0a1",
       "title": "Assistance with Federal Aid Applications | Apply for Federal Aid Today — The Place",
       "url": "https://www.theplacega.org/assistance-with-federal-aid-applications",
-      "fetchedAt": "2026-07-23T18:36:55.523Z"
+      "fetchedAt": "2026-10-16T20:50:57.216Z"
     },
     {
       "id": "web-workforce-development-education-c9cf19b6",
       "title": "Employment Services and Adult Education | Empower Your Future - Get Started Today — The Place",
       "url": "https://www.theplacega.org/workforce-development-education",
-      "fetchedAt": "2026-07-23T18:36:55.910Z"
+      "fetchedAt": "2026-10-16T20:50:57.588Z"
     },
     {
       "id": "web-the-cottage-3e1311ab",
@@ -175,13 +175,13 @@
       "id": "web-court-mandated-community-service-2-a6895588",
       "title": "Court Mandated Community Service | Get Help Today – Connect Now — The Place",
       "url": "https://www.theplacega.org/court-mandated-community-service-2",
-      "fetchedAt": "2026-08-07T10:14:01.575Z"
+      "fetchedAt": "2026-10-16T20:50:59.835Z"
     },
     {
       "id": "web-financials-7d99de46",
       "title": "Financials | Discover Our Legacy — Get Involved Today — The Place",
       "url": "https://www.theplacega.org/financials",
-      "fetchedAt": "2026-07-23T18:36:58.753Z"
+      "fetchedAt": "2026-10-16T20:51:00.211Z"
     },
     {
       "id": "web-history-b11ce65d",
@@ -193,7 +193,7 @@
       "id": "web-staff-564c6965",
       "title": "Staff — The Place",
       "url": "https://www.theplacega.org/staff",
-      "fetchedAt": "2026-10-08T16:32:52.075Z"
+      "fetchedAt": "2026-10-16T20:51:00.958Z"
     },
     {
       "id": "web-careers-9638b545",
@@ -205,43 +205,43 @@
       "id": "web-board-of-directors-8d8056e2",
       "title": "Board of Directors — The Place",
       "url": "https://www.theplacega.org/board-of-directors",
-      "fetchedAt": "2026-08-23T16:26:00.888Z"
+      "fetchedAt": "2026-10-16T20:51:01.722Z"
     },
     {
       "id": "web-newsletter-july-newsletter-for-the-place-f07a02af",
       "title": "July 2026 Newsletter for The Place — The Place",
       "url": "https://www.theplacega.org/newsletter/july-newsletter-for-the-place",
-      "fetchedAt": "2026-09-01T14:10:52.014Z"
+      "fetchedAt": "2026-10-16T20:51:02.098Z"
     },
     {
       "id": "web-newsletter-june-newsletter-for-the-place-75541533",
       "title": "June 2026 Newsletter for The Place — The Place",
       "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
-      "fetchedAt": "2026-09-01T14:10:52.916Z"
+      "fetchedAt": "2026-10-16T20:51:02.491Z"
     },
     {
       "id": "web-notes-from-the-place-five-ways-you-can-support-the-place-year-round-ef0baeb5",
       "title": "Five Ways You Can Support The Place Year-Round — The Place",
       "url": "https://www.theplacega.org/notes-from-the-place/five-ways-you-can-support-the-place-year-round",
-      "fetchedAt": "2026-08-23T16:26:02.874Z"
+      "fetchedAt": "2026-10-16T20:51:02.872Z"
     },
     {
       "id": "web-holidayhouse-f405f465",
       "title": "Holiday House — The Place",
       "url": "https://www.theplacega.org/holidayhouse",
-      "fetchedAt": "2026-09-16T14:13:43.065Z"
+      "fetchedAt": "2026-10-16T20:51:03.249Z"
     },
     {
       "id": "web-notes-from-the-place-the-cottage-a-place-to-find-stability-build-confidence-and-create-a-brighter-future-36b0abc1",
       "title": "The Cottage: A Place to Find Stability, Build Confidence, and Create a Brighter Future — The Place",
       "url": "https://www.theplacega.org/notes-from-the-place/the-cottage-a-place-to-find-stability-build-confidence-and-create-a-brighter-future",
-      "fetchedAt": "2026-08-23T17:03:56.670Z"
+      "fetchedAt": "2026-10-16T20:51:03.654Z"
     },
     {
       "id": "web-newsletter-august-newsletter-for-the-place-a93d0cc7",
       "title": "August 2026 Newsletter for The Place — The Place",
       "url": "https://www.theplacega.org/newsletter/august-newsletter-for-the-place",
-      "fetchedAt": "2026-09-01T14:10:56.379Z"
+      "fetchedAt": "2026-10-16T20:51:04.023Z"
     },
     {
       "id": "web-host-a-holiday-house-drive-e1ae04e8",
@@ -253,7 +253,7 @@
       "id": "web-heartsgiving-71cc983a",
       "title": "Heartsgiving — The Place",
       "url": "https://www.theplacega.org/heartsgiving",
-      "fetchedAt": "2026-10-15T14:12:38.092Z"
+      "fetchedAt": "2026-10-16T20:51:04.768Z"
     },
     {
       "id": "web-press-releases-31d36e55",
@@ -325,7 +325,7 @@
       "id": "web-media-room-posts-5dd8e022",
       "title": "Media Room — The Place",
       "url": "https://www.theplacega.org/media-room-posts",
-      "fetchedAt": "2026-09-23T14:17:51.371Z"
+      "fetchedAt": "2026-10-16T20:51:08.536Z"
     },
     {
       "id": "web-media-room-posts-7-things-you-shouldnt-donate-just-because-you-feel-guilty-throwing-them-away-decluttering-p-ace60086",
@@ -343,37 +343,37 @@
       "id": "web-media-room-posts-the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-suc-471f68db",
       "title": "The Cottage Provides Young Women Facing Housing Insecurity with a Path to Stability and Success — The Place",
       "url": "https://www.theplacega.org/media-room-posts/the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-success",
-      "fetchedAt": "2026-09-23T14:17:53.838Z"
+      "fetchedAt": "2026-10-16T20:51:09.654Z"
     },
     {
       "id": "web-media-room-posts-the-place-brings-the-magic-of-prom-to-local-students-15bbe0c6",
       "title": "The Place Brings the Magic of Prom to Local Students — The Place",
       "url": "https://www.theplacega.org/media-room-posts/the-place-brings-the-magic-of-prom-to-local-students",
-      "fetchedAt": "2026-09-23T14:17:54.681Z"
+      "fetchedAt": "2026-10-16T20:51:10.038Z"
     },
     {
       "id": "web-media-room-posts-the-place-honors-precision-concrete-construction-with-community-partnership-award-1aab6b03",
       "title": "The Place Honors Precision Concrete Construction With Community Partnership Award — The Place",
       "url": "https://www.theplacega.org/media-room-posts/the-place-honors-precision-concrete-construction-with-community-partnership-award",
-      "fetchedAt": "2026-09-23T14:17:56.752Z"
+      "fetchedAt": "2026-10-16T20:51:10.409Z"
     },
     {
       "id": "web-media-room-posts-the-place-hosts-heartsgiving-to-support-local-families-in-need-106ce50f",
       "title": "The Place Hosts \"Heartsgiving\" to Support Local Families in Need — The Place",
       "url": "https://www.theplacega.org/media-room-posts/the-place-hosts-heartsgiving-to-support-local-families-in-need",
-      "fetchedAt": "2026-09-23T14:17:57.396Z"
+      "fetchedAt": "2026-10-16T20:51:10.779Z"
     },
     {
       "id": "web-media-room-posts-the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families-b711e758",
       "title": "The Place's 11th Annual Holiday House Brings Dignity and Joy to Local Families — The Place",
       "url": "https://www.theplacega.org/media-room-posts/the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families",
-      "fetchedAt": "2026-09-23T14:17:56.142Z"
+      "fetchedAt": "2026-10-16T20:51:11.157Z"
     },
     {
       "id": "web-media-room-posts-the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christ-ad5afbda",
       "title": "The Place's Holiday House Brings Joy, Dignity, and Hope to More Than 2,100 Children This Christmas Season — The Place",
       "url": "https://www.theplacega.org/media-room-posts/the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christmas-season",
-      "fetchedAt": "2026-09-23T14:17:55.331Z"
+      "fetchedAt": "2026-10-16T20:51:11.621Z"
     },
     {
       "id": "web-calendar-forsyth-county-drive-through-pet-food-supply-pantry-205ae801",

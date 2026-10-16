@@ -2,7 +2,9 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 
 import {
+  approvedRedirectTarget,
   collapseRecurringCalendarOccurrences,
+  extractWebsiteSource,
   isAllowedByRobots,
   isCalendarPaginationLink,
   isCrawlableUrl,
@@ -77,6 +79,41 @@ describe("widget and crawler boundaries", () => {
     expect(isCrawlableUrl("https://www.theplacega.org/wp-admin/")).toBe(false);
     expect(isCrawlableUrl("https://example.com/food-pantry")).toBe(false);
     expect(isCrawlableUrl("https://www.theplacega.org/brochure.pdf")).toBe(false);
+  });
+
+  it("keeps nested Food Pantry schedule details separated in extracted text", () => {
+    const source = extractWebsiteSource(
+      `<main>
+        <h2>Food Pantry Hours and Location</h2>
+        <section>
+          <strong>FORSYTH</strong>
+          <p><span>Tuesday-Thursday</span><br><span>9:00am-1:30pm</span></p>
+          <address><span>2550 The Place Circle</span><span>Cumming, GA 30040</span></address>
+        </section>
+      </main>`,
+      "https://www.theplacega.org/food-pantry",
+      "2026-10-16T00:00:00.000Z",
+    );
+
+    expect(source?.text).toContain("Tuesday-Thursday");
+    expect(source?.text).toContain("9:00am-1:30pm");
+    expect(source?.text).toContain("2550 The Place Circle Cumming, GA 30040");
+    expect(source?.text).not.toContain("1:30pmAddress2550");
+  });
+
+  it("accepts only redirects back to approved The Place hosts", () => {
+    expect(
+      approvedRedirectTarget(
+        "https://theplacega.org/food-pantry",
+        "/food-pantry/",
+      ),
+    ).toBe("https://www.theplacega.org/food-pantry");
+    expect(() =>
+      approvedRedirectTarget(
+        "https://www.theplacega.org/contact-us",
+        "https://127.0.0.1/admin",
+      ),
+    ).toThrow("outside The Place website");
   });
 
   it("honors robots allow rules over shorter disallow rules", () => {

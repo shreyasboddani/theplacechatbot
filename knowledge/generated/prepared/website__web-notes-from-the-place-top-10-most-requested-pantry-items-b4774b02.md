@@ -14,20 +14,20 @@ Canonical URL: https://www.theplacega.org/notes-from-the-place/top-10-most-reque
 Top 10 Most Requested Pantry Items
 At The Place, our food pantry is a vital resource for families across Forsyth and Dawson Counties. Food donations play a key role in helping us serve our community and keep our shelves stocked with essentials.
 We’re often asked what items are most needed, so we’ve created a list of our Top 10 most requested pantry items to help guide your generous donations.
-Tuna/chicken pouches. These are a great source of protein. Unlike canned goods, pouches don’t require a can opener, which makes them more accessible for someone who may not have access to a kitchen. They’re also lightweight and easier to store.
-Tuna/chicken pouches. These are a great source of protein. Unlike canned goods, pouches don’t require a can opener, which makes them more accessible for someone who may not have access to a kitchen. They’re also lightweight and easier to store.
-Protein shakes and bars. Protein shakes and bars are an excellent source of protein while combining convenience and nutrition.
-Protein shakes and bars. Protein shakes and bars are an excellent source of protein while combining convenience and nutrition.
-Flour/sugar/cooking oil/salt/pepper (pantry staples). These pantry staples are always requested by clients as they are essential in cooking and preparing meals.
-Flour/sugar/cooking oil/salt/pepper (pantry staples). These pantry staples are always requested by clients as they are essential in cooking and preparing meals.
-Hygiene items. Hygiene items such as shampoo, toilet paper, body wash, and laundry detergent are often overlooked as pantry staples, but these items are always in need.
-Hygiene items. Hygiene items such as shampoo, toilet paper, body wash, and laundry detergent are often overlooked as pantry staples, but these items are always in need.
-Canned vegetables. Canned vegetables are nutritious and do not require refrigeration, which makes it a great pantry staple.
-Canned vegetables. Canned vegetables are nutritious and do not require refrigeration, which makes it a great pantry staple.
-Baby food. Babies have specific dietary needs, so donating items like formula and baby food help fill that gap for caregivers.
-Baby food. Babies have specific dietary needs, so donating items like formula and baby food help fill that gap for caregivers.
-Canned beans. Beans are highly nutritious and packed with protein, fiber, iron and other essential nutrients making them a great meat substitute as well.
-Canned beans. Beans are highly nutritious and packed with protein, fiber, iron and other essential nutrients making them a great meat substitute as well.
+Tuna/chicken pouches . These are a great source of protein. Unlike canned goods, pouches don’t require a can opener, which makes them more accessible for someone who may not have access to a kitchen. They’re also lightweight and easier to store.
+Tuna/chicken pouches . These are a great source of protein. Unlike canned goods, pouches don’t require a can opener, which makes them more accessible for someone who may not have access to a kitchen. They’re also lightweight and easier to store.
+Protein shakes and bars . Protein shakes and bars are an excellent source of protein while combining convenience and nutrition.
+Protein shakes and bars . Protein shakes and bars are an excellent source of protein while combining convenience and nutrition.
+Flour/sugar/cooking oil/salt/pepper (pantry staples) . These pantry staples are always requested by clients as they are essential in cooking and preparing meals.
+Flour/sugar/cooking oil/salt/pepper (pantry staples) . These pantry staples are always requested by clients as they are essential in cooking and preparing meals.
+Hygiene items . Hygiene items such as shampoo, toilet paper, body wash, and laundry detergent are often overlooked as pantry staples, but these items are always in need.
+Hygiene items . Hygiene items such as shampoo, toilet paper, body wash, and laundry detergent are often overlooked as pantry staples, but these items are always in need.
+Canned vegetables . Canned vegetables are nutritious and do not require refrigeration, which makes it a great pantry staple.
+Canned vegetables . Canned vegetables are nutritious and do not require refrigeration, which makes it a great pantry staple.
+Baby food . Babies have specific dietary needs, so donating items like formula and baby food help fill that gap for caregivers.
+Baby food . Babies have specific dietary needs, so donating items like formula and baby food help fill that gap for caregivers.
+Canned beans . Beans are highly nutritious and packed with protein, fiber, iron and other essential nutrients making them a great meat substitute as well.
+Canned beans . Beans are highly nutritious and packed with protein, fiber, iron and other essential nutrients making them a great meat substitute as well.
 Rice. Rice is a staple in almost every pantry. It has a long shelf life and works well for many types of cuisines making this a popular pantry item.
 Rice. Rice is a staple in almost every pantry. It has a long shelf life and works well for many types of cuisines making this a popular pantry item.
 Hamburger Helper. Hamburger Helper is a great way to stretch protein and can turn limited ingredients into a complete meal.

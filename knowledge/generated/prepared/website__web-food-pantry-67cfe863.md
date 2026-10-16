@@ -29,7 +29,7 @@ The Place provides free food to anyone in need through our mobile food pantries.
 Register for The Place's Client Choice Food Pantry:
 With access to our pantry, you can order groceries each week through our online “client choice” platform, allowing you to select foods that best meet your family’s dietary needs. When you arrive to pick up your order, you’ll also have the opportunity to browse our onsite “quick pick” area, which offers a variety of breads, sweets, and other items not available through the online system.
 With access to our pantry, you can order groceries each week through our online “client choice” platform, allowing you to select foods that best meet your family’s dietary needs. When you arrive to pick up your order, you’ll also have the opportunity to browse our onsite “quick pick” area, which offers a variety of breads, sweets, and other items not available through the online system.
-The following items are needed in order to register as a client of The PlaceProof of address in Forsyth or Dawson CountyPicture ID
+The following items are needed in order to register as a client of The Place Proof of address in Forsyth or Dawson County Picture ID
 The following items are needed in order to register as a client of The Place
 Proof of address in Forsyth or Dawson County
 Proof of address in Forsyth or Dawson County
@@ -44,19 +44,39 @@ Weekly food ordering for clients opens on Thursdays at 5:00am and closes on Mond
 Hours and Locations
 Emergency Food Assistance
 FORSYTH
-Monday-Thursday8:00am-5:00pmFriday8:00am-12:00pm
-Address2550 The Place CirCumming, GA 30040For more information, call770-887-1098
+Monday-Thursday
+8:00am-5:00pm
+Friday
+8:00am-12:00pm
+Address
+2550 The Place Cir
+Cumming, GA 30040
+For more information, call
+770-887-1098
 DAWSON
-Tuesday-Saturday10:00am-4:00pm
-Address829 Ga 9 NDawsonville, GA 30534
-For more information, call770-887-1098
+Tuesday-Saturday
+10:00am-4:00pm
+Address
+829 Ga 9 N
+Dawsonville, GA 30534
+For more information, call
+770-887-1098
 Food Pantry Hours and Location
 FORSYTH
-Tuesday-Thursday9:00am-1:30pmAddress2550 The Place CirCumming, GA 30040
+Tuesday-Thursday
+9:00am-1:30pm
+Address
+2550 The Place Cir
+Cumming, GA 30040
 DAWSON
-Thursday-Friday9:00am-1:00pm
-Saturday pickup available only in the Dawson Thrift Store from 10am - 4pmAddress829 Ga 9 NDawsonville, GA 30534
-For more information, call770-887-1098
+Thursday-Friday
+9:00am-1:00pm
+Saturday pickup available only in the Dawson Thrift Store from 10am - 4pm
+Address
+829 Ga 9 N
+Dawsonville, GA 30534
+For more information, call
+770-887-1098
 Mobile Food Pantries
 Free Food Available to All
 Our pantry uses SmartChoice Food Pantry Software to power our online shopping.

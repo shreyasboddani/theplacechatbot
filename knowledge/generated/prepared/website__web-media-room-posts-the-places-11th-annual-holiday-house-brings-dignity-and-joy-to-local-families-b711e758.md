@@ -14,7 +14,11 @@ Canonical URL: https://www.theplacega.org/media-room-posts/the-places-11th-annua
 
 The Place's 11th Annual Holiday House Brings Dignity and Joy to Local Families
 FOR IMMEDIATE RELEASE
-Contact:Nicole MorganThe Placenicole@theplacega.org | 770-887-1098 x242theplacega.org/holidayhouse
+Contact:
+Nicole Morgan
+The Place
+nicole@theplacega.org | 770-887-1098 x242
+theplacega.org/holidayhouse
 The Place's 11th Annual Holiday House Brings Dignity and Joy to Local Families
 Cumming, GA (November 2025) - The Place is celebrating the season of giving with its 11th Annual Holiday House, a cherished program that empowers parents and guardians facing financial hardship to personally select new gifts for their children, bringing dignity, joy, and hope to hundreds of families across Forsyth County.
 Unlike traditional toy drives or giveaways, Holiday House uses a client-choice model that transforms the gift-giving experience. Families shop for their children in age-specific "toy shops" filled with community-donated toys, specialty items, and $25 gift cards (Target, Amazon, Ulta). Volunteers help them shop for the presents and prepare for the holidays, allowing parents to give gifts with love and pride.
