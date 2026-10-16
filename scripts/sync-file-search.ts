@@ -932,7 +932,7 @@ export async function runFileSearchSync(
       desiredDocuments: documents.length,
       uploaded: uploadResult.uploaded,
       deleted: deleteResult.deleted,
-      unchanged: desired.length,
+      unchanged: plan.unchanged.length,
       uploadFailures: [],
       deleteFailures: deleteResult.failures,
     });
@@ -945,7 +945,7 @@ export async function runFileSearchSync(
     desiredDocuments: documents.length,
     uploaded: uploadResult.uploaded,
     deleted: deleteResult.deleted,
-    unchanged: desired.length,
+    unchanged: plan.unchanged.length,
     pendingUploads: 0,
   };
 }

@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { readFile, readdir, stat } from "node:fs/promises";
+import { readFile, readdir, realpath, stat } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -491,24 +491,55 @@ export async function verifyKnowledgeSnapshot(
   }
 
   const manifestFileNames = new Set(sources.map((source) => source.fileName));
+  const preparedDirectory = path.join(generatedDir, "prepared");
+  const realPreparedDirectory = await realpath(preparedDirectory);
   const preparedFiles = (
-    await readdir(path.join(generatedDir, "prepared"), {
+    await readdir(preparedDirectory, {
       withFileTypes: true,
     })
-  )
-    .filter(
-      (entry) =>
-        entry.isFile() &&
-        (entry.name.endsWith(".md") || entry.name.endsWith(".pdf")),
-    )
-    .map((entry) => entry.name);
+  ).filter(
+    (entry) => entry.name.endsWith(".md") || entry.name.endsWith(".pdf"),
+  );
+  const verifiedPreparedFiles: string[] = [];
+  for (const entry of preparedFiles) {
+    const filePath = path.join(preparedDirectory, entry.name);
+    let resolvedPath: string;
+    let fileStat: Awaited<ReturnType<typeof stat>>;
+    try {
+      [resolvedPath, fileStat] = await Promise.all([
+        realpath(filePath),
+        stat(filePath),
+      ]);
+    } catch {
+      errors.push(`Prepared document ${entry.name} cannot be read.`);
+      continue;
+    }
+    const resolvedRelativePath = path.relative(
+      realPreparedDirectory,
+      resolvedPath,
+    );
+    if (
+      !resolvedRelativePath ||
+      resolvedRelativePath === ".." ||
+      resolvedRelativePath.startsWith(`..${path.sep}`) ||
+      path.isAbsolute(resolvedRelativePath)
+    ) {
+      errors.push(`Prepared document ${entry.name} resolves outside its directory.`);
+      continue;
+    }
+    if (!fileStat.isFile()) {
+      errors.push(`Prepared document ${entry.name} is not a regular file.`);
+      continue;
+    }
+    verifiedPreparedFiles.push(entry.name);
+  }
   const unexpectedFiles = preparedFiles.filter(
-    (fileName) => !manifestFileNames.has(fileName),
+    (entry) => !manifestFileNames.has(entry.name),
   );
   if (unexpectedFiles.length > 0) {
     errors.push("The prepared directory contains unmapped documents.");
   }
-  if (preparedFiles.length !== sources.length) {
+  if (verifiedPreparedFiles.length !== sources.length) {
     errors.push("The prepared document count does not match the manifest.");
   }
 

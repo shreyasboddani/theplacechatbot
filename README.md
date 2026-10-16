@@ -445,7 +445,7 @@ File Search stores belong to the Gemini project that created them; changing only
 - In-memory rate limiting is not a strong production control.
 - Before broad public promotion, configure a Vercel Firewall rate-limit rule for `POST /api/chat`, plus a formal content-review workflow, uptime/error monitoring that excludes message text, accessibility testing with assistive technologies, retention/legal review, and a documented incident/rollback procedure.
 - Review Gemini and Vercel quotas, billing, and data-processing terms for The Place's expected traffic. Free-tier availability and limits can change.
-- Next.js and its ESLint configuration are pinned together to 16.4.2, which removes the critical Next.js advisory from the previous release. The remaining audit findings are in the development-only lint toolchain and Mammoth's argument-parser dependencies, which are used only by the offline staff FAQ parser. Their current compatible dependency ranges do not have a clean automatic fix. No critical findings remain; rerun the audit after upstream releases.
+- Next.js and its ESLint configuration are pinned together to 16.4.2, which removes the critical Next.js advisory from the previous release. `npm audit --omit=dev` reports no production dependency findings. The full audit still reports five high findings in Next's development-only lint dependency chain and three moderate findings in the offline FAQ parser's dependency chain; npm's proposed fixes require incompatible major downgrades, and patched compatible versions are not published yet. Rerun the audit after upstream releases.
 
 ## Packages added
 
@@ -453,11 +453,11 @@ Runtime:
 
 - `@google/genai` — official current Gemini JavaScript/TypeScript SDK
 - `cheerio` — HTML and sitemap content parsing
-- `mammoth` — DOCX conversion while preserving links
 - `zod` — runtime request and model-result validation
 
 Development:
 
+- `mammoth` — DOCX conversion while preserving links for the offline staff FAQ parser
 - `tsx` — TypeScript execution for offline scripts
 - `vitest` — unit and API-behavior tests
 - `yaml` — local validation of GitHub workflow configuration

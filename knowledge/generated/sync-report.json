@@ -748,5 +748,11 @@
   ],
   "totalDocumentsUploaded": 0,
   "uploadFailures": [],
-  "fileSearchStoreName": "fileSearchStores/the-place-grounded-knowledg-b2ir5guzf5jg"
+  "fileSearchStoreName": "fileSearchStores/the-place-grounded-knowledg-b2ir5guzf5jg",
+  "syncMode": "reconcile",
+  "totalDocumentsDeleted": 0,
+  "totalDocumentsUnchanged": 124,
+  "managedDocumentsAfterSync": 124,
+  "deleteFailures": [],
+  "uploadedAt": "2026-10-16T21:04:56.947Z"
 }
