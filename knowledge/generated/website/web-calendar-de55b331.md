@@ -3,27 +3,11 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-10-15T14:12:16.650Z
+Fetched at: 2026-10-16T13:59:52.549Z
 
 ## Page content
 
 Upcoming Events
-Witches Night Out
-Thursday, October 15, 2026
-6:00 PM
-10:00 PM
-Halcyon
-(map)
-Google Calendar
-ICS
-Parenting Class
-Thursday, October 15, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary School
-(map)
-Google Calendar
-ICS
 Mobile Pantry at Chestatee Elementary
 Saturday, October 17, 2026
 10:00 AM
@@ -681,6 +665,22 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Parenting Class
+Thursday, October 15, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary School
+(map)
+Google Calendar
+ICS
+Witches Night Out
+Thursday, October 15, 2026
+6:00 PM
+10:00 PM
+Halcyon
+(map)
+Google Calendar
+ICS
 Free GED Classes
 Wednesday, October 14, 2026
 6:00 PM
@@ -908,35 +908,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Mobile Pantry at New Hope Elementary
-Saturday, August 22, 2026
-11:30 AM
-12:30 PM
-New Hope Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Electronic Recycling Event
-Saturday, August 22, 2026
-10:00 AM
-1:00 PM
-The Place
-(map)
-Google Calendar
-ICS
-Electronic Recycling Event
 
 ## Relevant links
 
-- https://www.theplacega.org/calendar/witches-night-out: https://www.theplacega.org/calendar/witches-night-out
-- Witches Night Out: https://www.theplacega.org/calendar/witches-night-out
-- ICS: https://www.theplacega.org/calendar/witches-night-out
-- View Event →: https://www.theplacega.org/calendar/witches-night-out
-- https://www.theplacega.org/calendar/parenting-class-ejs4y: https://www.theplacega.org/calendar/parenting-class-ejs4y
-- Parenting Class: https://www.theplacega.org/calendar/parenting-class-ejs4y
-- ICS: https://www.theplacega.org/calendar/parenting-class-ejs4y
-- View Event →: https://www.theplacega.org/calendar/parenting-class-ejs4y
 - https://www.theplacega.org/calendar/mobile-pantry-chestatee-october: https://www.theplacega.org/calendar/mobile-pantry-chestatee-october
 - Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-october
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-october
@@ -1029,3 +1003,11 @@ Electronic Recycling Event
 - Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
+- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
+- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
