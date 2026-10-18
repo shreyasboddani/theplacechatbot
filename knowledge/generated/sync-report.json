@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-10-16T20:51:46.493Z",
+  "preparedAt": "2026-10-18T13:21:43.940Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-16T13:59:52.549Z"
+      "fetchedAt": "2026-10-18T13:20:34.143Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -748,11 +748,5 @@
   ],
   "totalDocumentsUploaded": 0,
   "uploadFailures": [],
-  "fileSearchStoreName": "fileSearchStores/the-place-grounded-knowledg-b2ir5guzf5jg",
-  "syncMode": "reconcile",
-  "totalDocumentsDeleted": 0,
-  "totalDocumentsUnchanged": 124,
-  "managedDocumentsAfterSync": 124,
-  "deleteFailures": [],
-  "uploadedAt": "2026-10-16T21:04:56.947Z"
+  "fileSearchStoreName": null
 }

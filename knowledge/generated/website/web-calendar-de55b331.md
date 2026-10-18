@@ -3,20 +3,11 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-10-16T13:59:52.549Z
+Fetched at: 2026-10-18T13:20:34.143Z
 
 ## Page content
 
 Upcoming Events
-Mobile Pantry at Chestatee Elementary
-Saturday, October 17, 2026
-10:00 AM
-11:00 AM
-Chestatee Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, October 19, 2026
 6:00 PM
@@ -665,6 +656,15 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Mobile Pantry at Chestatee Elementary
+Saturday, October 17, 2026
+10:00 AM
+11:00 AM
+Chestatee Elementary
+(map)
+Google Calendar
+ICS
+Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Parenting Class
 Thursday, October 15, 2026
 6:00 PM
@@ -900,21 +900,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Free GED Classes
-Monday, August 24, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant links
 
-- https://www.theplacega.org/calendar/mobile-pantry-chestatee-october: https://www.theplacega.org/calendar/mobile-pantry-chestatee-october
-- Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-october
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-october
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-chestatee-october
 - https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4
@@ -1011,3 +999,7 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
+- https://www.theplacega.org/calendar/mobile-pantry-brandywine-november: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
