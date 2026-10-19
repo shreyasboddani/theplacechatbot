@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-18T13:21:43.525Z",
+  "crawledAt": "2026-10-19T16:31:16.591Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-18T13:20:34.143Z"
+      "fetchedAt": "2026-10-19T16:30:04.854Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -532,10 +532,10 @@
       "fetchedAt": "2026-07-31T11:37:25.619Z"
     },
     {
-      "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-c966b757",
+      "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-ba21c118",
       "title": "Free GED Classes — The Place",
-      "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4",
-      "fetchedAt": "2026-10-12T19:07:32.186Z"
+      "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j",
+      "fetchedAt": "2026-10-19T16:31:10.415Z"
     },
     {
       "id": "web-calendar-red-robin-dine-to-donate-e8b1e68d",
@@ -612,36 +612,23 @@
       "reason": "HTTP 404"
     },
     {
-      "url": "https://www.theplacega.org/matching-gifts",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/gala-recap",
-      "reason": "No meaningful public page content found"
-    },
-    {
       "url": "https://www.theplacega.org/furniture-pickup-request",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/faroi",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/upcoming-events",
       "reason": "No meaningful public page content found"
     },
     {
       "url": "https://www.theplacega.org/volunteer-handbook",
       "reason": "Refusing to fetch or follow a URL outside The Place website."
-    }
-  ],
-  "duplicatePages": [
+    },
     {
-      "url": "https://www.theplacega.org/home",
-      "duplicateOf": "https://www.theplacega.org/"
+      "url": "https://www.theplacega.org/matching-gifts",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/upcoming-events",
+      "reason": "No meaningful public page content found"
     }
   ],
+  "duplicatePages": [],
   "blockedPages": [],
   "retainedPages": [
     {

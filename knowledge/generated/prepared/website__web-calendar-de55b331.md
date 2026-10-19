@@ -90,7 +90,6 @@ Brandywine Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at New Hope Elementary
 Saturday, October 24, 2026
 11:30 AM
@@ -99,7 +98,6 @@ New Hope Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, October 26, 2026
 6:00 PM
@@ -194,7 +192,6 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at Chattahoochee Elementary
 Saturday, November 14, 2026
 11:30 AM
@@ -203,7 +200,6 @@ Chattahoochee Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, November 16, 2026
 6:00 PM
@@ -228,7 +224,6 @@ Chestatee Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, November 23, 2026
 6:00 PM
@@ -253,7 +248,6 @@ Brandywine Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at New Hope Elementary
 Saturday, November 28, 2026
 11:30 AM
@@ -262,7 +256,6 @@ New Hope Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, November 30, 2026
 6:00 PM
@@ -309,7 +302,6 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at Chattahoochee Elementary
 Saturday, December 12, 2026
 11:30 AM
@@ -318,7 +310,6 @@ Chattahoochee Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, December 14, 2026
 6:00 PM
@@ -343,7 +334,6 @@ Chestatee Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, December 21, 2026
 6:00 PM
@@ -368,7 +358,6 @@ Brandywine Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at New Hope Elementary
 Saturday, December 26, 2026
 11:30 AM
@@ -377,7 +366,6 @@ New Hope Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, December 28, 2026
 6:00 PM
@@ -706,7 +694,6 @@ Chestatee Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Parenting Class
 Thursday, October 15, 2026
 6:00 PM
@@ -755,7 +742,6 @@ Chattahoochee Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at Cumming Elementary
 Saturday, October 10, 2026
 10:00 AM
@@ -764,7 +750,6 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Parenting Class
 Thursday, October 8, 2026
 6:00 PM
@@ -819,7 +804,6 @@ New Hope Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at Brandywine Elementary
 Saturday, September 26, 2026
 10:00 AM
@@ -828,7 +812,6 @@ Brandywine Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Wednesday, September 23, 2026
 6:00 PM
@@ -853,7 +836,6 @@ Chestatee Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Wednesday, September 16, 2026
 6:00 PM
@@ -886,7 +868,6 @@ Chattahoochee Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at Cumming Elementary
 Saturday, September 12, 2026
 10:00 AM
@@ -895,7 +876,6 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Wednesday, September 9, 2026
 6:00 PM
