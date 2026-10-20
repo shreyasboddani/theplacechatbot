@@ -12,8 +12,11 @@ Canonical URL: https://www.theplacega.org/assistance-with-federal-aid-applicatio
 ## Approved page content
 
 Need Help Completing Federal Aid Applications?
+The Place has temporarily paused this service. Thank you for your understanding as we work to connect our community with support.
 Federal Aid Applications
-The Place can help you navigate through the process of completing and submitting federal applications. Please note: The Place does not determine any eligibility decisions for federal aid.
+The Place’s assistance with completing and submitting federal aid applications is temporarily paused. We are committed to helping our community access the support they need and will do our best to connect you with a community resource that can assist with this process.
+For help finding a resource, please contact us at meghan@theplacega.org or (770) 887-1098.
+Please note that The Place does not determine eligibility for federal aid.
 TYPES OF ASSISTANCE:
 Food Stamps / SNAP
 Food Stamps / SNAP
@@ -27,4 +30,3 @@ WIC (Women, Infants, and Children)
 WIC (Women, Infants, and Children)
 TANF (Temporary Assistance for Needy Families)
 TANF (Temporary Assistance for Needy Families)
-By appointment only . To make an appointment, call us at 770-887-1098 or send an email to benefits@theplacega.org

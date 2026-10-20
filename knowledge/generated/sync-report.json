@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-10-19T16:31:17.038Z",
+  "preparedAt": "2026-10-20T14:21:33.229Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-19T16:30:04.854Z"
+      "fetchedAt": "2026-10-20T14:20:26.401Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -131,7 +131,7 @@
       "id": "web-assistance-with-federal-aid-applications-2dc4f0a1",
       "title": "Assistance with Federal Aid Applications | Apply for Federal Aid Today — The Place",
       "url": "https://www.theplacega.org/assistance-with-federal-aid-applications",
-      "fetchedAt": "2026-10-16T20:50:57.216Z"
+      "fetchedAt": "2026-10-20T14:20:33.390Z"
     },
     {
       "id": "web-workforce-development-education-c9cf19b6",
@@ -554,10 +554,10 @@
       "fetchedAt": "2026-10-15T14:13:13.212Z"
     },
     {
-      "id": "web-calendar-financial-literacy-fall-series-szalb-58aaca0e",
+      "id": "web-calendar-financial-literacy-fall-series-szalb-cslyd-946d114f",
       "title": "Financial Literacy Fall Series — The Place",
-      "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb",
-      "fetchedAt": "2026-10-13T16:59:43.888Z"
+      "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd",
+      "fetchedAt": "2026-10-20T14:21:25.377Z"
     },
     {
       "id": "web-calendar-charity-night-bingo-551c187f",
@@ -569,7 +569,13 @@
       "id": "web-calendar-lets-create-7c812ac3",
       "title": "Let's Create! — The Place",
       "url": "https://www.theplacega.org/calendar/lets-create",
-      "fetchedAt": "2026-10-02T15:52:05.935Z"
+      "fetchedAt": "2026-10-20T14:21:22.685Z"
+    },
+    {
+      "id": "web-calendar-las-clases-comienzan-en-noviembre-2026-26554c8f",
+      "title": "LAS CLASES COMIENZAN EN NOVIEMBRE 2026 — The Place",
+      "url": "https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026",
+      "fetchedAt": "2026-10-20T14:21:28.062Z"
     }
   ],
   "failedPages": [
@@ -720,7 +726,7 @@
   "conflictingInformation": [],
   "missingLinks": [],
   "unmappedSourceDocuments": [],
-  "totalDocumentsPrepared": 124,
+  "totalDocumentsPrepared": 125,
   "officialDocuments": [
     {
       "id": "volunteer-handbook-2026",

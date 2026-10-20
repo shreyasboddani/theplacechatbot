@@ -7,7 +7,7 @@ Canonical URL: https://www.theplacega.org/calendar/lets-create
 ## Important headings
 
 - Let's Create!
-- Free GED Classes
+- LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 - Free GED Classes
 
 ## Approved page content
@@ -23,7 +23,7 @@ United States
 (map)
 Google Calendar
 ICS
-Free GED Classes
+LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 Free GED Classes
 
 ## Relevant official links
@@ -32,8 +32,8 @@ Free GED Classes
 - ICS: https://www.theplacega.org/calendar/lets-create
 - Previous
 Previous
-November 4
-Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
+November 5
+LAS CLASES COMIENZAN EN NOVIEMBRE 2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
 - Next
 Next
 November 9

@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Free GED Classes
 - Financial Literacy Fall Series
 - Free GED Classes
 - Parenting Class
@@ -20,14 +19,17 @@ Canonical URL: https://www.theplacega.org/calendar
 - Financial Literacy Fall Series
 - Mobile Food Pantry
 - Free GED Classes
+- LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 - Let's Create!
 - Free GED Classes
 - Charity Night Bingo
 - Free GED Classes
+- LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 - Mobile Pantry at Cumming Elementary
 - Mobile Pantry at Chattahoochee Elementary
 - Free GED Classes
 - Free GED Classes
+- LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 - Mobile Pantry at Chestatee Elementary
 - Free GED Classes
 - Free GED Classes
@@ -44,20 +46,10 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Mobile Pantry at Chestatee Elementary
 - Free GED Classes
-- Free GED Classes
-- Mobile Pantry at Brandywine Elementary
 
 ## Approved page content
 
 Upcoming Events
-Free GED Classes
-Monday, October 19, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Financial Literacy Fall Series
 Tuesday, October 20, 2026
 6:00 PM
@@ -152,6 +144,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+LAS CLASES COMIENZAN EN NOVIEMBRE 2026
+Thursday, November 5, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
 Let's Create!
 Friday, November 6, 2026
 10:00 AM
@@ -184,6 +184,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+LAS CLASES COMIENZAN EN NOVIEMBRE 2026
+Thursday, November 12, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
 Mobile Pantry at Cumming Elementary
 Saturday, November 14, 2026
 10:00 AM
@@ -210,6 +218,14 @@ Google Calendar
 ICS
 Free GED Classes
 Wednesday, November 18, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
+LAS CLASES COMIENZAN EN NOVIEMBRE 2026
+Thursday, November 19, 2026
 6:00 PM
 8:00 PM
 Cumming Elementary
@@ -686,6 +702,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Free GED Classes
+Monday, October 19, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
 Mobile Pantry at Chestatee Elementary
 Saturday, October 17, 2026
 10:00 AM
@@ -914,21 +938,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Free GED Classes
-Wednesday, August 26, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4
 - https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb
 - Financial Literacy Fall Series: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb
 - ICS: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb
@@ -977,6 +989,10 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
+- https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
+- LAS CLASES COMIENZAN EN NOVIEMBRE 2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
+- ICS: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
+- View Event →: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
 - https://www.theplacega.org/calendar/lets-create: https://www.theplacega.org/calendar/lets-create
 - Let's Create!: https://www.theplacega.org/calendar/lets-create
 - ICS: https://www.theplacega.org/calendar/lets-create
@@ -993,6 +1009,10 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx
+- https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
+- LAS CLASES COMIENZAN EN NOVIEMBRE 2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
+- ICS: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
+- View Event →: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
 - https://www.theplacega.org/calendar/mobile-pantry-forsyth-november: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
@@ -1009,6 +1029,10 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
+- https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4
+- LAS CLASES COMIENZAN EN NOVIEMBRE 2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4
+- ICS: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4
+- View Event →: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4
 - https://www.theplacega.org/calendar/mobile-pantry-chestatee-november: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
 - Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
@@ -1017,11 +1041,3 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
-- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
-- https://www.theplacega.org/calendar/mobile-pantry-brandywine-november: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
-- Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
