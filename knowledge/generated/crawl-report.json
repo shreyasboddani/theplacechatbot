@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-20T14:21:32.940Z",
+  "crawledAt": "2026-10-22T14:33:39.221Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-20T14:20:26.401Z"
+      "fetchedAt": "2026-10-22T14:32:36.035Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -133,7 +133,7 @@
       "id": "web-assistance-with-federal-aid-applications-2dc4f0a1",
       "title": "Assistance with Federal Aid Applications | Apply for Federal Aid Today — The Place",
       "url": "https://www.theplacega.org/assistance-with-federal-aid-applications",
-      "fetchedAt": "2026-10-20T14:20:33.390Z"
+      "fetchedAt": "2026-10-22T14:32:43.844Z"
     },
     {
       "id": "web-workforce-development-education-c9cf19b6",

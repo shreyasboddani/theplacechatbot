@@ -7,8 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Financial Literacy Fall Series
-- Free GED Classes
 - Parenting Class
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
@@ -46,26 +44,12 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Mobile Pantry at Chestatee Elementary
 - Free GED Classes
+- Free GED Classes
+- Mobile Pantry at Brandywine Elementary
 
 ## Approved page content
 
 Upcoming Events
-Financial Literacy Fall Series
-Tuesday, October 20, 2026
-6:00 PM
-7:30 PM
-Family Promise
-(map)
-Google Calendar
-ICS
-Free GED Classes
-Wednesday, October 21, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Parenting Class
 Thursday, October 22, 2026
 6:00 PM
@@ -703,6 +687,22 @@ Cumming Elementary
 Google Calendar
 ICS
 Free GED Classes
+Wednesday, October 21, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
+Financial Literacy Fall Series
+Tuesday, October 20, 2026
+6:00 PM
+7:30 PM
+Family Promise
+(map)
+Google Calendar
+ICS
+Free GED Classes
 Monday, October 19, 2026
 6:00 PM
 8:00 PM
@@ -924,31 +924,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Mobile Food Pantry
-Wednesday, September 2, 2026
-12:30 PM
-1:30 PM
-Google Calendar
-ICS
-Free GED Classes
-Monday, August 31, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb
-- Financial Literacy Fall Series: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb
-- ICS: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb
-- View Event →: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb
-- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx
 - https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn: https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn
 - Parenting Class: https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn
 - ICS: https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn
@@ -1041,3 +1019,11 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
+- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj
+- https://www.theplacega.org/calendar/mobile-pantry-brandywine-november: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
