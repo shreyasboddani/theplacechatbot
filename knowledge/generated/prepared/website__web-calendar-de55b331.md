@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Parenting Class
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
 - Free GED Classes
@@ -46,18 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Free GED Classes
 - Mobile Pantry at Brandywine Elementary
+- Mobile Pantry at New Hope Elementary
 
 ## Approved page content
 
 Upcoming Events
-Parenting Class
-Thursday, October 22, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary School
-(map)
-Google Calendar
-ICS
 Mobile Pantry at Brandywine Elementary
 Saturday, October 24, 2026
 10:00 AM
@@ -686,6 +678,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Parenting Class
+Thursday, October 22, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary School
+(map)
+Google Calendar
+ICS
 Free GED Classes
 Wednesday, October 21, 2026
 6:00 PM
@@ -916,21 +916,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Free GED Classes
-Wednesday, September 2, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn: https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn
-- Parenting Class: https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn
-- ICS: https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn
-- View Event →: https://www.theplacega.org/calendar/parenting-class-ejs4y-8cdsn
 - https://www.theplacega.org/calendar/mobile-pantry-brandywine-october: https://www.theplacega.org/calendar/mobile-pantry-brandywine-october
 - Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-october
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-october
@@ -1027,3 +1015,7 @@ ICS
 - Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
+- https://www.theplacega.org/calendar/mobile-pantry-newhope-november: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
+- Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
