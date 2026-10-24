@@ -3,7 +3,7 @@
 Source ID: web-careers-9638b545
 Source type: official_website
 Canonical URL: https://www.theplacega.org/careers
-Fetched at: 2026-10-08T16:32:52.437Z
+Fetched at: 2026-10-24T13:22:26.194Z
 
 ## Page content
 
@@ -23,4 +23,15 @@ Performance and Development: Reward individual and team accomplishments through 
 Performance and Development: Reward individual and team accomplishments through performance-based adjustments. Support employee growth through professional development programs and training opportunities.
 Benefits Package: Offer benefits that reflect our Compassion and hope for employees, including medical/dental/vision, paid holidays, and paid time off.
 Benefits Package: Offer benefits that reflect our Compassion and hope for employees, including medical/dental/vision, paid holidays, and paid time off.
-We do not currently have open roles but are always looking for amazing people. Please check back soon.
+We currently have these open roles:
+Communications Coordinator
+This role is part-time
+This role is part-time
+View the job description
+View the job description
+Contact nicole@theplacega.org for more information
+Contact nicole@theplacega.org for more information
+
+## Relevant links
+
+- View the job description: https://www.theplacega.org/s/Communications-Coordinator-1026.pdf

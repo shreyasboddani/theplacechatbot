@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-23T14:17:49.401Z",
+  "crawledAt": "2026-10-24T13:23:11.753Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -199,7 +199,7 @@
       "id": "web-careers-9638b545",
       "title": "Careers — The Place",
       "url": "https://www.theplacega.org/careers",
-      "fetchedAt": "2026-10-08T16:32:52.437Z"
+      "fetchedAt": "2026-10-24T13:22:26.194Z"
     },
     {
       "id": "web-board-of-directors-8d8056e2",
