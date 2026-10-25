@@ -7,8 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Mobile Pantry at Brandywine Elementary
-- Mobile Pantry at New Hope Elementary
 - Free GED Classes
 - Financial Literacy Fall Series
 - Free GED Classes
@@ -46,26 +44,12 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
+- Free GED Classes
+- Free GED Classes
 
 ## Approved page content
 
 Upcoming Events
-Mobile Pantry at Brandywine Elementary
-Saturday, October 24, 2026
-10:00 AM
-11:00 AM
-Brandywine Elementary
-(map)
-Google Calendar
-ICS
-Mobile Pantry at New Hope Elementary
-Saturday, October 24, 2026
-11:30 AM
-12:30 PM
-New Hope Elementary
-(map)
-Google Calendar
-ICS
 Free GED Classes
 Monday, October 26, 2026
 6:00 PM
@@ -678,6 +662,22 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Mobile Pantry at New Hope Elementary
+Saturday, October 24, 2026
+11:30 AM
+12:30 PM
+New Hope Elementary
+(map)
+Google Calendar
+ICS
+Mobile Pantry at Brandywine Elementary
+Saturday, October 24, 2026
+10:00 AM
+11:00 AM
+Brandywine Elementary
+(map)
+Google Calendar
+ICS
 Parenting Class
 Thursday, October 22, 2026
 6:00 PM
@@ -900,33 +900,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Free GED Classes
-Wednesday, September 9, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
-Free GED Classes
-Monday, September 7, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/mobile-pantry-brandywine-october: https://www.theplacega.org/calendar/mobile-pantry-brandywine-october
-- Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-october
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-october
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-october
-- https://www.theplacega.org/calendar/mobile-pantry-newhope-october: https://www.theplacega.org/calendar/mobile-pantry-newhope-october
-- Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-october
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-october
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-newhope-october
 - https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j
@@ -1019,3 +995,11 @@ ICS
 - Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
+- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g
+- https://www.theplacega.org/calendar/mobile-food-pantry-december: https://www.theplacega.org/calendar/mobile-food-pantry-december
+- Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-december
+- ICS: https://www.theplacega.org/calendar/mobile-food-pantry-december
+- View Event →: https://www.theplacega.org/calendar/mobile-food-pantry-december
