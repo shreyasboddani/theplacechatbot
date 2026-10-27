@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-26T16:10:45.555Z",
+  "crawledAt": "2026-10-27T15:25:04.197Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-25T13:44:27.610Z"
+      "fetchedAt": "2026-10-27T15:23:39.486Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -133,7 +133,7 @@
       "id": "web-assistance-with-federal-aid-applications-2dc4f0a1",
       "title": "Assistance with Federal Aid Applications | Apply for Federal Aid Today — The Place",
       "url": "https://www.theplacega.org/assistance-with-federal-aid-applications",
-      "fetchedAt": "2026-10-22T14:32:43.844Z"
+      "fetchedAt": "2026-10-27T15:23:49.465Z"
     },
     {
       "id": "web-workforce-development-education-c9cf19b6",
@@ -556,10 +556,10 @@
       "fetchedAt": "2026-10-15T14:13:13.212Z"
     },
     {
-      "id": "web-calendar-financial-literacy-fall-series-szalb-cslyd-946d114f",
+      "id": "web-calendar-financial-literacy-fall-series-szalb-cslyd-nyk4x-5b12ca96",
       "title": "Financial Literacy Fall Series — The Place",
-      "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd",
-      "fetchedAt": "2026-10-20T14:21:25.377Z"
+      "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x",
+      "fetchedAt": "2026-10-27T15:24:57.262Z"
     },
     {
       "id": "web-calendar-charity-night-bingo-551c187f",

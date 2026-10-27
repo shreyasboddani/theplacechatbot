@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Free GED Classes
 - Financial Literacy Fall Series
 - Free GED Classes
 - Free GED Classes
@@ -46,18 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at New Hope Elementary
 - Free GED Classes
 - Free GED Classes
+- Free GED Classes
 
 ## Approved page content
 
 Upcoming Events
-Free GED Classes
-Monday, October 26, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Financial Literacy Fall Series
 Tuesday, October 27, 2026
 6:00 PM
@@ -662,6 +654,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Free GED Classes
+Monday, October 26, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
 Mobile Pantry at New Hope Elementary
 Saturday, October 24, 2026
 11:30 AM
@@ -892,21 +892,9 @@ Chattahoochee Elementary
 (map)
 Google Calendar
 ICS
-Mobile Pantry at Cumming Elementary
-Saturday, September 12, 2026
-10:00 AM
-11:00 AM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j
 - https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd
 - Financial Literacy Fall Series: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd
 - ICS: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd
@@ -1003,3 +991,7 @@ ICS
 - Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-december
 - ICS: https://www.theplacega.org/calendar/mobile-food-pantry-december
 - View Event →: https://www.theplacega.org/calendar/mobile-food-pantry-december
+- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry

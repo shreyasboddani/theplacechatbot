@@ -105,7 +105,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-de55b331.md",
     "title": "Calendar — The Place",
     "url": "https://www.theplacega.org/calendar",
-    "fetchedAt": "2026-10-25T13:44:27.610Z",
+    "fetchedAt": "2026-10-27T15:23:39.486Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -215,7 +215,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-assistance-with-federal-aid-applications-2dc4f0a1.md",
     "title": "Assistance with Federal Aid Applications | Apply for Federal Aid Today — The Place",
     "url": "https://www.theplacega.org/assistance-with-federal-aid-applications",
-    "fetchedAt": "2026-10-22T14:32:43.844Z",
+    "fetchedAt": "2026-10-27T15:23:49.465Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -920,12 +920,12 @@
     "priority": 50
   },
   {
-    "id": "web-calendar-financial-literacy-fall-series-szalb-cslyd-946d114f",
-    "fileName": "website__web-calendar-financial-literacy-fall-series-szalb-cslyd-946d114f.md",
-    "documentPath": "knowledge/generated/prepared/website__web-calendar-financial-literacy-fall-series-szalb-cslyd-946d114f.md",
+    "id": "web-calendar-financial-literacy-fall-series-szalb-cslyd-nyk4x-5b12ca96",
+    "fileName": "website__web-calendar-financial-literacy-fall-series-szalb-cslyd-nyk4x-5b12ca96.md",
+    "documentPath": "knowledge/generated/prepared/website__web-calendar-financial-literacy-fall-series-szalb-cslyd-nyk4x-5b12ca96.md",
     "title": "Financial Literacy Fall Series — The Place",
-    "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd",
-    "fetchedAt": "2026-10-20T14:21:25.377Z",
+    "url": "https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x",
+    "fetchedAt": "2026-10-27T15:24:57.262Z",
     "sourceType": "official_website",
     "priority": 50
   },
