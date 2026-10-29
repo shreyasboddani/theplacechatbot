@@ -63,6 +63,10 @@ Webpage recognition
 Social media recognition
 Social media recognition
 Thank You to Our Generous Partners
+Food Partner
+Friend of Heartsgiving
+Warmth Partner
+Friend of Heartsgiving
 
 ## Relevant official links
 
