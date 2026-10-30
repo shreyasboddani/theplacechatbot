@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-10-29T16:13:08.096Z",
+  "preparedAt": "2026-10-30T16:00:15.006Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-29T16:11:53.308Z"
+      "fetchedAt": "2026-10-30T15:58:40.114Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -576,6 +576,12 @@
       "title": "LAS CLASES COMIENZAN EN NOVIEMBRE 2026 — The Place",
       "url": "https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026",
       "fetchedAt": "2026-10-20T14:21:28.062Z"
+    },
+    {
+      "id": "web-calendar-pine-pigment-holiday-good-620a4a8d",
+      "title": "Pine + Pigment Holiday Good — The Place",
+      "url": "https://www.theplacega.org/calendar/pine-pigment-holiday-good",
+      "fetchedAt": "2026-10-30T16:00:08.402Z"
     }
   ],
   "failedPages": [
@@ -726,7 +732,7 @@
   "conflictingInformation": [],
   "missingLinks": [],
   "unmappedSourceDocuments": [],
-  "totalDocumentsPrepared": 125,
+  "totalDocumentsPrepared": 126,
   "officialDocuments": [
     {
       "id": "volunteer-handbook-2026",

@@ -20,6 +20,7 @@ Canonical URL: https://www.theplacega.org/calendar
 - Mobile Pantry at Cumming Elementary
 - Mobile Pantry at Chattahoochee Elementary
 - Free GED Classes
+- Pine + Pigment Holiday Good
 - Free GED Classes
 - LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 - Mobile Pantry at Chestatee Elementary
@@ -41,7 +42,6 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
-- Free GED Classes
 - Free GED Classes
 - Free GED Classes
 - Free GED Classes
@@ -151,6 +151,14 @@ Monday, November 16, 2026
 6:00 PM
 8:00 PM
 Cumming Elementary
+(map)
+Google Calendar
+ICS
+Pine + Pigment Holiday Good
+Tuesday, November 17, 2026
+6:00 PM
+8:00 PM
+Pine + Pigment
 (map)
 Google Calendar
 ICS
@@ -949,6 +957,10 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7
+- https://www.theplacega.org/calendar/pine-pigment-holiday-good: https://www.theplacega.org/calendar/pine-pigment-holiday-good
+- Pine + Pigment Holiday Good: https://www.theplacega.org/calendar/pine-pigment-holiday-good
+- ICS: https://www.theplacega.org/calendar/pine-pigment-holiday-good
+- View Event →: https://www.theplacega.org/calendar/pine-pigment-holiday-good
 - https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
@@ -993,7 +1005,3 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy
-- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb

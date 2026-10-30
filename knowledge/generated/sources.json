@@ -105,7 +105,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-de55b331.md",
     "title": "Calendar — The Place",
     "url": "https://www.theplacega.org/calendar",
-    "fetchedAt": "2026-10-29T16:11:53.308Z",
+    "fetchedAt": "2026-10-30T15:58:40.114Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -956,6 +956,16 @@
     "title": "LAS CLASES COMIENZAN EN NOVIEMBRE 2026 — The Place",
     "url": "https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026",
     "fetchedAt": "2026-10-20T14:21:28.062Z",
+    "sourceType": "official_website",
+    "priority": 50
+  },
+  {
+    "id": "web-calendar-pine-pigment-holiday-good-620a4a8d",
+    "fileName": "website__web-calendar-pine-pigment-holiday-good-620a4a8d.md",
+    "documentPath": "knowledge/generated/prepared/website__web-calendar-pine-pigment-holiday-good-620a4a8d.md",
+    "title": "Pine + Pigment Holiday Good — The Place",
+    "url": "https://www.theplacega.org/calendar/pine-pigment-holiday-good",
+    "fetchedAt": "2026-10-30T16:00:08.402Z",
     "sourceType": "official_website",
     "priority": 50
   },
