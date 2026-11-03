@@ -3,19 +3,11 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-10-30T15:58:40.114Z
+Fetched at: 2026-11-03T17:07:24.113Z
 
 ## Page content
 
 Upcoming Events
-Free GED Classes
-Monday, November 2, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Financial Literacy Fall Series
 Tuesday, November 3, 2026
 6:00 PM
@@ -615,6 +607,14 @@ Cumming Elementary
 Google Calendar
 ICS
 Free GED Classes
+Monday, November 2, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
+Free GED Classes
 Wednesday, October 28, 2026
 6:00 PM
 8:00 PM
@@ -852,21 +852,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Red Robin Dine to Donate
-Tuesday, September 15, 2026
-11:00 AM
-10:00 PM
-Red Robin at The Collection
-(map)
-Google Calendar
-ICS
 
 ## Relevant links
 
-- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5
 - https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
 - Financial Literacy Fall Series: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
 - ICS: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
@@ -963,3 +951,7 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy
+- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb

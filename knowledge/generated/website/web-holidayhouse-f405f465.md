@@ -3,7 +3,7 @@
 Source ID: web-holidayhouse-f405f465
 Source type: official_website
 Canonical URL: https://www.theplacega.org/holidayhouse
-Fetched at: 2026-10-16T20:51:03.249Z
+Fetched at: 2026-11-03T17:07:46.963Z
 
 ## Page content
 
@@ -27,7 +27,6 @@ $1,500
 CANDY CANE SPONSOR
 $750
 VOLUNTEER OPPORTUNITIES
-Volunteer Opportunities will open on Monday, November 2, 2026
 For more information, contact Amber Pham at Amber@theplacega.org
 Gift Guide
 Little Ones | Ages 0 - 4 yrs

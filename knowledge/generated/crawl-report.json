@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-10-30T16:00:14.568Z",
+  "crawledAt": "2026-11-03T17:08:41.850Z",
   "maxPages": 150,
   "indexedPages": [
     {
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-10-30T15:58:40.114Z"
+      "fetchedAt": "2026-11-03T17:07:24.113Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -229,7 +229,7 @@
       "id": "web-holidayhouse-f405f465",
       "title": "Holiday House — The Place",
       "url": "https://www.theplacega.org/holidayhouse",
-      "fetchedAt": "2026-10-16T20:51:03.249Z"
+      "fetchedAt": "2026-11-03T17:07:46.963Z"
     },
     {
       "id": "web-notes-from-the-place-the-cottage-a-place-to-find-stability-build-confidence-and-create-a-brighter-future-36b0abc1",
@@ -532,10 +532,10 @@
       "fetchedAt": "2026-07-31T11:37:25.619Z"
     },
     {
-      "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-0bad3959",
+      "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-be8d17ca",
       "title": "Free GED Classes — The Place",
-      "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5",
-      "fetchedAt": "2026-10-26T16:10:39.428Z"
+      "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259",
+      "fetchedAt": "2026-11-03T17:08:36.217Z"
     },
     {
       "id": "web-calendar-red-robin-dine-to-donate-e8b1e68d",

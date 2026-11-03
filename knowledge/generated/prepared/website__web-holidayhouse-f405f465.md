@@ -14,7 +14,6 @@ Canonical URL: https://www.theplacega.org/holidayhouse
 - Calificar Y Comprar
 - How You Can Help
 - VOLUNTEER OPPORTUNITIES
-- Volunteer Opportunities will open on Monday, November 2, 2026
 - Gift Guide
 
 ## Approved page content
@@ -39,7 +38,6 @@ $1,500
 CANDY CANE SPONSOR
 $750
 VOLUNTEER OPPORTUNITIES
-Volunteer Opportunities will open on Monday, November 2, 2026
 For more information, contact Amber Pham at Amber@theplacega.org
 Gift Guide
 Little Ones | Ages 0 - 4 yrs

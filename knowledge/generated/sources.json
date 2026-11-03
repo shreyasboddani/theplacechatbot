@@ -105,7 +105,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-de55b331.md",
     "title": "Calendar — The Place",
     "url": "https://www.theplacega.org/calendar",
-    "fetchedAt": "2026-10-30T15:58:40.114Z",
+    "fetchedAt": "2026-11-03T17:07:24.113Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -375,7 +375,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-holidayhouse-f405f465.md",
     "title": "Holiday House — The Place",
     "url": "https://www.theplacega.org/holidayhouse",
-    "fetchedAt": "2026-10-16T20:51:03.249Z",
+    "fetchedAt": "2026-11-03T17:07:46.963Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -880,12 +880,12 @@
     "priority": 50
   },
   {
-    "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-0bad3959",
-    "fileName": "website__web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-0bad3959.md",
-    "documentPath": "knowledge/generated/prepared/website__web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-0bad3959.md",
+    "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-be8d17ca",
+    "fileName": "website__web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-be8d17ca.md",
+    "documentPath": "knowledge/generated/prepared/website__web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-be8d17ca.md",
     "title": "Free GED Classes — The Place",
-    "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5",
-    "fetchedAt": "2026-10-26T16:10:39.428Z",
+    "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259",
+    "fetchedAt": "2026-11-03T17:08:36.217Z",
     "sourceType": "official_website",
     "priority": 50
   },
