@@ -157,6 +157,21 @@ describe("automated website refresh", () => {
     ]);
   });
 
+  it("drops pages that the website now reports as removed (404/410)", () => {
+    const previous = websiteSource();
+    const merged = mergePreviouslyApprovedSources({
+      currentSources: [],
+      previousSources: [previous],
+      failedPages: [{ url: previous.canonicalUrl, reason: "HTTP 404" }],
+      blockedPages: [],
+      approvedRemovalUrls: new Set(),
+      maxPages: 150,
+    });
+
+    expect(merged.sources).toEqual([]);
+    expect(merged.retainedPages).toEqual([]);
+  });
+
   it("requires an explicit same-origin approval before removing known content", () => {
     const previous = websiteSource();
     const approved = parseApprovedRemovalUrls({

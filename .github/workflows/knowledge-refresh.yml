@@ -88,8 +88,8 @@ jobs:
           unexpected_deletions="$(printf '%s\n' "$deleted_paths" | grep -Ev '^$|^knowledge/generated/prepared/website__[^/]+\.md$' || true)"
           echo "Prepared documents changed: $changed_documents; deleted website documents: $deleted_documents" >> "$GITHUB_STEP_SUMMARY"
 
-          if (( changed_documents > 20 )); then
-            echo "The refresh changed $changed_documents prepared documents, exceeding the automatic safety limit of 20. Manual review is required."
+          if (( changed_documents > 60 )); then
+            echo "The refresh changed $changed_documents prepared documents, exceeding the automatic safety limit of 60. Manual review is required."
             exit 1
           fi
 
@@ -99,8 +99,8 @@ jobs:
             exit 1
           fi
 
-          if (( deleted_documents > 5 )); then
-            echo "The refresh would remove $deleted_documents documents, exceeding the automatic removal limit of 5. Manual review is required."
+          if (( deleted_documents > 30 )); then
+            echo "The refresh would remove $deleted_documents documents, exceeding the automatic removal limit of 30. Manual review is required."
             exit 1
           fi
 

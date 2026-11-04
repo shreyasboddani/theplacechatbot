@@ -13,7 +13,7 @@ import type { WebsiteSource } from "../src/lib/knowledge/types";
 
 const USER_AGENT =
   "LearnAI-ThePlaceKnowledgeBot/1.0 (+https://www.theplacega.org; offline knowledge sync)";
-const DEFAULT_MAX_PAGES = 150;
+const DEFAULT_MAX_PAGES = 250;
 const MINIMUM_FULL_CRAWL_PAGES = 50;
 const MAXIMUM_FAILURE_RATIO = 0.25;
 const REQUEST_TIMEOUT_MS = 15_000;
@@ -204,6 +204,11 @@ export function mergePreviouslyApprovedSources(values: {
       currentUrls.has(previous.canonicalUrl) ||
       values.approvedRemovalUrls.has(previous.canonicalUrl)
     ) {
+      continue;
+    }
+    const failure = failedByUrl.get(previous.canonicalUrl);
+    if (failure === "HTTP 404" || failure === "HTTP 410") {
+      // The page was removed from the website; drop it instead of retaining it.
       continue;
     }
     if (sources.length >= values.maxPages) {
@@ -800,7 +805,7 @@ async function main() {
     ? Number(maxArgument.slice("--max-pages=".length))
     : DEFAULT_MAX_PAGES;
   const maxPages = Number.isFinite(requestedMax)
-    ? Math.min(150, Math.max(1, Math.floor(requestedMax)))
+    ? Math.min(250, Math.max(1, Math.floor(requestedMax)))
     : DEFAULT_MAX_PAGES;
   const root = process.cwd();
   const outputDir = path.resolve(root, "knowledge/generated");

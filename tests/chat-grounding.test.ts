@@ -147,4 +147,35 @@ describe("grounded interaction interpretation", () => {
       }),
     );
   });
+
+  it("retries uncited answers and succeeds when a later attempt is cited", async () => {
+    const client = {
+      create: vi
+        .fn()
+        .mockResolvedValueOnce(interaction("answered", false))
+        .mockResolvedValueOnce(interaction("answered", true)),
+    };
+    const result = await askGroundedQuestion(
+      client,
+      { message: "I need food", language: "auto", history: [] },
+      { model: "m", fileSearchStore: "fileSearchStores/test", manifest: [staffSource] },
+    );
+    expect(result.status).toBe("answered");
+    expect(client.create).toHaveBeenCalledTimes(2);
+  });
+
+  it("keeps the answer with the official website source when citations never arrive", async () => {
+    const uncited = {
+      steps: [{ type: "file_search_call" }, ...interaction("answered", false).steps],
+    };
+    const client = { create: vi.fn().mockResolvedValue(uncited) };
+    const result = await askGroundedQuestion(
+      client,
+      { message: "I need food", language: "auto", history: [] },
+      { model: "m", fileSearchStore: "fileSearchStores/test", manifest: [staffSource] },
+    );
+    expect(client.create).toHaveBeenCalledTimes(3);
+    expect(result.status).toBe("answered");
+    expect(result.sources[0]?.url).toBe("https://www.theplacega.org");
+  });
 });

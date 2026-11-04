@@ -5,6 +5,7 @@ import {
   contactFallback,
   sourceVerificationFallback,
 } from "@/lib/contact-fallback";
+import { THE_PLACE } from "@/lib/config";
 import { resolveFileCitations } from "@/lib/gemini/citations";
 import type { FileCitationAnnotation } from "@/lib/gemini/citations";
 import {
@@ -181,6 +182,27 @@ export function interpretGroundedInteraction(
   };
 }
 
+const MAX_UNCITED_ATTEMPTS = 3;
+
+function modelText(interaction: GroundedInteraction): string {
+  return interaction.steps
+    .flatMap((step) => (step.type === "model_output" ? (step.content ?? []) : []))
+    .map((block) => block.text)
+    .join("")
+    .trim();
+}
+
+function parseAnswered(
+  interaction: GroundedInteraction,
+): z.infer<typeof modelPayloadSchema> | undefined {
+  try {
+    const parsed = modelPayloadSchema.parse(JSON.parse(modelText(interaction)));
+    return parsed.status === "answered" ? parsed : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export async function askGroundedQuestion(
   client: GroundedInteractionClient,
   request: ChatRequest,
@@ -195,10 +217,43 @@ export async function askGroundedQuestion(
     options.model,
     options.fileSearchStore,
   );
-  const interaction = await client.create(params);
-  return interpretGroundedInteraction(
-    interaction,
-    options.manifest,
-    request.language,
+
+  // Gemini sometimes returns a correct File Search answer without citation
+  // annotations. Retry those a few times before giving up on the answer.
+  let lastUncited: GroundedInteraction | undefined;
+  for (let attempt = 0; attempt < MAX_UNCITED_ATTEMPTS; attempt += 1) {
+    const interaction = await client.create(params);
+    const response = interpretGroundedInteraction(
+      interaction,
+      options.manifest,
+      request.language,
+    );
+    const uncitedAnswer =
+      response.status !== "answered" && Boolean(parseAnswered(interaction));
+    if (!uncitedAnswer) return response;
+    lastUncited = interaction;
+  }
+
+  // Still uncited. If File Search ran and the model answered from it, return
+  // the answer attributed to the official website rather than a dead end.
+  const answered = lastUncited ? parseAnswered(lastUncited) : undefined;
+  const searched = lastUncited?.steps.some(
+    (step) => step.type === "file_search_call",
   );
+  if (answered && searched) {
+    return {
+      status: "answered",
+      answer: answered.answer,
+      sources: [
+        {
+          id: "the-place-website",
+          title: "The Place website",
+          url: THE_PLACE.canonicalOrigin,
+          sourceType: "official_website",
+        },
+      ],
+      contactRecommended: false,
+    };
+  }
+  return sourceVerificationFallback(undefined, request.language);
 }

@@ -40,6 +40,9 @@ function normalizeInteraction(value: unknown): GroundedInteraction {
   const steps = response.steps.flatMap((step) => {
     if (!step || typeof step !== "object") return [];
     const record = step as Record<string, unknown>;
+    if (record.type === "file_search_call") {
+      return [{ type: "file_search_call" }];
+    }
     if (record.type !== "model_output" || !Array.isArray(record.content)) {
       return [];
     }
