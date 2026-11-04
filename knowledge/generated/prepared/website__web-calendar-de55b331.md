@@ -7,8 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Financial Literacy Fall Series
-- Mobile Food Pantry
 - Free GED Classes
 - LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 - Let's Create!
@@ -46,24 +44,12 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Free GED Classes
 - Free GED Classes
+- Free GED Classes
+- Free GED Classes
 
 ## Approved page content
 
 Upcoming Events
-Financial Literacy Fall Series
-Tuesday, November 3, 2026
-6:00 PM
-7:30 PM
-Family Promise
-(map)
-Google Calendar
-ICS
-Mobile Food Pantry
-Wednesday, November 4, 2026
-12:30 PM
-1:30 PM
-Google Calendar
-ICS
 Free GED Classes
 Wednesday, November 4, 2026
 6:00 PM
@@ -648,6 +634,20 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Mobile Food Pantry
+Wednesday, November 4, 2026
+12:30 PM
+1:30 PM
+Google Calendar
+ICS
+Financial Literacy Fall Series
+Tuesday, November 3, 2026
+6:00 PM
+7:30 PM
+Family Promise
+(map)
+Google Calendar
+ICS
 Free GED Classes
 Monday, November 2, 2026
 6:00 PM
@@ -877,34 +877,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Mobile Pantry at Chestatee Elementary
-Saturday, September 19, 2026
-10:00 AM
-11:00 AM
-Chestatee Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Free GED Classes
-Wednesday, September 16, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
-- Financial Literacy Fall Series: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
-- ICS: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
-- View Event →: https://www.theplacega.org/calendar/financial-literacy-fall-series-szalb-cslyd-nyk4x
-- https://www.theplacega.org/calendar/mobile-food-pantry-november: https://www.theplacega.org/calendar/mobile-food-pantry-november
-- Mobile Food Pantry: https://www.theplacega.org/calendar/mobile-food-pantry-november
-- ICS: https://www.theplacega.org/calendar/mobile-food-pantry-november
-- View Event →: https://www.theplacega.org/calendar/mobile-food-pantry-november
 - https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
@@ -997,3 +972,11 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb
+- https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
+- Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november-7k66l
+- https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december
+- Mobile Pantry at Chattahoochee Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december
+- ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december
+- View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december

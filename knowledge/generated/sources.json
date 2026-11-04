@@ -105,7 +105,7 @@
     "documentPath": "knowledge/generated/prepared/website__web-calendar-de55b331.md",
     "title": "Calendar — The Place",
     "url": "https://www.theplacega.org/calendar",
-    "fetchedAt": "2026-11-03T17:07:24.113Z",
+    "fetchedAt": "2026-11-04T20:30:25.893Z",
     "sourceType": "official_website",
     "priority": 50
   },
@@ -420,102 +420,12 @@
     "priority": 50
   },
   {
-    "id": "web-press-releases-31d36e55",
-    "fileName": "website__web-press-releases-31d36e55.md",
-    "documentPath": "knowledge/generated/prepared/website__web-press-releases-31d36e55.md",
-    "title": "Press Releases — The Place",
-    "url": "https://www.theplacega.org/press-releases",
-    "fetchedAt": "2026-09-14T15:56:15.653Z",
-    "sourceType": "official_website",
-    "priority": 50
-  },
-  {
-    "id": "web-press-releases-1-174d5115",
-    "fileName": "website__web-press-releases-1-174d5115.md",
-    "documentPath": "knowledge/generated/prepared/website__web-press-releases-1-174d5115.md",
-    "title": "Press Releases — The Place",
-    "url": "https://www.theplacega.org/press-releases-1",
-    "fetchedAt": "2026-09-16T14:13:45.966Z",
-    "sourceType": "official_website",
-    "priority": 50
-  },
-  {
-    "id": "web-press-releases-1-the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-suc-7f06f6a3",
-    "fileName": "website__web-press-releases-1-the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-suc-7f06f6a3.md",
-    "documentPath": "knowledge/generated/prepared/website__web-press-releases-1-the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-suc-7f06f6a3.md",
-    "title": "The Cottage Provides Young Women Facing Housing Insecurity with a Path to Stability and Success — The Place",
-    "url": "https://www.theplacega.org/press-releases-1/the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-success",
-    "fetchedAt": "2026-09-16T14:13:46.597Z",
-    "sourceType": "official_website",
-    "priority": 50
-  },
-  {
-    "id": "web-press-releases-1-the-place-brings-the-magic-of-prom-to-local-students-1078c018",
-    "fileName": "website__web-press-releases-1-the-place-brings-the-magic-of-prom-to-local-students-1078c018.md",
-    "documentPath": "knowledge/generated/prepared/website__web-press-releases-1-the-place-brings-the-magic-of-prom-to-local-students-1078c018.md",
-    "title": "The Place Brings the Magic of Prom to Local Students — The Place",
-    "url": "https://www.theplacega.org/press-releases-1/the-place-brings-the-magic-of-prom-to-local-students",
-    "fetchedAt": "2026-09-14T15:56:08.808Z",
-    "sourceType": "official_website",
-    "priority": 50
-  },
-  {
-    "id": "web-press-releases-1-the-place-honors-precision-concrete-construction-with-community-partnership-award-72bc8b2e",
-    "fileName": "website__web-press-releases-1-the-place-honors-precision-concrete-construction-with-community-partnership-award-72bc8b2e.md",
-    "documentPath": "knowledge/generated/prepared/website__web-press-releases-1-the-place-honors-precision-concrete-construction-with-community-partnership-award-72bc8b2e.md",
-    "title": "The Place Honors Precision Concrete Construction With Community Partnership Award — The Place",
-    "url": "https://www.theplacega.org/press-releases-1/the-place-honors-precision-concrete-construction-with-community-partnership-award",
-    "fetchedAt": "2026-09-14T15:56:11.180Z",
-    "sourceType": "official_website",
-    "priority": 50
-  },
-  {
-    "id": "web-press-releases-1-the-place-hosts-heartsgiving-to-support-local-families-in-need-a7644a3f",
-    "fileName": "website__web-press-releases-1-the-place-hosts-heartsgiving-to-support-local-families-in-need-a7644a3f.md",
-    "documentPath": "knowledge/generated/prepared/website__web-press-releases-1-the-place-hosts-heartsgiving-to-support-local-families-in-need-a7644a3f.md",
-    "title": "The Place Hosts \"Heartsgiving\" to Support Local Families in Need — The Place",
-    "url": "https://www.theplacega.org/press-releases-1/the-place-hosts-heartsgiving-to-support-local-families-in-need",
-    "fetchedAt": "2026-09-14T15:56:11.968Z",
-    "sourceType": "official_website",
-    "priority": 50
-  },
-  {
-    "id": "web-press-releases-1-the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families-858ed7c1",
-    "fileName": "website__web-press-releases-1-the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families-858ed7c1.md",
-    "documentPath": "knowledge/generated/prepared/website__web-press-releases-1-the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families-858ed7c1.md",
-    "title": "The Place's 11th Annual Holiday House Brings Dignity and Joy to Local Families — The Place",
-    "url": "https://www.theplacega.org/press-releases-1/the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families",
-    "fetchedAt": "2026-09-14T15:56:10.401Z",
-    "sourceType": "official_website",
-    "priority": 50
-  },
-  {
-    "id": "web-press-releases-1-the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christ-c8473b07",
-    "fileName": "website__web-press-releases-1-the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christ-c8473b07.md",
-    "documentPath": "knowledge/generated/prepared/website__web-press-releases-1-the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christ-c8473b07.md",
-    "title": "The Place's Holiday House Brings Joy, Dignity, and Hope to More Than 2,100 Children This Christmas Season — The Place",
-    "url": "https://www.theplacega.org/press-releases-1/the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christmas-season",
-    "fetchedAt": "2026-09-14T15:56:09.624Z",
-    "sourceType": "official_website",
-    "priority": 50
-  },
-  {
     "id": "web-request-a-speaker-6ab42c87",
     "fileName": "website__web-request-a-speaker-6ab42c87.md",
     "documentPath": "knowledge/generated/prepared/website__web-request-a-speaker-6ab42c87.md",
     "title": "Request a Speaker — The Place",
     "url": "https://www.theplacega.org/request-a-speaker",
     "fetchedAt": "2026-09-15T14:22:16.344Z",
-    "sourceType": "official_website",
-    "priority": 50
-  },
-  {
-    "id": "web-press-releases-1-how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity-37c03c7c",
-    "fileName": "website__web-press-releases-1-how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity-37c03c7c.md",
-    "documentPath": "knowledge/generated/prepared/website__web-press-releases-1-how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity-37c03c7c.md",
-    "title": "How The Place is providing a living space for young women facing housing insecurity — The Place",
-    "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
-    "fetchedAt": "2026-09-16T14:14:40.972Z",
     "sourceType": "official_website",
     "priority": 50
   },
