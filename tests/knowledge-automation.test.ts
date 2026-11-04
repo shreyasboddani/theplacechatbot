@@ -618,8 +618,8 @@ describe("deployment automation configuration", () => {
     expect(refresh).toContain("contents: write");
     expect(refresh).toContain("Guard the generated-file boundary");
     expect(refresh).toContain("Enforce a bounded safe automatic change set");
-    expect(refresh).toContain("changed_documents > 20");
-    expect(refresh).toContain("deleted_documents > 5");
+    expect(refresh).toContain("changed_documents > 60");
+    expect(refresh).toContain("deleted_documents > 30");
     expect(refresh).toContain("website__[^/]+\\.md");
     expect(refresh).not.toContain("deleted_documents != approved_removals");
     expect(refresh).not.toContain("approvedRemovedPages.length");
