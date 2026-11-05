@@ -3,19 +3,11 @@
 Source ID: web-calendar-de55b331
 Source type: official_website
 Canonical URL: https://www.theplacega.org/calendar
-Fetched at: 2026-11-04T20:30:25.893Z
+Fetched at: 2026-11-05T17:27:20.986Z
 
 ## Page content
 
 Upcoming Events
-Free GED Classes
-Wednesday, November 4, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 Thursday, November 5, 2026
 6:00 PM
@@ -592,6 +584,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Free GED Classes
+Wednesday, November 4, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
 Mobile Food Pantry
 Wednesday, November 4, 2026
 12:30 PM
@@ -827,21 +827,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Free GED Classes
-Monday, September 21, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant links
 
-- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7
 - https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
 - LAS CLASES COMIENZAN EN NOVIEMBRE 2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
 - ICS: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
@@ -938,3 +926,7 @@ ICS
 - Mobile Pantry at Chattahoochee Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-forsyth-chattahoochee-december
+- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb

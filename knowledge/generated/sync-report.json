@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-11-04T20:31:04.045Z",
+  "preparedAt": "2026-11-05T17:28:37.481Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-11-04T20:30:25.893Z"
+      "fetchedAt": "2026-11-05T17:27:20.986Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -518,10 +518,10 @@
       "fetchedAt": "2026-10-20T14:21:22.685Z"
     },
     {
-      "id": "web-calendar-las-clases-comienzan-en-noviembre-2026-26554c8f",
+      "id": "web-calendar-las-clases-comienzan-en-noviembre-2026-y5dd6-7d05d18e",
       "title": "LAS CLASES COMIENZAN EN NOVIEMBRE 2026 — The Place",
-      "url": "https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026",
-      "fetchedAt": "2026-10-20T14:21:28.062Z"
+      "url": "https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6",
+      "fetchedAt": "2026-11-05T17:28:30.304Z"
     },
     {
       "id": "web-calendar-pine-pigment-holiday-good-620a4a8d",
@@ -531,42 +531,6 @@
     }
   ],
   "failedPages": [
-    {
-      "url": "https://www.theplacega.org/press-releases",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/press-releases-1",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/press-releases-1/the-cottage-provides-young-women-facing-housing-insecurity-with-a-path-to-stability-and-success",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/press-releases-1/the-place-brings-the-magic-of-prom-to-local-students",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/press-releases-1/the-place-honors-precision-concrete-construction-with-community-partnership-award",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/press-releases-1/the-place-hosts-heartsgiving-to-support-local-families-in-need",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/press-releases-1/the-places-11th-annual-holiday-house-brings-dignity-and-joy-to-local-families",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/press-releases-1/the-places-holiday-house-brings-joy-dignity-and-hope-to-more-than-2100-children-this-christmas-season",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.theplacega.org/press-releases-1/how-the-place-is-providing-a-living-space-for-young-women-facing-housing-insecurity",
-      "reason": "HTTP 404"
-    },
     {
       "url": "https://www.theplacega.org/furniture-pickup-request",
       "reason": "No meaningful public page content found"
