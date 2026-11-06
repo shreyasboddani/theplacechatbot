@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 - Let's Create!
 - Free GED Classes
 - Charity Night Bingo
@@ -46,18 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Free GED Classes
 - Free GED Classes
+- Free GED Classes
 
 ## Approved page content
 
 Upcoming Events
-LAS CLASES COMIENZAN EN NOVIEMBRE 2026
-Thursday, November 5, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Let's Create!
 Friday, November 6, 2026
 10:00 AM
@@ -626,6 +618,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+LAS CLASES COMIENZAN EN NOVIEMBRE 2026
+Thursday, November 5, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
 Free GED Classes
 Wednesday, November 4, 2026
 6:00 PM
@@ -861,21 +861,9 @@ Brandywine Elementary
 Google Calendar
 ICS
 Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
-Free GED Classes
-Wednesday, September 23, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
-- LAS CLASES COMIENZAN EN NOVIEMBRE 2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
-- ICS: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
-- View Event →: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026
 - https://www.theplacega.org/calendar/lets-create: https://www.theplacega.org/calendar/lets-create
 - Let's Create!: https://www.theplacega.org/calendar/lets-create
 - ICS: https://www.theplacega.org/calendar/lets-create
@@ -972,3 +960,7 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb
+- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-28shm: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-28shm
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-28shm
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-28shm
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-28shm
