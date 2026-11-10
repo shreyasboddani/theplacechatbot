@@ -7,16 +7,14 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Free GED Classes
 - Charity Night Bingo
 - Free GED Classes
-- LAS CLASES COMIENZAN EN NOVIEMBRE 2026
+- Coffee & Community
 - Mobile Pantry at Cumming Elementary
 - Mobile Pantry at Chattahoochee Elementary
 - Free GED Classes
 - Pine + Pigment Holiday Good
 - Free GED Classes
-- LAS CLASES COMIENZAN EN NOVIEMBRE 2026
 - Mobile Pantry at Chestatee Elementary
 - Free GED Classes
 - Free GED Classes
@@ -46,18 +44,12 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Free GED Classes
 - Free GED Classes
+- Free GED Classes
+- Free GED Classes
 
 ## Approved page content
 
 Upcoming Events
-Free GED Classes
-Monday, November 9, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 Charity Night Bingo
 Wednesday, November 11, 2026
 6:00 PM
@@ -74,11 +66,11 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-LAS CLASES COMIENZAN EN NOVIEMBRE 2026
-Thursday, November 12, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
+Coffee & Community
+Friday, November 13, 2026
+8:00 AM
+10:00 AM
+Unitas Community Coffee
 (map)
 Google Calendar
 ICS
@@ -118,14 +110,6 @@ Google Calendar
 ICS
 Free GED Classes
 Wednesday, November 18, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
-LAS CLASES COMIENZAN EN NOVIEMBRE 2026
-Thursday, November 19, 2026
 6:00 PM
 8:00 PM
 Cumming Elementary
@@ -610,6 +594,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Free GED Classes
+Monday, November 9, 2026
+6:00 PM
+8:00 PM
+Cumming Elementary
+(map)
+Google Calendar
+ICS
 Let's Create!
 Friday, November 6, 2026
 10:00 AM
@@ -843,22 +835,9 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
-Mobile Pantry at New Hope Elementary
-Saturday, September 26, 2026
-11:30 AM
-12:30 PM
-New Hope Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259
-- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259
-- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259
-- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259
 - https://www.theplacega.org/calendar/charity-night-bingo: https://www.theplacega.org/calendar/charity-night-bingo
 - Charity Night Bingo: https://www.theplacega.org/calendar/charity-night-bingo
 - ICS: https://www.theplacega.org/calendar/charity-night-bingo
@@ -867,10 +846,10 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx
-- https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
-- LAS CLASES COMIENZAN EN NOVIEMBRE 2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
-- ICS: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
-- View Event →: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
+- https://www.theplacega.org/calendar/coffee-community: https://www.theplacega.org/calendar/coffee-community
+- Coffee & Community: https://www.theplacega.org/calendar/coffee-community
+- ICS: https://www.theplacega.org/calendar/coffee-community
+- View Event →: https://www.theplacega.org/calendar/coffee-community
 - https://www.theplacega.org/calendar/mobile-pantry-forsyth-november: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
@@ -891,10 +870,6 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk
-- https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4
-- LAS CLASES COMIENZAN EN NOVIEMBRE 2026: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4
-- ICS: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4
-- View Event →: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6-pfgl4
 - https://www.theplacega.org/calendar/mobile-pantry-chestatee-november: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
 - Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
@@ -955,3 +930,11 @@ Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items,
 - Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-december
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-december
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-chestatee-december
+- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc
+- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659

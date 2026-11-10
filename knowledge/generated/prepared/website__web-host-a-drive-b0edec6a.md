@@ -31,4 +31,4 @@ Pantry needs
 - Household needs: https://www.theplacega.org/s/Household-Needs-Jan-2026-1-1.pdf
 - Senior needs: https://www.theplacega.org/s/Senior-2026-Needs.pdf
 - Hygiene needs: https://www.theplacega.org/s/Hygiene-Kit-Needs-1.pdf
-- Pantry needs: https://www.theplacega.org/s/September-26-Pantry-Needs.pdf
+- Pantry needs: https://www.theplacega.org/food-donations

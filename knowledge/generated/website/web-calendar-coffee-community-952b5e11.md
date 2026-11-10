@@ -1,18 +1,18 @@
-# LAS CLASES COMIENZAN EN NOVIEMBRE 2026 — The Place
+# Coffee & Community — The Place
 
-Source ID: web-calendar-las-clases-comienzan-en-noviembre-2026-y5dd6-7d05d18e
+Source ID: web-calendar-coffee-community-952b5e11
 Source type: official_website
-Canonical URL: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
-Fetched at: 2026-11-05T17:28:30.304Z
+Canonical URL: https://www.theplacega.org/calendar/coffee-community
+Fetched at: 2026-11-10T17:07:29.280Z
 
 ## Page content
 
-LAS CLASES COMIENZAN EN NOVIEMBRE 2026
-Thursday, November 12, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-540 Dahlonega Street
+Coffee & Community
+Friday, November 13, 2026
+8:00 AM
+10:00 AM
+Unitas Community Coffee
+125 Tribble Gap Road
 Cumming, Georgia, 30040
 United States
 (map)
@@ -24,7 +24,7 @@ Mobile Pantry at Cumming Elementary
 ## Relevant links
 
 - Back to All Events: https://www.theplacega.org/calendar
-- ICS: https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6
+- ICS: https://www.theplacega.org/calendar/coffee-community
 - Previous
 Previous
 November 11

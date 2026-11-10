@@ -3,7 +3,7 @@
 Source ID: web-host-a-drive-b0edec6a
 Source type: official_website
 Canonical URL: https://www.theplacega.org/host-a-drive
-Fetched at: 2026-08-31T17:05:59.384Z
+Fetched at: 2026-11-10T17:06:14.641Z
 
 ## Page content
 
@@ -28,4 +28,4 @@ Pantry needs
 - Household needs: https://www.theplacega.org/s/Household-Needs-Jan-2026-1-1.pdf
 - Senior needs: https://www.theplacega.org/s/Senior-2026-Needs.pdf
 - Hygiene needs: https://www.theplacega.org/s/Hygiene-Kit-Needs-1.pdf
-- Pantry needs: https://www.theplacega.org/s/September-26-Pantry-Needs.pdf
+- Pantry needs: https://www.theplacega.org/food-donations

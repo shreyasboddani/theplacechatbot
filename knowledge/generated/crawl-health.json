@@ -1,6 +1,11 @@
 {
   "maxPages": 250,
-  "totalIndexed": 88,
-  "retainedPages": [],
+  "totalIndexed": 89,
+  "retainedPages": [
+    {
+      "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
+      "reason": "This operation was aborted"
+    }
+  ],
   "approvedRemovedPages": []
 }

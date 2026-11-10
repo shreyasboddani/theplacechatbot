@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-11-09T19:54:06.793Z",
+  "preparedAt": "2026-11-10T17:08:16.593Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -65,7 +65,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-11-07T15:42:17.961Z"
+      "fetchedAt": "2026-11-10T17:06:05.056Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -161,7 +161,7 @@
       "id": "web-host-a-drive-b0edec6a",
       "title": "Host A Drive | Support Food Security – Donate Now — The Place",
       "url": "https://www.theplacega.org/host-a-drive",
-      "fetchedAt": "2026-08-31T17:05:59.384Z"
+      "fetchedAt": "2026-11-10T17:06:14.641Z"
     },
     {
       "id": "web-gala-sponsors-10f60cfd",
@@ -518,38 +518,70 @@
       "fetchedAt": "2026-10-20T14:21:22.685Z"
     },
     {
-      "id": "web-calendar-las-clases-comienzan-en-noviembre-2026-y5dd6-7d05d18e",
-      "title": "LAS CLASES COMIENZAN EN NOVIEMBRE 2026 — The Place",
-      "url": "https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6",
-      "fetchedAt": "2026-11-05T17:28:30.304Z"
-    },
-    {
       "id": "web-calendar-pine-pigment-holiday-good-620a4a8d",
       "title": "Pine + Pigment Holiday Good — The Place",
       "url": "https://www.theplacega.org/calendar/pine-pigment-holiday-good",
       "fetchedAt": "2026-10-30T16:00:08.402Z"
+    },
+    {
+      "id": "web-calendar-coffee-community-952b5e11",
+      "title": "Coffee & Community — The Place",
+      "url": "https://www.theplacega.org/calendar/coffee-community",
+      "fetchedAt": "2026-11-10T17:07:29.280Z"
+    },
+    {
+      "id": "web-calendar-las-clases-comienzan-en-noviembre-2026-26554c8f",
+      "title": "LAS CLASES COMIENZAN EN NOVIEMBRE 2026 — The Place",
+      "url": "https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026",
+      "fetchedAt": "2026-11-10T17:07:30.109Z"
     }
   ],
   "failedPages": [
     {
-      "url": "https://www.theplacega.org/furniture-pickup-request",
-      "reason": "No meaningful public page content found"
+      "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
+      "reason": "This operation was aborted"
     },
     {
-      "url": "https://www.theplacega.org/volunteer-handbook",
-      "reason": "Refusing to fetch or follow a URL outside The Place website."
+      "url": "https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6",
+      "reason": "HTTP 404"
     },
     {
       "url": "https://www.theplacega.org/matching-gifts",
       "reason": "No meaningful public page content found"
     },
     {
+      "url": "https://www.theplacega.org/gala-recap",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/furniture-pickup-request",
+      "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/faroi",
+      "reason": "No meaningful public page content found"
+    },
+    {
       "url": "https://www.theplacega.org/upcoming-events",
       "reason": "No meaningful public page content found"
+    },
+    {
+      "url": "https://www.theplacega.org/volunteer-handbook",
+      "reason": "Refusing to fetch or follow a URL outside The Place website."
     }
   ],
-  "duplicatePages": [],
-  "retainedPages": [],
+  "duplicatePages": [
+    {
+      "url": "https://www.theplacega.org/home",
+      "duplicateOf": "https://www.theplacega.org/"
+    }
+  ],
+  "retainedPages": [
+    {
+      "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
+      "reason": "This operation was aborted"
+    }
+  ],
   "approvedRemovedPages": [],
   "pendingFaqEntries": [
     {
@@ -605,7 +637,7 @@
   "conflictingInformation": [],
   "missingLinks": [],
   "unmappedSourceDocuments": [],
-  "totalDocumentsPrepared": 117,
+  "totalDocumentsPrepared": 118,
   "officialDocuments": [
     {
       "id": "volunteer-handbook-2026",
