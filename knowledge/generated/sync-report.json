@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-11-10T17:08:16.593Z",
+  "preparedAt": "2026-11-11T17:14:42.305Z",
   "successfullyIndexedPages": [
     {
       "id": "web-home-8044e23b",
@@ -538,50 +538,24 @@
   ],
   "failedPages": [
     {
-      "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
-      "reason": "This operation was aborted"
+      "url": "https://www.theplacega.org/furniture-pickup-request",
+      "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/calendar/las-clases-comienzan-en-noviembre-2026-y5dd6",
-      "reason": "HTTP 404"
+      "url": "https://www.theplacega.org/volunteer-handbook",
+      "reason": "Refusing to fetch or follow a URL outside The Place website."
     },
     {
       "url": "https://www.theplacega.org/matching-gifts",
       "reason": "No meaningful public page content found"
     },
     {
-      "url": "https://www.theplacega.org/gala-recap",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/furniture-pickup-request",
-      "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/faroi",
-      "reason": "No meaningful public page content found"
-    },
-    {
       "url": "https://www.theplacega.org/upcoming-events",
       "reason": "No meaningful public page content found"
-    },
-    {
-      "url": "https://www.theplacega.org/volunteer-handbook",
-      "reason": "Refusing to fetch or follow a URL outside The Place website."
     }
   ],
-  "duplicatePages": [
-    {
-      "url": "https://www.theplacega.org/home",
-      "duplicateOf": "https://www.theplacega.org/"
-    }
-  ],
-  "retainedPages": [
-    {
-      "url": "https://www.theplacega.org/newsletter/june-newsletter-for-the-place",
-      "reason": "This operation was aborted"
-    }
-  ],
+  "duplicatePages": [],
+  "retainedPages": [],
   "approvedRemovedPages": [],
   "pendingFaqEntries": [
     {
