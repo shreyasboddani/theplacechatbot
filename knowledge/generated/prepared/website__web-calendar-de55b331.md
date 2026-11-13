@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Coffee & Community
 - Mobile Pantry at Cumming Elementary
 - Mobile Pantry at Chattahoochee Elementary
 - Free GED Classes
@@ -46,18 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Free GED Classes
 - Free GED Classes
+- Free GED Classes
 
 ## Approved page content
 
 Upcoming Events
-Coffee & Community
-Friday, November 13, 2026
-8:00 AM
-10:00 AM
-Unitas Community Coffee
-(map)
-Google Calendar
-ICS
 Mobile Pantry at Cumming Elementary
 Saturday, November 14, 2026
 10:00 AM
@@ -578,6 +570,14 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Coffee & Community
+Friday, November 13, 2026
+8:00 AM
+10:00 AM
+Unitas Community Coffee
+(map)
+Google Calendar
+ICS
 Free GED Classes
 Wednesday, November 11, 2026
 6:00 PM
@@ -811,21 +811,9 @@ Wednesday, October 7, 2026
 1:30 PM
 Google Calendar
 ICS
-Free GED Classes
-Monday, October 5, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/coffee-community: https://www.theplacega.org/calendar/coffee-community
-- Coffee & Community: https://www.theplacega.org/calendar/coffee-community
-- ICS: https://www.theplacega.org/calendar/coffee-community
-- View Event →: https://www.theplacega.org/calendar/coffee-community
 - https://www.theplacega.org/calendar/mobile-pantry-forsyth-november: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - Mobile Pantry at Cumming Elementary: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-forsyth-november
@@ -922,3 +910,7 @@ ICS
 - Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-december
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-december
 - View Event →: https://www.theplacega.org/calendar/mobile-pantry-newhope-december
+- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9

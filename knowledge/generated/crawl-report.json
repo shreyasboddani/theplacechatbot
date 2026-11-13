@@ -1,13 +1,13 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-11-12T17:39:48.483Z",
+  "crawledAt": "2026-11-13T17:16:53.908Z",
   "maxPages": 250,
   "indexedPages": [
     {
       "id": "web-home-8044e23b",
       "title": "The Place | Get Assistance Today",
       "url": "https://www.theplacega.org/",
-      "fetchedAt": "2026-10-16T20:50:48.701Z"
+      "fetchedAt": "2026-11-13T17:15:34.316Z"
     },
     {
       "id": "web-contact-us-eac5f990",
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-11-12T17:38:36.322Z"
+      "fetchedAt": "2026-11-13T17:15:40.604Z"
     },
     {
       "id": "web-newsletter-89967774",
