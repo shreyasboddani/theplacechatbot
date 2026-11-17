@@ -64,8 +64,9 @@ Social media recognition
 Social media recognition
 Thank You to Our Generous Partners
 Food Partner
-Friend of Heartsgiving
+Turkey Partner
 Warmth Partner
+Friend of Heartsgiving
 Friend of Heartsgiving
 
 ## Relevant official links

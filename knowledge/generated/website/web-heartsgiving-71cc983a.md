@@ -3,7 +3,7 @@
 Source ID: web-heartsgiving-71cc983a
 Source type: official_website
 Canonical URL: https://www.theplacega.org/heartsgiving
-Fetched at: 2026-10-29T16:12:18.546Z
+Fetched at: 2026-11-17T18:38:30.277Z
 
 ## Page content
 
@@ -58,8 +58,9 @@ Social media recognition
 Social media recognition
 Thank You to Our Generous Partners
 Food Partner
-Friend of Heartsgiving
+Turkey Partner
 Warmth Partner
+Friend of Heartsgiving
 Friend of Heartsgiving
 
 ## Relevant links
