@@ -3,7 +3,7 @@
 Source ID: web-careers-9638b545
 Source type: official_website
 Canonical URL: https://www.theplacega.org/careers
-Fetched at: 2026-10-24T13:22:26.194Z
+Fetched at: 2026-11-19T18:20:59.798Z
 
 ## Page content
 
@@ -31,7 +31,15 @@ View the job description
 View the job description
 Contact nicole@theplacega.org for more information
 Contact nicole@theplacega.org for more information
+Retail Training Position
+This role is full-time for 6 months
+This role is full-time for 6 months
+View the job description
+View the job description
+Contact amanda@theplacega.org for more information
+Contact amanda@theplacega.org for more information
 
 ## Relevant links
 
 - View the job description: https://www.theplacega.org/s/Communications-Coordinator-1026.pdf
+- View the job description: https://www.theplacega.org/s/ATP-Thrift-store-training-position-hf3p.pdf

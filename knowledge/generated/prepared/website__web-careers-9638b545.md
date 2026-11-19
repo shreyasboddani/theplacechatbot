@@ -35,7 +35,15 @@ View the job description
 View the job description
 Contact nicole@theplacega.org for more information
 Contact nicole@theplacega.org for more information
+Retail Training Position
+This role is full-time for 6 months
+This role is full-time for 6 months
+View the job description
+View the job description
+Contact amanda@theplacega.org for more information
+Contact amanda@theplacega.org for more information
 
 ## Relevant official links
 
 - View the job description: https://www.theplacega.org/s/Communications-Coordinator-1026.pdf
+- View the job description: https://www.theplacega.org/s/ATP-Thrift-store-training-position-hf3p.pdf

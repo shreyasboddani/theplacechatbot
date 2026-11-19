@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-11-18T18:09:45.272Z",
+  "crawledAt": "2026-11-19T18:21:39.942Z",
   "maxPages": 250,
   "indexedPages": [
     {
@@ -67,7 +67,7 @@
       "id": "web-calendar-de55b331",
       "title": "Calendar — The Place",
       "url": "https://www.theplacega.org/calendar",
-      "fetchedAt": "2026-11-18T18:08:37.750Z"
+      "fetchedAt": "2026-11-19T18:20:50.929Z"
     },
     {
       "id": "web-newsletter-89967774",
@@ -199,7 +199,7 @@
       "id": "web-careers-9638b545",
       "title": "Careers — The Place",
       "url": "https://www.theplacega.org/careers",
-      "fetchedAt": "2026-10-24T13:22:26.194Z"
+      "fetchedAt": "2026-11-19T18:20:59.798Z"
     },
     {
       "id": "web-board-of-directors-8d8056e2",
