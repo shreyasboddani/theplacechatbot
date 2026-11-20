@@ -3,7 +3,7 @@
 Source ID: web-staff-564c6965
 Source type: official_website
 Canonical URL: https://www.theplacega.org/staff
-Fetched at: 2026-10-16T20:51:00.958Z
+Fetched at: 2026-11-20T17:52:43.097Z
 
 ## Page content
 
@@ -50,15 +50,14 @@ HOLLIS MEYER
 ​Financial Assistance Coordinator
 hollis@theplacega.org
 ext. 296
-OPERATIONS
-BRAD EVERSON
-Interim Food and Operations Manager
-brad@theplacega.org
-ext. 228
 FOOD SERVICES
 ​ERIC THURMAN
 Food Warehouse Coordinator
 eric@theplacega.org
+BRAD EVERSON
+Food and Operations Manager
+brad@theplacega.org
+ext. 228
 LEANDREA VOSKANIAN
 Food Distribution Coordinator (Forsyth)
 leandrea@theplacega.org
