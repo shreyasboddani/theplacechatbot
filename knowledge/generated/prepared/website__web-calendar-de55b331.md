@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Mobile Pantry at Chestatee Elementary
 - Free GED Classes
 - Free GED Classes
 - Mobile Pantry at Brandywine Elementary
@@ -46,19 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Free GED Classes
 - Free GED Classes
+- Free GED Classes
 
 ## Approved page content
 
 Upcoming Events
-Mobile Pantry at Chestatee Elementary
-Saturday, November 21, 2026
-10:00 AM
-11:00 AM
-Chestatee Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Monday, November 23, 2026
 6:00 PM
@@ -528,6 +519,15 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Mobile Pantry at Chestatee Elementary
+Saturday, November 21, 2026
+10:00 AM
+11:00 AM
+Chestatee Elementary
+(map)
+Google Calendar
+ICS
+Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Wednesday, November 18, 2026
 6:00 PM
@@ -763,21 +763,9 @@ Family Promise
 (map)
 Google Calendar
 ICS
-Free GED Classes
-Monday, October 12, 2026
-6:00 PM
-8:00 PM
-Cumming Elementary
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/mobile-pantry-chestatee-november: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
-- Mobile Pantry at Chestatee Elementary: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-chestatee-november
 - https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w
@@ -874,3 +862,7 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659-llcl8-hgte5-d5n7r
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659-llcl8-hgte5-d5n7r
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659-llcl8-hgte5-d5n7r
+- https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9-spkck-xzs79-zhmb8: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9-spkck-xzs79-zhmb8
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9-spkck-xzs79-zhmb8
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9-spkck-xzs79-zhmb8
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9-spkck-xzs79-zhmb8
