@@ -33,10 +33,10 @@ Picking up bread and meat donations from local stores to bring back to The Place
 After signing up you can explore additional opportunities that participants with limited mobility can do.
 After signing up you can explore additional opportunities that participants with limited mobility can do.
 Please note:
-Minimum age to volunteer on-site at our Thrift Store is 18 years old.
-Minimum age to volunteer on-site at our Thrift Store is 18 years old.
-Minimum age to volunteer on-site at our Food Warehouse/Mobile Food Pantries is 14 years old.
-Minimum age to volunteer on-site at our Food Warehouse/Mobile Food Pantries is 14 years old.
+Minimum age to volunteer on-site at our Food Warehouse/Thrift Store is 18 years old.
+Minimum age to volunteer on-site at our Food Warehouse/Thrift Store is 18 years old.
+Minimum age to volunteer on-site at our Mobile Food Pantries is 14 years old.
+Minimum age to volunteer on-site at our Mobile Food Pantries is 14 years old.
 LOCATIONS AND HOURS
 Forsyth location
 2550 The Place Circle, Cumming, GA 30040

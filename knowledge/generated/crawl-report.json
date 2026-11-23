@@ -1,6 +1,6 @@
 {
   "startedFrom": "https://www.theplacega.org",
-  "crawledAt": "2026-11-22T17:12:50.418Z",
+  "crawledAt": "2026-11-23T21:30:42.108Z",
   "maxPages": 250,
   "indexedPages": [
     {
@@ -49,7 +49,7 @@
       "id": "web-new-volunteers-51338cd7",
       "title": "New Volunteers | Get Involved Today — The Place",
       "url": "https://www.theplacega.org/new-volunteers",
-      "fetchedAt": "2026-10-16T20:50:51.497Z"
+      "fetchedAt": "2026-11-23T21:29:33.326Z"
     },
     {
       "id": "web-food-pantry-request-b0ed76b1",
@@ -478,10 +478,10 @@
       "fetchedAt": "2026-07-31T11:37:25.619Z"
     },
     {
-      "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-b0c571af",
+      "id": "web-calendar-free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983-eed05665",
       "title": "Free GED Classes — The Place",
-      "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w",
-      "fetchedAt": "2026-11-16T19:41:12.425Z"
+      "url": "https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g",
+      "fetchedAt": "2026-11-23T21:30:36.360Z"
     },
     {
       "id": "web-calendar-red-robin-dine-to-donate-e8b1e68d",

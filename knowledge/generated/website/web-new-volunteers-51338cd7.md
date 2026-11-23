@@ -3,7 +3,7 @@
 Source ID: web-new-volunteers-51338cd7
 Source type: official_website
 Canonical URL: https://www.theplacega.org/new-volunteers
-Fetched at: 2026-10-16T20:50:51.497Z
+Fetched at: 2026-11-23T21:29:33.326Z
 
 ## Page content
 
@@ -26,10 +26,10 @@ Picking up bread and meat donations from local stores to bring back to The Place
 After signing up you can explore additional opportunities that participants with limited mobility can do.
 After signing up you can explore additional opportunities that participants with limited mobility can do.
 Please note:
-Minimum age to volunteer on-site at our Thrift Store is 18 years old.
-Minimum age to volunteer on-site at our Thrift Store is 18 years old.
-Minimum age to volunteer on-site at our Food Warehouse/Mobile Food Pantries is 14 years old.
-Minimum age to volunteer on-site at our Food Warehouse/Mobile Food Pantries is 14 years old.
+Minimum age to volunteer on-site at our Food Warehouse/Thrift Store is 18 years old.
+Minimum age to volunteer on-site at our Food Warehouse/Thrift Store is 18 years old.
+Minimum age to volunteer on-site at our Mobile Food Pantries is 14 years old.
+Minimum age to volunteer on-site at our Mobile Food Pantries is 14 years old.
 LOCATIONS AND HOURS
 Forsyth location
 2550 The Place Circle, Cumming, GA 30040
