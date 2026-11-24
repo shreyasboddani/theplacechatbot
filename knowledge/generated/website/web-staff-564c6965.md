@@ -3,7 +3,7 @@
 Source ID: web-staff-564c6965
 Source type: official_website
 Canonical URL: https://www.theplacega.org/staff
-Fetched at: 2026-11-20T17:52:43.097Z
+Fetched at: 2026-11-24T20:13:01.230Z
 
 ## Page content
 
@@ -42,8 +42,8 @@ MEGHAN LIVINGSTON
 Case Management Manager
 meghan@theplacega.org
 ext. 229
-JESSICA MCGUIRE
-Office Coordinator/Benefits
+MARLENE ZUNIGA
+Front Desk Coordinator
 frontdesk@theplacega.org​
 ext. 295
 HOLLIS MEYER

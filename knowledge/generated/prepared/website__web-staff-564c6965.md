@@ -52,8 +52,8 @@ MEGHAN LIVINGSTON
 Case Management Manager
 meghan@theplacega.org
 ext. 229
-JESSICA MCGUIRE
-Office Coordinator/Benefits
+MARLENE ZUNIGA
+Front Desk Coordinator
 frontdesk@theplacega.org​
 ext. 295
 HOLLIS MEYER
