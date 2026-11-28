@@ -7,7 +7,6 @@ Canonical URL: https://www.theplacega.org/calendar
 ## Important headings
 
 - Upcoming Events
-- Mobile Pantry at Brandywine Elementary
 - Mobile Pantry at New Hope Elementary
 - Free GED Classes
 - Mobile Food Pantry
@@ -46,19 +45,11 @@ Canonical URL: https://www.theplacega.org/calendar
 - Free GED Classes
 - Free GED Classes
 - Free GED Classes
+- Free GED Classes
 
 ## Approved page content
 
 Upcoming Events
-Mobile Pantry at Brandywine Elementary
-Saturday, November 28, 2026
-10:00 AM
-11:00 AM
-Brandywine Elementary
-(map)
-Google Calendar
-ICS
-Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Mobile Pantry at New Hope Elementary
 Saturday, November 28, 2026
 11:30 AM
@@ -503,6 +494,15 @@ Cumming Elementary
 (map)
 Google Calendar
 ICS
+Mobile Pantry at Brandywine Elementary
+Saturday, November 28, 2026
+10:00 AM
+11:00 AM
+Brandywine Elementary
+(map)
+Google Calendar
+ICS
+Everyone is welcome! Come get fresh produce, frozen meats, non-perishable items, and eggs (when available).
 Free GED Classes
 Wednesday, November 25, 2026
 6:00 PM
@@ -739,21 +739,9 @@ Cumming Elementary School
 (map)
 Google Calendar
 ICS
-Witches Night Out
-Thursday, October 15, 2026
-6:00 PM
-10:00 PM
-Halcyon
-(map)
-Google Calendar
-ICS
 
 ## Relevant official links
 
-- https://www.theplacega.org/calendar/mobile-pantry-brandywine-november: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
-- Mobile Pantry at Brandywine Elementary: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
-- ICS: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
-- View Event →: https://www.theplacega.org/calendar/mobile-pantry-brandywine-november
 - https://www.theplacega.org/calendar/mobile-pantry-newhope-november: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
 - Mobile Pantry at New Hope Elementary: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
 - ICS: https://www.theplacega.org/calendar/mobile-pantry-newhope-november
@@ -850,3 +838,7 @@ ICS
 - Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9-spkck-xzs79-zhmb8-k5wp7
 - ICS: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9-spkck-xzs79-zhmb8-k5wp7
 - View Event →: https://www.theplacega.org/calendar/free-ged-classes-dh7mh-hc34f-5s5zj-mrzzh-fty3x-ntp9b-rx7h3-f6sf4-rcc8j-l3rz5-a5259-sxbj7-5pk9w-l983g-4kzwy-hc3mb-hb3hc-5xtf9-spkck-xzs79-zhmb8-k5wp7
+- https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659-llcl8-hgte5-d5n7r-l9y75-9trx6: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659-llcl8-hgte5-d5n7r-l9y75-9trx6
+- Free GED Classes: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659-llcl8-hgte5-d5n7r-l9y75-9trx6
+- ICS: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659-llcl8-hgte5-d5n7r-l9y75-9trx6
+- View Event →: https://www.theplacega.org/calendar/free-ged-classes-6t997-zlysg-d4yp4-syh62-xat6g-nf3y3-ergt8-rbe43-ra5lx-8c5f8-dr2x7-45wxx-8nfpk-c78rj-9hyry-bxysb-yr659-llcl8-hgte5-d5n7r-l9y75-9trx6
